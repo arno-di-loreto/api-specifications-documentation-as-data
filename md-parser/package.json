@@ -1,0 +1,23 @@
+{
+  "name": "md-parser",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "github-slugger": "^1.4.0",
+    "mdast-util-toc": "^6.1.0",
+    "remark-html": "^15.0.1",
+    "remark-parse": "^10.0.1",
+    "remark-toc": "^8.0.1",
+    "slugify": "^1.6.5",
+    "unified": "^10.1.2",
+    "unist-util-parents": "^2.0.0",
+    "unist-util-visit": "^4.1.0"
+  }
+}
