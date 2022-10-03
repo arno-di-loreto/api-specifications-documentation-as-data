@@ -38,7 +38,7 @@ const sources = [
     versionName: "3.1",
     version: "3.1.0",
     githubUrl: "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md",
-    file: "./content/3.1.0.md"
+    file: "../specifications/3.1.0.md"
   },
   /*
   {

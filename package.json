@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "unist-util-visit-parents": "^5.1.0"
-  }
-}
