@@ -1,0 +1,83 @@
+{
+    "version": "2.0",
+    "schemas": [
+        {
+            "name": "Swagger Object"
+        },
+        {
+            "name": "Info Object"
+        },
+        {
+            "name": "Contact Object"
+        },
+        {
+            "name": "License Object"
+        },
+        {
+            "name": "Paths Object"
+        },
+        {
+            "name": "Path Item Object"
+        },
+        {
+            "name": "Operation Object"
+        },
+        {
+            "name": "External Documentation Object"
+        },
+        {
+            "name": "Parameter Object"
+        },
+        {
+            "name": "Items Object"
+        },
+        {
+            "name": "Responses Object"
+        },
+        {
+            "name": "Response Object"
+        },
+        {
+            "name": "Headers Object"
+        },
+        {
+            "name": "Example Object"
+        },
+        {
+            "name": "Header Object"
+        },
+        {
+            "name": "Tag Object"
+        },
+        {
+            "name": "Reference Object"
+        },
+        {
+            "name": "Schema Object"
+        },
+        {
+            "name": "XML Object"
+        },
+        {
+            "name": "Definitions Object"
+        },
+        {
+            "name": "Parameters Definitions Object"
+        },
+        {
+            "name": "Responses Definitions Object"
+        },
+        {
+            "name": "Security Definitions Object"
+        },
+        {
+            "name": "Security Scheme Object"
+        },
+        {
+            "name": "Scopes Object"
+        },
+        {
+            "name": "Security Requirement Object"
+        }
+    ]
+}

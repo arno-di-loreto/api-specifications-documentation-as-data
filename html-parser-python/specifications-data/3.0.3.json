@@ -1,0 +1,95 @@
+{
+    "version": "3.0.3",
+    "schemas": [
+        {
+            "name": "OpenAPI Object"
+        },
+        {
+            "name": "Info Object"
+        },
+        {
+            "name": "Contact Object"
+        },
+        {
+            "name": "License Object"
+        },
+        {
+            "name": "Server Object"
+        },
+        {
+            "name": "Server Variable Object"
+        },
+        {
+            "name": "Components Object"
+        },
+        {
+            "name": "Paths Object"
+        },
+        {
+            "name": "Path Item Object"
+        },
+        {
+            "name": "Operation Object"
+        },
+        {
+            "name": "External Documentation Object"
+        },
+        {
+            "name": "Parameter Object"
+        },
+        {
+            "name": "Request Body Object"
+        },
+        {
+            "name": "Media Type Object"
+        },
+        {
+            "name": "Encoding Object"
+        },
+        {
+            "name": "Responses Object"
+        },
+        {
+            "name": "Response Object"
+        },
+        {
+            "name": "Callback Object"
+        },
+        {
+            "name": "Example Object"
+        },
+        {
+            "name": "Link Object"
+        },
+        {
+            "name": "Header Object"
+        },
+        {
+            "name": "Tag Object"
+        },
+        {
+            "name": "Reference Object"
+        },
+        {
+            "name": "Schema Object"
+        },
+        {
+            "name": "Discriminator Object"
+        },
+        {
+            "name": "XML Object"
+        },
+        {
+            "name": "Security Scheme Object"
+        },
+        {
+            "name": "OAuth Flows Object"
+        },
+        {
+            "name": "OAuth Flow Object"
+        },
+        {
+            "name": "Security Requirement Object"
+        }
+    ]
+}

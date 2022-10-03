@@ -177,6 +177,20 @@ class Node:
         self.parent = get_parent_node(self, current_parent_node)
       self.parent.add_child(self)
 
+  def get_node(self, level, text):
+    if self.type != 'content':
+      if level == self.level and text == self.soup.text:
+        return self
+      else:
+        for child in self.children:
+          found = child.get_node(level, text)
+          if found != None:
+            return found;
+    return None
+
+  def get_text(self):
+    return self.soup.text
+
   def to_dict(self):
     dict_children = []
     for child in self.children:
@@ -203,20 +217,41 @@ class Node:
     
     return dict_node
 
+class OpenApiSpecificationSchema:
+  def __init__(self, schema_node):
+    self.name = schema_node.get_text()
+
+  def to_dict(self):
+    return {
+      'name': self.name
+    }
+
 class OpenApiSpecification:
   def __init__(self, document_tree):
     self.document_tree = document_tree
     self.__init__version()
+    self.__init__schemas()
 
   def __init__version(self):
     title_regex = re.compile(r'Version (.*)')
     version_header_soup = self.document_tree.soup.find('h4')
     version_header = title_regex.search(version_header_soup.text)
     self.version = version_header.group(1)
+  
+  def __init__schemas(self):
+    schemas_node = self.document_tree.get_node(3, 'Schema')
+    self.schemas = []
+    for schema_node in schemas_node.children:
+      if schema_node.type == 'header':
+        self.schemas.append(OpenApiSpecificationSchema(schema_node))
 
   def to_dict(self):
+    schemas_dict = []
+    for schema in self.schemas:
+      schemas_dict.append(schema.to_dict())
     return {
-      'version': self.version
+      'version': self.version,
+      'schemas': schemas_dict
     }
 
 
@@ -247,18 +282,24 @@ def load_markdown_as_html(file):
   html = md.convert(markdown_content)
   return html
 
-html = load_markdown_as_html('../specifications/3.1.0.md')
-soup = BeautifulSoup(html, 'html.parser')
-tree_node = generate_tree(soup)
-tree_dict = tree_node.to_dict()
+versions = ['2.0', '3.0.3', '3.1.0']
+source = '../specifications'
+target = './specifications-data'
 
-openapi = OpenApiSpecification(tree_node)
-openapi_dict = openapi.to_dict()
+for version in versions:
+  html = load_markdown_as_html(source + '/'+ version + '.md')
+  soup = BeautifulSoup(html, 'html.parser')
+  tree_node = generate_tree(soup)
+  tree_dict = tree_node.to_dict()
 
-result_dict = {
-  'data': openapi_dict,
-  'source': tree_dict
-}
-result_json = json.dumps(result_dict, indent = 4) 
-print(result_json)
-#print(json.dumps(openapi_dict, indent = 4))
+  openapi = OpenApiSpecification(tree_node)
+  openapi_dict = openapi.to_dict()
+  full_dict = {
+    'data': openapi_dict,
+    'source': tree_dict
+  }
+  result_dict = openapi_dict
+  result_json = json.dumps(result_dict, indent = 4) 
+  f = open(target+'/'+version+'.json','w')
+  f.write(result_json)
+  f.close()
