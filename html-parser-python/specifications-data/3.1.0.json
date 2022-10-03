@@ -8,6 +8,7 @@
                 {
                     "name": "openapi",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "oasVersion",
                     "type": {
                         "listType": null,
@@ -22,6 +23,7 @@
                 {
                     "name": "info",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "oasInfo",
                     "type": {
                         "listType": null,
@@ -36,6 +38,7 @@
                 {
                     "name": " jsonSchemaDialect",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oasJsonSchemaDialect",
                     "type": {
                         "listType": null,
@@ -50,6 +53,7 @@
                 {
                     "name": "servers",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oasServers",
                     "type": {
                         "listType": "array",
@@ -64,6 +68,7 @@
                 {
                     "name": "paths",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oasPaths",
                     "type": {
                         "listType": null,
@@ -78,6 +83,7 @@
                 {
                     "name": "webhooks",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oasWebhooks",
                     "type": {
                         "listType": "map",
@@ -93,6 +99,7 @@
                 {
                     "name": "components",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oasComponents",
                     "type": {
                         "listType": null,
@@ -107,6 +114,7 @@
                 {
                     "name": "security",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oasSecurity",
                     "type": {
                         "listType": "array",
@@ -121,6 +129,7 @@
                 {
                     "name": "tags",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oasTags",
                     "type": {
                         "listType": "array",
@@ -135,6 +144,7 @@
                 {
                     "name": "externalDocs",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oasExternalDocs",
                     "type": {
                         "listType": null,
@@ -149,6 +159,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -169,6 +180,7 @@
                 {
                     "name": "title",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "infoTitle",
                     "type": {
                         "listType": null,
@@ -183,6 +195,7 @@
                 {
                     "name": "summary",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoSummary",
                     "type": {
                         "listType": null,
@@ -197,6 +210,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoDescription",
                     "type": {
                         "listType": null,
@@ -211,6 +225,7 @@
                 {
                     "name": "termsOfService",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoTermsOfService",
                     "type": {
                         "listType": null,
@@ -225,6 +240,7 @@
                 {
                     "name": "contact",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoContact",
                     "type": {
                         "listType": null,
@@ -239,6 +255,7 @@
                 {
                     "name": "license",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoLicense",
                     "type": {
                         "listType": null,
@@ -253,6 +270,7 @@
                 {
                     "name": "version",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "infoVersion",
                     "type": {
                         "listType": null,
@@ -267,6 +285,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -287,6 +306,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "contactName",
                     "type": {
                         "listType": null,
@@ -301,6 +321,7 @@
                 {
                     "name": "url",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "contactUrl",
                     "type": {
                         "listType": null,
@@ -315,6 +336,7 @@
                 {
                     "name": "email",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "contactEmail",
                     "type": {
                         "listType": null,
@@ -329,6 +351,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -349,6 +372,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "licenseName",
                     "type": {
                         "listType": null,
@@ -363,6 +387,7 @@
                 {
                     "name": "identifier",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "licenseIdentifier",
                     "type": {
                         "listType": null,
@@ -377,6 +402,7 @@
                 {
                     "name": "url",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "licenseUrl",
                     "type": {
                         "listType": null,
@@ -391,6 +417,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -411,6 +438,7 @@
                 {
                     "name": "url",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "serverUrl",
                     "type": {
                         "listType": null,
@@ -425,6 +453,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "serverDescription",
                     "type": {
                         "listType": null,
@@ -439,6 +468,7 @@
                 {
                     "name": "variables",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "serverVariables",
                     "type": {
                         "listType": "map",
@@ -453,6 +483,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -473,6 +504,7 @@
                 {
                     "name": "enum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "serverVariableEnum",
                     "type": {
                         "listType": "array",
@@ -487,6 +519,7 @@
                 {
                     "name": "default",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "serverVariableDefault",
                     "type": {
                         "listType": null,
@@ -501,6 +534,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "serverVariableDescription",
                     "type": {
                         "listType": null,
@@ -515,6 +549,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -535,6 +570,7 @@
                 {
                     "name": " schemas",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsSchemas",
                     "type": {
                         "listType": "map",
@@ -549,6 +585,7 @@
                 {
                     "name": " responses",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsResponses",
                     "type": {
                         "listType": "map",
@@ -564,6 +601,7 @@
                 {
                     "name": " parameters",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsParameters",
                     "type": {
                         "listType": "map",
@@ -579,6 +617,7 @@
                 {
                     "name": " examples",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsExamples",
                     "type": {
                         "listType": "map",
@@ -594,6 +633,7 @@
                 {
                     "name": " requestBodies",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsRequestBodies",
                     "type": {
                         "listType": "map",
@@ -609,6 +649,7 @@
                 {
                     "name": " headers",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsHeaders",
                     "type": {
                         "listType": "map",
@@ -624,6 +665,7 @@
                 {
                     "name": " securitySchemes",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsSecuritySchemes",
                     "type": {
                         "listType": "map",
@@ -639,6 +681,7 @@
                 {
                     "name": " links",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsLinks",
                     "type": {
                         "listType": "map",
@@ -654,6 +697,7 @@
                 {
                     "name": " callbacks",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsCallbacks",
                     "type": {
                         "listType": "map",
@@ -669,6 +713,7 @@
                 {
                     "name": " pathItems",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "componentsPathItems",
                     "type": {
                         "listType": "map",
@@ -684,6 +729,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -704,6 +750,7 @@
                 {
                     "name": "/{path}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "pathsPath",
                     "type": {
                         "listType": null,
@@ -718,6 +765,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -738,6 +786,7 @@
                 {
                     "name": "$ref",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemRef",
                     "type": {
                         "listType": null,
@@ -752,6 +801,7 @@
                 {
                     "name": "summary",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemSummary",
                     "type": {
                         "listType": null,
@@ -766,6 +816,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemDescription",
                     "type": {
                         "listType": null,
@@ -780,6 +831,7 @@
                 {
                     "name": "get",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemGet",
                     "type": {
                         "listType": null,
@@ -794,6 +846,7 @@
                 {
                     "name": "put",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemPut",
                     "type": {
                         "listType": null,
@@ -808,6 +861,7 @@
                 {
                     "name": "post",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemPost",
                     "type": {
                         "listType": null,
@@ -822,6 +876,7 @@
                 {
                     "name": "delete",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemDelete",
                     "type": {
                         "listType": null,
@@ -836,6 +891,7 @@
                 {
                     "name": "options",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemOptions",
                     "type": {
                         "listType": null,
@@ -850,6 +906,7 @@
                 {
                     "name": "head",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemHead",
                     "type": {
                         "listType": null,
@@ -864,6 +921,7 @@
                 {
                     "name": "patch",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemPatch",
                     "type": {
                         "listType": null,
@@ -878,6 +936,7 @@
                 {
                     "name": "trace",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemTrace",
                     "type": {
                         "listType": null,
@@ -892,6 +951,7 @@
                 {
                     "name": "servers",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemServers",
                     "type": {
                         "listType": "array",
@@ -906,6 +966,7 @@
                 {
                     "name": "parameters",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemParameters",
                     "type": {
                         "listType": "array",
@@ -921,6 +982,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -941,6 +1003,7 @@
                 {
                     "name": "tags",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationTags",
                     "type": {
                         "listType": "array",
@@ -955,6 +1018,7 @@
                 {
                     "name": "summary",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationSummary",
                     "type": {
                         "listType": null,
@@ -969,6 +1033,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationDescription",
                     "type": {
                         "listType": null,
@@ -983,6 +1048,7 @@
                 {
                     "name": "externalDocs",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationExternalDocs",
                     "type": {
                         "listType": null,
@@ -997,6 +1063,7 @@
                 {
                     "name": "operationId",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationId",
                     "type": {
                         "listType": null,
@@ -1011,6 +1078,7 @@
                 {
                     "name": "parameters",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationParameters",
                     "type": {
                         "listType": "array",
@@ -1026,6 +1094,7 @@
                 {
                     "name": "requestBody",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationRequestBody",
                     "type": {
                         "listType": null,
@@ -1041,6 +1110,7 @@
                 {
                     "name": "responses",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationResponses",
                     "type": {
                         "listType": null,
@@ -1055,6 +1125,7 @@
                 {
                     "name": "callbacks",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationCallbacks",
                     "type": {
                         "listType": "map",
@@ -1070,6 +1141,7 @@
                 {
                     "name": "deprecated",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationDeprecated",
                     "type": {
                         "listType": null,
@@ -1084,6 +1156,7 @@
                 {
                     "name": "security",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationSecurity",
                     "type": {
                         "listType": "array",
@@ -1098,6 +1171,7 @@
                 {
                     "name": "servers",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationServers",
                     "type": {
                         "listType": "array",
@@ -1112,6 +1186,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1132,6 +1207,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "externalDocDescription",
                     "type": {
                         "listType": null,
@@ -1146,6 +1222,7 @@
                 {
                     "name": "url",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "externalDocUrl",
                     "type": {
                         "listType": null,
@@ -1160,6 +1237,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1180,6 +1258,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "parameterName",
                     "type": {
                         "listType": null,
@@ -1194,6 +1273,7 @@
                 {
                     "name": "in",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "parameterIn",
                     "type": {
                         "listType": null,
@@ -1208,6 +1288,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterDescription",
                     "type": {
                         "listType": null,
@@ -1222,6 +1303,7 @@
                 {
                     "name": "required",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterRequired",
                     "type": {
                         "listType": null,
@@ -1236,6 +1318,7 @@
                 {
                     "name": " deprecated",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterDeprecated",
                     "type": {
                         "listType": null,
@@ -1250,6 +1333,7 @@
                 {
                     "name": " allowEmptyValue",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterAllowEmptyValue",
                     "type": {
                         "listType": null,
@@ -1264,6 +1348,7 @@
                 {
                     "name": "style",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterStyle",
                     "type": {
                         "listType": null,
@@ -1278,6 +1363,7 @@
                 {
                     "name": "explode",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterExplode",
                     "type": {
                         "listType": null,
@@ -1292,6 +1378,7 @@
                 {
                     "name": "allowReserved",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterAllowReserved",
                     "type": {
                         "listType": null,
@@ -1306,6 +1393,7 @@
                 {
                     "name": "schema",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterSchema",
                     "type": {
                         "listType": null,
@@ -1320,6 +1408,7 @@
                 {
                     "name": "example",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterExample",
                     "type": {
                         "listType": null,
@@ -1334,6 +1423,7 @@
                 {
                     "name": "examples",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterExamples",
                     "type": {
                         "listType": "map",
@@ -1349,6 +1439,7 @@
                 {
                     "name": "content",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterContent",
                     "type": {
                         "listType": "map",
@@ -1363,6 +1454,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1383,6 +1475,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "requestBodyDescription",
                     "type": {
                         "listType": null,
@@ -1397,6 +1490,7 @@
                 {
                     "name": "content",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "requestBodyContent",
                     "type": {
                         "listType": "map",
@@ -1411,6 +1505,7 @@
                 {
                     "name": "required",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "requestBodyRequired",
                     "type": {
                         "listType": null,
@@ -1425,6 +1520,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1445,6 +1541,7 @@
                 {
                     "name": "schema",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "mediaTypeSchema",
                     "type": {
                         "listType": null,
@@ -1459,6 +1556,7 @@
                 {
                     "name": "example",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "mediaTypeExample",
                     "type": {
                         "listType": null,
@@ -1473,6 +1571,7 @@
                 {
                     "name": "examples",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "mediaTypeExamples",
                     "type": {
                         "listType": "map",
@@ -1488,6 +1587,7 @@
                 {
                     "name": "encoding",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "mediaTypeEncoding",
                     "type": {
                         "listType": "map",
@@ -1502,6 +1602,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1522,6 +1623,7 @@
                 {
                     "name": "contentType",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "encodingContentType",
                     "type": {
                         "listType": null,
@@ -1536,6 +1638,7 @@
                 {
                     "name": "headers",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "encodingHeaders",
                     "type": {
                         "listType": "map",
@@ -1551,6 +1654,7 @@
                 {
                     "name": "style",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "encodingStyle",
                     "type": {
                         "listType": null,
@@ -1565,6 +1669,7 @@
                 {
                     "name": "explode",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "encodingExplode",
                     "type": {
                         "listType": null,
@@ -1579,6 +1684,7 @@
                 {
                     "name": "allowReserved",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "encodingAllowReserved",
                     "type": {
                         "listType": null,
@@ -1593,6 +1699,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1613,6 +1720,7 @@
                 {
                     "name": "default",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "responsesDefault",
                     "type": {
                         "listType": null,
@@ -1628,6 +1736,7 @@
                 {
                     "name": "HTTP Status Code",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "responsesCode",
                     "type": {
                         "listType": null,
@@ -1643,6 +1752,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1663,6 +1773,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "responseDescription",
                     "type": {
                         "listType": null,
@@ -1677,6 +1788,7 @@
                 {
                     "name": "headers",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "responseHeaders",
                     "type": {
                         "listType": "map",
@@ -1692,6 +1804,7 @@
                 {
                     "name": "content",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "responseContent",
                     "type": {
                         "listType": "map",
@@ -1706,6 +1819,7 @@
                 {
                     "name": "links",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "responseLinks",
                     "type": {
                         "listType": "map",
@@ -1721,6 +1835,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1741,6 +1856,7 @@
                 {
                     "name": "{expression}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "callbackExpression",
                     "type": {
                         "listType": null,
@@ -1756,6 +1872,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1776,6 +1893,7 @@
                 {
                     "name": "summary",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "exampleSummary",
                     "type": {
                         "listType": null,
@@ -1790,6 +1908,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "exampleDescription",
                     "type": {
                         "listType": null,
@@ -1804,6 +1923,7 @@
                 {
                     "name": "value",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "exampleValue",
                     "type": {
                         "listType": null,
@@ -1818,6 +1938,7 @@
                 {
                     "name": "externalValue",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "exampleExternalValue",
                     "type": {
                         "listType": null,
@@ -1832,6 +1953,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1852,6 +1974,7 @@
                 {
                     "name": "operationRef",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "linkOperationRef",
                     "type": {
                         "listType": null,
@@ -1866,6 +1989,7 @@
                 {
                     "name": "operationId",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "linkOperationId",
                     "type": {
                         "listType": null,
@@ -1880,6 +2004,7 @@
                 {
                     "name": "parameters",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "linkParameters",
                     "type": {
                         "listType": "map",
@@ -1895,6 +2020,7 @@
                 {
                     "name": "requestBody",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "linkRequestBody",
                     "type": {
                         "listType": null,
@@ -1910,6 +2036,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "linkDescription",
                     "type": {
                         "listType": null,
@@ -1924,6 +2051,7 @@
                 {
                     "name": "server",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "linkServer",
                     "type": {
                         "listType": null,
@@ -1938,6 +2066,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1958,6 +2087,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -1978,6 +2108,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "tagName",
                     "type": {
                         "listType": null,
@@ -1992,6 +2123,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "tagDescription",
                     "type": {
                         "listType": null,
@@ -2006,6 +2138,7 @@
                 {
                     "name": "externalDocs",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "tagExternalDocs",
                     "type": {
                         "listType": null,
@@ -2020,6 +2153,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -2040,6 +2174,7 @@
                 {
                     "name": "$ref",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "referenceRef",
                     "type": {
                         "listType": null,
@@ -2054,6 +2189,7 @@
                 {
                     "name": "summary",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "referenceSummary",
                     "type": {
                         "listType": null,
@@ -2068,6 +2204,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "referenceDescription",
                     "type": {
                         "listType": null,
@@ -2082,6 +2219,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -2102,6 +2240,7 @@
                 {
                     "name": "discriminator",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaDiscriminator",
                     "type": {
                         "listType": null,
@@ -2116,6 +2255,7 @@
                 {
                     "name": "xml",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaXml",
                     "type": {
                         "listType": null,
@@ -2130,6 +2270,7 @@
                 {
                     "name": "externalDocs",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaExternalDocs",
                     "type": {
                         "listType": null,
@@ -2144,6 +2285,7 @@
                 {
                     "name": "example",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaExample",
                     "type": {
                         "listType": null,
@@ -2158,6 +2300,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -2178,6 +2321,7 @@
                 {
                     "name": "propertyName",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "propertyName",
                     "type": {
                         "listType": null,
@@ -2192,6 +2336,7 @@
                 {
                     "name": " mapping",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "discriminatorMapping",
                     "type": {
                         "listType": "map",
@@ -2206,6 +2351,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -2226,6 +2372,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlName",
                     "type": {
                         "listType": null,
@@ -2240,6 +2387,7 @@
                 {
                     "name": "namespace",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlNamespace",
                     "type": {
                         "listType": null,
@@ -2254,6 +2402,7 @@
                 {
                     "name": "prefix",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlPrefix",
                     "type": {
                         "listType": null,
@@ -2268,6 +2417,7 @@
                 {
                     "name": "attribute",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlAttribute",
                     "type": {
                         "listType": null,
@@ -2282,6 +2432,7 @@
                 {
                     "name": "wrapped",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlWrapped",
                     "type": {
                         "listType": null,
@@ -2296,6 +2447,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -2316,6 +2468,7 @@
                 {
                     "name": "type",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeType",
                     "type": {
                         "listType": null,
@@ -2330,6 +2483,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "securitySchemeDescription",
                     "type": {
                         "listType": null,
@@ -2344,6 +2498,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeName",
                     "type": {
                         "listType": null,
@@ -2358,6 +2513,7 @@
                 {
                     "name": "in",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeIn",
                     "type": {
                         "listType": null,
@@ -2372,6 +2528,7 @@
                 {
                     "name": "scheme",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeScheme",
                     "type": {
                         "listType": null,
@@ -2386,6 +2543,7 @@
                 {
                     "name": "bearerFormat",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "securitySchemeBearerFormat",
                     "type": {
                         "listType": null,
@@ -2400,6 +2558,7 @@
                 {
                     "name": "flows",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeFlows",
                     "type": {
                         "listType": null,
@@ -2414,6 +2573,7 @@
                 {
                     "name": "openIdConnectUrl",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeOpenIdConnectUrl",
                     "type": {
                         "listType": null,
@@ -2428,6 +2588,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -2448,6 +2609,7 @@
                 {
                     "name": "implicit",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oauthFlowsImplicit",
                     "type": {
                         "listType": null,
@@ -2462,6 +2624,7 @@
                 {
                     "name": "password",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oauthFlowsPassword",
                     "type": {
                         "listType": null,
@@ -2476,6 +2639,7 @@
                 {
                     "name": "clientCredentials",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oauthFlowsClientCredentials",
                     "type": {
                         "listType": null,
@@ -2490,6 +2654,7 @@
                 {
                     "name": "authorizationCode",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oauthFlowsAuthorizationCode",
                     "type": {
                         "listType": null,
@@ -2504,6 +2669,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -2524,6 +2690,7 @@
                 {
                     "name": "authorizationUrl",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "oauthFlowAuthorizationUrl",
                     "type": {
                         "listType": null,
@@ -2538,6 +2705,7 @@
                 {
                     "name": "tokenUrl",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "oauthFlowTokenUrl",
                     "type": {
                         "listType": null,
@@ -2552,6 +2720,7 @@
                 {
                     "name": "refreshUrl",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "oauthFlowRefreshUrl",
                     "type": {
                         "listType": null,
@@ -2566,6 +2735,7 @@
                 {
                     "name": "scopes",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "oauthFlowScopes",
                     "type": {
                         "listType": "map",
@@ -2580,6 +2750,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -2600,6 +2771,7 @@
                 {
                     "name": "{name}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "securityRequirementsName",
                     "type": {
                         "listType": "array",
@@ -2614,6 +2786,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,

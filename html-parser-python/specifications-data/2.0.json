@@ -8,6 +8,7 @@
                 {
                     "name": "swagger",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "swaggerSwagger",
                     "type": {
                         "listType": null,
@@ -22,6 +23,7 @@
                 {
                     "name": "info",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "swaggerInfo",
                     "type": {
                         "listType": null,
@@ -36,6 +38,7 @@
                 {
                     "name": "host",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerHost",
                     "type": {
                         "listType": null,
@@ -50,6 +53,7 @@
                 {
                     "name": "basePath",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerBasePath",
                     "type": {
                         "listType": null,
@@ -64,6 +68,7 @@
                 {
                     "name": "schemes",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerSchemes",
                     "type": {
                         "listType": "array",
@@ -78,6 +83,7 @@
                 {
                     "name": "consumes",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerConsumes",
                     "type": {
                         "listType": "array",
@@ -92,6 +98,7 @@
                 {
                     "name": "produces",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerProduces",
                     "type": {
                         "listType": "array",
@@ -106,6 +113,7 @@
                 {
                     "name": "paths",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "swaggerPaths",
                     "type": {
                         "listType": null,
@@ -120,6 +128,7 @@
                 {
                     "name": "definitions",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerDefinitions",
                     "type": {
                         "listType": null,
@@ -134,6 +143,7 @@
                 {
                     "name": "parameters",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerParameters",
                     "type": {
                         "listType": null,
@@ -148,6 +158,7 @@
                 {
                     "name": "responses",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerResponses",
                     "type": {
                         "listType": null,
@@ -162,6 +173,7 @@
                 {
                     "name": "securityDefinitions",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerSecurityDefinitions",
                     "type": {
                         "listType": null,
@@ -176,6 +188,7 @@
                 {
                     "name": "security",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerSecurity",
                     "type": {
                         "listType": "array",
@@ -190,6 +203,7 @@
                 {
                     "name": "tags",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerTags",
                     "type": {
                         "listType": "array",
@@ -204,6 +218,7 @@
                 {
                     "name": "externalDocs",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "swaggerExternalDocs",
                     "type": {
                         "listType": null,
@@ -218,6 +233,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "swaggerExtensions",
                     "type": {
                         "listType": null,
@@ -238,6 +254,7 @@
                 {
                     "name": "title",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "infoTitle",
                     "type": {
                         "listType": null,
@@ -252,6 +269,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoDescription",
                     "type": {
                         "listType": null,
@@ -266,6 +284,7 @@
                 {
                     "name": "termsOfService",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoTermsOfService",
                     "type": {
                         "listType": null,
@@ -280,6 +299,7 @@
                 {
                     "name": "contact",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoContact",
                     "type": {
                         "listType": null,
@@ -294,6 +314,7 @@
                 {
                     "name": "license",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoLicense",
                     "type": {
                         "listType": null,
@@ -308,6 +329,7 @@
                 {
                     "name": "version",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "infoVersion",
                     "type": {
                         "listType": null,
@@ -322,6 +344,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "infoExtensions",
                     "type": {
                         "listType": null,
@@ -342,6 +365,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "contactName",
                     "type": {
                         "listType": null,
@@ -356,6 +380,7 @@
                 {
                     "name": "url",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "contactUrl",
                     "type": {
                         "listType": null,
@@ -370,6 +395,7 @@
                 {
                     "name": "email",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "contactEmail",
                     "type": {
                         "listType": null,
@@ -384,6 +410,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "contactExtensions",
                     "type": {
                         "listType": null,
@@ -404,6 +431,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "licenseName",
                     "type": {
                         "listType": null,
@@ -418,6 +446,7 @@
                 {
                     "name": "url",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "licenseUrl",
                     "type": {
                         "listType": null,
@@ -432,6 +461,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "licenseExtensions",
                     "type": {
                         "listType": null,
@@ -452,6 +482,7 @@
                 {
                     "name": "/{path}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "pathsPath",
                     "type": {
                         "listType": null,
@@ -466,6 +497,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "pathsExtensions",
                     "type": {
                         "listType": null,
@@ -486,6 +518,7 @@
                 {
                     "name": "$ref",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemRef",
                     "type": {
                         "listType": null,
@@ -500,6 +533,7 @@
                 {
                     "name": "get",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemGet",
                     "type": {
                         "listType": null,
@@ -514,6 +548,7 @@
                 {
                     "name": "put",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemPut",
                     "type": {
                         "listType": null,
@@ -528,6 +563,7 @@
                 {
                     "name": "post",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemPost",
                     "type": {
                         "listType": null,
@@ -542,6 +578,7 @@
                 {
                     "name": "delete",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemDelete",
                     "type": {
                         "listType": null,
@@ -556,6 +593,7 @@
                 {
                     "name": "options",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemOptions",
                     "type": {
                         "listType": null,
@@ -570,6 +608,7 @@
                 {
                     "name": "head",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemHead",
                     "type": {
                         "listType": null,
@@ -584,6 +623,7 @@
                 {
                     "name": "patch",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemPatch",
                     "type": {
                         "listType": null,
@@ -598,6 +638,7 @@
                 {
                     "name": "parameters",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "pathItemParameters",
                     "type": {
                         "listType": "array",
@@ -613,6 +654,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "pathItemExtensions",
                     "type": {
                         "listType": null,
@@ -633,6 +675,7 @@
                 {
                     "name": "tags",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationTags",
                     "type": {
                         "listType": "array",
@@ -647,6 +690,7 @@
                 {
                     "name": "summary",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationSummary",
                     "type": {
                         "listType": null,
@@ -661,6 +705,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationDescription",
                     "type": {
                         "listType": null,
@@ -675,6 +720,7 @@
                 {
                     "name": "externalDocs",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationExternalDocs",
                     "type": {
                         "listType": null,
@@ -689,6 +735,7 @@
                 {
                     "name": "operationId",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationId",
                     "type": {
                         "listType": null,
@@ -703,6 +750,7 @@
                 {
                     "name": "consumes",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationConsumes",
                     "type": {
                         "listType": "array",
@@ -717,6 +765,7 @@
                 {
                     "name": "produces",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationProduces",
                     "type": {
                         "listType": "array",
@@ -731,6 +780,7 @@
                 {
                     "name": "parameters",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationParameters",
                     "type": {
                         "listType": "array",
@@ -746,6 +796,7 @@
                 {
                     "name": "responses",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "operationResponses",
                     "type": {
                         "listType": null,
@@ -760,6 +811,7 @@
                 {
                     "name": "schemes",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationSchemes",
                     "type": {
                         "listType": "array",
@@ -774,6 +826,7 @@
                 {
                     "name": "deprecated",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationDeprecated",
                     "type": {
                         "listType": null,
@@ -788,6 +841,7 @@
                 {
                     "name": "security",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "operationSecurity",
                     "type": {
                         "listType": "array",
@@ -802,6 +856,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "operationExtensions",
                     "type": {
                         "listType": null,
@@ -822,6 +877,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "externalDocDescription",
                     "type": {
                         "listType": null,
@@ -836,6 +892,7 @@
                 {
                     "name": "url",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "externalDocUrl",
                     "type": {
                         "listType": null,
@@ -850,6 +907,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "externalDocExtensions",
                     "type": {
                         "listType": null,
@@ -870,6 +928,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "parameterName",
                     "type": {
                         "listType": null,
@@ -884,6 +943,7 @@
                 {
                     "name": "in",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "parameterIn",
                     "type": {
                         "listType": null,
@@ -898,6 +958,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterDescription",
                     "type": {
                         "listType": null,
@@ -912,6 +973,7 @@
                 {
                     "name": "required",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterRequired",
                     "type": {
                         "listType": null,
@@ -926,6 +988,7 @@
                 {
                     "name": "schema",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "parameterSchema",
                     "type": {
                         "listType": null,
@@ -940,6 +1003,7 @@
                 {
                     "name": "type",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "parameterType",
                     "type": {
                         "listType": null,
@@ -954,6 +1018,7 @@
                 {
                     "name": "format",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterFormat",
                     "type": {
                         "listType": null,
@@ -968,6 +1033,7 @@
                 {
                     "name": "allowEmptyValue",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterAllowEmptyValue",
                     "type": {
                         "listType": null,
@@ -982,6 +1048,7 @@
                 {
                     "name": "items",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterItems",
                     "type": {
                         "listType": null,
@@ -996,6 +1063,7 @@
                 {
                     "name": "collectionFormat",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterCollectionFormat",
                     "type": {
                         "listType": null,
@@ -1010,6 +1078,7 @@
                 {
                     "name": "default",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterDefault",
                     "type": {
                         "listType": null,
@@ -1024,6 +1093,7 @@
                 {
                     "name": "maximum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterMaximum",
                     "type": {
                         "listType": null,
@@ -1038,6 +1108,7 @@
                 {
                     "name": "exclusiveMaximum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterExclusiveMaximum",
                     "type": {
                         "listType": null,
@@ -1052,6 +1123,7 @@
                 {
                     "name": "minimum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterMinimum",
                     "type": {
                         "listType": null,
@@ -1066,6 +1138,7 @@
                 {
                     "name": "exclusiveMinimum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterExclusiveMinimum",
                     "type": {
                         "listType": null,
@@ -1080,6 +1153,7 @@
                 {
                     "name": "maxLength",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterMaxLength",
                     "type": {
                         "listType": null,
@@ -1094,6 +1168,7 @@
                 {
                     "name": "minLength",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterMinLength",
                     "type": {
                         "listType": null,
@@ -1108,6 +1183,7 @@
                 {
                     "name": "pattern",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterPattern",
                     "type": {
                         "listType": null,
@@ -1122,6 +1198,7 @@
                 {
                     "name": "maxItems",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterMaxItems",
                     "type": {
                         "listType": null,
@@ -1136,6 +1213,7 @@
                 {
                     "name": "minItems",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterMinItems",
                     "type": {
                         "listType": null,
@@ -1150,6 +1228,7 @@
                 {
                     "name": "uniqueItems",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterUniqueItems",
                     "type": {
                         "listType": null,
@@ -1164,6 +1243,7 @@
                 {
                     "name": "enum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterEnum",
                     "type": {
                         "listType": "array",
@@ -1178,6 +1258,7 @@
                 {
                     "name": "multipleOf",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "parameterMultipleOf",
                     "type": {
                         "listType": null,
@@ -1192,6 +1273,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "parameterExtensions",
                     "type": {
                         "listType": null,
@@ -1212,6 +1294,7 @@
                 {
                     "name": "type",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "itemsType",
                     "type": {
                         "listType": null,
@@ -1226,6 +1309,7 @@
                 {
                     "name": "format",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsFormat",
                     "type": {
                         "listType": null,
@@ -1240,6 +1324,7 @@
                 {
                     "name": "items",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsItems",
                     "type": {
                         "listType": null,
@@ -1254,6 +1339,7 @@
                 {
                     "name": "collectionFormat",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsCollectionFormat",
                     "type": {
                         "listType": null,
@@ -1268,6 +1354,7 @@
                 {
                     "name": "default",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsDefault",
                     "type": {
                         "listType": null,
@@ -1282,6 +1369,7 @@
                 {
                     "name": "maximum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsMaximum",
                     "type": {
                         "listType": null,
@@ -1296,6 +1384,7 @@
                 {
                     "name": "exclusiveMaximum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsMaximum",
                     "type": {
                         "listType": null,
@@ -1310,6 +1399,7 @@
                 {
                     "name": "minimum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsMinimum",
                     "type": {
                         "listType": null,
@@ -1324,6 +1414,7 @@
                 {
                     "name": "exclusiveMinimum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsExclusiveMinimum",
                     "type": {
                         "listType": null,
@@ -1338,6 +1429,7 @@
                 {
                     "name": "maxLength",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsMaxLength",
                     "type": {
                         "listType": null,
@@ -1352,6 +1444,7 @@
                 {
                     "name": "minLength",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsMinLength",
                     "type": {
                         "listType": null,
@@ -1366,6 +1459,7 @@
                 {
                     "name": "pattern",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsPattern",
                     "type": {
                         "listType": null,
@@ -1380,6 +1474,7 @@
                 {
                     "name": "maxItems",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsMaxItems",
                     "type": {
                         "listType": null,
@@ -1394,6 +1489,7 @@
                 {
                     "name": "minItems",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsMinItems",
                     "type": {
                         "listType": null,
@@ -1408,6 +1504,7 @@
                 {
                     "name": "uniqueItems",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsUniqueItems",
                     "type": {
                         "listType": null,
@@ -1422,6 +1519,7 @@
                 {
                     "name": "enum",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsEnum",
                     "type": {
                         "listType": "array",
@@ -1436,6 +1534,7 @@
                 {
                     "name": "multipleOf",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "itemsMultipleOf",
                     "type": {
                         "listType": null,
@@ -1450,6 +1549,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "itemsExtensions",
                     "type": {
                         "listType": null,
@@ -1470,6 +1570,7 @@
                 {
                     "name": "default",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "responsesDefault",
                     "type": {
                         "listType": null,
@@ -1485,6 +1586,7 @@
                 {
                     "name": "{HTTP Status Code}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "responsesCode",
                     "type": {
                         "listType": null,
@@ -1500,6 +1602,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "responsesExtensions",
                     "type": {
                         "listType": null,
@@ -1520,6 +1623,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "responseDescription",
                     "type": {
                         "listType": null,
@@ -1534,6 +1638,7 @@
                 {
                     "name": "schema",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "responseSchema",
                     "type": {
                         "listType": null,
@@ -1548,6 +1653,7 @@
                 {
                     "name": "headers",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "responseHeaders",
                     "type": {
                         "listType": null,
@@ -1562,6 +1668,7 @@
                 {
                     "name": "examples",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "responseExamples",
                     "type": {
                         "listType": null,
@@ -1576,6 +1683,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "responseExtensions",
                     "type": {
                         "listType": null,
@@ -1596,6 +1704,7 @@
                 {
                     "name": "{name}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "headersName",
                     "type": {
                         "listType": null,
@@ -1616,6 +1725,7 @@
                 {
                     "name": "{mime type}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "exampleMimeType",
                     "type": {
                         "listType": null,
@@ -1636,6 +1746,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "headerExtensions",
                     "type": {
                         "listType": null,
@@ -1656,6 +1767,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "tagName",
                     "type": {
                         "listType": null,
@@ -1670,6 +1782,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "tagDescription",
                     "type": {
                         "listType": null,
@@ -1684,6 +1797,7 @@
                 {
                     "name": "externalDocs",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "tagExternalDocs",
                     "type": {
                         "listType": null,
@@ -1698,6 +1812,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "tagExtensions",
                     "type": {
                         "listType": null,
@@ -1718,6 +1833,7 @@
                 {
                     "name": "$ref",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "referenceRef",
                     "type": {
                         "listType": null,
@@ -1738,6 +1854,7 @@
                 {
                     "name": "discriminator",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaDiscriminator",
                     "type": {
                         "listType": null,
@@ -1752,6 +1869,7 @@
                 {
                     "name": "readOnly",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaReadOnly",
                     "type": {
                         "listType": null,
@@ -1766,6 +1884,7 @@
                 {
                     "name": "xml",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaXml",
                     "type": {
                         "listType": null,
@@ -1780,6 +1899,7 @@
                 {
                     "name": "externalDocs",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaExternalDocs",
                     "type": {
                         "listType": null,
@@ -1794,6 +1914,7 @@
                 {
                     "name": "example",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "schemaExample",
                     "type": {
                         "listType": null,
@@ -1808,6 +1929,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "schemaExtensions",
                     "type": {
                         "listType": null,
@@ -1828,6 +1950,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlName",
                     "type": {
                         "listType": null,
@@ -1842,6 +1965,7 @@
                 {
                     "name": "namespace",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlNamespace",
                     "type": {
                         "listType": null,
@@ -1856,6 +1980,7 @@
                 {
                     "name": "prefix",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlPrefix",
                     "type": {
                         "listType": null,
@@ -1870,6 +1995,7 @@
                 {
                     "name": "attribute",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlAttribute",
                     "type": {
                         "listType": null,
@@ -1884,6 +2010,7 @@
                 {
                     "name": "wrapped",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "xmlWrapped",
                     "type": {
                         "listType": null,
@@ -1898,6 +2025,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "xmlExtensions",
                     "type": {
                         "listType": null,
@@ -1918,6 +2046,7 @@
                 {
                     "name": "{name}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "definitionsName",
                     "type": {
                         "listType": null,
@@ -1938,6 +2067,7 @@
                 {
                     "name": "{name}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "pdName",
                     "type": {
                         "listType": null,
@@ -1958,6 +2088,7 @@
                 {
                     "name": "{name}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "rdName",
                     "type": {
                         "listType": null,
@@ -1978,6 +2109,7 @@
                 {
                     "name": "{name}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "sdName",
                     "type": {
                         "listType": null,
@@ -1998,6 +2130,7 @@
                 {
                     "name": "type",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeType",
                     "type": {
                         "listType": null,
@@ -2012,6 +2145,7 @@
                 {
                     "name": "description",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "securitySchemeDescription",
                     "type": {
                         "listType": null,
@@ -2026,6 +2160,7 @@
                 {
                     "name": "name",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeName",
                     "type": {
                         "listType": null,
@@ -2040,6 +2175,7 @@
                 {
                     "name": "in",
                     "nameType": "fixed",
+                    "required": false,
                     "id": "securitySchemeIn",
                     "type": {
                         "listType": null,
@@ -2054,6 +2190,7 @@
                 {
                     "name": "flow",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeFlow",
                     "type": {
                         "listType": null,
@@ -2068,6 +2205,7 @@
                 {
                     "name": "authorizationUrl",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeAuthorizationUrl",
                     "type": {
                         "listType": null,
@@ -2082,6 +2220,7 @@
                 {
                     "name": "tokenUrl",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeTokenUrl",
                     "type": {
                         "listType": null,
@@ -2096,6 +2235,7 @@
                 {
                     "name": "scopes",
                     "nameType": "fixed",
+                    "required": true,
                     "id": "securitySchemeScopes",
                     "type": {
                         "listType": null,
@@ -2110,6 +2250,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "securitySchemeExtensions",
                     "type": {
                         "listType": null,
@@ -2130,6 +2271,7 @@
                 {
                     "name": "{name}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "scopesName",
                     "type": {
                         "listType": null,
@@ -2144,6 +2286,7 @@
                 {
                     "name": "^x-",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "scopesExtensions",
                     "type": {
                         "listType": null,
@@ -2164,6 +2307,7 @@
                 {
                     "name": "{name}",
                     "nameType": "patterned",
+                    "required": false,
                     "id": "securityRequirementsName",
                     "type": {
                         "listType": "array",

@@ -271,14 +271,24 @@ class FieldType:
     }
 
 class SchemaField:
-  def __init__(self, table_node_line, name_type):
+  def __init__(self, table_node_line, name_type, specification):
+    self.specification = specification
     self.id = table_node_line.anchor
     self.name_type = name_type
     self.name = table_node_line.get_value_by_header(['Field Name', 'Field Pattern'])
     self.type = FieldType(table_node_line.get_value_by_header(['Type']))
     self.applies_to = table_node_line.get_value_by_header(['Validity','Applies To'])
     self.description = table_node_line.get_value_by_header(['Description'])
-  
+    self.__init__required()
+
+  def __init__required(self):
+    if self.specification.is_version('2'):
+      required_keyword = '<strong>required.</strong>' # swagger 2 <strong>Required.</strong> v3 <strong>REQUIRED</strong> 
+    else:
+      required_keyword = '<strong>required</strong>.'
+    description_html_lower = str(self.description.decode_contents()).lower()
+    self.required = description_html_lower.startswith(required_keyword)
+
   def to_dict(self):
     applies_to = None
     if self.applies_to != None:
@@ -286,6 +296,7 @@ class SchemaField:
     return {
       'name': self.name.text,
       'nameType': self.name_type,
+      'required': self.required,
       'id': self.id,
       'type': self.type.to_dict(),
       'appliesTo': applies_to,
@@ -293,14 +304,14 @@ class SchemaField:
     }
 
 class SchemaFields:
-  def __init__(self, fields_node, name_type):
+  def __init__(self, fields_node, name_type, specification):
     self.node = fields_node
     self.fields = []
     if fields_node != None:
       for child in self.node.children:
         if child.type == 'content' and child.sub_type == 'table':
           for line in child.table.lines:
-            self.fields.append(SchemaField(line, name_type))
+            self.fields.append(SchemaField(line, name_type, specification))
 
   def append_fields(self, schema_fields):
     self.fields = self.fields + schema_fields.fields
@@ -330,12 +341,12 @@ class OpenApiSpecificationSchema:
   def __init_fields(self):
     print('=======>Schema ', self.name)
     fixed_fields_node = self.node.get_node('Fixed Fields', 'header')
-    fixed_fields = SchemaFields(fixed_fields_node, 'fixed')
+    fixed_fields = SchemaFields(fixed_fields_node, 'fixed', self.specification)
     patterned_fields_node = self.node.get_node('Patterned Fields', 'header')
-    patterned_fields = SchemaFields(patterned_fields_node, 'patterned')
+    patterned_fields = SchemaFields(patterned_fields_node, 'patterned', self.specification)
     # in v2 ^x- are inconsistently in Patterned Objects and Patterned Field
     patterned_objects_node = self.node.get_node('Patterned Objects', 'header')
-    patterned_objects = SchemaFields(patterned_objects_node, 'patterned')
+    patterned_objects = SchemaFields(patterned_objects_node, 'patterned', self.specification)
 
     self.fields = fixed_fields
     self.fields.append_fields(patterned_fields)
@@ -345,7 +356,7 @@ class OpenApiSpecificationSchema:
     # in v3 ^x- are not explicitly described -> To add manually
     if self.specification.is_version('3'):
       specification_extensions_node = self.specification.document_tree.get_node('Specification Extensions', 'header')
-      extension_fields = SchemaFields(specification_extensions_node, 'patterned')
+      extension_fields = SchemaFields(specification_extensions_node, 'patterned', self.specification)
       self.fields.append_fields(extension_fields)
 
   def __init_is_extensible(self):
@@ -359,10 +370,10 @@ class OpenApiSpecificationSchema:
         # Swagger 2
         # Look for a ^x- field
         patterned_fields_node = self.node.get_node('Patterned Fields', 'header')
-        patterned_fields = SchemaFields(patterned_fields_node, 'patterned')
+        patterned_fields = SchemaFields(patterned_fields_node, 'patterned', self.specification)
         # in v2 ^x- are inconsistently in Patterned Objects and Patterned Field
         patterned_objects_node = self.node.get_node('Patterned Objects', 'header')
-        patterned_objects = SchemaFields(patterned_objects_node, 'patterned')
+        patterned_objects = SchemaFields(patterned_objects_node, 'patterned', self.specification)
         patterned_fields.append_fields(patterned_objects)
         extension_field = patterned_fields.get_field('^x-')
         self.is_extensible = (extension_field != None)
