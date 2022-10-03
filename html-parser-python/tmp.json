@@ -8,7 +8,7 @@
             "type": "header",
             "subType": null,
             "level": 1,
-            "html": "<h1>OpenAPI Specification</h1>",
+            "html": "<h1 id=\"openapi-specification\">OpenAPI Specification</h1>",
             "children": [
                 {
                     "type": "content",
@@ -21,7 +21,7 @@
                     "type": "header",
                     "subType": null,
                     "level": 4,
-                    "html": "<h4>Version 3.1.0</h4>",
+                    "html": "<h4 id=\"version-310\">Version 3.1.0</h4>",
                     "children": [
                         {
                             "type": "content",
@@ -58,13 +58,18 @@
                             "html": "\n",
                             "children": []
                         }
-                    ]
+                    ],
+                    "header": {
+                        "level": 4,
+                        "id": "version-310",
+                        "anchor": null
+                    }
                 },
                 {
                     "type": "header",
                     "subType": null,
                     "level": 2,
-                    "html": "<h2>Introduction</h2>",
+                    "html": "<h2 id=\"introduction\">Introduction</h2>",
                     "children": [
                         {
                             "type": "content",
@@ -101,13 +106,18 @@
                             "html": "\n",
                             "children": []
                         }
-                    ]
+                    ],
+                    "header": {
+                        "level": 2,
+                        "id": "introduction",
+                        "anchor": null
+                    }
                 },
                 {
                     "type": "header",
                     "subType": null,
                     "level": 2,
-                    "html": "<h2>Table of Contents</h2>",
+                    "html": "<h2 id=\"table-of-contents\">Table of Contents</h2>",
                     "children": [
                         {
                             "type": "content",
@@ -158,13 +168,18 @@
                             "html": "\n",
                             "children": []
                         }
-                    ]
+                    ],
+                    "header": {
+                        "level": 2,
+                        "id": "table-of-contents",
+                        "anchor": null
+                    }
                 },
                 {
                     "type": "header",
                     "subType": null,
                     "level": 2,
-                    "html": "<h2>Definitions</h2>",
+                    "html": "<h2 id=\"definitions\">Definitions</h2>",
                     "children": [
                         {
                             "type": "content",
@@ -177,7 +192,7 @@
                             "type": "header",
                             "subType": null,
                             "level": 5,
-                            "html": "<h5><a name=\"oasDocument\"></a>OpenAPI Document</h5>",
+                            "html": "<h5 id=\"openapi-document\"><a name=\"oasDocument\"></a>OpenAPI Document</h5>",
                             "children": [
                                 {
                                     "type": "content",
@@ -200,13 +215,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 5,
+                                "id": "openapi-document",
+                                "anchor": "oasDocument"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 5,
-                            "html": "<h5><a name=\"pathTemplating\"></a>Path Templating</h5>",
+                            "html": "<h5 id=\"path-templating\"><a name=\"pathTemplating\"></a>Path Templating</h5>",
                             "children": [
                                 {
                                     "type": "content",
@@ -257,13 +277,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 5,
+                                "id": "path-templating",
+                                "anchor": "pathTemplating"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 5,
-                            "html": "<h5><a name=\"mediaTypes\"></a>Media Types</h5>",
+                            "html": "<h5 id=\"media-types\"><a name=\"mediaTypes\"></a>Media Types</h5>",
                             "children": [
                                 {
                                     "type": "content",
@@ -318,13 +343,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 5,
+                                "id": "media-types",
+                                "anchor": "mediaTypes"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 5,
-                            "html": "<h5><a name=\"httpCodes\"></a>HTTP Status Codes</h5>",
+                            "html": "<h5 id=\"http-status-codes\"><a name=\"httpCodes\"></a>HTTP Status Codes</h5>",
                             "children": [
                                 {
                                     "type": "content",
@@ -347,15 +377,25 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 5,
+                                "id": "http-status-codes",
+                                "anchor": "httpCodes"
+                            }
                         }
-                    ]
+                    ],
+                    "header": {
+                        "level": 2,
+                        "id": "definitions",
+                        "anchor": null
+                    }
                 },
                 {
                     "type": "header",
                     "subType": null,
                     "level": 2,
-                    "html": "<h2>Specification</h2>",
+                    "html": "<h2 id=\"specification\">Specification</h2>",
                     "children": [
                         {
                             "type": "content",
@@ -368,7 +408,7 @@
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3>Versions</h3>",
+                            "html": "<h3 id=\"versions\">Versions</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -419,13 +459,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "versions",
+                                "anchor": null
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3>Format</h3>",
+                            "html": "<h3 id=\"format\">Format</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -564,13 +609,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "format",
+                                "anchor": null
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3><a name=\"documentStructure\"></a>Document Structure</h3>",
+                            "html": "<h3 id=\"document-structure\"><a name=\"documentStructure\"></a>Document Structure</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -607,13 +657,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "document-structure",
+                                "anchor": "documentStructure"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3><a name=\"dataTypes\"></a>Data Types</h3>",
+                            "html": "<h3 id=\"data-types\"><a name=\"dataTypes\"></a>Data Types</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -712,13 +767,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "data-types",
+                                "anchor": "dataTypes"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3><a name=\"richText\"></a>Rich Text Formatting</h3>",
+                            "html": "<h3 id=\"rich-text-formatting\"><a name=\"richText\"></a>Rich Text Formatting</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -741,13 +801,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "rich-text-formatting",
+                                "anchor": "richText"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3><a name=\"relativeReferencesURI\"></a>Relative References in URIs</h3>",
+                            "html": "<h3 id=\"relative-references-in-uris\"><a name=\"relativeReferencesURI\"></a>Relative References in URIs</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -812,13 +877,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "relative-references-in-uris",
+                                "anchor": "relativeReferencesURI"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3><a name=\"relativeReferencesURL\"></a>Relative References in URLs</h3>",
+                            "html": "<h3 id=\"relative-references-in-urls\"><a name=\"relativeReferencesURL\"></a>Relative References in URLs</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -841,13 +911,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "relative-references-in-urls",
+                                "anchor": "relativeReferencesURL"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3>Schema</h3>",
+                            "html": "<h3 id=\"schema\">Schema</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -874,7 +949,7 @@
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"oasObject\"></a>OpenAPI Object</h4>",
+                                    "html": "<h4 id=\"openapi-object\"><a name=\"oasObject\"></a>OpenAPI Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -901,7 +976,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -997,15 +1072,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "openapi-object",
+                                        "anchor": "oasObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"infoObject\"></a>Info Object</h4>",
+                                    "html": "<h4 id=\"info-object\"><a name=\"infoObject\"></a>Info Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -1032,7 +1117,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_1\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1113,13 +1198,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_1",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Info Object Example</h5>",
+                                            "html": "<h5 id=\"info-object-example\">Info Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1164,15 +1254,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "info-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "info-object",
+                                        "anchor": "infoObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"contactObject\"></a>Contact Object</h4>",
+                                    "html": "<h4 id=\"contact-object\"><a name=\"contactObject\"></a>Contact Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -1199,7 +1299,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_2\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1260,13 +1360,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_2",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Contact Object Example</h5>",
+                                            "html": "<h5 id=\"contact-object-example\">Contact Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1311,15 +1416,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "contact-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "contact-object",
+                                        "anchor": "contactObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"licenseObject\"></a>License Object</h4>",
+                                    "html": "<h4 id=\"license-object\"><a name=\"licenseObject\"></a>License Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -1346,7 +1461,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_3\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1407,13 +1522,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_3",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>License Object Example</h5>",
+                                            "html": "<h5 id=\"license-object-example\">License Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1458,15 +1578,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "license-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "license-object",
+                                        "anchor": "licenseObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"serverObject\"></a>Server Object</h4>",
+                                    "html": "<h4 id=\"server-object\"><a name=\"serverObject\"></a>Server Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -1493,7 +1623,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_4\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1554,13 +1684,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_4",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Server Object Example</h5>",
+                                            "html": "<h5 id=\"server-object-example\">Server Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1719,15 +1854,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "server-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "server-object",
+                                        "anchor": "serverObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"serverVariableObject\"></a>Server Variable Object</h4>",
+                                    "html": "<h4 id=\"server-variable-object\"><a name=\"serverVariableObject\"></a>Server Variable Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -1754,7 +1899,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_5\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1815,15 +1960,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_5",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "server-variable-object",
+                                        "anchor": "serverVariableObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"componentsObject\"></a>Components Object</h4>",
+                                    "html": "<h4 id=\"components-object\"><a name=\"componentsObject\"></a>Components Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -1850,7 +2005,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_6\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -1992,13 +2147,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_6",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Components Object Example</h5>",
+                                            "html": "<h5 id=\"components-object-example\">Components Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2043,15 +2203,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "components-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "components-object",
+                                        "anchor": "componentsObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"pathsObject\"></a>Paths Object</h4>",
+                                    "html": "<h4 id=\"paths-object\"><a name=\"pathsObject\"></a>Paths Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -2078,7 +2248,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Patterned Fields</h5>",
+                                            "html": "<h5 id=\"patterned-fields\">Patterned Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2129,13 +2299,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "patterned-fields",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Path Templating Matching</h5>",
+                                            "html": "<h5 id=\"path-templating-matching\">Path Templating Matching</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2240,13 +2415,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "path-templating-matching",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Paths Object Example</h5>",
+                                            "html": "<h5 id=\"paths-object-example\">Paths Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2291,15 +2471,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "paths-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "paths-object",
+                                        "anchor": "pathsObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"pathItemObject\"></a>Path Item Object</h4>",
+                                    "html": "<h4 id=\"path-item-object\"><a name=\"pathItemObject\"></a>Path Item Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -2326,7 +2516,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_7\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2437,13 +2627,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_7",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Path Item Object Example</h5>",
+                                            "html": "<h5 id=\"path-item-object-example\">Path Item Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2488,15 +2683,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "path-item-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "path-item-object",
+                                        "anchor": "pathItemObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"operationObject\"></a>Operation Object</h4>",
+                                    "html": "<h4 id=\"operation-object\"><a name=\"operationObject\"></a>Operation Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -2523,7 +2728,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_8\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2629,13 +2834,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_8",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Operation Object Example</h5>",
+                                            "html": "<h5 id=\"operation-object-example\">Operation Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2680,15 +2890,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "operation-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "operation-object",
+                                        "anchor": "operationObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"externalDocumentationObject\"></a>External Documentation Object</h4>",
+                                    "html": "<h4 id=\"external-documentation-object\"><a name=\"externalDocumentationObject\"></a>External Documentation Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -2715,7 +2935,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_9\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2771,13 +2991,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_9",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>External Documentation Object Example</h5>",
+                                            "html": "<h5 id=\"external-documentation-object-example\">External Documentation Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2822,15 +3047,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "external-documentation-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "external-documentation-object",
+                                        "anchor": "externalDocumentationObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"parameterObject\"></a>Parameter Object</h4>",
+                                    "html": "<h4 id=\"parameter-object\"><a name=\"parameterObject\"></a>Parameter Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -2871,7 +3106,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Parameter Locations</h5>",
+                                            "html": "<h5 id=\"parameter-locations\">Parameter Locations</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -2894,13 +3129,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "parameter-locations",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_10\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -3071,13 +3311,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_10",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5><a name=\"styleValues\"></a>Style Values</h5>",
+                                            "html": "<h5 id=\"style-values\"><a name=\"styleValues\"></a>Style Values</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -3166,13 +3411,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "style-values",
+                                                "anchor": "styleValues"
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Style Examples</h5>",
+                                            "html": "<h5 id=\"style-examples\">Style Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -3355,13 +3605,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "style-examples",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Parameter Object Examples</h5>",
+                                            "html": "<h5 id=\"parameter-object-examples\">Parameter Object Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -3620,15 +3875,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "parameter-object-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "parameter-object",
+                                        "anchor": "parameterObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"requestBodyObject\"></a>Request Body Object</h4>",
+                                    "html": "<h4 id=\"request-body-object\"><a name=\"requestBodyObject\"></a>Request Body Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -3655,7 +3920,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_11\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -3716,13 +3981,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_11",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Request Body Examples</h5>",
+                                            "html": "<h5 id=\"request-body-examples\">Request Body Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -3831,15 +4101,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "request-body-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "request-body-object",
+                                        "anchor": "requestBodyObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"mediaTypeObject\"></a>Media Type Object</h4>",
+                                    "html": "<h4 id=\"media-type-object\"><a name=\"mediaTypeObject\"></a>Media Type Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -3866,7 +4146,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_12\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -3932,13 +4212,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_12",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Media Type Examples</h5>",
+                                            "html": "<h5 id=\"media-type-examples\">Media Type Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -3983,13 +4268,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "media-type-examples",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Considerations for File Uploads</h5>",
+                                            "html": "<h5 id=\"considerations-for-file-uploads\">Considerations for File Uploads</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4274,13 +4564,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "considerations-for-file-uploads",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Support for x-www-form-urlencoded Request Bodies</h5>",
+                                            "html": "<h5 id=\"support-for-x-www-form-urlencoded-request-bodies\">Support for x-www-form-urlencoded Request Bodies</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4349,13 +4644,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "support-for-x-www-form-urlencoded-request-bodies",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Special Considerations for <code>multipart</code> Content</h5>",
+                                            "html": "<h5 id=\"special-considerations-for-multipart-content\">Special Considerations for <code>multipart</code> Content</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4480,15 +4780,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "special-considerations-for-multipart-content",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "media-type-object",
+                                        "anchor": "mediaTypeObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"encodingObject\"></a>Encoding Object</h4>",
+                                    "html": "<h4 id=\"encoding-object\"><a name=\"encodingObject\"></a>Encoding Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -4515,7 +4825,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_13\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4586,13 +4896,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_13",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Encoding Object Example</h5>",
+                                            "html": "<h5 id=\"encoding-object-example\">Encoding Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4619,15 +4934,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "encoding-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "encoding-object",
+                                        "anchor": "encodingObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"responsesObject\"></a>Responses Object</h4>",
+                                    "html": "<h4 id=\"responses-object\"><a name=\"responsesObject\"></a>Responses Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -4696,7 +5021,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_14\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4733,13 +5058,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_14",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Patterned Fields</h5>",
+                                            "html": "<h5 id=\"patterned-fields_1\">Patterned Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4790,13 +5120,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "patterned-fields_1",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Responses Object Example</h5>",
+                                            "html": "<h5 id=\"responses-object-example\">Responses Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4855,15 +5190,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "responses-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "responses-object",
+                                        "anchor": "responsesObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"responseObject\"></a>Response Object</h4>",
+                                    "html": "<h4 id=\"response-object\"><a name=\"responseObject\"></a>Response Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -4890,7 +5235,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_15\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -4956,13 +5301,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_15",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Response Object Examples</h5>",
+                                            "html": "<h5 id=\"response-object-examples\">Response Object Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -5171,15 +5521,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "response-object-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "response-object",
+                                        "anchor": "responseObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"callbackObject\"></a>Callback Object</h4>",
+                                    "html": "<h4 id=\"callback-object\"><a name=\"callbackObject\"></a>Callback Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -5220,7 +5580,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Patterned Fields</h5>",
+                                            "html": "<h5 id=\"patterned-fields_2\">Patterned Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -5271,13 +5631,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "patterned-fields_2",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Key Expression</h5>",
+                                            "html": "<h5 id=\"key-expression\">Key Expression</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -5400,13 +5765,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "key-expression",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Callback Object Examples</h5>",
+                                            "html": "<h5 id=\"callback-object-examples\">Callback Object Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -5479,15 +5849,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "callback-object-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "callback-object",
+                                        "anchor": "callbackObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"exampleObject\"></a>Example Object</h4>",
+                                    "html": "<h4 id=\"example-object\"><a name=\"exampleObject\"></a>Example Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -5500,7 +5880,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_16\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -5580,13 +5960,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_16",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Example Object Examples</h5>",
+                                            "html": "<h5 id=\"example-object-examples\">Example Object Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -5691,15 +6076,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "example-object-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "example-object",
+                                        "anchor": "exampleObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"linkObject\"></a>Link Object</h4>",
+                                    "html": "<h4 id=\"link-object\"><a name=\"linkObject\"></a>Link Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -5754,7 +6149,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_17\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -5844,13 +6239,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_17",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Examples</h5>",
+                                            "html": "<h5 id=\"examples\">Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -5951,13 +6351,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "examples",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>OperationRef Examples</h5>",
+                                            "html": "<h5 id=\"operationref-examples\">OperationRef Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6044,13 +6449,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "operationref-examples",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5><a name=\"runtimeExpression\"></a>Runtime Expressions</h5>",
+                                            "html": "<h5 id=\"runtime-expressions\"><a name=\"runtimeExpression\"></a>Runtime Expressions</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6147,13 +6557,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "runtime-expressions",
+                                                "anchor": "runtimeExpression"
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5><a name=\"runtimeExpressionExamples\"></a>Examples</h5>",
+                                            "html": "<h5 id=\"examples_1\"><a name=\"runtimeExpressionExamples\"></a>Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6190,15 +6605,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "examples_1",
+                                                "anchor": "runtimeExpressionExamples"
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "link-object",
+                                        "anchor": "linkObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"headerObject\"></a>Header Object</h4>",
+                                    "html": "<h4 id=\"header-object\"><a name=\"headerObject\"></a>Header Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -6239,7 +6664,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Header Object Example</h5>",
+                                            "html": "<h5 id=\"header-object-example\">Header Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6298,15 +6723,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "header-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "header-object",
+                                        "anchor": "headerObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"tagObject\"></a>Tag Object</h4>",
+                                    "html": "<h4 id=\"tag-object\"><a name=\"tagObject\"></a>Tag Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -6333,7 +6768,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_18\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6394,13 +6829,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_18",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Tag Object Example</h5>",
+                                            "html": "<h5 id=\"tag-object-example\">Tag Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6445,15 +6885,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "tag-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "tag-object",
+                                        "anchor": "tagObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"referenceObject\"></a>Reference Object</h4>",
+                                    "html": "<h4 id=\"reference-object\"><a name=\"referenceObject\"></a>Reference Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -6508,7 +6958,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_19\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6583,13 +7033,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_19",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Reference Object Example</h5>",
+                                            "html": "<h5 id=\"reference-object-example\">Reference Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6634,13 +7089,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "reference-object-example",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Relative Schema Document Example</h5>",
+                                            "html": "<h5 id=\"relative-schema-document-example\">Relative Schema Document Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6685,13 +7145,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "relative-schema-document-example",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Relative Documents With Embedded Schema Example</h5>",
+                                            "html": "<h5 id=\"relative-documents-with-embedded-schema-example\">Relative Documents With Embedded Schema Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6736,15 +7201,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "relative-documents-with-embedded-schema-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "reference-object",
+                                        "anchor": "referenceObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"schemaObject\"></a>Schema Object</h4>",
+                                    "html": "<h4 id=\"schema-object\"><a name=\"schemaObject\"></a>Schema Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -6799,7 +7274,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Properties</h5>",
+                                            "html": "<h5 id=\"properties\">Properties</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6892,13 +7367,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "properties",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5><a name=\"baseVocabulary\"></a>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_20\"><a name=\"baseVocabulary\"></a>Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -6968,7 +7448,7 @@
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6><a name=\"schemaComposition\"></a>Composition and Inheritance (Polymorphism)</h6>",
+                                                    "html": "<h6 id=\"composition-and-inheritance-polymorphism\"><a name=\"schemaComposition\"></a>Composition and Inheritance (Polymorphism)</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7005,13 +7485,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "composition-and-inheritance-polymorphism",
+                                                        "anchor": "schemaComposition"
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>XML Modeling</h6>",
+                                                    "html": "<h6 id=\"xml-modeling\">XML Modeling</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7034,13 +7519,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "xml-modeling",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Specifying Schema Dialects</h6>",
+                                                    "html": "<h6 id=\"specifying-schema-dialects\">Specifying Schema Dialects</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7105,15 +7595,25 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "specifying-schema-dialects",
+                                                        "anchor": null
+                                                    }
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_20",
+                                                "anchor": "baseVocabulary"
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Schema Object Examples</h5>",
+                                            "html": "<h5 id=\"schema-object-examples\">Schema Object Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -7126,7 +7626,7 @@
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Primitive Sample</h6>",
+                                                    "html": "<h6 id=\"primitive-sample\">Primitive Sample</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7171,13 +7671,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "primitive-sample",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Simple Model</h6>",
+                                                    "html": "<h6 id=\"simple-model\">Simple Model</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7222,13 +7727,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "simple-model",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Model with Map/Dictionary Properties</h6>",
+                                                    "html": "<h6 id=\"model-with-mapdictionary-properties\">Model with Map/Dictionary Properties</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7337,13 +7847,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "model-with-mapdictionary-properties",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Model with Example</h6>",
+                                                    "html": "<h6 id=\"model-with-example\">Model with Example</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7388,13 +7903,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "model-with-example",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Models with Composition</h6>",
+                                                    "html": "<h6 id=\"models-with-composition\">Models with Composition</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7439,13 +7959,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "models-with-composition",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Models with Polymorphism Support</h6>",
+                                                    "html": "<h6 id=\"models-with-polymorphism-support\">Models with Polymorphism Support</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -7490,17 +8015,32 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "models-with-polymorphism-support",
+                                                        "anchor": null
+                                                    }
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "schema-object-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "schema-object",
+                                        "anchor": "schemaObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"discriminatorObject\"></a>Discriminator Object</h4>",
+                                    "html": "<h4 id=\"discriminator-object\"><a name=\"discriminatorObject\"></a>Discriminator Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -7541,7 +8081,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_21\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -7905,15 +8445,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_21",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "discriminator-object",
+                                        "anchor": "discriminatorObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"xmlObject\"></a>XML Object</h4>",
+                                    "html": "<h4 id=\"xml-object\"><a name=\"xmlObject\"></a>XML Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -7954,7 +8504,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_22\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -8025,13 +8575,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_22",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>XML Object Examples</h5>",
+                                            "html": "<h5 id=\"xml-object-examples\">XML Object Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -8058,7 +8613,7 @@
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>No XML Element</h6>",
+                                                    "html": "<h6 id=\"no-xml-element\">No XML Element</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -8203,13 +8758,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "no-xml-element",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>XML Name Replacement</h6>",
+                                                    "html": "<h6 id=\"xml-name-replacement\">XML Name Replacement</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -8272,13 +8832,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "xml-name-replacement",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>XML Attribute, Prefix and Namespace</h6>",
+                                                    "html": "<h6 id=\"xml-attribute-prefix-and-namespace\">XML Attribute, Prefix and Namespace</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -8355,13 +8920,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "xml-attribute-prefix-and-namespace",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>XML Arrays</h6>",
+                                                    "html": "<h6 id=\"xml-arrays\">XML Arrays</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -8778,17 +9348,32 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "xml-arrays",
+                                                        "anchor": null
+                                                    }
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "xml-object-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "xml-object",
+                                        "anchor": "xmlObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"securitySchemeObject\"></a>Security Scheme Object</h4>",
+                                    "html": "<h4 id=\"security-scheme-object\"><a name=\"securitySchemeObject\"></a>Security Scheme Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -8829,7 +9414,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_23\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -8924,13 +9509,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_23",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Security Scheme Object Example</h5>",
+                                            "html": "<h5 id=\"security-scheme-object-example\">Security Scheme Object Example</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -8943,7 +9533,7 @@
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Basic Authentication Sample</h6>",
+                                                    "html": "<h6 id=\"basic-authentication-sample\">Basic Authentication Sample</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -8988,13 +9578,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "basic-authentication-sample",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>API Key Sample</h6>",
+                                                    "html": "<h6 id=\"api-key-sample\">API Key Sample</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -9039,13 +9634,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "api-key-sample",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>JWT Bearer Sample</h6>",
+                                                    "html": "<h6 id=\"jwt-bearer-sample\">JWT Bearer Sample</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -9090,13 +9690,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "jwt-bearer-sample",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Implicit OAuth2 Sample</h6>",
+                                                    "html": "<h6 id=\"implicit-oauth2-sample\">Implicit OAuth2 Sample</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -9141,17 +9746,32 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "implicit-oauth2-sample",
+                                                        "anchor": null
+                                                    }
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "security-scheme-object-example",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "security-scheme-object",
+                                        "anchor": "securitySchemeObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"oauthFlowsObject\"></a>OAuth Flows Object</h4>",
+                                    "html": "<h4 id=\"oauth-flows-object\"><a name=\"oauthFlowsObject\"></a>OAuth Flows Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -9178,7 +9798,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_24\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -9244,15 +9864,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_24",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "oauth-flows-object",
+                                        "anchor": "oauthFlowsObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"oauthFlowObject\"></a>OAuth Flow Object</h4>",
+                                    "html": "<h4 id=\"oauth-flow-object\"><a name=\"oauthFlowObject\"></a>OAuth Flow Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -9279,7 +9909,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Fixed Fields</h5>",
+                                            "html": "<h5 id=\"fixed-fields_25\">Fixed Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -9350,13 +9980,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "fixed-fields_25",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>OAuth Flow Object Examples</h5>",
+                                            "html": "<h5 id=\"oauth-flow-object-examples\">OAuth Flow Object Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -9401,15 +10036,25 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "oauth-flow-object-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "oauth-flow-object",
+                                        "anchor": "oauthFlowObject"
+                                    }
                                 },
                                 {
                                     "type": "header",
                                     "subType": null,
                                     "level": 4,
-                                    "html": "<h4><a name=\"securityRequirementObject\"></a>Security Requirement Object</h4>",
+                                    "html": "<h4 id=\"security-requirement-object\"><a name=\"securityRequirementObject\"></a>Security Requirement Object</h4>",
                                     "children": [
                                         {
                                             "type": "content",
@@ -9464,7 +10109,7 @@
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Patterned Fields</h5>",
+                                            "html": "<h5 id=\"patterned-fields_3\">Patterned Fields</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -9501,13 +10146,18 @@
                                                     "html": "\n",
                                                     "children": []
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "patterned-fields_3",
+                                                "anchor": null
+                                            }
                                         },
                                         {
                                             "type": "header",
                                             "subType": null,
                                             "level": 5,
-                                            "html": "<h5>Security Requirement Object Examples</h5>",
+                                            "html": "<h5 id=\"security-requirement-object-examples\">Security Requirement Object Examples</h5>",
                                             "children": [
                                                 {
                                                     "type": "content",
@@ -9520,7 +10170,7 @@
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Non-OAuth2 Security Requirement</h6>",
+                                                    "html": "<h6 id=\"non-oauth2-security-requirement\">Non-OAuth2 Security Requirement</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -9565,13 +10215,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "non-oauth2-security-requirement",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>OAuth2 Security Requirement</h6>",
+                                                    "html": "<h6 id=\"oauth2-security-requirement\">OAuth2 Security Requirement</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -9616,13 +10271,18 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "oauth2-security-requirement",
+                                                        "anchor": null
+                                                    }
                                                 },
                                                 {
                                                     "type": "header",
                                                     "subType": null,
                                                     "level": 6,
-                                                    "html": "<h6>Optional OAuth2 Security</h6>",
+                                                    "html": "<h6 id=\"optional-oauth2-security\">Optional OAuth2 Security</h6>",
                                                     "children": [
                                                         {
                                                             "type": "content",
@@ -9681,19 +10341,39 @@
                                                             "html": "\n",
                                                             "children": []
                                                         }
-                                                    ]
+                                                    ],
+                                                    "header": {
+                                                        "level": 6,
+                                                        "id": "optional-oauth2-security",
+                                                        "anchor": null
+                                                    }
                                                 }
-                                            ]
+                                            ],
+                                            "header": {
+                                                "level": 5,
+                                                "id": "security-requirement-object-examples",
+                                                "anchor": null
+                                            }
                                         }
-                                    ]
+                                    ],
+                                    "header": {
+                                        "level": 4,
+                                        "id": "security-requirement-object",
+                                        "anchor": "securityRequirementObject"
+                                    }
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "schema",
+                                "anchor": null
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3><a name=\"specificationExtensions\"></a>Specification Extensions</h3>",
+                            "html": "<h3 id=\"specification-extensions\"><a name=\"specificationExtensions\"></a>Specification Extensions</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -9772,13 +10452,18 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "specification-extensions",
+                                "anchor": "specificationExtensions"
+                            }
                         },
                         {
                             "type": "header",
                             "subType": null,
                             "level": 3,
-                            "html": "<h3><a name=\"securityFiltering\"></a>Security Filtering</h3>",
+                            "html": "<h3 id=\"security-filtering\"><a name=\"securityFiltering\"></a>Security Filtering</h3>",
                             "children": [
                                 {
                                     "type": "content",
@@ -9843,15 +10528,25 @@
                                     "html": "\n",
                                     "children": []
                                 }
-                            ]
+                            ],
+                            "header": {
+                                "level": 3,
+                                "id": "security-filtering",
+                                "anchor": "securityFiltering"
+                            }
                         }
-                    ]
+                    ],
+                    "header": {
+                        "level": 2,
+                        "id": "specification",
+                        "anchor": null
+                    }
                 },
                 {
                     "type": "header",
                     "subType": null,
                     "level": 2,
-                    "html": "<h2><a name=\"revisionHistory\"></a>Appendix A: Revision History</h2>",
+                    "html": "<h2 id=\"appendix-a-revision-history\"><a name=\"revisionHistory\"></a>Appendix A: Revision History</h2>",
                     "children": [
                         {
                             "type": "content",
@@ -9951,9 +10646,19 @@
                                 ]
                             }
                         }
-                    ]
+                    ],
+                    "header": {
+                        "level": 2,
+                        "id": "appendix-a-revision-history",
+                        "anchor": "revisionHistory"
+                    }
                 }
-            ]
+            ],
+            "header": {
+                "level": 1,
+                "id": "openapi-specification",
+                "anchor": null
+            }
         }
     ]
 }

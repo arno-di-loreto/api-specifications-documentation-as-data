@@ -29,6 +29,32 @@ def get_parent_node(new_node, current_parent_node):
   else: # new_header_node.level < current_parent_node.level:
     return get_parent_node(new_node, current_parent_node.parent)
 
+class HeaderNode:
+  def __init__(self, node):
+    self.__init_level(node.soup)
+    self.__init__anchor(node.soup)
+    self.__init__id(node.soup)
+  
+  def __init_level(self, soup):
+    self.level = get_header_level(soup)
+
+  def __init__anchor(self, soup):
+    anchor = soup.find('a')
+    if anchor != None:
+      self.anchor = anchor['name']
+    else:
+      self.anchor = None
+
+  def __init__id(self, soup):
+    self.id = soup['id']
+
+  def to_dict(self):
+    return {
+      'level': self.level,
+      'id': self.id,
+      'anchor': self.anchor
+    }
+
 class CodeNode:
 
   def __init__(self, node):
@@ -98,6 +124,7 @@ class Node:
       if header_level > 0:
         self.type = 'header'
         self.level = header_level
+        self.header = HeaderNode(self)
       else:
         self.type = 'content'
         self.sub_type = get_content_sub_type(self.soup)
@@ -125,10 +152,14 @@ class Node:
       'html': str(self.soup),
       'children': dict_children
     }
-    if self.sub_type == 'code':
-      dict_node['code'] = self.code.to_dict()
-    if self.sub_type == 'table':
-      dict_node['table'] = self.table.to_dict()
+    if self.type == 'header':
+      dict_node['header'] = self.header.to_dict()
+    elif self.type == 'content':
+      if self.sub_type == 'code':
+        dict_node['code'] = self.code.to_dict()
+      elif self.sub_type == 'table':
+        dict_node['table'] = self.table.to_dict()
+    
     return dict_node
 
 
@@ -150,7 +181,7 @@ def load_markdown_as_html(file):
   specification_location = file
   markdown_file = open(specification_location)
   markdown_content = markdown_file.read();
-  md = markdown.Markdown(extensions=['tables',  'fenced_code'])
+  md = markdown.Markdown(extensions=['tables',  'fenced_code', 'toc'])
   html = md.convert(markdown_content)
   return html
 
