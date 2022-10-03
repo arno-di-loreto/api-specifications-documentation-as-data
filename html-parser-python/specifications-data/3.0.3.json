@@ -4,10 +4,11 @@
         {
             "name": "OpenAPI Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "oasVersion",
                     "name": "openapi",
+                    "nameType": "fixed",
+                    "id": "oasVersion",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -19,8 +20,9 @@
                     "description": "REQUIRED. This string MUST be the semantic version number of the OpenAPI Specification version that the OpenAPI document uses. The openapi field SHOULD be used by tooling specifications and clients to interpret the OpenAPI document. This is not related to the API info.version string."
                 },
                 {
-                    "id": "oasInfo",
                     "name": "info",
+                    "nameType": "fixed",
+                    "id": "oasInfo",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -32,8 +34,9 @@
                     "description": "REQUIRED. Provides metadata about the API. The metadata MAY be used by tooling as required."
                 },
                 {
-                    "id": "oasServers",
                     "name": "servers",
+                    "nameType": "fixed",
+                    "id": "oasServers",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -45,8 +48,9 @@
                     "description": "An array of Server Objects, which provide connectivity information to a target server. If the servers property is not provided, or is an empty array, the default value would be a Server Object with a url value of /."
                 },
                 {
-                    "id": "oasPaths",
                     "name": "paths",
+                    "nameType": "fixed",
+                    "id": "oasPaths",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -58,8 +62,9 @@
                     "description": "REQUIRED. The available paths and operations for the API."
                 },
                 {
-                    "id": "oasComponents",
                     "name": "components",
+                    "nameType": "fixed",
+                    "id": "oasComponents",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -71,8 +76,9 @@
                     "description": "An element to hold various schemas for the specification."
                 },
                 {
-                    "id": "oasSecurity",
                     "name": "security",
+                    "nameType": "fixed",
+                    "id": "oasSecurity",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -84,8 +90,9 @@
                     "description": "A declaration of which security mechanisms can be used across the API. The list of values includes alternative security requirement objects that can be used. Only one of the security requirement objects need to be satisfied to authorize a request. Individual operations can override this definition. To make security optional, an empty security requirement ({}) can be included in the array."
                 },
                 {
-                    "id": "oasTags",
                     "name": "tags",
+                    "nameType": "fixed",
+                    "id": "oasTags",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -97,8 +104,9 @@
                     "description": "A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared MAY be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique."
                 },
                 {
-                    "id": "oasExternalDocs",
                     "name": "externalDocs",
+                    "nameType": "fixed",
+                    "id": "oasExternalDocs",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -114,10 +122,11 @@
         {
             "name": "Info Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "infoTitle",
                     "name": "title",
+                    "nameType": "fixed",
+                    "id": "infoTitle",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -129,8 +138,9 @@
                     "description": "REQUIRED. The title of the API."
                 },
                 {
-                    "id": "infoDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "infoDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -142,8 +152,9 @@
                     "description": "A short description of the API. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "infoTermsOfService",
                     "name": "termsOfService",
+                    "nameType": "fixed",
+                    "id": "infoTermsOfService",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -155,8 +166,9 @@
                     "description": "A URL to the Terms of Service for the API. MUST be in the format of a URL."
                 },
                 {
-                    "id": "infoContact",
                     "name": "contact",
+                    "nameType": "fixed",
+                    "id": "infoContact",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -168,8 +180,9 @@
                     "description": "The contact information for the exposed API."
                 },
                 {
-                    "id": "infoLicense",
                     "name": "license",
+                    "nameType": "fixed",
+                    "id": "infoLicense",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -181,8 +194,9 @@
                     "description": "The license information for the exposed API."
                 },
                 {
-                    "id": "infoVersion",
                     "name": "version",
+                    "nameType": "fixed",
+                    "id": "infoVersion",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -198,10 +212,11 @@
         {
             "name": "Contact Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "contactName",
                     "name": "name",
+                    "nameType": "fixed",
+                    "id": "contactName",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -213,8 +228,9 @@
                     "description": "The identifying name of the contact person/organization."
                 },
                 {
-                    "id": "contactUrl",
                     "name": "url",
+                    "nameType": "fixed",
+                    "id": "contactUrl",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -226,8 +242,9 @@
                     "description": "The URL pointing to the contact information. MUST be in the format of a URL."
                 },
                 {
-                    "id": "contactEmail",
                     "name": "email",
+                    "nameType": "fixed",
+                    "id": "contactEmail",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -243,10 +260,11 @@
         {
             "name": "License Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "licenseName",
                     "name": "name",
+                    "nameType": "fixed",
+                    "id": "licenseName",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -258,8 +276,9 @@
                     "description": "REQUIRED. The license name used for the API."
                 },
                 {
-                    "id": "licenseUrl",
                     "name": "url",
+                    "nameType": "fixed",
+                    "id": "licenseUrl",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -275,10 +294,11 @@
         {
             "name": "Server Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "serverUrl",
                     "name": "url",
+                    "nameType": "fixed",
+                    "id": "serverUrl",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -290,8 +310,9 @@
                     "description": "REQUIRED. A URL to the target host.  This URL supports Server Variables and MAY be relative, to indicate that the host location is relative to the location where the OpenAPI document is being served. Variable substitutions will be made when a variable is named in {brackets}."
                 },
                 {
-                    "id": "serverDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "serverDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -303,8 +324,9 @@
                     "description": "An optional string describing the host designated by the URL. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "serverVariables",
                     "name": "variables",
+                    "nameType": "fixed",
+                    "id": "serverVariables",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -320,10 +342,11 @@
         {
             "name": "Server Variable Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "serverVariableEnum",
                     "name": "enum",
+                    "nameType": "fixed",
+                    "id": "serverVariableEnum",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -335,8 +358,9 @@
                     "description": "An enumeration of string values to be used if the substitution options are from a limited set. The array SHOULD NOT be empty."
                 },
                 {
-                    "id": "serverVariableDefault",
                     "name": "default",
+                    "nameType": "fixed",
+                    "id": "serverVariableDefault",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -348,8 +372,9 @@
                     "description": "REQUIRED. The default value to use for substitution, which SHALL be sent if an alternate value is not supplied. Note this behavior is different than the Schema Object's treatment of default values, because in those cases parameter values are optional. If the enum is defined, the value SHOULD exist in the enum's values."
                 },
                 {
-                    "id": "serverVariableDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "serverVariableDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -365,10 +390,11 @@
         {
             "name": "Components Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "componentsSchemas",
                     "name": " schemas",
+                    "nameType": "fixed",
+                    "id": "componentsSchemas",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -381,8 +407,9 @@
                     "description": "An object to hold reusable Schema Objects."
                 },
                 {
-                    "id": "componentsResponses",
                     "name": " responses",
+                    "nameType": "fixed",
+                    "id": "componentsResponses",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -395,8 +422,9 @@
                     "description": "An object to hold reusable Response Objects."
                 },
                 {
-                    "id": "componentsParameters",
                     "name": " parameters",
+                    "nameType": "fixed",
+                    "id": "componentsParameters",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -409,8 +437,9 @@
                     "description": "An object to hold reusable Parameter Objects."
                 },
                 {
-                    "id": "componentsExamples",
                     "name": " examples",
+                    "nameType": "fixed",
+                    "id": "componentsExamples",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -423,8 +452,9 @@
                     "description": "An object to hold reusable Example Objects."
                 },
                 {
-                    "id": "componentsRequestBodies",
                     "name": " requestBodies",
+                    "nameType": "fixed",
+                    "id": "componentsRequestBodies",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -437,8 +467,9 @@
                     "description": "An object to hold reusable Request Body Objects."
                 },
                 {
-                    "id": "componentsHeaders",
                     "name": " headers",
+                    "nameType": "fixed",
+                    "id": "componentsHeaders",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -451,8 +482,9 @@
                     "description": "An object to hold reusable Header Objects."
                 },
                 {
-                    "id": "componentsSecuritySchemes",
                     "name": " securitySchemes",
+                    "nameType": "fixed",
+                    "id": "componentsSecuritySchemes",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -465,8 +497,9 @@
                     "description": "An object to hold reusable Security Scheme Objects."
                 },
                 {
-                    "id": "componentsLinks",
                     "name": " links",
+                    "nameType": "fixed",
+                    "id": "componentsLinks",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -479,8 +512,9 @@
                     "description": "An object to hold reusable Link Objects."
                 },
                 {
-                    "id": "componentsCallbacks",
                     "name": " callbacks",
+                    "nameType": "fixed",
+                    "id": "componentsCallbacks",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -497,15 +531,31 @@
         {
             "name": "Paths Object",
             "extensible": true,
-            "fixedFields": []
+            "fields": [
+                {
+                    "name": "/{path}",
+                    "nameType": "patterned",
+                    "id": "pathsPath",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Path Item Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A relative path to an individual endpoint. The field name MUST begin with a forward slash (/). The path is appended (no relative URL resolution) to the expanded URL from the Server Object's url field in order to construct the full URL. Path templating is allowed. When matching URLs, concrete (non-templated) paths would be matched before their templated counterparts. Templated paths with the same hierarchy but different templated names MUST NOT exist as they are identical. In case of ambiguous matching, it's up to the tooling to decide which one to use."
+                }
+            ]
         },
         {
             "name": "Path Item Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "pathItemRef",
                     "name": "$ref",
+                    "nameType": "fixed",
+                    "id": "pathItemRef",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -517,8 +567,9 @@
                     "description": "Allows for an external definition of this path item. The referenced structure MUST be in the format of a Path Item Object.  In case a Path Item Object field appears both in the defined object and the referenced object, the behavior is undefined."
                 },
                 {
-                    "id": "pathItemSummary",
                     "name": "summary",
+                    "nameType": "fixed",
+                    "id": "pathItemSummary",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -530,8 +581,9 @@
                     "description": "An optional, string summary, intended to apply to all operations in this path."
                 },
                 {
-                    "id": "pathItemDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "pathItemDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -543,8 +595,9 @@
                     "description": "An optional, string description, intended to apply to all operations in this path. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "pathItemGet",
                     "name": "get",
+                    "nameType": "fixed",
+                    "id": "pathItemGet",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -556,8 +609,9 @@
                     "description": "A definition of a GET operation on this path."
                 },
                 {
-                    "id": "pathItemPut",
                     "name": "put",
+                    "nameType": "fixed",
+                    "id": "pathItemPut",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -569,8 +623,9 @@
                     "description": "A definition of a PUT operation on this path."
                 },
                 {
-                    "id": "pathItemPost",
                     "name": "post",
+                    "nameType": "fixed",
+                    "id": "pathItemPost",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -582,8 +637,9 @@
                     "description": "A definition of a POST operation on this path."
                 },
                 {
-                    "id": "pathItemDelete",
                     "name": "delete",
+                    "nameType": "fixed",
+                    "id": "pathItemDelete",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -595,8 +651,9 @@
                     "description": "A definition of a DELETE operation on this path."
                 },
                 {
-                    "id": "pathItemOptions",
                     "name": "options",
+                    "nameType": "fixed",
+                    "id": "pathItemOptions",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -608,8 +665,9 @@
                     "description": "A definition of a OPTIONS operation on this path."
                 },
                 {
-                    "id": "pathItemHead",
                     "name": "head",
+                    "nameType": "fixed",
+                    "id": "pathItemHead",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -621,8 +679,9 @@
                     "description": "A definition of a HEAD operation on this path."
                 },
                 {
-                    "id": "pathItemPatch",
                     "name": "patch",
+                    "nameType": "fixed",
+                    "id": "pathItemPatch",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -634,8 +693,9 @@
                     "description": "A definition of a PATCH operation on this path."
                 },
                 {
-                    "id": "pathItemTrace",
                     "name": "trace",
+                    "nameType": "fixed",
+                    "id": "pathItemTrace",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -647,8 +707,9 @@
                     "description": "A definition of a TRACE operation on this path."
                 },
                 {
-                    "id": "pathItemServers",
                     "name": "servers",
+                    "nameType": "fixed",
+                    "id": "pathItemServers",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -660,8 +721,9 @@
                     "description": "An alternative server array to service all operations in this path."
                 },
                 {
-                    "id": "pathItemParameters",
                     "name": "parameters",
+                    "nameType": "fixed",
+                    "id": "pathItemParameters",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -678,10 +740,11 @@
         {
             "name": "Operation Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "operationTags",
                     "name": "tags",
+                    "nameType": "fixed",
+                    "id": "operationTags",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -693,8 +756,9 @@
                     "description": "A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier."
                 },
                 {
-                    "id": "operationSummary",
                     "name": "summary",
+                    "nameType": "fixed",
+                    "id": "operationSummary",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -706,8 +770,9 @@
                     "description": "A short summary of what the operation does."
                 },
                 {
-                    "id": "operationDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "operationDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -719,8 +784,9 @@
                     "description": "A verbose explanation of the operation behavior. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "operationExternalDocs",
                     "name": "externalDocs",
+                    "nameType": "fixed",
+                    "id": "operationExternalDocs",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -732,8 +798,9 @@
                     "description": "Additional external documentation for this operation."
                 },
                 {
-                    "id": "operationId",
                     "name": "operationId",
+                    "nameType": "fixed",
+                    "id": "operationId",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -745,8 +812,9 @@
                     "description": "Unique string used to identify the operation. The id MUST be unique among all operations described in the API. The operationId value is case-sensitive. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is RECOMMENDED to follow common programming naming conventions."
                 },
                 {
-                    "id": "operationParameters",
                     "name": "parameters",
+                    "nameType": "fixed",
+                    "id": "operationParameters",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -759,8 +827,9 @@
                     "description": "A list of parameters that are applicable for this operation. If a parameter is already defined at the Path Item, the new definition will override it but can never remove it. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the OpenAPI Object's components/parameters."
                 },
                 {
-                    "id": "operationRequestBody",
                     "name": "requestBody",
+                    "nameType": "fixed",
+                    "id": "operationRequestBody",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -773,8 +842,9 @@
                     "description": "The request body applicable for this operation.  The requestBody is only supported in HTTP methods where the HTTP 1.1 specification RFC7231 has explicitly defined semantics for request bodies.  In other cases where the HTTP spec is vague, requestBody SHALL be ignored by consumers."
                 },
                 {
-                    "id": "operationResponses",
                     "name": "responses",
+                    "nameType": "fixed",
+                    "id": "operationResponses",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -786,8 +856,9 @@
                     "description": "REQUIRED. The list of possible responses as they are returned from executing this operation."
                 },
                 {
-                    "id": "operationCallbacks",
                     "name": "callbacks",
+                    "nameType": "fixed",
+                    "id": "operationCallbacks",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -800,8 +871,9 @@
                     "description": "A map of possible out-of band callbacks related to the parent operation. The key is a unique identifier for the Callback Object. Each value in the map is a Callback Object that describes a request that may be initiated by the API provider and the expected responses."
                 },
                 {
-                    "id": "operationDeprecated",
                     "name": "deprecated",
+                    "nameType": "fixed",
+                    "id": "operationDeprecated",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -813,8 +885,9 @@
                     "description": "Declares this operation to be deprecated. Consumers SHOULD refrain from usage of the declared operation. Default value is false."
                 },
                 {
-                    "id": "operationSecurity",
                     "name": "security",
+                    "nameType": "fixed",
+                    "id": "operationSecurity",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -826,8 +899,9 @@
                     "description": "A declaration of which security mechanisms can be used for this operation. The list of values includes alternative security requirement objects that can be used. Only one of the security requirement objects need to be satisfied to authorize a request. To make security optional, an empty security requirement ({}) can be included in the array. This definition overrides any declared top-level security. To remove a top-level security declaration, an empty array can be used."
                 },
                 {
-                    "id": "operationServers",
                     "name": "servers",
+                    "nameType": "fixed",
+                    "id": "operationServers",
                     "type": {
                         "listType": "array",
                         "mapKeyType": null,
@@ -843,10 +917,11 @@
         {
             "name": "External Documentation Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "externalDocDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "externalDocDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -858,8 +933,9 @@
                     "description": "A short description of the target documentation. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "externalDocUrl",
                     "name": "url",
+                    "nameType": "fixed",
+                    "id": "externalDocUrl",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -875,10 +951,11 @@
         {
             "name": "Parameter Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "parameterName",
                     "name": "name",
+                    "nameType": "fixed",
+                    "id": "parameterName",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -890,8 +967,9 @@
                     "description": "REQUIRED. The name of the parameter. Parameter names are case sensitive. If in is \"path\", the name field MUST correspond to a template expression occurring within the path field in the Paths Object. See Path Templating for further information.If in is \"header\" and the name field is \"Accept\", \"Content-Type\" or \"Authorization\", the parameter definition SHALL be ignored.For all other cases, the name corresponds to the parameter name used by the in property."
                 },
                 {
-                    "id": "parameterIn",
                     "name": "in",
+                    "nameType": "fixed",
+                    "id": "parameterIn",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -903,8 +981,9 @@
                     "description": "REQUIRED. The location of the parameter. Possible values are \"query\", \"header\", \"path\" or \"cookie\"."
                 },
                 {
-                    "id": "parameterDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "parameterDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -916,8 +995,9 @@
                     "description": "A brief description of the parameter. This could contain examples of use. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "parameterRequired",
                     "name": "required",
+                    "nameType": "fixed",
+                    "id": "parameterRequired",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -929,8 +1009,9 @@
                     "description": "Determines whether this parameter is mandatory. If the parameter location is \"path\", this property is REQUIRED and its value MUST be true. Otherwise, the property MAY be included and its default value is false."
                 },
                 {
-                    "id": "parameterDeprecated",
                     "name": " deprecated",
+                    "nameType": "fixed",
+                    "id": "parameterDeprecated",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -942,8 +1023,9 @@
                     "description": "Specifies that a parameter is deprecated and SHOULD be transitioned out of usage. Default value is false."
                 },
                 {
-                    "id": "parameterAllowEmptyValue",
                     "name": " allowEmptyValue",
+                    "nameType": "fixed",
+                    "id": "parameterAllowEmptyValue",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -955,8 +1037,9 @@
                     "description": "Sets the ability to pass empty-valued parameters. This is valid only for query parameters and allows sending a parameter with an empty value. Default value is false. If style is used, and if behavior is n/a (cannot be serialized), the value of allowEmptyValue SHALL be ignored. Use of this property is NOT RECOMMENDED, as it is likely to be removed in a later revision."
                 },
                 {
-                    "id": "parameterStyle",
                     "name": "style",
+                    "nameType": "fixed",
+                    "id": "parameterStyle",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -968,8 +1051,9 @@
                     "description": "Describes how the parameter value will be serialized depending on the type of the parameter value. Default values (based on value of in): for query - form; for path - simple; for header - simple; for cookie - form."
                 },
                 {
-                    "id": "parameterExplode",
                     "name": "explode",
+                    "nameType": "fixed",
+                    "id": "parameterExplode",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -981,8 +1065,9 @@
                     "description": "When this is true, parameter values of type array or object generate separate parameters for each value of the array or key-value pair of the map. For other types of parameters this property has no effect. When style is form, the default value is true. For all other styles, the default value is false."
                 },
                 {
-                    "id": "parameterAllowReserved",
                     "name": "allowReserved",
+                    "nameType": "fixed",
+                    "id": "parameterAllowReserved",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -994,8 +1079,9 @@
                     "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. This property only applies to parameters with an in value of query. The default value is false."
                 },
                 {
-                    "id": "parameterSchema",
                     "name": "schema",
+                    "nameType": "fixed",
+                    "id": "parameterSchema",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1008,8 +1094,9 @@
                     "description": "The schema defining the type used for the parameter."
                 },
                 {
-                    "id": "parameterExample",
                     "name": "example",
+                    "nameType": "fixed",
+                    "id": "parameterExample",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1021,8 +1108,9 @@
                     "description": "Example of the parameter's potential value. The example SHOULD match the specified schema and encoding properties if present. The example field is mutually exclusive of the examples field. Furthermore, if referencing a schema that contains an example, the example value SHALL override the example provided by the schema. To represent examples of media types that cannot naturally be represented in JSON or YAML, a string value can contain the example with escaping where necessary."
                 },
                 {
-                    "id": "parameterExamples",
                     "name": "examples",
+                    "nameType": "fixed",
+                    "id": "parameterExamples",
                     "type": {
                         "listType": "map",
                         "mapKeyType": " string",
@@ -1035,8 +1123,9 @@
                     "description": "Examples of the parameter's potential value. Each example SHOULD contain a value in the correct format as specified in the parameter encoding. The examples field is mutually exclusive of the example field. Furthermore, if referencing a schema that contains an example, the examples value SHALL override the example provided by the schema."
                 },
                 {
-                    "id": "parameterContent",
                     "name": "content",
+                    "nameType": "fixed",
+                    "id": "parameterContent",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1052,10 +1141,11 @@
         {
             "name": "Request Body Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "requestBodyDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "requestBodyDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1067,8 +1157,9 @@
                     "description": "A brief description of the request body. This could contain examples of use.  CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "requestBodyContent",
                     "name": "content",
+                    "nameType": "fixed",
+                    "id": "requestBodyContent",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1080,8 +1171,9 @@
                     "description": "REQUIRED. The content of the request body. The key is a media type or media type range and the value describes it.  For requests that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
                 },
                 {
-                    "id": "requestBodyRequired",
                     "name": "required",
+                    "nameType": "fixed",
+                    "id": "requestBodyRequired",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1097,10 +1189,11 @@
         {
             "name": "Media Type Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "mediaTypeSchema",
                     "name": "schema",
+                    "nameType": "fixed",
+                    "id": "mediaTypeSchema",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1113,8 +1206,9 @@
                     "description": "The schema defining the content of the request, response, or parameter."
                 },
                 {
-                    "id": "mediaTypeExample",
                     "name": "example",
+                    "nameType": "fixed",
+                    "id": "mediaTypeExample",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1126,8 +1220,9 @@
                     "description": "Example of the media type.  The example object SHOULD be in the correct format as specified by the media type.  The example field is mutually exclusive of the examples field.  Furthermore, if referencing a schema which contains an example, the example value SHALL override the example provided by the schema."
                 },
                 {
-                    "id": "mediaTypeExamples",
                     "name": "examples",
+                    "nameType": "fixed",
+                    "id": "mediaTypeExamples",
                     "type": {
                         "listType": "map",
                         "mapKeyType": " string",
@@ -1140,8 +1235,9 @@
                     "description": "Examples of the media type.  Each example object SHOULD  match the media type and specified schema if present.  The examples field is mutually exclusive of the example field.  Furthermore, if referencing a schema which contains an example, the examples value SHALL override the example provided by the schema."
                 },
                 {
-                    "id": "mediaTypeEncoding",
                     "name": "encoding",
+                    "nameType": "fixed",
+                    "id": "mediaTypeEncoding",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1157,10 +1253,11 @@
         {
             "name": "Encoding Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "encodingContentType",
                     "name": "contentType",
+                    "nameType": "fixed",
+                    "id": "encodingContentType",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1172,8 +1269,9 @@
                     "description": "The Content-Type for encoding a specific property. Default value depends on the property type: for string with format being binary \u2013 application/octet-stream; for other primitive types \u2013 text/plain; for object - application/json; for array \u2013 the default is defined based on the inner type. The value can be a specific media type (e.g. application/json), a wildcard media type (e.g. image/*), or a comma-separated list of the two types."
                 },
                 {
-                    "id": "encodingHeaders",
                     "name": "headers",
+                    "nameType": "fixed",
+                    "id": "encodingHeaders",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1186,8 +1284,9 @@
                     "description": "A map allowing additional information to be provided as headers, for example Content-Disposition.  Content-Type is described separately and SHALL be ignored in this section. This property SHALL be ignored if the request body media type is not a multipart."
                 },
                 {
-                    "id": "encodingStyle",
                     "name": "style",
+                    "nameType": "fixed",
+                    "id": "encodingStyle",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1199,8 +1298,9 @@
                     "description": "Describes how a specific property value will be serialized depending on its type.  See Parameter Object for details on the style property. The behavior follows the same values as query parameters, including default values. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded."
                 },
                 {
-                    "id": "encodingExplode",
                     "name": "explode",
+                    "nameType": "fixed",
+                    "id": "encodingExplode",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1212,8 +1312,9 @@
                     "description": "When this is true, property values of type array or object generate separate parameters for each value of the array, or key-value-pair of the map.  For other types of properties this property has no effect. When style is form, the default value is true. For all other styles, the default value is false. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded."
                 },
                 {
-                    "id": "encodingAllowReserved",
                     "name": "allowReserved",
+                    "nameType": "fixed",
+                    "id": "encodingAllowReserved",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1229,10 +1330,11 @@
         {
             "name": "Responses Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "responsesDefault",
                     "name": "default",
+                    "nameType": "fixed",
+                    "id": "responsesDefault",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1243,16 +1345,32 @@
                     },
                     "appliesTo": null,
                     "description": "The documentation of responses other than the ones declared for specific HTTP response codes. Use this field to cover undeclared responses. A Reference Object can link to a response that the OpenAPI Object's components/responses section defines."
+                },
+                {
+                    "name": "HTTP Status Code",
+                    "nameType": "patterned",
+                    "id": "responsesCode",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Response Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Any HTTP status code can be used as the property name, but only one property per code, to describe the expected response for that HTTP status code.  A Reference Object can link to a response that is defined in the OpenAPI Object's components/responses section. This field MUST be enclosed in quotation marks (for example, \"200\") for compatibility between JSON and YAML. To define a range of response codes, this field MAY contain the uppercase wildcard character X. For example, 2XX represents all response codes between [200-299]. Only the following range definitions are allowed: 1XX, 2XX, 3XX, 4XX, and 5XX. If a response is defined using an explicit code, the explicit code definition takes precedence over the range definition for that code."
                 }
             ]
         },
         {
             "name": "Response Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "responseDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "responseDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1264,8 +1382,9 @@
                     "description": "REQUIRED. A short description of the response. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "responseHeaders",
                     "name": "headers",
+                    "nameType": "fixed",
+                    "id": "responseHeaders",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1278,8 +1397,9 @@
                     "description": "Maps a header name to its definition. RFC7230 states header names are case insensitive. If a response header is defined with the name \"Content-Type\", it SHALL be ignored."
                 },
                 {
-                    "id": "responseContent",
                     "name": "content",
+                    "nameType": "fixed",
+                    "id": "responseContent",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1291,8 +1411,9 @@
                     "description": "A map containing descriptions of potential response payloads. The key is a media type or media type range and the value describes it.  For responses that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
                 },
                 {
-                    "id": "responseLinks",
                     "name": "links",
+                    "nameType": "fixed",
+                    "id": "responseLinks",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1309,15 +1430,31 @@
         {
             "name": "Callback Object",
             "extensible": true,
-            "fixedFields": []
+            "fields": [
+                {
+                    "name": "{expression}",
+                    "nameType": "patterned",
+                    "id": "callbackExpression",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Path Item Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A Path Item Object used to define a callback request and expected responses.  A complete example is available."
+                }
+            ]
         },
         {
             "name": "Example Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "exampleSummary",
                     "name": "summary",
+                    "nameType": "fixed",
+                    "id": "exampleSummary",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1329,8 +1466,9 @@
                     "description": "Short description for the example."
                 },
                 {
-                    "id": "exampleDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "exampleDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1342,8 +1480,9 @@
                     "description": "Long description for the example. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "exampleValue",
                     "name": "value",
+                    "nameType": "fixed",
+                    "id": "exampleValue",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1355,8 +1494,9 @@
                     "description": "Embedded literal example. The value field and externalValue field are mutually exclusive. To represent examples of media types that cannot naturally represented in JSON or YAML, use a string value to contain the example, escaping where necessary."
                 },
                 {
-                    "id": "exampleExternalValue",
                     "name": "externalValue",
+                    "nameType": "fixed",
+                    "id": "exampleExternalValue",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1372,10 +1512,11 @@
         {
             "name": "Link Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "linkOperationRef",
                     "name": "operationRef",
+                    "nameType": "fixed",
+                    "id": "linkOperationRef",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1387,8 +1528,9 @@
                     "description": "A relative or absolute URI reference to an OAS operation. This field is mutually exclusive of the operationId field, and MUST point to an Operation Object. Relative operationRef values MAY be used to locate an existing Operation Object in the OpenAPI definition."
                 },
                 {
-                    "id": "linkOperationId",
                     "name": "operationId",
+                    "nameType": "fixed",
+                    "id": "linkOperationId",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1400,8 +1542,9 @@
                     "description": "The name of an existing, resolvable OAS operation, as defined with a unique operationId.  This field is mutually exclusive of the operationRef field."
                 },
                 {
-                    "id": "linkParameters",
                     "name": "parameters",
+                    "nameType": "fixed",
+                    "id": "linkParameters",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1414,8 +1557,9 @@
                     "description": "A map representing parameters to pass to an operation as specified with operationId or identified via operationRef. The key is the parameter name to be used, whereas the value can be a constant or an expression to be evaluated and passed to the linked operation.  The parameter name can be qualified using the parameter location [{in}.]{name} for operations that use the same parameter name in different locations (e.g. path.id)."
                 },
                 {
-                    "id": "linkRequestBody",
                     "name": "requestBody",
+                    "nameType": "fixed",
+                    "id": "linkRequestBody",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1428,8 +1572,9 @@
                     "description": "A literal value or {expression} to use as a request body when calling the target operation."
                 },
                 {
-                    "id": "linkDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "linkDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1441,8 +1586,9 @@
                     "description": "A description of the link. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "linkServer",
                     "name": "server",
+                    "nameType": "fixed",
+                    "id": "linkServer",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1458,15 +1604,16 @@
         {
             "name": "Header Object",
             "extensible": false,
-            "fixedFields": []
+            "fields": []
         },
         {
             "name": "Tag Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "tagName",
                     "name": "name",
+                    "nameType": "fixed",
+                    "id": "tagName",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1478,8 +1625,9 @@
                     "description": "REQUIRED. The name of the tag."
                 },
                 {
-                    "id": "tagDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "tagDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1491,8 +1639,9 @@
                     "description": "A short description for the tag. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "tagExternalDocs",
                     "name": "externalDocs",
+                    "nameType": "fixed",
+                    "id": "tagExternalDocs",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1508,10 +1657,11 @@
         {
             "name": "Reference Object",
             "extensible": false,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "referenceRef",
                     "name": "$ref",
+                    "nameType": "fixed",
+                    "id": "referenceRef",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1527,10 +1677,11 @@
         {
             "name": "Schema Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "schemaNullable",
                     "name": "nullable",
+                    "nameType": "fixed",
+                    "id": "schemaNullable",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1542,8 +1693,9 @@
                     "description": "A true value adds \"null\" to the allowed type specified by the type keyword, only if type is explicitly defined within the same Schema Object. Other Schema Object constraints retain their defined behavior, and therefore may disallow the use of null as a value. A false value leaves the specified or default type unmodified. The default value is false."
                 },
                 {
-                    "id": "schemaDiscriminator",
                     "name": "discriminator",
+                    "nameType": "fixed",
+                    "id": "schemaDiscriminator",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1555,8 +1707,9 @@
                     "description": "Adds support for polymorphism. The discriminator is an object name that is used to differentiate between other schemas which may satisfy the payload description. See Composition and Inheritance for more details."
                 },
                 {
-                    "id": "schemaReadOnly",
                     "name": "readOnly",
+                    "nameType": "fixed",
+                    "id": "schemaReadOnly",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1568,8 +1721,9 @@
                     "description": "Relevant only for Schema \"properties\" definitions. Declares the property as \"read only\". This means that it MAY be sent as part of a response but SHOULD NOT be sent as part of the request. If the property is marked as readOnly being true and is in the required list, the required will take effect on the response only. A property MUST NOT be marked as both readOnly and writeOnly being true. Default value is false."
                 },
                 {
-                    "id": "schemaWriteOnly",
                     "name": "writeOnly",
+                    "nameType": "fixed",
+                    "id": "schemaWriteOnly",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1581,8 +1735,9 @@
                     "description": "Relevant only for Schema \"properties\" definitions. Declares the property as \"write only\". Therefore, it MAY be sent as part of a request but SHOULD NOT be sent as part of the response. If the property is marked as writeOnly being true and is in the required list, the required will take effect on the request only. A property MUST NOT be marked as both readOnly and writeOnly being true. Default value is false."
                 },
                 {
-                    "id": "schemaXml",
                     "name": "xml",
+                    "nameType": "fixed",
+                    "id": "schemaXml",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1594,8 +1749,9 @@
                     "description": "This MAY be used only on properties schemas. It has no effect on root schemas. Adds additional metadata to describe the XML representation of this property."
                 },
                 {
-                    "id": "schemaExternalDocs",
                     "name": "externalDocs",
+                    "nameType": "fixed",
+                    "id": "schemaExternalDocs",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1607,8 +1763,9 @@
                     "description": "Additional external documentation for this schema."
                 },
                 {
-                    "id": "schemaExample",
                     "name": "example",
+                    "nameType": "fixed",
+                    "id": "schemaExample",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1620,8 +1777,9 @@
                     "description": "A free-form property to include an example of an instance for this schema. To represent examples that cannot be naturally represented in JSON or YAML, a string value can be used to contain the example with escaping where necessary."
                 },
                 {
-                    "id": "schemaDeprecated",
                     "name": " deprecated",
+                    "nameType": "fixed",
+                    "id": "schemaDeprecated",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1637,10 +1795,11 @@
         {
             "name": "Discriminator Object",
             "extensible": false,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "propertyName",
                     "name": "propertyName",
+                    "nameType": "fixed",
+                    "id": "propertyName",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1652,8 +1811,9 @@
                     "description": "REQUIRED. The name of the property in the payload that will hold the discriminator value."
                 },
                 {
-                    "id": "discriminatorMapping",
                     "name": " mapping",
+                    "nameType": "fixed",
+                    "id": "discriminatorMapping",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1669,10 +1829,11 @@
         {
             "name": "XML Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "xmlName",
                     "name": "name",
+                    "nameType": "fixed",
+                    "id": "xmlName",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1684,8 +1845,9 @@
                     "description": "Replaces the name of the element/attribute used for the described schema property. When defined within items, it will affect the name of the individual XML elements within the list. When defined alongside type being array (outside the items), it will affect the wrapping element and only if wrapped is true. If wrapped is false, it will be ignored."
                 },
                 {
-                    "id": "xmlNamespace",
                     "name": "namespace",
+                    "nameType": "fixed",
+                    "id": "xmlNamespace",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1697,8 +1859,9 @@
                     "description": "The URI of the namespace definition. Value MUST be in the form of an absolute URI."
                 },
                 {
-                    "id": "xmlPrefix",
                     "name": "prefix",
+                    "nameType": "fixed",
+                    "id": "xmlPrefix",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1710,8 +1873,9 @@
                     "description": "The prefix to be used for the name."
                 },
                 {
-                    "id": "xmlAttribute",
                     "name": "attribute",
+                    "nameType": "fixed",
+                    "id": "xmlAttribute",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1723,8 +1887,9 @@
                     "description": "Declares whether the property definition translates to an attribute instead of an element. Default value is false."
                 },
                 {
-                    "id": "xmlWrapped",
                     "name": "wrapped",
+                    "nameType": "fixed",
+                    "id": "xmlWrapped",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1740,10 +1905,11 @@
         {
             "name": "Security Scheme Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "securitySchemeType",
                     "name": "type",
+                    "nameType": "fixed",
+                    "id": "securitySchemeType",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1755,8 +1921,9 @@
                     "description": "REQUIRED. The type of the security scheme. Valid values are \"apiKey\", \"http\", \"oauth2\", \"openIdConnect\"."
                 },
                 {
-                    "id": "securitySchemeDescription",
                     "name": "description",
+                    "nameType": "fixed",
+                    "id": "securitySchemeDescription",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1768,8 +1935,9 @@
                     "description": "A short description for security scheme. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
-                    "id": "securitySchemeName",
                     "name": "name",
+                    "nameType": "fixed",
+                    "id": "securitySchemeName",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1781,8 +1949,9 @@
                     "description": "REQUIRED. The name of the header, query or cookie parameter to be used."
                 },
                 {
-                    "id": "securitySchemeIn",
                     "name": "in",
+                    "nameType": "fixed",
+                    "id": "securitySchemeIn",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1794,8 +1963,9 @@
                     "description": "REQUIRED. The location of the API key. Valid values are \"query\", \"header\" or \"cookie\"."
                 },
                 {
-                    "id": "securitySchemeScheme",
                     "name": "scheme",
+                    "nameType": "fixed",
+                    "id": "securitySchemeScheme",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1807,8 +1977,9 @@
                     "description": "REQUIRED. The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.  The values used SHOULD be registered in the IANA Authentication Scheme registry."
                 },
                 {
-                    "id": "securitySchemeBearerFormat",
                     "name": "bearerFormat",
+                    "nameType": "fixed",
+                    "id": "securitySchemeBearerFormat",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1820,8 +1991,9 @@
                     "description": "A hint to the client to identify how the bearer token is formatted.  Bearer tokens are usually generated by an authorization server, so this information is primarily for documentation purposes."
                 },
                 {
-                    "id": "securitySchemeFlows",
                     "name": "flows",
+                    "nameType": "fixed",
+                    "id": "securitySchemeFlows",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1833,8 +2005,9 @@
                     "description": "REQUIRED. An object containing configuration information for the flow types supported."
                 },
                 {
-                    "id": "securitySchemeOpenIdConnectUrl",
                     "name": "openIdConnectUrl",
+                    "nameType": "fixed",
+                    "id": "securitySchemeOpenIdConnectUrl",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1850,10 +2023,11 @@
         {
             "name": "OAuth Flows Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "oauthFlowsImplicit",
                     "name": "implicit",
+                    "nameType": "fixed",
+                    "id": "oauthFlowsImplicit",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1865,8 +2039,9 @@
                     "description": "Configuration for the OAuth Implicit flow"
                 },
                 {
-                    "id": "oauthFlowsPassword",
                     "name": "password",
+                    "nameType": "fixed",
+                    "id": "oauthFlowsPassword",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1878,8 +2053,9 @@
                     "description": "Configuration for the OAuth Resource Owner Password flow"
                 },
                 {
-                    "id": "oauthFlowsClientCredentials",
                     "name": "clientCredentials",
+                    "nameType": "fixed",
+                    "id": "oauthFlowsClientCredentials",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1891,8 +2067,9 @@
                     "description": "Configuration for the OAuth Client Credentials flow.  Previously called application in OpenAPI 2.0."
                 },
                 {
-                    "id": "oauthFlowsAuthorizationCode",
                     "name": "authorizationCode",
+                    "nameType": "fixed",
+                    "id": "oauthFlowsAuthorizationCode",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1908,10 +2085,11 @@
         {
             "name": "OAuth Flow Object",
             "extensible": true,
-            "fixedFields": [
+            "fields": [
                 {
-                    "id": "oauthFlowAuthorizationUrl",
                     "name": "authorizationUrl",
+                    "nameType": "fixed",
+                    "id": "oauthFlowAuthorizationUrl",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1923,8 +2101,9 @@
                     "description": "REQUIRED. The authorization URL to be used for this flow. This MUST be in the form of a URL."
                 },
                 {
-                    "id": "oauthFlowTokenUrl",
                     "name": "tokenUrl",
+                    "nameType": "fixed",
+                    "id": "oauthFlowTokenUrl",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1936,8 +2115,9 @@
                     "description": "REQUIRED. The token URL to be used for this flow. This MUST be in the form of a URL."
                 },
                 {
-                    "id": "oauthFlowRefreshUrl",
                     "name": "refreshUrl",
+                    "nameType": "fixed",
+                    "id": "oauthFlowRefreshUrl",
                     "type": {
                         "listType": null,
                         "mapKeyType": null,
@@ -1949,8 +2129,9 @@
                     "description": "The URL to be used for obtaining refresh tokens. This MUST be in the form of a URL."
                 },
                 {
-                    "id": "oauthFlowScopes",
                     "name": "scopes",
+                    "nameType": "fixed",
+                    "id": "oauthFlowScopes",
                     "type": {
                         "listType": "map",
                         "mapKeyType": "string",
@@ -1966,7 +2147,22 @@
         {
             "name": "Security Requirement Object",
             "extensible": false,
-            "fixedFields": []
+            "fields": [
+                {
+                    "name": "{name}",
+                    "nameType": "patterned",
+                    "id": "securityRequirementsName",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Each name MUST correspond to a security scheme which is declared in the Security Schemes under the Components Object. If the security scheme is of type \"oauth2\" or \"openIdConnect\", then the value is a list of scope names required for the execution, and the list MAY be empty if authorization does not require a specified scope. For other security scheme types, the array MUST be empty."
+                }
+            ]
         }
     ]
 }

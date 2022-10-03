@@ -279,9 +279,10 @@ class FieldType:
     }
 
 class SchemaField:
-  def __init__(self, table_node_line):
+  def __init__(self, table_node_line, name_type):
     self.id = table_node_line.anchor
-    self.name = table_node_line.get_value_by_header(['Field Name'])
+    self.name_type = name_type
+    self.name = table_node_line.get_value_by_header(['Field Name', 'Field Pattern'])
     print('field: ', self.name.text)
     self.type = FieldType(table_node_line.get_value_by_header(['Type']))
     self.applies_to = table_node_line.get_value_by_header(['Validity','Applies To'])
@@ -292,15 +293,16 @@ class SchemaField:
     if self.applies_to != None:
       applies_to = self.applies_to.text
     return {
-      'id': self.id,
       'name': self.name.text,
+      'nameType': self.name_type,
+      'id': self.id,
       'type': self.type.to_dict(),
       'appliesTo': applies_to,
       'description': self.description.text
     }
 
 class SchemaFields:
-  def __init__(self, fields_node):
+  def __init__(self, fields_node, name_type):
     self.node = fields_node
     self.fields = []
     if fields_node != None:
@@ -309,9 +311,12 @@ class SchemaFields:
         if child.type == 'content' and child.sub_type == 'table':
           print('table found')
           for line in child.table.lines:
-            self.fields.append(SchemaField(line))
+            self.fields.append(SchemaField(line, name_type))
     else:
       print('NO fixed fields')
+
+  def append_fields(self, schema_fields):
+    self.fields = self.fields + schema_fields.fields
 
   def to_dict(self):
     fields_dict = []
@@ -330,7 +335,19 @@ class OpenApiSpecificationSchema:
   def __init_fields(self):
     print('=======>Schema ', self.name)
     fixed_fields_node = self.node.get_node('Fixed Fields', 'header')
-    self.fixedFields = SchemaFields(fixed_fields_node)
+    fixed_fields = SchemaFields(fixed_fields_node, 'fixed')
+    patterned_fields_node = self.node.get_node('Patterned Fields', 'header')
+    patterned_fields = SchemaFields(patterned_fields_node, 'patterned')
+    # in v2 ^x- are inconsistently in Patterned Objects and Patterned Field
+    patterned_objects_node = self.node.get_node('Patterned Objects', 'header')
+    patterned_objects = SchemaFields(patterned_objects_node, 'patterned')
+
+    self.fields = fixed_fields
+    self.fields.append_fields(patterned_fields)
+    self.fields.append_fields(patterned_objects)
+
+    # also in v2/v3 extension are not described as objects -> to add manually
+    # in v3 ^x- are not explicitly described -> To add manually
 
   def __init_is_extensible(self):
     self.is_extensible = False
@@ -346,7 +363,7 @@ class OpenApiSpecificationSchema:
     return {
       'name': self.name,
       'extensible': self.is_extensible,
-      'fixedFields': self.fixedFields.to_dict(),
+      'fields': self.fields.to_dict(),
       #'node': self.node.to_dict()
     }
 
