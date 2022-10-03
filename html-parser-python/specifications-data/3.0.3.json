@@ -15,6 +15,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. This string MUST be the semantic version number of the OpenAPI Specification version that the OpenAPI document uses. The openapi field SHOULD be used by tooling specifications and clients to interpret the OpenAPI document. This is not related to the API info.version string."
                 },
                 {
@@ -27,6 +28,7 @@
                             "Info Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. Provides metadata about the API. The metadata MAY be used by tooling as required."
                 },
                 {
@@ -39,6 +41,7 @@
                             "Server Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An array of Server Objects, which provide connectivity information to a target server. If the servers property is not provided, or is an empty array, the default value would be a Server Object with a url value of /."
                 },
                 {
@@ -51,6 +54,7 @@
                             "Paths Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The available paths and operations for the API."
                 },
                 {
@@ -63,6 +67,7 @@
                             "Components Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An element to hold various schemas for the specification."
                 },
                 {
@@ -75,6 +80,7 @@
                             "Security Requirement Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A declaration of which security mechanisms can be used across the API. The list of values includes alternative security requirement objects that can be used. Only one of the security requirement objects need to be satisfied to authorize a request. Individual operations can override this definition. To make security optional, an empty security requirement ({}) can be included in the array."
                 },
                 {
@@ -87,6 +93,7 @@
                             "Tag Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared MAY be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique."
                 },
                 {
@@ -99,6 +106,7 @@
                             "External Documentation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Additional external documentation."
                 }
             ]
@@ -117,6 +125,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The title of the API."
                 },
                 {
@@ -129,6 +138,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A short description of the API. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -141,6 +151,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A URL to the Terms of Service for the API. MUST be in the format of a URL."
                 },
                 {
@@ -153,6 +164,7 @@
                             "Contact Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The contact information for the exposed API."
                 },
                 {
@@ -165,6 +177,7 @@
                             "License Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The license information for the exposed API."
                 },
                 {
@@ -177,6 +190,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The version of the OpenAPI document (which is distinct from the OpenAPI Specification version or the API implementation version)."
                 }
             ]
@@ -195,6 +209,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The identifying name of the contact person/organization."
                 },
                 {
@@ -207,6 +222,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The URL pointing to the contact information. MUST be in the format of a URL."
                 },
                 {
@@ -219,6 +235,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The email address of the contact person/organization. MUST be in the format of an email address."
                 }
             ]
@@ -237,6 +254,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The license name used for the API."
                 },
                 {
@@ -249,6 +267,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A URL to the license used for the API. MUST be in the format of a URL."
                 }
             ]
@@ -267,6 +286,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. A URL to the target host.  This URL supports Server Variables and MAY be relative, to indicate that the host location is relative to the location where the OpenAPI document is being served. Variable substitutions will be made when a variable is named in {brackets}."
                 },
                 {
@@ -279,6 +299,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An optional string describing the host designated by the URL. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -291,6 +312,7 @@
                             "Server Variable Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A map between a variable name and its value.  The value is used for substitution in the server's URL template."
                 }
             ]
@@ -309,6 +331,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An enumeration of string values to be used if the substitution options are from a limited set. The array SHOULD NOT be empty."
                 },
                 {
@@ -321,6 +344,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The default value to use for substitution, which SHALL be sent if an alternate value is not supplied. Note this behavior is different than the Schema Object's treatment of default values, because in those cases parameter values are optional. If the enum is defined, the value SHOULD exist in the enum's values."
                 },
                 {
@@ -333,6 +357,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An optional description for the server variable. CommonMark syntax MAY be used for rich text representation."
                 }
             ]
@@ -352,6 +377,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Schema Objects."
                 },
                 {
@@ -365,6 +391,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Response Objects."
                 },
                 {
@@ -378,6 +405,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Parameter Objects."
                 },
                 {
@@ -391,6 +419,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Example Objects."
                 },
                 {
@@ -404,6 +433,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Request Body Objects."
                 },
                 {
@@ -417,6 +447,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Header Objects."
                 },
                 {
@@ -430,6 +461,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Security Scheme Objects."
                 },
                 {
@@ -443,6 +475,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Link Objects."
                 },
                 {
@@ -456,6 +489,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold reusable Callback Objects."
                 }
             ]
@@ -479,6 +513,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Allows for an external definition of this path item. The referenced structure MUST be in the format of a Path Item Object.  In case a Path Item Object field appears both in the defined object and the referenced object, the behavior is undefined."
                 },
                 {
@@ -491,6 +526,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An optional, string summary, intended to apply to all operations in this path."
                 },
                 {
@@ -503,6 +539,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An optional, string description, intended to apply to all operations in this path. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -515,6 +552,7 @@
                             "Operation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A definition of a GET operation on this path."
                 },
                 {
@@ -527,6 +565,7 @@
                             "Operation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A definition of a PUT operation on this path."
                 },
                 {
@@ -539,6 +578,7 @@
                             "Operation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A definition of a POST operation on this path."
                 },
                 {
@@ -551,6 +591,7 @@
                             "Operation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A definition of a DELETE operation on this path."
                 },
                 {
@@ -563,6 +604,7 @@
                             "Operation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A definition of a OPTIONS operation on this path."
                 },
                 {
@@ -575,6 +617,7 @@
                             "Operation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A definition of a HEAD operation on this path."
                 },
                 {
@@ -587,6 +630,7 @@
                             "Operation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A definition of a PATCH operation on this path."
                 },
                 {
@@ -599,6 +643,7 @@
                             "Operation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A definition of a TRACE operation on this path."
                 },
                 {
@@ -611,6 +656,7 @@
                             "Server Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An alternative server array to service all operations in this path."
                 },
                 {
@@ -624,6 +670,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A list of parameters that are applicable for all the operations described under this path. These parameters can be overridden at the operation level, but cannot be removed there. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the OpenAPI Object's components/parameters."
                 }
             ]
@@ -642,6 +689,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier."
                 },
                 {
@@ -654,6 +702,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A short summary of what the operation does."
                 },
                 {
@@ -666,6 +715,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A verbose explanation of the operation behavior. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -678,6 +728,7 @@
                             "External Documentation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Additional external documentation for this operation."
                 },
                 {
@@ -690,6 +741,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Unique string used to identify the operation. The id MUST be unique among all operations described in the API. The operationId value is case-sensitive. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is RECOMMENDED to follow common programming naming conventions."
                 },
                 {
@@ -703,6 +755,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A list of parameters that are applicable for this operation. If a parameter is already defined at the Path Item, the new definition will override it but can never remove it. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the OpenAPI Object's components/parameters."
                 },
                 {
@@ -716,6 +769,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The request body applicable for this operation.  The requestBody is only supported in HTTP methods where the HTTP 1.1 specification RFC7231 has explicitly defined semantics for request bodies.  In other cases where the HTTP spec is vague, requestBody SHALL be ignored by consumers."
                 },
                 {
@@ -728,6 +782,7 @@
                             "Responses Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The list of possible responses as they are returned from executing this operation."
                 },
                 {
@@ -741,6 +796,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A map of possible out-of band callbacks related to the parent operation. The key is a unique identifier for the Callback Object. Each value in the map is a Callback Object that describes a request that may be initiated by the API provider and the expected responses."
                 },
                 {
@@ -753,6 +809,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Declares this operation to be deprecated. Consumers SHOULD refrain from usage of the declared operation. Default value is false."
                 },
                 {
@@ -765,6 +822,7 @@
                             "Security Requirement Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A declaration of which security mechanisms can be used for this operation. The list of values includes alternative security requirement objects that can be used. Only one of the security requirement objects need to be satisfied to authorize a request. To make security optional, an empty security requirement ({}) can be included in the array. This definition overrides any declared top-level security. To remove a top-level security declaration, an empty array can be used."
                 },
                 {
@@ -777,6 +835,7 @@
                             "Server Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An alternative server array to service this operation. If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value."
                 }
             ]
@@ -795,6 +854,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A short description of the target documentation. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -807,6 +867,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The URL for the target documentation. Value MUST be in the format of a URL."
                 }
             ]
@@ -825,6 +886,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The name of the parameter. Parameter names are case sensitive. If in is \"path\", the name field MUST correspond to a template expression occurring within the path field in the Paths Object. See Path Templating for further information.If in is \"header\" and the name field is \"Accept\", \"Content-Type\" or \"Authorization\", the parameter definition SHALL be ignored.For all other cases, the name corresponds to the parameter name used by the in property."
                 },
                 {
@@ -837,6 +899,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The location of the parameter. Possible values are \"query\", \"header\", \"path\" or \"cookie\"."
                 },
                 {
@@ -849,6 +912,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A brief description of the parameter. This could contain examples of use. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -861,6 +925,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Determines whether this parameter is mandatory. If the parameter location is \"path\", this property is REQUIRED and its value MUST be true. Otherwise, the property MAY be included and its default value is false."
                 },
                 {
@@ -873,6 +938,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Specifies that a parameter is deprecated and SHOULD be transitioned out of usage. Default value is false."
                 },
                 {
@@ -885,6 +951,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Sets the ability to pass empty-valued parameters. This is valid only for query parameters and allows sending a parameter with an empty value. Default value is false. If style is used, and if behavior is n/a (cannot be serialized), the value of allowEmptyValue SHALL be ignored. Use of this property is NOT RECOMMENDED, as it is likely to be removed in a later revision."
                 },
                 {
@@ -897,6 +964,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Describes how the parameter value will be serialized depending on the type of the parameter value. Default values (based on value of in): for query - form; for path - simple; for header - simple; for cookie - form."
                 },
                 {
@@ -909,6 +977,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "When this is true, parameter values of type array or object generate separate parameters for each value of the array or key-value pair of the map. For other types of parameters this property has no effect. When style is form, the default value is true. For all other styles, the default value is false."
                 },
                 {
@@ -921,6 +990,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. This property only applies to parameters with an in value of query. The default value is false."
                 },
                 {
@@ -934,6 +1004,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The schema defining the type used for the parameter."
                 },
                 {
@@ -946,6 +1017,7 @@
                             "Any"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Example of the parameter's potential value. The example SHOULD match the specified schema and encoding properties if present. The example field is mutually exclusive of the examples field. Furthermore, if referencing a schema that contains an example, the example value SHALL override the example provided by the schema. To represent examples of media types that cannot naturally be represented in JSON or YAML, a string value can contain the example with escaping where necessary."
                 },
                 {
@@ -959,6 +1031,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Examples of the parameter's potential value. Each example SHOULD contain a value in the correct format as specified in the parameter encoding. The examples field is mutually exclusive of the example field. Furthermore, if referencing a schema that contains an example, the examples value SHALL override the example provided by the schema."
                 },
                 {
@@ -971,6 +1044,7 @@
                             "Media Type Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A map containing the representations for the parameter. The key is the media type and the value describes it. The map MUST only contain one entry."
                 }
             ]
@@ -989,6 +1063,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A brief description of the request body. This could contain examples of use.  CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -1001,6 +1076,7 @@
                             "Media Type Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The content of the request body. The key is a media type or media type range and the value describes it.  For requests that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
                 },
                 {
@@ -1013,6 +1089,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Determines if the request body is required in the request. Defaults to false."
                 }
             ]
@@ -1032,6 +1109,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The schema defining the content of the request, response, or parameter."
                 },
                 {
@@ -1044,6 +1122,7 @@
                             "Any"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Example of the media type.  The example object SHOULD be in the correct format as specified by the media type.  The example field is mutually exclusive of the examples field.  Furthermore, if referencing a schema which contains an example, the example value SHALL override the example provided by the schema."
                 },
                 {
@@ -1057,6 +1136,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Examples of the media type.  Each example object SHOULD  match the media type and specified schema if present.  The examples field is mutually exclusive of the example field.  Furthermore, if referencing a schema which contains an example, the examples value SHALL override the example provided by the schema."
                 },
                 {
@@ -1069,6 +1149,7 @@
                             "Encoding Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A map between a property name and its encoding information. The key, being the property name, MUST exist in the schema as a property. The encoding object SHALL only apply to requestBody objects when the media type is multipart or application/x-www-form-urlencoded."
                 }
             ]
@@ -1087,6 +1168,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The Content-Type for encoding a specific property. Default value depends on the property type: for string with format being binary \u2013 application/octet-stream; for other primitive types \u2013 text/plain; for object - application/json; for array \u2013 the default is defined based on the inner type. The value can be a specific media type (e.g. application/json), a wildcard media type (e.g. image/*), or a comma-separated list of the two types."
                 },
                 {
@@ -1100,6 +1182,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A map allowing additional information to be provided as headers, for example Content-Disposition.  Content-Type is described separately and SHALL be ignored in this section. This property SHALL be ignored if the request body media type is not a multipart."
                 },
                 {
@@ -1112,6 +1195,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Describes how a specific property value will be serialized depending on its type.  See Parameter Object for details on the style property. The behavior follows the same values as query parameters, including default values. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded."
                 },
                 {
@@ -1124,6 +1208,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "When this is true, property values of type array or object generate separate parameters for each value of the array, or key-value-pair of the map.  For other types of properties this property has no effect. When style is form, the default value is true. For all other styles, the default value is false. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded."
                 },
                 {
@@ -1136,6 +1221,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default value is false. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded."
                 }
             ]
@@ -1155,6 +1241,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The documentation of responses other than the ones declared for specific HTTP response codes. Use this field to cover undeclared responses. A Reference Object can link to a response that the OpenAPI Object's components/responses section defines."
                 }
             ]
@@ -1173,6 +1260,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. A short description of the response. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -1186,6 +1274,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Maps a header name to its definition. RFC7230 states header names are case insensitive. If a response header is defined with the name \"Content-Type\", it SHALL be ignored."
                 },
                 {
@@ -1198,6 +1287,7 @@
                             "Media Type Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A map containing descriptions of potential response payloads. The key is a media type or media type range and the value describes it.  For responses that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
                 },
                 {
@@ -1211,6 +1301,7 @@
                             "Reference Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A map of operations links that can be followed from the response. The key of the map is a short name for the link, following the naming constraints of the names for Component Objects."
                 }
             ]
@@ -1234,6 +1325,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Short description for the example."
                 },
                 {
@@ -1246,6 +1338,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Long description for the example. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -1258,6 +1351,7 @@
                             "Any"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Embedded literal example. The value field and externalValue field are mutually exclusive. To represent examples of media types that cannot naturally represented in JSON or YAML, use a string value to contain the example, escaping where necessary."
                 },
                 {
@@ -1270,6 +1364,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A URL that points to the literal example. This provides the capability to reference examples that cannot easily be included in JSON or YAML documents.  The value field and externalValue field are mutually exclusive."
                 }
             ]
@@ -1288,6 +1383,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A relative or absolute URI reference to an OAS operation. This field is mutually exclusive of the operationId field, and MUST point to an Operation Object. Relative operationRef values MAY be used to locate an existing Operation Object in the OpenAPI definition."
                 },
                 {
@@ -1300,6 +1396,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The name of an existing, resolvable OAS operation, as defined with a unique operationId.  This field is mutually exclusive of the operationRef field."
                 },
                 {
@@ -1313,6 +1410,7 @@
                             ""
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A map representing parameters to pass to an operation as specified with operationId or identified via operationRef. The key is the parameter name to be used, whereas the value can be a constant or an expression to be evaluated and passed to the linked operation.  The parameter name can be qualified using the parameter location [{in}.]{name} for operations that use the same parameter name in different locations (e.g. path.id)."
                 },
                 {
@@ -1326,6 +1424,7 @@
                             ""
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A literal value or {expression} to use as a request body when calling the target operation."
                 },
                 {
@@ -1338,6 +1437,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A description of the link. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -1350,6 +1450,7 @@
                             "Server Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A server object to be used by the target operation."
                 }
             ]
@@ -1373,6 +1474,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The name of the tag."
                 },
                 {
@@ -1385,6 +1487,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A short description for the tag. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
@@ -1397,6 +1500,7 @@
                             "External Documentation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Additional external documentation for this tag."
                 }
             ]
@@ -1415,6 +1519,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The reference string."
                 }
             ]
@@ -1433,6 +1538,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A true value adds \"null\" to the allowed type specified by the type keyword, only if type is explicitly defined within the same Schema Object. Other Schema Object constraints retain their defined behavior, and therefore may disallow the use of null as a value. A false value leaves the specified or default type unmodified. The default value is false."
                 },
                 {
@@ -1445,6 +1551,7 @@
                             "Discriminator Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Adds support for polymorphism. The discriminator is an object name that is used to differentiate between other schemas which may satisfy the payload description. See Composition and Inheritance for more details."
                 },
                 {
@@ -1457,6 +1564,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Relevant only for Schema \"properties\" definitions. Declares the property as \"read only\". This means that it MAY be sent as part of a response but SHOULD NOT be sent as part of the request. If the property is marked as readOnly being true and is in the required list, the required will take effect on the response only. A property MUST NOT be marked as both readOnly and writeOnly being true. Default value is false."
                 },
                 {
@@ -1469,6 +1577,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Relevant only for Schema \"properties\" definitions. Declares the property as \"write only\". Therefore, it MAY be sent as part of a request but SHOULD NOT be sent as part of the response. If the property is marked as writeOnly being true and is in the required list, the required will take effect on the request only. A property MUST NOT be marked as both readOnly and writeOnly being true. Default value is false."
                 },
                 {
@@ -1481,6 +1590,7 @@
                             "XML Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "This MAY be used only on properties schemas. It has no effect on root schemas. Adds additional metadata to describe the XML representation of this property."
                 },
                 {
@@ -1493,6 +1603,7 @@
                             "External Documentation Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Additional external documentation for this schema."
                 },
                 {
@@ -1505,6 +1616,7 @@
                             "Any"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "A free-form property to include an example of an instance for this schema. To represent examples that cannot be naturally represented in JSON or YAML, a string value can be used to contain the example with escaping where necessary."
                 },
                 {
@@ -1517,6 +1629,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Specifies that a schema is deprecated and SHOULD be transitioned out of usage. Default value is false."
                 }
             ]
@@ -1535,6 +1648,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "REQUIRED. The name of the property in the payload that will hold the discriminator value."
                 },
                 {
@@ -1547,6 +1661,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "An object to hold mappings between payload values and schema names or references."
                 }
             ]
@@ -1565,6 +1680,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Replaces the name of the element/attribute used for the described schema property. When defined within items, it will affect the name of the individual XML elements within the list. When defined alongside type being array (outside the items), it will affect the wrapping element and only if wrapped is true. If wrapped is false, it will be ignored."
                 },
                 {
@@ -1577,6 +1693,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The URI of the namespace definition. Value MUST be in the form of an absolute URI."
                 },
                 {
@@ -1589,6 +1706,7 @@
                             "string"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "The prefix to be used for the name."
                 },
                 {
@@ -1601,6 +1719,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Declares whether the property definition translates to an attribute instead of an element. Default value is false."
                 },
                 {
@@ -1613,6 +1732,7 @@
                             "boolean"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "MAY be used only for an array definition. Signifies whether the array is wrapped (for example, <books><book/><book/></books>) or unwrapped (<book/><book/>). Default value is false. The definition takes effect only when defined alongside type being array (outside the items)."
                 }
             ]
@@ -1631,7 +1751,8 @@
                             "string"
                         ]
                     },
-                    "description": "Any"
+                    "appliesTo": "Any",
+                    "description": "REQUIRED. The type of the security scheme. Valid values are \"apiKey\", \"http\", \"oauth2\", \"openIdConnect\"."
                 },
                 {
                     "id": "securitySchemeDescription",
@@ -1643,7 +1764,8 @@
                             "string"
                         ]
                     },
-                    "description": "Any"
+                    "appliesTo": "Any",
+                    "description": "A short description for security scheme. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
                     "id": "securitySchemeName",
@@ -1655,7 +1777,8 @@
                             "string"
                         ]
                     },
-                    "description": "apiKey"
+                    "appliesTo": "apiKey",
+                    "description": "REQUIRED. The name of the header, query or cookie parameter to be used."
                 },
                 {
                     "id": "securitySchemeIn",
@@ -1667,7 +1790,8 @@
                             "string"
                         ]
                     },
-                    "description": "apiKey"
+                    "appliesTo": "apiKey",
+                    "description": "REQUIRED. The location of the API key. Valid values are \"query\", \"header\" or \"cookie\"."
                 },
                 {
                     "id": "securitySchemeScheme",
@@ -1679,7 +1803,8 @@
                             "string"
                         ]
                     },
-                    "description": "http"
+                    "appliesTo": "http",
+                    "description": "REQUIRED. The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.  The values used SHOULD be registered in the IANA Authentication Scheme registry."
                 },
                 {
                     "id": "securitySchemeBearerFormat",
@@ -1691,7 +1816,8 @@
                             "string"
                         ]
                     },
-                    "description": "http (\"bearer\")"
+                    "appliesTo": "http (\"bearer\")",
+                    "description": "A hint to the client to identify how the bearer token is formatted.  Bearer tokens are usually generated by an authorization server, so this information is primarily for documentation purposes."
                 },
                 {
                     "id": "securitySchemeFlows",
@@ -1703,7 +1829,8 @@
                             "OAuth Flows Object"
                         ]
                     },
-                    "description": "oauth2"
+                    "appliesTo": "oauth2",
+                    "description": "REQUIRED. An object containing configuration information for the flow types supported."
                 },
                 {
                     "id": "securitySchemeOpenIdConnectUrl",
@@ -1715,7 +1842,8 @@
                             "string"
                         ]
                     },
-                    "description": "openIdConnect"
+                    "appliesTo": "openIdConnect",
+                    "description": "REQUIRED. OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL."
                 }
             ]
         },
@@ -1733,6 +1861,7 @@
                             "OAuth Flow Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Configuration for the OAuth Implicit flow"
                 },
                 {
@@ -1745,6 +1874,7 @@
                             "OAuth Flow Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Configuration for the OAuth Resource Owner Password flow"
                 },
                 {
@@ -1757,6 +1887,7 @@
                             "OAuth Flow Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Configuration for the OAuth Client Credentials flow.  Previously called application in OpenAPI 2.0."
                 },
                 {
@@ -1769,6 +1900,7 @@
                             "OAuth Flow Object"
                         ]
                     },
+                    "appliesTo": null,
                     "description": "Configuration for the OAuth Authorization Code flow.  Previously called accessCode in OpenAPI 2.0."
                 }
             ]
@@ -1787,7 +1919,8 @@
                             "string"
                         ]
                     },
-                    "description": "oauth2 (\"implicit\", \"authorizationCode\")"
+                    "appliesTo": "oauth2 (\"implicit\", \"authorizationCode\")",
+                    "description": "REQUIRED. The authorization URL to be used for this flow. This MUST be in the form of a URL."
                 },
                 {
                     "id": "oauthFlowTokenUrl",
@@ -1799,7 +1932,8 @@
                             "string"
                         ]
                     },
-                    "description": "oauth2 (\"password\", \"clientCredentials\", \"authorizationCode\")"
+                    "appliesTo": "oauth2 (\"password\", \"clientCredentials\", \"authorizationCode\")",
+                    "description": "REQUIRED. The token URL to be used for this flow. This MUST be in the form of a URL."
                 },
                 {
                     "id": "oauthFlowRefreshUrl",
@@ -1811,7 +1945,8 @@
                             "string"
                         ]
                     },
-                    "description": "oauth2"
+                    "appliesTo": "oauth2",
+                    "description": "The URL to be used for obtaining refresh tokens. This MUST be in the form of a URL."
                 },
                 {
                     "id": "oauthFlowScopes",
@@ -1823,7 +1958,8 @@
                             "string"
                         ]
                     },
-                    "description": "oauth2"
+                    "appliesTo": "oauth2",
+                    "description": "REQUIRED. The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it. The map MAY be empty."
                 }
             ]
         },

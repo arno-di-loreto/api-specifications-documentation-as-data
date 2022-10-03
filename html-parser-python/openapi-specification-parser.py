@@ -75,7 +75,8 @@ class CodeNode:
     }
 
 class TableNodeLine:
-  def __init__(self, line_soup):
+  def __init__(self, line_soup, table):
+    self.table = table
     self.__init__anchor(line_soup)
     self.__init__values(line_soup)
 
@@ -91,6 +92,23 @@ class TableNodeLine:
     self.values = []
     for cell_html in cells_html:
       self.values.append(cell_html)
+
+  def get_value_by_header(self, header_names):
+    print('get by header', header_names)
+    print('headers', self.table.headers)
+    result = None
+    for header_name in header_names:
+      print('header', header_name)
+      index = 0
+      while index < len(self.table.headers): 
+        if self.table.headers[index].text == header_name:
+          print('index', index)
+          result = self.values[index]
+          break;
+        else:
+          index += 1
+    print('result', result)
+    return result
 
   def to_dict(self):
     values = []
@@ -119,10 +137,10 @@ class TableNode:
     self.lines = []
     lines_html = soup.find_all('tr')
     for line_html in lines_html:
-      line = TableNodeLine(line_html)
+      line = TableNodeLine(line_html, self)
       if(len(line.values) > 0): # workaround because th are also in tr
         self.lines.append(line)
-  
+
   def to_dict(self):
     headers_dict = []
     for header in self.headers:
@@ -263,16 +281,21 @@ class FieldType:
 class SchemaField:
   def __init__(self, table_node_line):
     self.id = table_node_line.anchor
-    self.name = table_node_line.values[0]
+    self.name = table_node_line.get_value_by_header(['Field Name'])
     print('field: ', self.name.text)
-    self.type = FieldType(table_node_line.values[1])
-    self.description = table_node_line.values[2]
+    self.type = FieldType(table_node_line.get_value_by_header(['Type']))
+    self.applies_to = table_node_line.get_value_by_header(['Validity','Applies To'])
+    self.description = table_node_line.get_value_by_header(['Description'])
   
   def to_dict(self):
+    applies_to = None
+    if self.applies_to != None:
+      applies_to = self.applies_to.text
     return {
       'id': self.id,
       'name': self.name.text,
       'type': self.type.to_dict(),
+      'appliesTo': applies_to,
       'description': self.description.text
     }
 
@@ -385,8 +408,8 @@ def load_markdown_as_html(file):
 
 versions = [
   '2.0', 
-  #'3.0.3',
-  #'3.1.0'
+  '3.0.3',
+  '3.1.0'
 ]
 source = '../specifications'
 target = './specifications-data'
