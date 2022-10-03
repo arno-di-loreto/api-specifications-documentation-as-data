@@ -48,6 +48,34 @@ class CodeNode:
       'value': self.value
     }
 
+class TableNode:
+  def __init__(self, node):
+    self.__init__headers(node.soup)
+    self.__init__lines(node.soup)
+
+  def __init__headers(self, soup):
+    self.headers = []
+    headers_html = soup.find_all('th')
+    for header_html in headers_html:
+      self.headers.append(header_html.text)
+
+  def __init__lines(self, soup):
+    self.lines = []
+    lines_html = soup.find_all('tr')
+    for line_html in lines_html:
+      line = []
+      cells_html = line_html.find_all('td')
+      for cell_html in cells_html:
+        line.append(cell_html.text)
+      if(len(line) > 0): # workaround because th are also in tr
+        self.lines.append(line)
+  
+  def to_dict(self):
+    return {
+      'headers': self.headers,
+      'lines': self.lines
+    }
+
 class Node:
   def __init__(self, soup=None, current_parent_node=None):
     self.soup = soup
@@ -75,6 +103,8 @@ class Node:
         self.sub_type = get_content_sub_type(self.soup)
         if self.sub_type == 'code':
           self.code = CodeNode(self)
+        elif self.sub_type == 'table':
+          self.table = TableNode(self)
 
   def set_parent_node(self, current_parent_node):
     if current_parent_node != None:
@@ -97,6 +127,8 @@ class Node:
     }
     if self.sub_type == 'code':
       dict_node['code'] = self.code.to_dict()
+    if self.sub_type == 'table':
+      dict_node['table'] = self.table.to_dict()
     return dict_node
 
 
