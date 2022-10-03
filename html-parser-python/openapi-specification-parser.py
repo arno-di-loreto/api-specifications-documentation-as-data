@@ -318,6 +318,14 @@ class SchemaFields:
   def append_fields(self, schema_fields):
     self.fields = self.fields + schema_fields.fields
 
+  def get_field(self, name):
+    found_field = None
+    for field in self.fields:
+      if field.name.text == name:
+        found_field = field
+        break
+    return found_field
+
   def to_dict(self):
     fields_dict = []
     for field in self.fields:
@@ -352,12 +360,21 @@ class OpenApiSpecificationSchema:
   def __init_is_extensible(self):
     self.is_extensible = False
     for child in self.node.children:
-      # OpenAPI 3, 3.1
-      v3_extensible_content = self.node.get_node('This object MAY be extended with Specification Extensions.', 'content')
-      self.is_extensible = (v3_extensible_content != None)
-      # Swagger 2
-      # Look for a ^x- field
-
+      if self.specification.is_version('3'):
+        # OpenAPI 3, 3.1
+        v3_extensible_content = self.node.get_node('This object MAY be extended with Specification Extensions.', 'content')
+        self.is_extensible = (v3_extensible_content != None)
+      else:
+        # Swagger 2
+        # Look for a ^x- field
+        patterned_fields_node = self.node.get_node('Patterned Fields', 'header')
+        patterned_fields = SchemaFields(patterned_fields_node, 'patterned')
+        # in v2 ^x- are inconsistently in Patterned Objects and Patterned Field
+        patterned_objects_node = self.node.get_node('Patterned Objects', 'header')
+        patterned_objects = SchemaFields(patterned_objects_node, 'patterned')
+        patterned_fields.append_fields(patterned_objects)
+        extension_field = patterned_fields.get_field('^x-')
+        self.is_extensible = (extension_field != None)
 
   def to_dict(self):
     return {
@@ -385,6 +402,9 @@ class OpenApiSpecification:
     for schema_node in schemas_node.children:
       if schema_node.type == 'header':
         self.schemas.append(OpenApiSpecificationSchema(schema_node, self))
+
+  def is_version(self, version):
+    return self.version.startswith(version)
 
   def to_dict(self):
     schemas_dict = []
@@ -425,8 +445,8 @@ def load_markdown_as_html(file):
 
 versions = [
   '2.0', 
-  '3.0.3',
-  '3.1.0'
+  #'3.0.3',
+  #'3.1.0'
 ]
 source = '../specifications'
 target = './specifications-data'

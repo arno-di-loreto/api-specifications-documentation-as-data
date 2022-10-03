@@ -3,7 +3,7 @@
     "schemas": [
         {
             "name": "Swagger Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "swagger",
@@ -233,7 +233,7 @@
         },
         {
             "name": "Info Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "title",
@@ -337,7 +337,7 @@
         },
         {
             "name": "Contact Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "name",
@@ -399,7 +399,7 @@
         },
         {
             "name": "License Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "name",
@@ -447,7 +447,7 @@
         },
         {
             "name": "Paths Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "/{path}",
@@ -481,7 +481,7 @@
         },
         {
             "name": "Path Item Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "$ref",
@@ -628,7 +628,7 @@
         },
         {
             "name": "Operation Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "tags",
@@ -817,7 +817,7 @@
         },
         {
             "name": "External Documentation Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "description",
@@ -865,7 +865,7 @@
         },
         {
             "name": "Parameter Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "name",
@@ -1207,7 +1207,7 @@
         },
         {
             "name": "Items Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "type",
@@ -1465,7 +1465,7 @@
         },
         {
             "name": "Responses Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "default",
@@ -1515,7 +1515,7 @@
         },
         {
             "name": "Response Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "description",
@@ -1631,7 +1631,7 @@
         },
         {
             "name": "Header Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "^x-",
@@ -1651,7 +1651,7 @@
         },
         {
             "name": "Tag Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "name",
@@ -1733,7 +1733,7 @@
         },
         {
             "name": "Schema Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "discriminator",
@@ -1823,7 +1823,7 @@
         },
         {
             "name": "XML Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "name",
@@ -1993,7 +1993,7 @@
         },
         {
             "name": "Security Scheme Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "type",
@@ -2125,7 +2125,7 @@
         },
         {
             "name": "Scopes Object",
-            "extensible": false,
+            "extensible": true,
             "fields": [
                 {
                     "name": "{name}",
