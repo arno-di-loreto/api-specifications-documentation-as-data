@@ -59,7 +59,7 @@ class CodeNode:
 
   def __init__(self, node):
     code_block = node.soup.find_all('code')[0];
-    self.value = code_block.text
+    self.value = code_block
     regex_language = re.compile(r'language-(.*)')
     code_block_with_class = node.soup.find_all(class_=regex_language)
     if len(code_block_with_class) > 0:
@@ -71,8 +71,40 @@ class CodeNode:
   def to_dict(self):
     return {
       'language': self.language,
-      'value': self.value
+      'text': self.value.text
     }
+
+
+class TableNodeLine:
+  def __init__(self, line_soup):
+    self.__init__anchor(line_soup)
+    self.__init__values(line_soup)
+
+  def __init__anchor(self, soup):
+    anchor = soup.find('a')
+    self.anchor = None
+    if anchor != None:
+      if anchor.has_attr('name'):
+        self.anchor = anchor['name']      
+
+  def __init__values(self, soup):
+    cells_html = soup.find_all('td')
+    self.values = []
+    for cell_html in cells_html:
+      self.values.append(cell_html)
+
+  def to_dict(self):
+    values = []
+    for value in self.values:
+      values.append({
+        'text': value.text,
+        'html': value.decode_contents()
+      })
+    return {
+      'anchor': self.anchor,
+      'values': values
+    }
+
 
 class TableNode:
   def __init__(self, node):
@@ -83,23 +115,29 @@ class TableNode:
     self.headers = []
     headers_html = soup.find_all('th')
     for header_html in headers_html:
-      self.headers.append(header_html.text)
+      self.headers.append(header_html)
 
   def __init__lines(self, soup):
     self.lines = []
     lines_html = soup.find_all('tr')
     for line_html in lines_html:
-      line = []
-      cells_html = line_html.find_all('td')
-      for cell_html in cells_html:
-        line.append(cell_html.text)
-      if(len(line) > 0): # workaround because th are also in tr
+      line = TableNodeLine(line_html)
+      if(len(line.values) > 0): # workaround because th are also in tr
         self.lines.append(line)
   
   def to_dict(self):
+    headers_dict = []
+    for header in self.headers:
+      headers_dict.append({
+        'text': header.text,
+        'html': header.decode_contents()
+      })
+    lines_dict = []
+    for line in self.lines:
+      lines_dict.append(line.to_dict())
     return {
-      'headers': self.headers,
-      'lines': self.lines
+      'headers': headers_dict,
+      'lines': lines_dict
     }
 
 class Node:
@@ -145,10 +183,15 @@ class Node:
     dict_children = []
     for child in self.children:
       dict_children.append(child.to_dict())
+    if self.soup != None:
+      text = self.soup.text
+    else:
+      text = None
     dict_node = {
       'type': self.type,
       'subType': self.sub_type,
       'level': self.level,
+      'text': text,
       'html': str(self.soup),
       'children': dict_children
     }
