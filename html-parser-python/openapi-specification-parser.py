@@ -74,7 +74,6 @@ class CodeNode:
       'text': self.value.text
     }
 
-
 class TableNodeLine:
   def __init__(self, line_soup):
     self.__init__anchor(line_soup)
@@ -104,7 +103,6 @@ class TableNodeLine:
       'anchor': self.anchor,
       'values': values
     }
-
 
 class TableNode:
   def __init__(self, node):
@@ -205,17 +203,20 @@ class Node:
     
     return dict_node
 
+def is_not_excluded_soup(soup):
+  return soup.text != '\n'
 
 def generate_tree(soup):
   current_soup = soup.find_all('h1')[0]
   root_node = Node()
   current_parent_node = root_node
   while current_soup != None:
-    new_node = Node(current_soup, current_parent_node)
-    if new_node.type == 'header':
-      current_parent_node = new_node
-    else:
-      current_parent_node = new_node.parent
+    if is_not_excluded_soup(current_soup):
+      new_node = Node(current_soup, current_parent_node)
+      if new_node.type == 'header':
+        current_parent_node = new_node
+      else:
+        current_parent_node = new_node.parent
     current_soup = current_soup.next_sibling
   return root_node
 
