@@ -142,17 +142,17 @@ class Node:
   def __init__(self, soup=None, current_parent_node=None):
     self.soup = soup
     self.children = []
-    self.set_type_and_level()
+    self.set_type_and_level(current_parent_node)
     self.set_parent_node(current_parent_node)
   
   def add_child(self, node):
     self.children.append(node)
 
-  def set_type_and_level(self):
+  def set_type_and_level(self, current_parent_node):
     self.sub_type = None
     self.level = None
     self.code = None
-    if self.soup == None:
+    if current_parent_node == None:
       self.type = 'root'
       self.level = 0
     else:
@@ -203,12 +203,30 @@ class Node:
     
     return dict_node
 
+class OpenApiSpecification:
+  def __init__(self, document_tree):
+    self.document_tree = document_tree
+    self.__init__version()
+
+  def __init__version(self):
+    title_regex = re.compile(r'Version (.*)')
+    version_header_soup = self.document_tree.soup.find('h4')
+    version_header = title_regex.search(version_header_soup.text)
+    self.version = version_header.group(1)
+
+  def to_dict(self):
+    return {
+      'version': self.version
+    }
+
+
+
 def is_not_excluded_soup(soup):
   return soup.text != '\n'
 
 def generate_tree(soup):
+  root_node = Node(soup)
   current_soup = soup.find_all('h1')[0]
-  root_node = Node()
   current_parent_node = root_node
   while current_soup != None:
     if is_not_excluded_soup(current_soup):
@@ -233,5 +251,14 @@ html = load_markdown_as_html('../specifications/3.1.0.md')
 soup = BeautifulSoup(html, 'html.parser')
 tree_node = generate_tree(soup)
 tree_dict = tree_node.to_dict()
-tree_json = json.dumps(tree_dict, indent = 4) 
-print(tree_json)
+
+openapi = OpenApiSpecification(tree_node)
+openapi_dict = openapi.to_dict()
+
+result_dict = {
+  'data': openapi_dict,
+  'source': tree_dict
+}
+result_json = json.dumps(result_dict, indent = 4) 
+print(result_json)
+#print(json.dumps(openapi_dict, indent = 4))
