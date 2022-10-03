@@ -145,6 +145,20 @@
                     },
                     "appliesTo": null,
                     "description": "Additional external documentation."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -249,6 +263,20 @@
                     },
                     "appliesTo": null,
                     "description": "REQUIRED. The version of the OpenAPI document (which is distinct from the OpenAPI Specification version or the API implementation version)."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -297,6 +325,20 @@
                     },
                     "appliesTo": null,
                     "description": "The email address of the contact person/organization. This MUST be in the form of an email address."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -345,6 +387,20 @@
                     },
                     "appliesTo": null,
                     "description": "A URL to the license used for the API. This MUST be in the form of a URL. The url field is mutually exclusive of the identifier field."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -393,6 +449,20 @@
                     },
                     "appliesTo": null,
                     "description": "A map between a variable name and its value.  The value is used for substitution in the server's URL template."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -441,6 +511,20 @@
                     },
                     "appliesTo": null,
                     "description": "An optional description for the server variable. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -596,6 +680,20 @@
                     },
                     "appliesTo": null,
                     "description": "An object to hold reusable Path Item Object."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -616,6 +714,20 @@
                     },
                     "appliesTo": null,
                     "description": "A relative path to an individual endpoint. The field name MUST begin with a forward slash (/). The path is appended (no relative URL resolution) to the expanded URL from the Server Object's url field in order to construct the full URL. Path templating is allowed. When matching URLs, concrete (non-templated) paths would be matched before their templated counterparts. Templated paths with the same hierarchy but different templated names MUST NOT exist as they are identical. In case of ambiguous matching, it's up to the tooling to decide which one to use."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -805,6 +917,20 @@
                     },
                     "appliesTo": null,
                     "description": "A list of parameters that are applicable for all the operations described under this path. These parameters can be overridden at the operation level, but cannot be removed there. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the OpenAPI Object's components/parameters."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -982,6 +1108,20 @@
                     },
                     "appliesTo": null,
                     "description": "An alternative server array to service this operation. If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1016,6 +1156,20 @@
                     },
                     "appliesTo": null,
                     "description": "REQUIRED. The URL for the target documentation. This MUST be in the form of a URL."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1205,6 +1359,20 @@
                     },
                     "appliesTo": null,
                     "description": "A map containing the representations for the parameter. The key is the media type and the value describes it. The map MUST only contain one entry."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1253,6 +1421,20 @@
                     },
                     "appliesTo": null,
                     "description": "Determines if the request body is required in the request. Defaults to false."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1316,6 +1498,20 @@
                     },
                     "appliesTo": null,
                     "description": "A map between a property name and its encoding information. The key, being the property name, MUST exist in the schema as a property. The encoding object SHALL only apply to requestBody objects when the media type is multipart or application/x-www-form-urlencoded."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1393,6 +1589,20 @@
                     },
                     "appliesTo": null,
                     "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default value is false. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded or multipart/form-data. If a value is explicitly defined, then the value of contentType (implicit or explicit) SHALL be ignored."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1429,6 +1639,20 @@
                     },
                     "appliesTo": null,
                     "description": "Any HTTP status code can be used as the property name, but only one property per code, to describe the expected response for that HTTP status code. This field MUST be enclosed in quotation marks (for example, \"200\") for compatibility between JSON and YAML. To define a range of response codes, this field MAY contain the uppercase wildcard character X. For example, 2XX represents all response codes between [200-299]. Only the following range definitions are allowed: 1XX, 2XX, 3XX, 4XX, and 5XX. If a response is defined using an explicit code, the explicit code definition takes precedence over the range definition for that code."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1493,6 +1717,20 @@
                     },
                     "appliesTo": null,
                     "description": "A map of operations links that can be followed from the response. The key of the map is a short name for the link, following the naming constraints of the names for Component Objects."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1514,6 +1752,20 @@
                     },
                     "appliesTo": null,
                     "description": "A Path Item Object, or a reference to one, used to define a callback request and expected responses.  A complete example is available."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1576,6 +1828,20 @@
                     },
                     "appliesTo": null,
                     "description": "A URI that points to the literal example. This provides the capability to reference examples that cannot easily be included in JSON or YAML documents.  The value field and externalValue field are mutually exclusive. See the rules for resolving Relative References."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1668,13 +1934,42 @@
                     },
                     "appliesTo": null,
                     "description": "A server object to be used by the target operation."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
         {
             "name": "Header Object",
             "extensible": false,
-            "fields": []
+            "fields": [
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
         },
         {
             "name": "Tag Object",
@@ -1721,6 +2016,20 @@
                     },
                     "appliesTo": null,
                     "description": "Additional external documentation for this tag."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1769,6 +2078,20 @@
                     },
                     "appliesTo": null,
                     "description": "A description which by default SHOULD override that of the referenced component. CommonMark syntax MAY be used for rich text representation. If the referenced object-type does not allow a description field, then this field has no effect."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1831,6 +2154,20 @@
                     },
                     "appliesTo": null,
                     "description": "A free-form property to include an example of an instance for this schema. To represent examples that cannot be naturally represented in JSON or YAML, a string value can be used to contain the example with escaping where necessary.Deprecated: The example property has been deprecated in favor of the JSON Schema examples keyword. Use of example is discouraged, and later versions of this specification may remove it."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1865,6 +2202,20 @@
                     },
                     "appliesTo": null,
                     "description": "An object to hold mappings between payload values and schema names or references."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -1941,6 +2292,20 @@
                     },
                     "appliesTo": null,
                     "description": "MAY be used only for an array definition. Signifies whether the array is wrapped (for example, <books><book/><book/></books>) or unwrapped (<book/><book/>). Default value is false. The definition takes effect only when defined alongside type being array (outside the items)."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -2059,6 +2424,20 @@
                     },
                     "appliesTo": "openIdConnect",
                     "description": "REQUIRED. OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL. The OpenID Connect standard requires the use of TLS."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -2121,6 +2500,20 @@
                     },
                     "appliesTo": null,
                     "description": "Configuration for the OAuth Authorization Code flow.  Previously called accessCode in OpenAPI 2.0."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -2183,6 +2576,20 @@
                     },
                     "appliesTo": "oauth2",
                     "description": "REQUIRED. The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it. The map MAY be empty."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         },
@@ -2203,6 +2610,20 @@
                     },
                     "appliesTo": null,
                     "description": "Each name MUST correspond to a security scheme which is declared in the Security Schemes under the Components Object. If the security scheme is of type \"oauth2\" or \"openIdConnect\", then the value is a list of scope names required for the execution, and the list MAY be empty if authorization does not require a specified scope. For other security scheme types, the array MAY contain a list of role names which are required for the execution, but are not otherwise defined or exchanged in-band."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
         }

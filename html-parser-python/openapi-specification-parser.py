@@ -94,20 +94,15 @@ class TableNodeLine:
       self.values.append(cell_html)
 
   def get_value_by_header(self, header_names):
-    print('get by header', header_names)
-    print('headers', self.table.headers)
     result = None
     for header_name in header_names:
-      print('header', header_name)
       index = 0
       while index < len(self.table.headers): 
         if self.table.headers[index].text == header_name:
-          print('index', index)
           result = self.values[index]
           break;
         else:
           index += 1
-    print('result', result)
     return result
 
   def to_dict(self):
@@ -206,7 +201,7 @@ class Node:
         found_flag =  found_flag and (level == self.level)
     #print('result', found_flag, self.get_text()[0:20], self.type, self.level)
     if found_flag == True:
-      print('result', found_flag, self.get_text()[0:20], self.type, self.level)
+      #print('result', found_flag, self.get_text()[0:20], self.type, self.level)
       return self
     else:
       for child in self.children:
@@ -253,9 +248,7 @@ class FieldType:
   def __init__list_and_types(self):
     type_regex = re.compile(r'^((?P<map>Map\[)(?P<key>[a-zA-Z\s]+),)?(?P<array>\[)?(?P<types>[a-zA-Z\*\|\s]+)(?:\])?.*$') 
     #.* at the end because of typo in v3.1 on webhooks property Map[string, Path Item Object | Reference Object] ]
-    print('source', self.soup.text)
     type_search = type_regex.search(self.soup.text)
-    print(type_search)
     
     self.map_key = None
     self.list_type = None
@@ -269,7 +262,6 @@ class FieldType:
     self.types = []
     for t in types:
       self.types.append(t.strip())
-    print(self.to_dict())
   
   def to_dict(self):
     return {
@@ -283,7 +275,6 @@ class SchemaField:
     self.id = table_node_line.anchor
     self.name_type = name_type
     self.name = table_node_line.get_value_by_header(['Field Name', 'Field Pattern'])
-    print('field: ', self.name.text)
     self.type = FieldType(table_node_line.get_value_by_header(['Type']))
     self.applies_to = table_node_line.get_value_by_header(['Validity','Applies To'])
     self.description = table_node_line.get_value_by_header(['Description'])
@@ -306,14 +297,10 @@ class SchemaFields:
     self.node = fields_node
     self.fields = []
     if fields_node != None:
-      print('fixed fields')
       for child in self.node.children:
         if child.type == 'content' and child.sub_type == 'table':
-          print('table found')
           for line in child.table.lines:
             self.fields.append(SchemaField(line, name_type))
-    else:
-      print('NO fixed fields')
 
   def append_fields(self, schema_fields):
     self.fields = self.fields + schema_fields.fields
@@ -356,6 +343,10 @@ class OpenApiSpecificationSchema:
 
     # also in v2/v3 extension are not described as objects -> to add manually
     # in v3 ^x- are not explicitly described -> To add manually
+    if self.specification.is_version('3'):
+      specification_extensions_node = self.specification.document_tree.get_node('Specification Extensions', 'header')
+      extension_fields = SchemaFields(specification_extensions_node, 'patterned')
+      self.fields.append_fields(extension_fields)
 
   def __init_is_extensible(self):
     self.is_extensible = False
@@ -395,6 +386,7 @@ class OpenApiSpecification:
     version_header_soup = self.document_tree.soup.find('h4')
     version_header = title_regex.search(version_header_soup.text)
     self.version = version_header.group(1)
+    print('****** VERSION *****', self.version)
   
   def __init__schemas(self):
     schemas_node = self.document_tree.get_node('Schema', 'header', 3)
@@ -445,8 +437,8 @@ def load_markdown_as_html(file):
 
 versions = [
   '2.0', 
-  #'3.0.3',
-  #'3.1.0'
+  '3.0.3',
+  '3.1.0'
 ]
 source = '../specifications'
 target = './specifications-data'
