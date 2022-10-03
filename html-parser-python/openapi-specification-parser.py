@@ -177,15 +177,24 @@ class Node:
         self.parent = get_parent_node(self, current_parent_node)
       self.parent.add_child(self)
 
-  def get_node(self, level, text):
-    if self.type != 'content':
-      if level == self.level and text == self.soup.text:
-        return self
-      else:
-        for child in self.children:
-          found = child.get_node(level, text)
-          if found != None:
-            return found;
+  def get_node(self, text, type=None, level=None):
+    #print('search', text, type, level)
+    found_flag = False
+    if text == self.get_text():
+      found_flag = True
+      if type != None:
+        found_flag = found_flag and (type == self.type)
+      if level != None:
+        found_flag =  found_flag and (level == self.level)
+    #print('result', found_flag, self.get_text()[0:20], self.type, self.level)
+    if found_flag == True:
+      print('result', found_flag, self.get_text()[0:20], self.type, self.level)
+      return self
+    else:
+      for child in self.children:
+        found = child.get_node(text, type, level)
+        if found != None:
+          return found;
     return None
 
   def get_text(self):
@@ -217,13 +226,105 @@ class Node:
     
     return dict_node
 
+
+class FieldType:
+  def __init__(self, soup):
+    self.soup = soup
+    self.__init__list_and_types()
+
+  def __init__list_and_types(self):
+    type_regex = re.compile(r'^((?P<map>Map\[)(?P<key>[a-zA-Z\s]+),)?(?P<array>\[)?(?P<types>[a-zA-Z\*\|\s]+)(?:\])?.*$') 
+    #.* at the end because of typo in v3.1 on webhooks property Map[string, Path Item Object | Reference Object] ]
+    print('source', self.soup.text)
+    type_search = type_regex.search(self.soup.text)
+    print(type_search)
+    
+    self.map_key = None
+    self.list_type = None
+    if type_search.group('map'):
+      self.list_type = 'map'
+      self.map_key = type_search.group('key')
+    elif type_search.group('array'):
+      self.list_type = 'array'
+
+    types = type_search.group('types').split('|')
+    self.types = []
+    for t in types:
+      self.types.append(t.strip())
+    print(self.to_dict())
+  
+  def to_dict(self):
+    return {
+      'listType': self.list_type, 
+      'mapKeyType': self.map_key,
+      'types': self.types
+    }
+
+class SchemaField:
+  def __init__(self, table_node_line):
+    self.id = table_node_line.anchor
+    self.name = table_node_line.values[0]
+    print('field: ', self.name.text)
+    self.type = FieldType(table_node_line.values[1])
+    self.description = table_node_line.values[2]
+  
+  def to_dict(self):
+    return {
+      'id': self.id,
+      'name': self.name.text,
+      'type': self.type.to_dict(),
+      'description': self.description.text
+    }
+
+class SchemaFields:
+  def __init__(self, fields_node):
+    self.node = fields_node
+    self.fields = []
+    if fields_node != None:
+      print('fixed fields')
+      for child in self.node.children:
+        if child.type == 'content' and child.sub_type == 'table':
+          print('table found')
+          for line in child.table.lines:
+            self.fields.append(SchemaField(line))
+    else:
+      print('NO fixed fields')
+
+  def to_dict(self):
+    fields_dict = []
+    for field in self.fields:
+      fields_dict.append(field.to_dict())
+    return fields_dict
+
 class OpenApiSpecificationSchema:
-  def __init__(self, schema_node):
+  def __init__(self, schema_node, specification):
+    self.specification = specification
     self.name = schema_node.get_text()
+    self.node = schema_node
+    self.__init_is_extensible()
+    self.__init_fields()
+
+  def __init_fields(self):
+    print('=======>Schema ', self.name)
+    fixed_fields_node = self.node.get_node('Fixed Fields', 'header')
+    self.fixedFields = SchemaFields(fixed_fields_node)
+
+  def __init_is_extensible(self):
+    self.is_extensible = False
+    for child in self.node.children:
+      # OpenAPI 3, 3.1
+      v3_extensible_content = self.node.get_node('This object MAY be extended with Specification Extensions.', 'content')
+      self.is_extensible = (v3_extensible_content != None)
+      # Swagger 2
+      # Look for a ^x- field
+
 
   def to_dict(self):
     return {
-      'name': self.name
+      'name': self.name,
+      'extensible': self.is_extensible,
+      'fixedFields': self.fixedFields.to_dict(),
+      #'node': self.node.to_dict()
     }
 
 class OpenApiSpecification:
@@ -239,11 +340,11 @@ class OpenApiSpecification:
     self.version = version_header.group(1)
   
   def __init__schemas(self):
-    schemas_node = self.document_tree.get_node(3, 'Schema')
+    schemas_node = self.document_tree.get_node('Schema', 'header', 3)
     self.schemas = []
     for schema_node in schemas_node.children:
       if schema_node.type == 'header':
-        self.schemas.append(OpenApiSpecificationSchema(schema_node))
+        self.schemas.append(OpenApiSpecificationSchema(schema_node, self))
 
   def to_dict(self):
     schemas_dict = []
@@ -282,7 +383,11 @@ def load_markdown_as_html(file):
   html = md.convert(markdown_content)
   return html
 
-versions = ['2.0', '3.0.3', '3.1.0']
+versions = [
+  '2.0', 
+  #'3.0.3',
+  #'3.1.0'
+]
 source = '../specifications'
 target = './specifications-data'
 
