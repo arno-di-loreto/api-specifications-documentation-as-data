@@ -13,6 +13,14 @@ def get_header_level(element):
       level = int(header.group(1))
   return level
 
+def get_content_sub_type(soup):
+  if soup.name == 'table':
+    return 'table'
+  elif soup.name == 'pre':
+    return 'code'
+  else:
+    return 'text' 
+
 def get_parent_node(new_node, current_parent_node): 
   if new_node.level > current_parent_node.level:
     return current_parent_node
@@ -20,6 +28,26 @@ def get_parent_node(new_node, current_parent_node):
     return current_parent_node.parent 
   else: # new_header_node.level < current_parent_node.level:
     return get_parent_node(new_node, current_parent_node.parent)
+
+class CodeNode:
+
+  def __init__(self, node):
+    code_block = node.soup.find_all('code')[0];
+    self.value = code_block.text
+    regex_language = re.compile(r'language-(.*)')
+    code_block_with_class = node.soup.find_all(class_=regex_language)
+    if len(code_block_with_class) > 0:
+      class_language = regex_language.search(code_block_with_class[0]['class'][0])
+      self.language = class_language.group(1)
+    else:
+      self.language = None
+  
+  def to_dict(self):
+    return {
+      'language': self.language,
+      'value': self.value
+    }
+
 class Node:
   def __init__(self, soup=None, current_parent_node=None):
     self.soup = soup
@@ -31,6 +59,9 @@ class Node:
     self.children.append(node)
 
   def set_type_and_level(self):
+    self.sub_type = None
+    self.level = None
+    self.code = None
     if self.soup == None:
       self.type = 'root'
       self.level = 0
@@ -41,7 +72,9 @@ class Node:
         self.level = header_level
       else:
         self.type = 'content'
-        self.level = None
+        self.sub_type = get_content_sub_type(self.soup)
+        if self.sub_type == 'code':
+          self.code = CodeNode(self)
 
   def set_parent_node(self, current_parent_node):
     if current_parent_node != None:
@@ -57,10 +90,13 @@ class Node:
       dict_children.append(child.to_dict())
     dict_node = {
       'type': self.type,
+      'subType': self.sub_type,
       'level': self.level,
       'html': str(self.soup),
       'children': dict_children
     }
+    if self.sub_type == 'code':
+      dict_node['code'] = self.code.to_dict()
     return dict_node
 
 
