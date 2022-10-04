@@ -1084,7 +1084,7 @@
                         "listType": null,
                         "mapKeyType": null,
                         "types": [
-                            "*"
+                            "Any"
                         ]
                     },
                     "appliesTo": null,
@@ -1249,7 +1249,7 @@
                         "listType": "array",
                         "mapKeyType": null,
                         "types": [
-                            "*"
+                            "Any"
                         ]
                     },
                     "appliesTo": null,
@@ -1360,7 +1360,7 @@
                         "listType": null,
                         "mapKeyType": null,
                         "types": [
-                            "*"
+                            "Any"
                         ]
                     },
                     "appliesTo": null,
@@ -1525,7 +1525,7 @@
                         "listType": "array",
                         "mapKeyType": null,
                         "types": [
-                            "*"
+                            "Any"
                         ]
                     },
                     "appliesTo": null,

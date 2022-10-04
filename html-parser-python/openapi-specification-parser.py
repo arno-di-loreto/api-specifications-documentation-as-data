@@ -261,6 +261,9 @@ class FieldType:
     types = type_search.group('types').split('|')
     self.types = []
     for t in types:
+      # In swagger 2 some Any are marked as *
+      if t == '*':
+        t = 'Any'
       self.types.append(t.strip())
   
   def to_dict(self):
