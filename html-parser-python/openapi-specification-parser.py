@@ -212,6 +212,9 @@ class Node:
 
   def get_text(self):
     return self.soup.text
+  
+  def get_html(self):
+    return self.soup.decode_contents()
 
   def to_dict(self):
     dict_children = []
@@ -285,12 +288,15 @@ class SchemaField:
     self.__init__required()
 
   def __init__required(self):
-    if self.specification.is_version('2'):
-      required_keyword = '<strong>required.</strong>' # swagger 2 <strong>Required.</strong> v3 <strong>REQUIRED</strong> 
-    else:
-      required_keyword = '<strong>required</strong>.'
-    description_html_lower = str(self.description.decode_contents()).lower()
-    self.required = description_html_lower.startswith(required_keyword)
+    #if self.specification.is_version('2'):
+    #  required_keyword = '<strong>Required.</strong>' # swagger 2 <strong>Required.</strong> v3 <strong>REQUIRED</strong> 
+    #else:
+    #  required_keyword = '<strong>REQUIRED</strong>.'
+    #description_html_lower = self.description.text.lower()
+    self.required = self.description.text.lower().startswith('required')
+
+  def get_description_text(self):
+    return re.sub(r'^required\.\s*', '', self.description.text, flags=re.IGNORECASE)
 
   def to_dict(self):
     applies_to = None
@@ -303,7 +309,7 @@ class SchemaField:
       'id': self.id,
       'type': self.type.to_dict(),
       'appliesTo': applies_to,
-      'description': self.description.text
+      'description': self.get_description_text()
     }
 
 class SchemaFields:
@@ -340,6 +346,21 @@ class OpenApiSpecificationSchema:
     self.node = schema_node
     self.__init_is_extensible()
     self.__init_fields()
+    self.__init_description()
+
+  def __init_description(self):
+    self.descriptions = []
+    for child in self.node.children:
+      if child.type == 'content':
+        self.descriptions.append(child)
+      else: # will break on first header after intro
+        break
+
+  def get_description(self):
+    result = ''
+    for description in self.descriptions:
+      result += description.get_html()
+    return result
 
   def __init_fields(self):
     print('=======>Schema ', self.name)
@@ -385,6 +406,7 @@ class OpenApiSpecificationSchema:
     return {
       'name': self.name,
       'extensible': self.is_extensible,
+      'description': self.get_description(),
       'fields': self.fields.to_dict(),
       #'node': self.node.to_dict()
     }
@@ -393,6 +415,7 @@ class OpenApiSpecification:
   def __init__(self, document_tree):
     self.document_tree = document_tree
     self.__init__version()
+    self.__init__description()
     self.__init__schemas()
 
   def __init__version(self):
@@ -409,6 +432,20 @@ class OpenApiSpecification:
       if schema_node.type == 'header':
         self.schemas.append(OpenApiSpecificationSchema(schema_node, self))
 
+  def __init__description(self):
+    self.description = []
+    if self.is_version('3'):
+      introduction = self.document_tree.get_node('Introduction', 'header', 2)
+    else:
+      introduction = self.document_tree.get_node('Introductions', 'header', 2)
+    self.description = introduction.children
+
+  def get_description(self):
+    description_html = ''
+    for description in self.description:
+      description_html += description.get_html()
+    return description_html
+
   def is_version(self, version):
     return self.version.startswith(version)
 
@@ -418,6 +455,8 @@ class OpenApiSpecification:
       schemas_dict.append(schema.to_dict())
     return {
       'version': self.version,
+      'description': self.get_description(),
+      #'node': self.document_tree.to_dict(),
       'schemas': schemas_dict
     }
 

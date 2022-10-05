@@ -1,9 +1,11 @@
 {
     "version": "3.1.0",
+    "description": "The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.",
     "schemas": [
         {
             "name": "OpenAPI Object",
             "extensible": true,
+            "description": "This is the root object of the <a href=\"#oasDocument\">OpenAPI document</a>.",
             "fields": [
                 {
                     "name": "openapi",
@@ -18,7 +20,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. This string MUST be the version number of the OpenAPI Specification that the OpenAPI document uses. The openapi field SHOULD be used by tooling to interpret the OpenAPI document. This is not related to the API info.version string."
+                    "description": "This string MUST be the version number of the OpenAPI Specification that the OpenAPI document uses. The openapi field SHOULD be used by tooling to interpret the OpenAPI document. This is not related to the API info.version string."
                 },
                 {
                     "name": "info",
@@ -33,7 +35,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. Provides metadata about the API. The metadata MAY be used by tooling as required."
+                    "description": "Provides metadata about the API. The metadata MAY be used by tooling as required."
                 },
                 {
                     "name": " jsonSchemaDialect",
@@ -176,6 +178,7 @@
         {
             "name": "Info Object",
             "extensible": true,
+            "description": "The object provides metadata about the API.\nThe metadata MAY be used by the clients if needed, and MAY be presented in editing or documentation generation tools for convenience.",
             "fields": [
                 {
                     "name": "title",
@@ -190,7 +193,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The title of the API."
+                    "description": "The title of the API."
                 },
                 {
                     "name": "summary",
@@ -280,7 +283,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The version of the OpenAPI document (which is distinct from the OpenAPI Specification version or the API implementation version)."
+                    "description": "The version of the OpenAPI document (which is distinct from the OpenAPI Specification version or the API implementation version)."
                 },
                 {
                     "name": "^x-",
@@ -302,6 +305,7 @@
         {
             "name": "Contact Object",
             "extensible": true,
+            "description": "Contact information for the exposed API.",
             "fields": [
                 {
                     "name": "name",
@@ -368,6 +372,7 @@
         {
             "name": "License Object",
             "extensible": true,
+            "description": "License information for the exposed API.",
             "fields": [
                 {
                     "name": "name",
@@ -382,7 +387,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The license name used for the API."
+                    "description": "The license name used for the API."
                 },
                 {
                     "name": "identifier",
@@ -434,6 +439,7 @@
         {
             "name": "Server Object",
             "extensible": true,
+            "description": "An object representing a Server.",
             "fields": [
                 {
                     "name": "url",
@@ -448,7 +454,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. A URL to the target host.  This URL supports Server Variables and MAY be relative, to indicate that the host location is relative to the location where the OpenAPI document is being served. Variable substitutions will be made when a variable is named in {brackets}."
+                    "description": "A URL to the target host.  This URL supports Server Variables and MAY be relative, to indicate that the host location is relative to the location where the OpenAPI document is being served. Variable substitutions will be made when a variable is named in {brackets}."
                 },
                 {
                     "name": "description",
@@ -500,6 +506,7 @@
         {
             "name": "Server Variable Object",
             "extensible": true,
+            "description": "An object representing a Server Variable for server URL template substitution.",
             "fields": [
                 {
                     "name": "enum",
@@ -529,7 +536,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The default value to use for substitution, which SHALL be sent if an alternate value is not supplied. Note this behavior is different than the Schema Object's treatment of default values, because in those cases parameter values are optional. If the enum is defined, the value MUST exist in the enum's values."
+                    "description": "The default value to use for substitution, which SHALL be sent if an alternate value is not supplied. Note this behavior is different than the Schema Object's treatment of default values, because in those cases parameter values are optional. If the enum is defined, the value MUST exist in the enum's values."
                 },
                 {
                     "name": "description",
@@ -566,6 +573,7 @@
         {
             "name": "Components Object",
             "extensible": true,
+            "description": "Holds a set of reusable objects for different aspects of the OAS.\nAll objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.",
             "fields": [
                 {
                     "name": " schemas",
@@ -746,6 +754,7 @@
         {
             "name": "Paths Object",
             "extensible": true,
+            "description": "Holds the relative paths to the individual endpoints and their operations.\nThe path is appended to the URL from the <a href=\"#serverObject\"><code>Server Object</code></a> in order to construct the full URL.  The Paths MAY be empty, due to <a href=\"#securityFiltering\">Access Control List (ACL) constraints</a>.",
             "fields": [
                 {
                     "name": "/{path}",
@@ -782,6 +791,7 @@
         {
             "name": "Path Item Object",
             "extensible": true,
+            "description": "Describes the operations available on a single path.\nA Path Item MAY be empty, due to <a href=\"#securityFiltering\">ACL constraints</a>.\nThe path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available.",
             "fields": [
                 {
                     "name": "$ref",
@@ -999,6 +1009,7 @@
         {
             "name": "Operation Object",
             "extensible": true,
+            "description": "Describes a single API operation on a path.",
             "fields": [
                 {
                     "name": "tags",
@@ -1203,6 +1214,7 @@
         {
             "name": "External Documentation Object",
             "extensible": true,
+            "description": "Allows referencing an external resource for extended documentation.",
             "fields": [
                 {
                     "name": "description",
@@ -1232,7 +1244,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The URL for the target documentation. This MUST be in the form of a URL."
+                    "description": "The URL for the target documentation. This MUST be in the form of a URL."
                 },
                 {
                     "name": "^x-",
@@ -1254,6 +1266,7 @@
         {
             "name": "Parameter Object",
             "extensible": true,
+            "description": "Describes a single operation parameter.A unique parameter is defined by a combination of a <a href=\"#parameterName\">name</a> and <a href=\"#parameterIn\">location</a>.",
             "fields": [
                 {
                     "name": "name",
@@ -1268,7 +1281,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The name of the parameter. Parameter names are case sensitive. If in is \"path\", the name field MUST correspond to a template expression occurring within the path field in the Paths Object. See Path Templating for further information.If in is \"header\" and the name field is \"Accept\", \"Content-Type\" or \"Authorization\", the parameter definition SHALL be ignored.For all other cases, the name corresponds to the parameter name used by the in property."
+                    "description": "The name of the parameter. Parameter names are case sensitive. If in is \"path\", the name field MUST correspond to a template expression occurring within the path field in the Paths Object. See Path Templating for further information.If in is \"header\" and the name field is \"Accept\", \"Content-Type\" or \"Authorization\", the parameter definition SHALL be ignored.For all other cases, the name corresponds to the parameter name used by the in property."
                 },
                 {
                     "name": "in",
@@ -1283,7 +1296,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The location of the parameter. Possible values are \"query\", \"header\", \"path\" or \"cookie\"."
+                    "description": "The location of the parameter. Possible values are \"query\", \"header\", \"path\" or \"cookie\"."
                 },
                 {
                     "name": "description",
@@ -1471,6 +1484,7 @@
         {
             "name": "Request Body Object",
             "extensible": true,
+            "description": "Describes a single request body.",
             "fields": [
                 {
                     "name": "description",
@@ -1500,7 +1514,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The content of the request body. The key is a media type or media type range and the value describes it.  For requests that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
+                    "description": "The content of the request body. The key is a media type or media type range and the value describes it.  For requests that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
                 },
                 {
                     "name": "required",
@@ -1537,6 +1551,7 @@
         {
             "name": "Media Type Object",
             "extensible": true,
+            "description": "Each Media Type Object provides schema and examples for the media type identified by its key.",
             "fields": [
                 {
                     "name": "schema",
@@ -1619,6 +1634,7 @@
         {
             "name": "Encoding Object",
             "extensible": true,
+            "description": "A single encoding definition applied to a single schema property.",
             "fields": [
                 {
                     "name": "contentType",
@@ -1716,6 +1732,7 @@
         {
             "name": "Responses Object",
             "extensible": true,
+            "description": "A container for the expected responses of an operation.\nThe container maps a HTTP response code to the expected response.The documentation is not necessarily expected to cover all possible HTTP response codes because they may not be known in advance.\nHowever, documentation is expected to cover a successful operation response and any known errors.The <code>default</code> MAY be used as a default response object for all HTTP codes \nthat are not covered individually by the <code>Responses Object</code>.The <code>Responses Object</code> MUST contain at least one response code, and if only one\nresponse code is provided it SHOULD be the response for a successful operation\ncall.",
             "fields": [
                 {
                     "name": "default",
@@ -1769,6 +1786,7 @@
         {
             "name": "Response Object",
             "extensible": true,
+            "description": "Describes a single response from an API Operation, including design-time, static \n<code>links</code> to operations based on the response.",
             "fields": [
                 {
                     "name": "description",
@@ -1783,7 +1801,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. A description of the response. CommonMark syntax MAY be used for rich text representation."
+                    "description": "A description of the response. CommonMark syntax MAY be used for rich text representation."
                 },
                 {
                     "name": "headers",
@@ -1852,6 +1870,7 @@
         {
             "name": "Callback Object",
             "extensible": true,
+            "description": "A map of possible out-of band callbacks related to the parent operation.\nEach value in the map is a <a href=\"#pathItemObject\">Path Item Object</a> that describes a set of requests that may be initiated by the API provider and the expected responses.\nThe key value used to identify the path item object is an expression, evaluated at runtime, that identifies a URL to use for the callback operation.To describe incoming requests from the API provider independent from another API call, use the <a href=\"#oasWebhooks\"><code>webhooks</code></a> field.",
             "fields": [
                 {
                     "name": "{expression}",
@@ -1889,6 +1908,7 @@
         {
             "name": "Example Object",
             "extensible": true,
+            "description": "",
             "fields": [
                 {
                     "name": "summary",
@@ -1970,6 +1990,7 @@
         {
             "name": "Link Object",
             "extensible": true,
+            "description": "The <code>Link object</code> represents a possible design-time link for a response.\nThe presence of a link does not guarantee the caller's ability to successfully invoke it, rather it provides a known relationship and traversal mechanism between responses and other operations.Unlike <em>dynamic</em> links (i.e. links provided <strong>in</strong> the response payload), the OAS linking mechanism does not require link information in the runtime response.For computing links, and providing instructions to execute them, a <a href=\"#runtimeExpression\">runtime expression</a> is used for accessing values in an operation and using them as parameters while invoking the linked operation.  ",
             "fields": [
                 {
                     "name": "operationRef",
@@ -2083,6 +2104,7 @@
         {
             "name": "Header Object",
             "extensible": false,
+            "description": "The Header Object follows the structure of the <a href=\"#parameterObject\">Parameter Object</a> with the following changes:\n<li><code>name</code> MUST NOT be specified, it is given in the corresponding <code>headers</code> map.</li>\n<li><code>in</code> MUST NOT be specified, it is implicitly in <code>header</code>.</li>\n<li>All traits that are affected by the location MUST be applicable to a location of <code>header</code> (for example, <a href=\"#parameterStyle\"><code>style</code></a>).</li>\n",
             "fields": [
                 {
                     "name": "^x-",
@@ -2104,6 +2126,7 @@
         {
             "name": "Tag Object",
             "extensible": true,
+            "description": "Adds metadata to a single tag that is used by the <a href=\"#operationObject\">Operation Object</a>.\nIt is not mandatory to have a Tag Object per tag defined in the Operation Object instances.",
             "fields": [
                 {
                     "name": "name",
@@ -2118,7 +2141,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The name of the tag."
+                    "description": "The name of the tag."
                 },
                 {
                     "name": "description",
@@ -2170,6 +2193,7 @@
         {
             "name": "Reference Object",
             "extensible": false,
+            "description": "A simple object to allow referencing other components in the OpenAPI document, internally and externally.The <code>$ref</code> string value contains a URI <a href=\"https://tools.ietf.org/html/rfc3986\">RFC3986</a>, which identifies the location of the value being referenced.See the rules for resolving <a href=\"#relativeReferencesURI\">Relative References</a>.",
             "fields": [
                 {
                     "name": "$ref",
@@ -2184,7 +2208,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The reference identifier. This MUST be in the form of a URI."
+                    "description": "The reference identifier. This MUST be in the form of a URI."
                 },
                 {
                     "name": "summary",
@@ -2236,6 +2260,7 @@
         {
             "name": "Schema Object",
             "extensible": false,
+            "description": "The Schema Object allows the definition of input and output data types.\nThese types can be objects, but also primitives and arrays. This object is a superset of the <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-00\">JSON Schema Specification Draft 2020-12</a>.For more information about the properties, see <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-00\">JSON Schema Core</a> and <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-validation-00\">JSON Schema Validation</a>.Unless stated otherwise, the property definitions follow those of JSON Schema and do not add any additional semantics.\nWhere JSON Schema indicates that behavior is defined by the application (e.g. for annotations), OAS also defers the definition of semantics to the application consuming the OpenAPI document.",
             "fields": [
                 {
                     "name": "discriminator",
@@ -2317,6 +2342,7 @@
         {
             "name": "Discriminator Object",
             "extensible": true,
+            "description": "When request bodies or response payloads may be one of a number of different schemas, a <code>discriminator</code> object can be used to aid in serialization, deserialization, and validation.  The discriminator is a specific object in a schema which is used to inform the consumer of the document of an alternative schema based on the value associated with it.When using the discriminator, <em>inline</em> schemas will not be considered.",
             "fields": [
                 {
                     "name": "propertyName",
@@ -2331,7 +2357,7 @@
                         ]
                     },
                     "appliesTo": null,
-                    "description": "REQUIRED. The name of the property in the payload that will hold the discriminator value."
+                    "description": "The name of the property in the payload that will hold the discriminator value."
                 },
                 {
                     "name": " mapping",
@@ -2368,6 +2394,7 @@
         {
             "name": "XML Object",
             "extensible": true,
+            "description": "A metadata object that allows for more fine-tuned XML model definitions.When using arrays, XML element names are <em>not</em> inferred (for singular/plural forms) and the <code>name</code> property SHOULD be used to add that information.\nSee examples for expected behavior.",
             "fields": [
                 {
                     "name": "name",
@@ -2464,6 +2491,7 @@
         {
             "name": "Security Scheme Object",
             "extensible": true,
+            "description": "Defines a security scheme that can be used by the operations.Supported schemes are HTTP authentication, an API key (either as a header, a cookie parameter or as a query parameter), mutual TLS (use of a client certificate), OAuth2's common flows (implicit, password, client credentials and authorization code) as defined in <a href=\"https://tools.ietf.org/html/rfc6749\">RFC6749</a>, and <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-discovery-06\">OpenID Connect Discovery</a>.\nPlease note that as of 2020, the implicit flow is about to be deprecated by <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-security-topics\">OAuth 2.0 Security Best Current Practice</a>. Recommended for most use case is Authorization Code Grant flow with PKCE.",
             "fields": [
                 {
                     "name": "type",
@@ -2478,7 +2506,7 @@
                         ]
                     },
                     "appliesTo": "Any",
-                    "description": "REQUIRED. The type of the security scheme. Valid values are \"apiKey\", \"http\", \"mutualTLS\", \"oauth2\", \"openIdConnect\"."
+                    "description": "The type of the security scheme. Valid values are \"apiKey\", \"http\", \"mutualTLS\", \"oauth2\", \"openIdConnect\"."
                 },
                 {
                     "name": "description",
@@ -2508,7 +2536,7 @@
                         ]
                     },
                     "appliesTo": "apiKey",
-                    "description": "REQUIRED. The name of the header, query or cookie parameter to be used."
+                    "description": "The name of the header, query or cookie parameter to be used."
                 },
                 {
                     "name": "in",
@@ -2523,7 +2551,7 @@
                         ]
                     },
                     "appliesTo": "apiKey",
-                    "description": "REQUIRED. The location of the API key. Valid values are \"query\", \"header\" or \"cookie\"."
+                    "description": "The location of the API key. Valid values are \"query\", \"header\" or \"cookie\"."
                 },
                 {
                     "name": "scheme",
@@ -2538,7 +2566,7 @@
                         ]
                     },
                     "appliesTo": "http",
-                    "description": "REQUIRED. The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.  The values used SHOULD be registered in the IANA Authentication Scheme registry."
+                    "description": "The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.  The values used SHOULD be registered in the IANA Authentication Scheme registry."
                 },
                 {
                     "name": "bearerFormat",
@@ -2568,7 +2596,7 @@
                         ]
                     },
                     "appliesTo": "oauth2",
-                    "description": "REQUIRED. An object containing configuration information for the flow types supported."
+                    "description": "An object containing configuration information for the flow types supported."
                 },
                 {
                     "name": "openIdConnectUrl",
@@ -2583,7 +2611,7 @@
                         ]
                     },
                     "appliesTo": "openIdConnect",
-                    "description": "REQUIRED. OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL. The OpenID Connect standard requires the use of TLS."
+                    "description": "OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL. The OpenID Connect standard requires the use of TLS."
                 },
                 {
                     "name": "^x-",
@@ -2605,6 +2633,7 @@
         {
             "name": "OAuth Flows Object",
             "extensible": true,
+            "description": "Allows configuration of the supported OAuth Flows.",
             "fields": [
                 {
                     "name": "implicit",
@@ -2686,6 +2715,7 @@
         {
             "name": "OAuth Flow Object",
             "extensible": true,
+            "description": "Configuration details for a supported OAuth Flow",
             "fields": [
                 {
                     "name": "authorizationUrl",
@@ -2700,7 +2730,7 @@
                         ]
                     },
                     "appliesTo": "oauth2 (\"implicit\", \"authorizationCode\")",
-                    "description": "REQUIRED. The authorization URL to be used for this flow. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
+                    "description": "The authorization URL to be used for this flow. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
                 },
                 {
                     "name": "tokenUrl",
@@ -2715,7 +2745,7 @@
                         ]
                     },
                     "appliesTo": "oauth2 (\"password\", \"clientCredentials\", \"authorizationCode\")",
-                    "description": "REQUIRED. The token URL to be used for this flow. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
+                    "description": "The token URL to be used for this flow. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
                 },
                 {
                     "name": "refreshUrl",
@@ -2745,7 +2775,7 @@
                         ]
                     },
                     "appliesTo": "oauth2",
-                    "description": "REQUIRED. The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it. The map MAY be empty."
+                    "description": "The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it. The map MAY be empty."
                 },
                 {
                     "name": "^x-",
@@ -2767,6 +2797,7 @@
         {
             "name": "Security Requirement Object",
             "extensible": false,
+            "description": "Lists the required security schemes to execute this operation.\nThe name used for each property MUST correspond to a security scheme declared in the <a href=\"#componentsSecuritySchemes\">Security Schemes</a> under the <a href=\"#componentsObject\">Components Object</a>.Security Requirement Objects that contain multiple schemes require that all schemes MUST be satisfied for a request to be authorized.\nThis enables support for scenarios where multiple query parameters or HTTP headers are required to convey security information.When a list of Security Requirement Objects is defined on the <a href=\"#oasObject\">OpenAPI Object</a> or <a href=\"#operationObject\">Operation Object</a>, only one of the Security Requirement Objects in the list needs to be satisfied to authorize the request.",
             "fields": [
                 {
                     "name": "{name}",
