@@ -1,0 +1,2835 @@
+{
+    "version": "3.1.0",
+    "description": "The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.",
+    "schemas": [
+        {
+            "name": "OpenAPI Object",
+            "extensible": true,
+            "description": "This is the root object of the <a href=\"#oasDocument\">OpenAPI document</a>.",
+            "fields": [
+                {
+                    "name": "openapi",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "oasVersion",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "This string MUST be the version number of the OpenAPI Specification that the OpenAPI document uses. The openapi field SHOULD be used by tooling to interpret the OpenAPI document. This is not related to the API info.version string."
+                },
+                {
+                    "name": "info",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "oasInfo",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Info Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Provides metadata about the API. The metadata MAY be used by tooling as required."
+                },
+                {
+                    "name": " jsonSchemaDialect",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oasJsonSchemaDialect",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The default value for the $schema keyword within Schema Objects contained within this OAS document. This MUST be in the form of a URI."
+                },
+                {
+                    "name": "servers",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oasServers",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "Server Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An array of Server Objects, which provide connectivity information to a target server. If the servers property is not provided, or is an empty array, the default value would be a Server Object with a url value of /."
+                },
+                {
+                    "name": "paths",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oasPaths",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Paths Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The available paths and operations for the API."
+                },
+                {
+                    "name": "webhooks",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oasWebhooks",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Path Item Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The incoming webhooks that MAY be received as part of this API and that the API consumer MAY choose to implement. Closely related to the callbacks feature, this section describes requests initiated other than by an API call, for example by an out of band registration. The key name is a unique string to refer to each webhook, while the (optionally referenced) Path Item Object describes a request that may be initiated by the API provider and the expected responses. An example is available."
+                },
+                {
+                    "name": "components",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oasComponents",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Components Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An element to hold various schemas for the document."
+                },
+                {
+                    "name": "security",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oasSecurity",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "Security Requirement Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A declaration of which security mechanisms can be used across the API. The list of values includes alternative security requirement objects that can be used. Only one of the security requirement objects need to be satisfied to authorize a request. Individual operations can override this definition. To make security optional, an empty security requirement ({}) can be included in the array."
+                },
+                {
+                    "name": "tags",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oasTags",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "Tag Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A list of tags used by the document with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared MAY be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique."
+                },
+                {
+                    "name": "externalDocs",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oasExternalDocs",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "External Documentation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Additional external documentation."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Info Object",
+            "extensible": true,
+            "description": "The object provides metadata about the API.\nThe metadata MAY be used by the clients if needed, and MAY be presented in editing or documentation generation tools for convenience.",
+            "fields": [
+                {
+                    "name": "title",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "infoTitle",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The title of the API."
+                },
+                {
+                    "name": "summary",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "infoSummary",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A short summary of the API."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "infoDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A description of the API. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "termsOfService",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "infoTermsOfService",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A URL to the Terms of Service for the API. This MUST be in the form of a URL."
+                },
+                {
+                    "name": "contact",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "infoContact",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Contact Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The contact information for the exposed API."
+                },
+                {
+                    "name": "license",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "infoLicense",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "License Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The license information for the exposed API."
+                },
+                {
+                    "name": "version",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "infoVersion",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The version of the OpenAPI document (which is distinct from the OpenAPI Specification version or the API implementation version)."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Contact Object",
+            "extensible": true,
+            "description": "Contact information for the exposed API.",
+            "fields": [
+                {
+                    "name": "name",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "contactName",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The identifying name of the contact person/organization."
+                },
+                {
+                    "name": "url",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "contactUrl",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The URL pointing to the contact information. This MUST be in the form of a URL."
+                },
+                {
+                    "name": "email",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "contactEmail",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The email address of the contact person/organization. This MUST be in the form of an email address."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "License Object",
+            "extensible": true,
+            "description": "License information for the exposed API.",
+            "fields": [
+                {
+                    "name": "name",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "licenseName",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The license name used for the API."
+                },
+                {
+                    "name": "identifier",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "licenseIdentifier",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An SPDX license expression for the API. The identifier field is mutually exclusive of the url field."
+                },
+                {
+                    "name": "url",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "licenseUrl",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A URL to the license used for the API. This MUST be in the form of a URL. The url field is mutually exclusive of the identifier field."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Server Object",
+            "extensible": true,
+            "description": "An object representing a Server.",
+            "fields": [
+                {
+                    "name": "url",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "serverUrl",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A URL to the target host.  This URL supports Server Variables and MAY be relative, to indicate that the host location is relative to the location where the OpenAPI document is being served. Variable substitutions will be made when a variable is named in {brackets}."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "serverDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An optional string describing the host designated by the URL. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "variables",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "serverVariables",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Server Variable Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A map between a variable name and its value.  The value is used for substitution in the server's URL template."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Server Variable Object",
+            "extensible": true,
+            "description": "An object representing a Server Variable for server URL template substitution.",
+            "fields": [
+                {
+                    "name": "enum",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "serverVariableEnum",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An enumeration of string values to be used if the substitution options are from a limited set. The array MUST NOT be empty."
+                },
+                {
+                    "name": "default",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "serverVariableDefault",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The default value to use for substitution, which SHALL be sent if an alternate value is not supplied. Note this behavior is different than the Schema Object's treatment of default values, because in those cases parameter values are optional. If the enum is defined, the value MUST exist in the enum's values."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "serverVariableDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An optional description for the server variable. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Components Object",
+            "extensible": true,
+            "description": "Holds a set of reusable objects for different aspects of the OAS.\nAll objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.",
+            "fields": [
+                {
+                    "name": " schemas",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsSchemas",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Schema Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Schema Objects."
+                },
+                {
+                    "name": " responses",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsResponses",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Response Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Response Objects."
+                },
+                {
+                    "name": " parameters",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsParameters",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Parameter Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Parameter Objects."
+                },
+                {
+                    "name": " examples",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsExamples",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Example Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Example Objects."
+                },
+                {
+                    "name": " requestBodies",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsRequestBodies",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Request Body Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Request Body Objects."
+                },
+                {
+                    "name": " headers",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsHeaders",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Header Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Header Objects."
+                },
+                {
+                    "name": " securitySchemes",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsSecuritySchemes",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Security Scheme Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Security Scheme Objects."
+                },
+                {
+                    "name": " links",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsLinks",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Link Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Link Objects."
+                },
+                {
+                    "name": " callbacks",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsCallbacks",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Callback Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Callback Objects."
+                },
+                {
+                    "name": " pathItems",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "componentsPathItems",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Path Item Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold reusable Path Item Object."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Paths Object",
+            "extensible": true,
+            "description": "Holds the relative paths to the individual endpoints and their operations.\nThe path is appended to the URL from the <a href=\"#serverObject\"><code>Server Object</code></a> in order to construct the full URL.  The Paths MAY be empty, due to <a href=\"#securityFiltering\">Access Control List (ACL) constraints</a>.",
+            "fields": [
+                {
+                    "name": "/{path}",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "pathsPath",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Path Item Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A relative path to an individual endpoint. The field name MUST begin with a forward slash (/). The path is appended (no relative URL resolution) to the expanded URL from the Server Object's url field in order to construct the full URL. Path templating is allowed. When matching URLs, concrete (non-templated) paths would be matched before their templated counterparts. Templated paths with the same hierarchy but different templated names MUST NOT exist as they are identical. In case of ambiguous matching, it's up to the tooling to decide which one to use."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Path Item Object",
+            "extensible": true,
+            "description": "Describes the operations available on a single path.\nA Path Item MAY be empty, due to <a href=\"#securityFiltering\">ACL constraints</a>.\nThe path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available.",
+            "fields": [
+                {
+                    "name": "$ref",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemRef",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows for a referenced definition of this path item. The referenced structure MUST be in the form of a Path Item Object.  In case a Path Item Object field appears both in the defined object and the referenced object, the behavior is undefined. See the rules for resolving Relative References."
+                },
+                {
+                    "name": "summary",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemSummary",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An optional, string summary, intended to apply to all operations in this path."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An optional, string description, intended to apply to all operations in this path. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "get",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemGet",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Operation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A definition of a GET operation on this path."
+                },
+                {
+                    "name": "put",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemPut",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Operation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A definition of a PUT operation on this path."
+                },
+                {
+                    "name": "post",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemPost",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Operation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A definition of a POST operation on this path."
+                },
+                {
+                    "name": "delete",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemDelete",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Operation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A definition of a DELETE operation on this path."
+                },
+                {
+                    "name": "options",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemOptions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Operation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A definition of a OPTIONS operation on this path."
+                },
+                {
+                    "name": "head",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemHead",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Operation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A definition of a HEAD operation on this path."
+                },
+                {
+                    "name": "patch",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemPatch",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Operation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A definition of a PATCH operation on this path."
+                },
+                {
+                    "name": "trace",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemTrace",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Operation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A definition of a TRACE operation on this path."
+                },
+                {
+                    "name": "servers",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemServers",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "Server Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An alternative server array to service all operations in this path."
+                },
+                {
+                    "name": "parameters",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "pathItemParameters",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "Parameter Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A list of parameters that are applicable for all the operations described under this path. These parameters can be overridden at the operation level, but cannot be removed there. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the OpenAPI Object's components/parameters."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Operation Object",
+            "extensible": true,
+            "description": "Describes a single API operation on a path.",
+            "fields": [
+                {
+                    "name": "tags",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationTags",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier."
+                },
+                {
+                    "name": "summary",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationSummary",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A short summary of what the operation does."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A verbose explanation of the operation behavior. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "externalDocs",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationExternalDocs",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "External Documentation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Additional external documentation for this operation."
+                },
+                {
+                    "name": "operationId",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationId",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Unique string used to identify the operation. The id MUST be unique among all operations described in the API. The operationId value is case-sensitive. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is RECOMMENDED to follow common programming naming conventions."
+                },
+                {
+                    "name": "parameters",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationParameters",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "Parameter Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A list of parameters that are applicable for this operation. If a parameter is already defined at the Path Item, the new definition will override it but can never remove it. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the OpenAPI Object's components/parameters."
+                },
+                {
+                    "name": "requestBody",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationRequestBody",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Request Body Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The request body applicable for this operation.  The requestBody is fully supported in HTTP methods where the HTTP 1.1 specification RFC7231 has explicitly defined semantics for request bodies.  In other cases where the HTTP spec is vague (such as GET, HEAD and DELETE), requestBody is permitted but does not have well-defined semantics and SHOULD be avoided if possible."
+                },
+                {
+                    "name": "responses",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationResponses",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Responses Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The list of possible responses as they are returned from executing this operation."
+                },
+                {
+                    "name": "callbacks",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationCallbacks",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Callback Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A map of possible out-of band callbacks related to the parent operation. The key is a unique identifier for the Callback Object. Each value in the map is a Callback Object that describes a request that may be initiated by the API provider and the expected responses."
+                },
+                {
+                    "name": "deprecated",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationDeprecated",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Declares this operation to be deprecated. Consumers SHOULD refrain from usage of the declared operation. Default value is false."
+                },
+                {
+                    "name": "security",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationSecurity",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "Security Requirement Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A declaration of which security mechanisms can be used for this operation. The list of values includes alternative security requirement objects that can be used. Only one of the security requirement objects need to be satisfied to authorize a request. To make security optional, an empty security requirement ({}) can be included in the array. This definition overrides any declared top-level security. To remove a top-level security declaration, an empty array can be used."
+                },
+                {
+                    "name": "servers",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "operationServers",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "Server Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An alternative server array to service this operation. If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "External Documentation Object",
+            "extensible": true,
+            "description": "Allows referencing an external resource for extended documentation.",
+            "fields": [
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "externalDocDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A description of the target documentation. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "url",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "externalDocUrl",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The URL for the target documentation. This MUST be in the form of a URL."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Parameter Object",
+            "extensible": true,
+            "description": "Describes a single operation parameter.A unique parameter is defined by a combination of a <a href=\"#parameterName\">name</a> and <a href=\"#parameterIn\">location</a>.",
+            "fields": [
+                {
+                    "name": "name",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "parameterName",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The name of the parameter. Parameter names are case sensitive. If in is \"path\", the name field MUST correspond to a template expression occurring within the path field in the Paths Object. See Path Templating for further information.If in is \"header\" and the name field is \"Accept\", \"Content-Type\" or \"Authorization\", the parameter definition SHALL be ignored.For all other cases, the name corresponds to the parameter name used by the in property."
+                },
+                {
+                    "name": "in",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "parameterIn",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The location of the parameter. Possible values are \"query\", \"header\", \"path\" or \"cookie\"."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A brief description of the parameter. This could contain examples of use. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "required",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterRequired",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Determines whether this parameter is mandatory. If the parameter location is \"path\", this property is REQUIRED and its value MUST be true. Otherwise, the property MAY be included and its default value is false."
+                },
+                {
+                    "name": " deprecated",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterDeprecated",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Specifies that a parameter is deprecated and SHOULD be transitioned out of usage. Default value is false."
+                },
+                {
+                    "name": " allowEmptyValue",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterAllowEmptyValue",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Sets the ability to pass empty-valued parameters. This is valid only for query parameters and allows sending a parameter with an empty value. Default value is false. If style is used, and if behavior is n/a (cannot be serialized), the value of allowEmptyValue SHALL be ignored. Use of this property is NOT RECOMMENDED, as it is likely to be removed in a later revision."
+                },
+                {
+                    "name": "style",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterStyle",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Describes how the parameter value will be serialized depending on the type of the parameter value. Default values (based on value of in): for query - form; for path - simple; for header - simple; for cookie - form."
+                },
+                {
+                    "name": "explode",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterExplode",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "When this is true, parameter values of type array or object generate separate parameters for each value of the array or key-value pair of the map. For other types of parameters this property has no effect. When style is form, the default value is true. For all other styles, the default value is false."
+                },
+                {
+                    "name": "allowReserved",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterAllowReserved",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. This property only applies to parameters with an in value of query. The default value is false."
+                },
+                {
+                    "name": "schema",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterSchema",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Schema Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The schema defining the type used for the parameter."
+                },
+                {
+                    "name": "example",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterExample",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Example of the parameter's potential value. The example SHOULD match the specified schema and encoding properties if present. The example field is mutually exclusive of the examples field. Furthermore, if referencing a schema that contains an example, the example value SHALL override the example provided by the schema. To represent examples of media types that cannot naturally be represented in JSON or YAML, a string value can contain the example with escaping where necessary."
+                },
+                {
+                    "name": "examples",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterExamples",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": " string",
+                        "types": [
+                            "Example Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Examples of the parameter's potential value. Each example SHOULD contain a value in the correct format as specified in the parameter encoding. The examples field is mutually exclusive of the example field. Furthermore, if referencing a schema that contains an example, the examples value SHALL override the example provided by the schema."
+                },
+                {
+                    "name": "content",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "parameterContent",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Media Type Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A map containing the representations for the parameter. The key is the media type and the value describes it. The map MUST only contain one entry."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Request Body Object",
+            "extensible": true,
+            "description": "Describes a single request body.",
+            "fields": [
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "requestBodyDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A brief description of the request body. This could contain examples of use.  CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "content",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "requestBodyContent",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Media Type Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The content of the request body. The key is a media type or media type range and the value describes it.  For requests that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
+                },
+                {
+                    "name": "required",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "requestBodyRequired",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Determines if the request body is required in the request. Defaults to false."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Media Type Object",
+            "extensible": true,
+            "description": "Each Media Type Object provides schema and examples for the media type identified by its key.",
+            "fields": [
+                {
+                    "name": "schema",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "mediaTypeSchema",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Schema Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The schema defining the content of the request, response, or parameter."
+                },
+                {
+                    "name": "example",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "mediaTypeExample",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Example of the media type.  The example object SHOULD be in the correct format as specified by the media type.  The example field is mutually exclusive of the examples field.  Furthermore, if referencing a schema which contains an example, the example value SHALL override the example provided by the schema."
+                },
+                {
+                    "name": "examples",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "mediaTypeExamples",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": " string",
+                        "types": [
+                            "Example Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Examples of the media type.  Each example object SHOULD  match the media type and specified schema if present.  The examples field is mutually exclusive of the example field.  Furthermore, if referencing a schema which contains an example, the examples value SHALL override the example provided by the schema."
+                },
+                {
+                    "name": "encoding",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "mediaTypeEncoding",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Encoding Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A map between a property name and its encoding information. The key, being the property name, MUST exist in the schema as a property. The encoding object SHALL only apply to requestBody objects when the media type is multipart or application/x-www-form-urlencoded."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Encoding Object",
+            "extensible": true,
+            "description": "A single encoding definition applied to a single schema property.",
+            "fields": [
+                {
+                    "name": "contentType",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "encodingContentType",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The Content-Type for encoding a specific property. Default value depends on the property type: for object - application/json;  for array \u2013 the default is defined based on the inner type; for all other cases the default is application/octet-stream. The value can be a specific media type (e.g. application/json), a wildcard media type (e.g. image/*), or a comma-separated list of the two types."
+                },
+                {
+                    "name": "headers",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "encodingHeaders",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Header Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A map allowing additional information to be provided as headers, for example Content-Disposition.  Content-Type is described separately and SHALL be ignored in this section. This property SHALL be ignored if the request body media type is not a multipart."
+                },
+                {
+                    "name": "style",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "encodingStyle",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Describes how a specific property value will be serialized depending on its type.  See Parameter Object for details on the style property. The behavior follows the same values as query parameters, including default values. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded or multipart/form-data. If a value is explicitly defined, then the value of contentType (implicit or explicit) SHALL be ignored."
+                },
+                {
+                    "name": "explode",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "encodingExplode",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "When this is true, property values of type array or object generate separate parameters for each value of the array, or key-value-pair of the map.  For other types of properties this property has no effect. When style is form, the default value is true. For all other styles, the default value is false. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded or multipart/form-data. If a value is explicitly defined, then the value of contentType (implicit or explicit) SHALL be ignored."
+                },
+                {
+                    "name": "allowReserved",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "encodingAllowReserved",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default value is false. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded or multipart/form-data. If a value is explicitly defined, then the value of contentType (implicit or explicit) SHALL be ignored."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Responses Object",
+            "extensible": true,
+            "description": "A container for the expected responses of an operation.\nThe container maps a HTTP response code to the expected response.The documentation is not necessarily expected to cover all possible HTTP response codes because they may not be known in advance.\nHowever, documentation is expected to cover a successful operation response and any known errors.The <code>default</code> MAY be used as a default response object for all HTTP codes \nthat are not covered individually by the <code>Responses Object</code>.The <code>Responses Object</code> MUST contain at least one response code, and if only one\nresponse code is provided it SHOULD be the response for a successful operation\ncall.",
+            "fields": [
+                {
+                    "name": "default",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "responsesDefault",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Response Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The documentation of responses other than the ones declared for specific HTTP response codes. Use this field to cover undeclared responses."
+                },
+                {
+                    "name": "HTTP Status Code",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "responsesCode",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Response Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Any HTTP status code can be used as the property name, but only one property per code, to describe the expected response for that HTTP status code. This field MUST be enclosed in quotation marks (for example, \"200\") for compatibility between JSON and YAML. To define a range of response codes, this field MAY contain the uppercase wildcard character X. For example, 2XX represents all response codes between [200-299]. Only the following range definitions are allowed: 1XX, 2XX, 3XX, 4XX, and 5XX. If a response is defined using an explicit code, the explicit code definition takes precedence over the range definition for that code."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Response Object",
+            "extensible": true,
+            "description": "Describes a single response from an API Operation, including design-time, static \n<code>links</code> to operations based on the response.",
+            "fields": [
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "responseDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A description of the response. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "headers",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "responseHeaders",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Header Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Maps a header name to its definition. RFC7230 states header names are case insensitive. If a response header is defined with the name \"Content-Type\", it SHALL be ignored."
+                },
+                {
+                    "name": "content",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "responseContent",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Media Type Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A map containing descriptions of potential response payloads. The key is a media type or media type range and the value describes it.  For responses that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
+                },
+                {
+                    "name": "links",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "responseLinks",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Link Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A map of operations links that can be followed from the response. The key of the map is a short name for the link, following the naming constraints of the names for Component Objects."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Callback Object",
+            "extensible": true,
+            "description": "A map of possible out-of band callbacks related to the parent operation.\nEach value in the map is a <a href=\"#pathItemObject\">Path Item Object</a> that describes a set of requests that may be initiated by the API provider and the expected responses.\nThe key value used to identify the path item object is an expression, evaluated at runtime, that identifies a URL to use for the callback operation.To describe incoming requests from the API provider independent from another API call, use the <a href=\"#oasWebhooks\"><code>webhooks</code></a> field.",
+            "fields": [
+                {
+                    "name": "{expression}",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "callbackExpression",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Path Item Object",
+                            "Reference Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A Path Item Object, or a reference to one, used to define a callback request and expected responses.  A complete example is available."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Example Object",
+            "extensible": true,
+            "description": "",
+            "fields": [
+                {
+                    "name": "summary",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "exampleSummary",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Short description for the example."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "exampleDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Long description for the example. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "value",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "exampleValue",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Embedded literal example. The value field and externalValue field are mutually exclusive. To represent examples of media types that cannot naturally represented in JSON or YAML, use a string value to contain the example, escaping where necessary."
+                },
+                {
+                    "name": "externalValue",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "exampleExternalValue",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A URI that points to the literal example. This provides the capability to reference examples that cannot easily be included in JSON or YAML documents.  The value field and externalValue field are mutually exclusive. See the rules for resolving Relative References."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Link Object",
+            "extensible": true,
+            "description": "The <code>Link object</code> represents a possible design-time link for a response.\nThe presence of a link does not guarantee the caller's ability to successfully invoke it, rather it provides a known relationship and traversal mechanism between responses and other operations.Unlike <em>dynamic</em> links (i.e. links provided <strong>in</strong> the response payload), the OAS linking mechanism does not require link information in the runtime response.For computing links, and providing instructions to execute them, a <a href=\"#runtimeExpression\">runtime expression</a> is used for accessing values in an operation and using them as parameters while invoking the linked operation.  ",
+            "fields": [
+                {
+                    "name": "operationRef",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "linkOperationRef",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A relative or absolute URI reference to an OAS operation. This field is mutually exclusive of the operationId field, and MUST point to an Operation Object. Relative operationRef values MAY be used to locate an existing Operation Object in the OpenAPI definition. See the rules for resolving Relative References."
+                },
+                {
+                    "name": "operationId",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "linkOperationId",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The name of an existing, resolvable OAS operation, as defined with a unique operationId.  This field is mutually exclusive of the operationRef field."
+                },
+                {
+                    "name": "parameters",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "linkParameters",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "Any",
+                            ""
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A map representing parameters to pass to an operation as specified with operationId or identified via operationRef. The key is the parameter name to be used, whereas the value can be a constant or an expression to be evaluated and passed to the linked operation.  The parameter name can be qualified using the parameter location [{in}.]{name} for operations that use the same parameter name in different locations (e.g. path.id)."
+                },
+                {
+                    "name": "requestBody",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "linkRequestBody",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any",
+                            ""
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A literal value or {expression} to use as a request body when calling the target operation."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "linkDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A description of the link. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "server",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "linkServer",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Server Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A server object to be used by the target operation."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Header Object",
+            "extensible": false,
+            "description": "The Header Object follows the structure of the <a href=\"#parameterObject\">Parameter Object</a> with the following changes:\n<li><code>name</code> MUST NOT be specified, it is given in the corresponding <code>headers</code> map.</li>\n<li><code>in</code> MUST NOT be specified, it is implicitly in <code>header</code>.</li>\n<li>All traits that are affected by the location MUST be applicable to a location of <code>header</code> (for example, <a href=\"#parameterStyle\"><code>style</code></a>).</li>\n",
+            "fields": [
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Tag Object",
+            "extensible": true,
+            "description": "Adds metadata to a single tag that is used by the <a href=\"#operationObject\">Operation Object</a>.\nIt is not mandatory to have a Tag Object per tag defined in the Operation Object instances.",
+            "fields": [
+                {
+                    "name": "name",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "tagName",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The name of the tag."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "tagDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A description for the tag. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "externalDocs",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "tagExternalDocs",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "External Documentation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Additional external documentation for this tag."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Reference Object",
+            "extensible": false,
+            "description": "A simple object to allow referencing other components in the OpenAPI document, internally and externally.The <code>$ref</code> string value contains a URI <a href=\"https://tools.ietf.org/html/rfc3986\">RFC3986</a>, which identifies the location of the value being referenced.See the rules for resolving <a href=\"#relativeReferencesURI\">Relative References</a>.",
+            "fields": [
+                {
+                    "name": "$ref",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "referenceRef",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The reference identifier. This MUST be in the form of a URI."
+                },
+                {
+                    "name": "summary",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "referenceSummary",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A short summary which by default SHOULD override that of the referenced component. If the referenced object-type does not allow a summary field, then this field has no effect."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "referenceDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A description which by default SHOULD override that of the referenced component. CommonMark syntax MAY be used for rich text representation. If the referenced object-type does not allow a description field, then this field has no effect."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Schema Object",
+            "extensible": false,
+            "description": "The Schema Object allows the definition of input and output data types.\nThese types can be objects, but also primitives and arrays. This object is a superset of the <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-00\">JSON Schema Specification Draft 2020-12</a>.For more information about the properties, see <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-00\">JSON Schema Core</a> and <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-validation-00\">JSON Schema Validation</a>.Unless stated otherwise, the property definitions follow those of JSON Schema and do not add any additional semantics.\nWhere JSON Schema indicates that behavior is defined by the application (e.g. for annotations), OAS also defers the definition of semantics to the application consuming the OpenAPI document.",
+            "fields": [
+                {
+                    "name": "discriminator",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "schemaDiscriminator",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Discriminator Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Adds support for polymorphism. The discriminator is an object name that is used to differentiate between other schemas which may satisfy the payload description. See Composition and Inheritance for more details."
+                },
+                {
+                    "name": "xml",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "schemaXml",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "XML Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "This MAY be used only on properties schemas. It has no effect on root schemas. Adds additional metadata to describe the XML representation of this property."
+                },
+                {
+                    "name": "externalDocs",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "schemaExternalDocs",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "External Documentation Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Additional external documentation for this schema."
+                },
+                {
+                    "name": "example",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "schemaExample",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "A free-form property to include an example of an instance for this schema. To represent examples that cannot be naturally represented in JSON or YAML, a string value can be used to contain the example with escaping where necessary.Deprecated: The example property has been deprecated in favor of the JSON Schema examples keyword. Use of example is discouraged, and later versions of this specification may remove it."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Discriminator Object",
+            "extensible": true,
+            "description": "When request bodies or response payloads may be one of a number of different schemas, a <code>discriminator</code> object can be used to aid in serialization, deserialization, and validation.  The discriminator is a specific object in a schema which is used to inform the consumer of the document of an alternative schema based on the value associated with it.When using the discriminator, <em>inline</em> schemas will not be considered.",
+            "fields": [
+                {
+                    "name": "propertyName",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "propertyName",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The name of the property in the payload that will hold the discriminator value."
+                },
+                {
+                    "name": " mapping",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "discriminatorMapping",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "An object to hold mappings between payload values and schema names or references."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "XML Object",
+            "extensible": true,
+            "description": "A metadata object that allows for more fine-tuned XML model definitions.When using arrays, XML element names are <em>not</em> inferred (for singular/plural forms) and the <code>name</code> property SHOULD be used to add that information.\nSee examples for expected behavior.",
+            "fields": [
+                {
+                    "name": "name",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "xmlName",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Replaces the name of the element/attribute used for the described schema property. When defined within items, it will affect the name of the individual XML elements within the list. When defined alongside type being array (outside the items), it will affect the wrapping element and only if wrapped is true. If wrapped is false, it will be ignored."
+                },
+                {
+                    "name": "namespace",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "xmlNamespace",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The URI of the namespace definition. This MUST be in the form of an absolute URI."
+                },
+                {
+                    "name": "prefix",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "xmlPrefix",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "The prefix to be used for the name."
+                },
+                {
+                    "name": "attribute",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "xmlAttribute",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Declares whether the property definition translates to an attribute instead of an element. Default value is false."
+                },
+                {
+                    "name": "wrapped",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "xmlWrapped",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "boolean"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "MAY be used only for an array definition. Signifies whether the array is wrapped (for example, <books><book/><book/></books>) or unwrapped (<book/><book/>). Default value is false. The definition takes effect only when defined alongside type being array (outside the items)."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Security Scheme Object",
+            "extensible": true,
+            "description": "Defines a security scheme that can be used by the operations.Supported schemes are HTTP authentication, an API key (either as a header, a cookie parameter or as a query parameter), mutual TLS (use of a client certificate), OAuth2's common flows (implicit, password, client credentials and authorization code) as defined in <a href=\"https://tools.ietf.org/html/rfc6749\">RFC6749</a>, and <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-discovery-06\">OpenID Connect Discovery</a>.\nPlease note that as of 2020, the implicit flow is about to be deprecated by <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-security-topics\">OAuth 2.0 Security Best Current Practice</a>. Recommended for most use case is Authorization Code Grant flow with PKCE.",
+            "fields": [
+                {
+                    "name": "type",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "securitySchemeType",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "Any",
+                    "description": "The type of the security scheme. Valid values are \"apiKey\", \"http\", \"mutualTLS\", \"oauth2\", \"openIdConnect\"."
+                },
+                {
+                    "name": "description",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "securitySchemeDescription",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "Any",
+                    "description": "A description for security scheme. CommonMark syntax MAY be used for rich text representation."
+                },
+                {
+                    "name": "name",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "securitySchemeName",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "apiKey",
+                    "description": "The name of the header, query or cookie parameter to be used."
+                },
+                {
+                    "name": "in",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "securitySchemeIn",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "apiKey",
+                    "description": "The location of the API key. Valid values are \"query\", \"header\" or \"cookie\"."
+                },
+                {
+                    "name": "scheme",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "securitySchemeScheme",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "http",
+                    "description": "The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.  The values used SHOULD be registered in the IANA Authentication Scheme registry."
+                },
+                {
+                    "name": "bearerFormat",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "securitySchemeBearerFormat",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "http (\"bearer\")",
+                    "description": "A hint to the client to identify how the bearer token is formatted.  Bearer tokens are usually generated by an authorization server, so this information is primarily for documentation purposes."
+                },
+                {
+                    "name": "flows",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "securitySchemeFlows",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "OAuth Flows Object"
+                        ]
+                    },
+                    "appliesTo": "oauth2",
+                    "description": "An object containing configuration information for the flow types supported."
+                },
+                {
+                    "name": "openIdConnectUrl",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "securitySchemeOpenIdConnectUrl",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "openIdConnect",
+                    "description": "OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL. The OpenID Connect standard requires the use of TLS."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "OAuth Flows Object",
+            "extensible": true,
+            "description": "Allows configuration of the supported OAuth Flows.",
+            "fields": [
+                {
+                    "name": "implicit",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oauthFlowsImplicit",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "OAuth Flow Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Configuration for the OAuth Implicit flow"
+                },
+                {
+                    "name": "password",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oauthFlowsPassword",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "OAuth Flow Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Configuration for the OAuth Resource Owner Password flow"
+                },
+                {
+                    "name": "clientCredentials",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oauthFlowsClientCredentials",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "OAuth Flow Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Configuration for the OAuth Client Credentials flow.  Previously called application in OpenAPI 2.0."
+                },
+                {
+                    "name": "authorizationCode",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oauthFlowsAuthorizationCode",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "OAuth Flow Object"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Configuration for the OAuth Authorization Code flow.  Previously called accessCode in OpenAPI 2.0."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "OAuth Flow Object",
+            "extensible": true,
+            "description": "Configuration details for a supported OAuth Flow",
+            "fields": [
+                {
+                    "name": "authorizationUrl",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "oauthFlowAuthorizationUrl",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "oauth2 (\"implicit\", \"authorizationCode\")",
+                    "description": "The authorization URL to be used for this flow. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
+                },
+                {
+                    "name": "tokenUrl",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "oauthFlowTokenUrl",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "oauth2 (\"password\", \"clientCredentials\", \"authorizationCode\")",
+                    "description": "The token URL to be used for this flow. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
+                },
+                {
+                    "name": "refreshUrl",
+                    "nameType": "fixed",
+                    "required": false,
+                    "id": "oauthFlowRefreshUrl",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "oauth2",
+                    "description": "The URL to be used for obtaining refresh tokens. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
+                },
+                {
+                    "name": "scopes",
+                    "nameType": "fixed",
+                    "required": true,
+                    "id": "oauthFlowScopes",
+                    "type": {
+                        "listType": "map",
+                        "mapKeyType": "string",
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": "oauth2",
+                    "description": "The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it. The map MAY be empty."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        },
+        {
+            "name": "Security Requirement Object",
+            "extensible": false,
+            "description": "Lists the required security schemes to execute this operation.\nThe name used for each property MUST correspond to a security scheme declared in the <a href=\"#componentsSecuritySchemes\">Security Schemes</a> under the <a href=\"#componentsObject\">Components Object</a>.Security Requirement Objects that contain multiple schemes require that all schemes MUST be satisfied for a request to be authorized.\nThis enables support for scenarios where multiple query parameters or HTTP headers are required to convey security information.When a list of Security Requirement Objects is defined on the <a href=\"#oasObject\">OpenAPI Object</a> or <a href=\"#operationObject\">Operation Object</a>, only one of the Security Requirement Objects in the list needs to be satisfied to authorize the request.",
+            "fields": [
+                {
+                    "name": "{name}",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "securityRequirementsName",
+                    "type": {
+                        "listType": "array",
+                        "mapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Each name MUST correspond to a security scheme which is declared in the Security Schemes under the Components Object. If the security scheme is of type \"oauth2\" or \"openIdConnect\", then the value is a list of scope names required for the execution, and the list MAY be empty if authorization does not require a specified scope. For other security scheme types, the array MAY contain a list of role names which are required for the execution, but are not otherwise defined or exchanged in-band."
+                },
+                {
+                    "name": "^x-",
+                    "nameType": "patterned",
+                    "required": false,
+                    "id": "infoExtensions",
+                    "type": {
+                        "listType": null,
+                        "mapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "appliesTo": null,
+                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
+                }
+            ]
+        }
+    ]
+}
