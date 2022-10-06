@@ -150,7 +150,8 @@ class SpecificationViewer extends HTMLElement {
     .tree .title {
       position: -webkit-sticky; /* Safari */
       position: sticky;
-      top: 0;
+      top: 90px;
+      margin-top:10px;
       background: white;
     }
 
