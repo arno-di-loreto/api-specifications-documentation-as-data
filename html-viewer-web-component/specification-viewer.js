@@ -187,8 +187,8 @@ class SpecificationViewer extends HTMLElement {
     .navigation > a {
       text-decoration: none;
       font-size: 0.8rem;
-      background: black;
-      color: white;
+      background: darkseagreen;
+      color: black;
     }
 
     .opened {
@@ -327,7 +327,7 @@ class SpecificationViewer extends HTMLElement {
         fieldType = `<span class="syntax">[</span>${fieldType}<span class="syntax">]</span>`;
       }
       else if (field.type.listType === 'map'){
-        fieldType = `<span class="syntax">{key ${field.type.mapKeyType}: </span>${fieldType}<span class="syntax">}</span>`;
+        fieldType = `<span class="syntax">{ * : </span>${fieldType}<span class="syntax">}</span>`;
       }
       htmlField.innerHTML = `
       <div class="node" data-type="field" data-name="${schema.name};${field.name}" data-children="${dataChildren}">
