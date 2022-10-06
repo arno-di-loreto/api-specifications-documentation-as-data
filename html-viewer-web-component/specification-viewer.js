@@ -117,6 +117,7 @@ class SpecificationViewer extends HTMLElement {
       background-color: green;
       color: white;
       padding: 0.3rem;
+      margin-left: 0.4rem;
       border-radius: 8px;
       vertical-align: middle;
       text-transform: uppercase;
@@ -134,6 +135,20 @@ class SpecificationViewer extends HTMLElement {
       text-transform: uppercase;
     }
 
+    .tree .root {
+      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 0.8rem;
+      background-color: red;
+      color: white;
+      padding: 0.3rem;
+      margin-left: 0.4rem;
+      border-radius: 8px;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+
+
+
     .tree .title {
       position: -webkit-sticky; /* Safari */
       position: sticky;
@@ -145,54 +160,65 @@ class SpecificationViewer extends HTMLElement {
     return style;
   }
 
-  _getHtmlSpecification(specification) {
+  _getHtmlSpecification() {
     const htmlSpecification = document.createElement('ul');
     htmlSpecification.setAttribute('class', 'tree');
     htmlSpecification.innerHTML = `
       <li>
         <div>
-          <div class="title"><h1>OpenAPI ${specification.version} Specification</h1></div>
-          <div class="description">${specification.description}</div>
+          <div class="title"><h1>OpenAPI ${this.specification.version} Specification</h1></div>
+          <div class="description">${this.specification.description}</div>
         </div>
       </li>
     `;
-    const ul = document.createElement('ul');
-    // Need to add a "root" schema flag in data
-    const rootObject = this._getHtmlSchema(specification.schemas[0], specification);
-    ul.appendChild(rootObject);
-    htmlSpecification.appendChild(ul);
+    const sections = document.createElement('ul');
+    const schemas = document.createElement('li');
+    schemas.setAttribute('class', 'node');
+    schemas.innerHTML = `
+        <div>
+          <div class="title"><h1>Schemas</h1></div>
+        </div>
+    `;
+    sections.appendChild(schemas);
+    const rootObject = this._getHtmlSchema(this.specification.schemas.find(schema => schema.root));
+    schemas.appendChild(rootObject);
+    htmlSpecification.appendChild(sections);
     return htmlSpecification;
   }
 
-  _getHtmlSchema(schema, specification) {
+  _getHtmlSchema(schema) {
     const htmlSchema = document.createElement('li');
     let extensible = '';
     if(schema.extensible) {
-      extensible = `&nbsp;<span class="extensible">Extensible</span>`
+      extensible = `<span class="extensible">Extensible</span>`
+    }
+    let root = '';
+    if(schema.root) {
+      root = `<span class="root">Root</span>`
     }
     htmlSchema.innerHTML = `
-        <div class="node">
+        <div class="node" data-type="schema" data-name="${schema.name}">
           <div class="title">
-            <h1>${schema.name}${extensible}</h1>
+            <h1>${schema.name}${root}${extensible}</h1>
           </div>
           <div class="description">${schema.description}</div>
         </div>
     `;
-    const fields = this._getHtmlFields(schema.fields, specification);
+    const fields = this._getHtmlFields(schema.fields);
     htmlSchema.appendChild(fields);
     return htmlSchema;
   }
 
 
-  _getHtmlSchemas(types, specification) {
+  _getHtmlSchemas(types) {
     const htmlSchemas = document.createElement('ul');
     types.forEach(type => {
       // Q&D to avoid loop
       if(['Info Object', 'Contact Object', 'License Object', 'Paths Object', 'Path Item Object', 'Components Object', 'Parameter Object', 'Reference Object'].includes(type)){
-        const schema = specification.schemas.find(s => s.name === type);
+        const schema = this.specification.schemas.find(s => s.name === type);
         console.log(type, schema);
         if(schema){ // atomic types will not be found but we do not care
-            htmlSchemas.appendChild(this._getHtmlSchema(schema, specification));
+            htmlSchemas.appendChild(this._getHtmlSchema(schema));
         }
       }
     });
@@ -204,10 +230,9 @@ class SpecificationViewer extends HTMLElement {
     }
   }
 
-  _getHtmlFields(fields, specification) {
+  _getHtmlFields(fields) {
     const htmlFields = document.createElement('ul');
     fields.forEach((field) => {
-      console.log(field)
       const htmlField = document.createElement('li');
       let required = '';
       if(field.required){
@@ -218,7 +243,7 @@ class SpecificationViewer extends HTMLElement {
         richText = '<span class="rich-text">Rich Text</span>';
       }
       htmlField.innerHTML = `
-      <div class="node" data-schema="${field.type.types[0]}">
+      <div class="node" data-type="field" data-name="${field.name}">
         <div class="title">
           <code class="openapi">
             <span class="property">${field.name}</span>${required}
@@ -230,7 +255,7 @@ class SpecificationViewer extends HTMLElement {
       </div>
       `;
       // will need a fix to add the map/list dimension * vs {*}
-      const htmlSchemas = this._getHtmlSchemas(field.type.types, specification);
+      const htmlSchemas = this._getHtmlSchemas(field.type.types);
       console.log(htmlSchemas);
       if(htmlSchemas){
         htmlField.appendChild(htmlSchemas);
@@ -253,20 +278,20 @@ class SpecificationViewer extends HTMLElement {
     if(this.src) {
       console.log('content from url', this.src);
       fetch(this.src).then((response)=>{response.json().then((json)=>{
-        this.content = json;
+        this.specification = json;
         this._render();
       })});
     }
     else {
       console.log('inline content');
-      this.content = JSON.parse(this.innerText);
+      this.specification = JSON.parse(this.innerText);
       this._render(); 
     }
   }
 
   _render() {
     this.shadowRoot.appendChild(this._getCss());
-    const htmlSpecification = this._getHtmlSpecification(this.content);
+    const htmlSpecification = this._getHtmlSpecification();
     this.shadowRoot.appendChild(htmlSpecification);
   }
 
