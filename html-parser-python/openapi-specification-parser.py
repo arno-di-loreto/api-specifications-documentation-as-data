@@ -362,6 +362,7 @@ class OpenApiSpecificationSchema:
     self.__init_is_extensible()
     self.__init_fields()
     self.__init_description()
+    self.__init_is_root()
 
   def __init_description(self):
     self.descriptions = []
@@ -370,6 +371,9 @@ class OpenApiSpecificationSchema:
         self.descriptions.append(child)
       else: # will break on first header after intro
         break
+
+  def __init_is_root(self):
+    self.is_root = self.get_description().__contains__('This is the root')
 
   def get_description(self):
     result = ''
@@ -421,6 +425,7 @@ class OpenApiSpecificationSchema:
     return {
       'name': self.name,
       'extensible': self.is_extensible,
+      'root': self.is_root,
       'description': self.get_description(),
       'fields': self.fields.to_dict(),
       #'node': self.node.to_dict()

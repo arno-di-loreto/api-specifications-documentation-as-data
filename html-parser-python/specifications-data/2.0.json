@@ -5,6 +5,7 @@
         {
             "name": "Swagger Object",
             "extensible": true,
+            "root": true,
             "description": "This is the root document object for the API specification. It combines what previously was the Resource Listing and API Declaration (version 1.2 and earlier) together into one document.",
             "fields": [
                 {
@@ -268,6 +269,7 @@
         {
             "name": "Info Object",
             "extensible": true,
+            "root": false,
             "description": "The object provides metadata about the API. The metadata can be used by the clients if needed, and can be presented in the Swagger-UI for convenience.",
             "fields": [
                 {
@@ -387,6 +389,7 @@
         {
             "name": "Contact Object",
             "extensible": true,
+            "root": false,
             "description": "Contact information for the exposed API.",
             "fields": [
                 {
@@ -458,6 +461,7 @@
         {
             "name": "License Object",
             "extensible": true,
+            "root": false,
             "description": "License information for the exposed API.",
             "fields": [
                 {
@@ -513,6 +517,7 @@
         {
             "name": "Paths Object",
             "extensible": true,
+            "root": false,
             "description": "Holds the relative paths to the individual endpoints. The path is appended to the <a href=\"#swaggerBasePath\"><code>basePath</code></a> in order to construct the full URL.\nThe Paths may be empty, due to <a href=\"#securityFiltering\">ACL constraints</a>.",
             "fields": [
                 {
@@ -552,6 +557,7 @@
         {
             "name": "Path Item Object",
             "extensible": true,
+            "root": false,
             "description": "Describes the operations available on a single path.\nA Path Item may be empty, due to <a href=\"#securityFiltering\">ACL constraints</a>. The path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available.",
             "fields": [
                 {
@@ -720,6 +726,7 @@
         {
             "name": "Operation Object",
             "extensible": true,
+            "root": false,
             "description": "Describes a single API operation on a path.",
             "fields": [
                 {
@@ -936,6 +943,7 @@
         {
             "name": "External Documentation Object",
             "extensible": true,
+            "root": false,
             "description": "Allows referencing an external resource for extended documentation.",
             "fields": [
                 {
@@ -991,6 +999,7 @@
         {
             "name": "Parameter Object",
             "extensible": true,
+            "root": false,
             "description": "Describes a single operation parameter.A unique parameter is defined by a combination of a <a href=\"#parameterName\">name</a> and <a href=\"#parameterIn\">location</a>.There are five possible parameter types.\n* Path - Used together with <a href=\"#pathTemplating\">Path Templating</a>, where the parameter value is actually part of the operation's URL. This does not include the host or base path of the API. For example, in <code>/items/{itemId}</code>, the path parameter is <code>itemId</code>.\n* Query - Parameters that are appended to the URL. For example, in <code>/items?id=###</code>, the query parameter is <code>id</code>.\n* Header - Custom headers that are expected as part of the request.\n* Body - The payload that's appended to the HTTP request. Since there can only be one payload, there can only be <em>one</em> body parameter. The name of the body parameter has no effect on the parameter itself and is used for documentation purposes only. Since Form parameters are also in the payload, body and form parameters cannot exist together for the same operation.\n* Form - Used to describe the payload of an HTTP request when either <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> or both are used as the content type of the request (in Swagger's definition, the <a href=\"#operationConsumes\"><code>consumes</code></a> property of an operation). This is the only parameter type that can be used to send files, thus supporting the <code>file</code> type. Since form parameters are sent in the payload, they cannot be declared together with a body parameter for the same operation. Form parameters have a different format based on the content-type used (for further details, consult http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4):\n  * <code>application/x-www-form-urlencoded</code> - Similar to the format of Query parameters but as a payload. For example, <code>foo=1&amp;bar=swagger</code> - both <code>foo</code> and <code>bar</code> are form parameters. This is normally used for simple parameters that are being transferred.\n  * <code>multipart/form-data</code> - each parameter takes a section in the payload with an internal header. For example, for the header <code>Content-Disposition: form-data; name=\"submit-name\"</code> the name of the parameter is <code>submit-name</code>. This type of form parameters is more commonly used for file transfers.",
             "fields": [
                 {
@@ -1382,6 +1391,7 @@
         {
             "name": "Items Object",
             "extensible": true,
+            "root": false,
             "description": "A limited subset of JSON-Schema's items object. It is used by parameter definitions that are not located <a href=\"#parameterIn\"><code>in</code></a> <code>\"body\"</code>.",
             "fields": [
                 {
@@ -1677,6 +1687,7 @@
         {
             "name": "Responses Object",
             "extensible": true,
+            "root": false,
             "description": "A container for the expected responses of an operation. The container maps a HTTP response code to the expected response. It is not expected from the documentation to necessarily cover all possible HTTP response codes, since they may not be known in advance. However, it is expected from the documentation to cover a successful operation response and any known errors.The <code>default</code> can be used as the default response object for all HTTP codes that are not covered individually by the specification.The <code>Responses Object</code> MUST contain at least one response code, and it SHOULD be the response for a successful operation call.",
             "fields": [
                 {
@@ -1734,6 +1745,7 @@
         {
             "name": "Response Object",
             "extensible": true,
+            "root": false,
             "description": "Describes a single response from an API Operation.",
             "fields": [
                 {
@@ -1821,6 +1833,7 @@
         {
             "name": "Headers Object",
             "extensible": false,
+            "root": false,
             "description": "Lists the headers that can be sent as part of a response.",
             "fields": [
                 {
@@ -1844,6 +1857,7 @@
         {
             "name": "Example Object",
             "extensible": false,
+            "root": false,
             "description": "Allows sharing examples for operation responses.",
             "fields": [
                 {
@@ -1867,6 +1881,7 @@
         {
             "name": "Header Object",
             "extensible": true,
+            "root": false,
             "description": "\n<thead>\n<tr>\n<th>Field Name</th>\n<th style=\"text-align: center;\">Type</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><a name=\"headerDescription\"></a>description</td>\n<td style=\"text-align: center;\"><code>string</code></td>\n<td>A short description of the header.</td>\n</tr>\n<tr>\n<td><a name=\"headerType\"></a>type</td>\n<td style=\"text-align: center;\"><code>string</code></td>\n<td><strong>Required.</strong> The type of the object. The value MUST be one of <code>\"string\"</code>, <code>\"number\"</code>, <code>\"integer\"</code>, <code>\"boolean\"</code>, or <code>\"array\"</code>.</td>\n</tr>\n<tr>\n<td><a name=\"headerFormat\"></a>format</td>\n<td style=\"text-align: center;\"><code>string</code></td>\n<td>The extending format for the previously mentioned <a href=\"#stType\"><code>type</code></a>. See <a href=\"#dataTypeFormat\">Data Type Formats</a> for further details.</td>\n</tr>\n<tr>\n<td><a name=\"headerItems\"></a>items</td>\n<td style=\"text-align: center;\"><a href=\"#itemsObject\">Items Object</a></td>\n<td><strong>Required if <a href=\"#stType\"><code>type</code></a> is \"array\".</strong> Describes the type of items in the array.</td>\n</tr>\n<tr>\n<td><a name=\"headerCollectionFormat\"></a>collectionFormat</td>\n<td style=\"text-align: center;\"><code>string</code></td>\n<td>Determines the format of the array if type array is used. Possible values are: <ul><li><code>csv</code> - comma separated values <code>foo,bar</code>. <li><code>ssv</code> - space separated values <code>foo bar</code>. <li><code>tsv</code> - tab separated values <code>foo\\tbar</code>. <li><code>pipes</code> - pipe separated values <code>foo|bar</code>. </li></li></li></li></ul> Default value is <code>csv</code>.</td>\n</tr>\n<tr>\n<td><a name=\"headerDefault\"></a>default</td>\n<td style=\"text-align: center;\">*</td>\n<td>Declares the value of the header that the server will use if none is provided. (Note: \"default\" has no meaning for required headers.) See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2. Unlike JSON Schema this value MUST conform to the defined <a href=\"#headerDefault\"><code>type</code></a> for the header.</td>\n</tr>\n<tr>\n<td><a name=\"headerMaximum\"></a>maximum</td>\n<td style=\"text-align: center;\"><code>number</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2.</td>\n</tr>\n<tr>\n<td><a name=\"headerMaximum\"></a>exclusiveMaximum</td>\n<td style=\"text-align: center;\"><code>boolean</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.2.</td>\n</tr>\n<tr>\n<td><a name=\"headerMinimum\"></a>minimum</td>\n<td style=\"text-align: center;\"><code>number</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3.</td>\n</tr>\n<tr>\n<td><a name=\"headerExclusiveMinimum\"></a>exclusiveMinimum</td>\n<td style=\"text-align: center;\"><code>boolean</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3.</td>\n</tr>\n<tr>\n<td><a name=\"headerMaxLength\"></a>maxLength</td>\n<td style=\"text-align: center;\"><code>integer</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.1.</td>\n</tr>\n<tr>\n<td><a name=\"headerMinLength\"></a>minLength</td>\n<td style=\"text-align: center;\"><code>integer</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.2.</td>\n</tr>\n<tr>\n<td><a name=\"headerPattern\"></a>pattern</td>\n<td style=\"text-align: center;\"><code>string</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.</td>\n</tr>\n<tr>\n<td><a name=\"headerMaxItems\"></a>maxItems</td>\n<td style=\"text-align: center;\"><code>integer</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.2.</td>\n</tr>\n<tr>\n<td><a name=\"headerMinItems\"></a>minItems</td>\n<td style=\"text-align: center;\"><code>integer</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.3.</td>\n</tr>\n<tr>\n<td><a name=\"headerUniqueItems\"></a>uniqueItems</td>\n<td style=\"text-align: center;\"><code>boolean</code></td>\n<td>https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.3.4.</td>\n</tr>\n<tr>\n<td><a name=\"headerEnum\"></a>enum</td>\n<td style=\"text-align: center;\">[*]</td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1.</td>\n</tr>\n<tr>\n<td><a name=\"headerMultipleOf\"></a>multipleOf</td>\n<td style=\"text-align: center;\"><code>number</code></td>\n<td>See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.1.</td>\n</tr>\n</tbody>\n",
             "fields": [
                 {
@@ -1890,6 +1905,7 @@
         {
             "name": "Tag Object",
             "extensible": true,
+            "root": false,
             "description": "Allows adding meta data to a single tag that is used by the <a href=\"#operationObject\">Operation Object</a>. It is not mandatory to have a Tag Object per tag used there.",
             "fields": [
                 {
@@ -1961,6 +1977,7 @@
         {
             "name": "Reference Object",
             "extensible": false,
+            "root": false,
             "description": "A simple object to allow referencing other definitions in the specification. It can be used to reference parameters and responses that are defined at the top level for reuse.The Reference Object is a <a href=\"http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-02\">JSON Reference</a> that uses a <a href=\"http://tools.ietf.org/html/rfc6901\">JSON Pointer</a> as its value. For this specification, only <a href=\"https://tools.ietf.org/html/draft-zyp-json-schema-04#section-7.2.3\">canonical dereferencing</a> is supported.",
             "fields": [
                 {
@@ -1984,6 +2001,7 @@
         {
             "name": "Schema Object",
             "extensible": true,
+            "root": false,
             "description": "The Schema Object allows the definition of input and output data types. These types can be objects, but also primitives and arrays. This object is based on the <a href=\"http://json-schema.org/\">JSON Schema Specification Draft 4</a> and uses a predefined subset of it. On top of this subset, there are extensions provided by this specification to allow for more complete documentation.Further information about the properties can be found in <a href=\"https://tools.ietf.org/html/draft-zyp-json-schema-04\">JSON Schema Core</a> and <a href=\"https://tools.ietf.org/html/draft-fge-json-schema-validation-00\">JSON Schema Validation</a>. Unless stated otherwise, the property definitions follow the JSON Schema specification as referenced here.The following properties are taken directly from the JSON Schema definition and follow the same specifications:\n- $ref - As a <a href=\"https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03\">JSON Reference</a>\n- format (See <a href=\"#dataTypeFormat\">Data Type Formats</a> for further details)\n- title\n- description (<a href=\"https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown\">GFM syntax</a> can be used for rich text representation)\n- default (Unlike JSON Schema, the value MUST conform to the defined type for the Schema Object)\n- multipleOf\n- maximum\n- exclusiveMaximum\n- minimum\n- exclusiveMinimum\n- maxLength\n- minLength\n- pattern\n- maxItems\n- minItems\n- uniqueItems\n- maxProperties\n- minProperties\n- required\n- enum\n- typeThe following properties are taken from the JSON Schema definition but their definitions were adjusted to the Swagger Specification. Their definition is the same as the one from JSON Schema, only where the original definition references the JSON Schema definition, the <a href=\"#schemaObject\">Schema Object</a> definition is used instead.\n- items\n- allOf\n- properties\n- additionalPropertiesOther than the JSON Schema subset fields, the following fields may be used for further schema documentation.",
             "fields": [
                 {
@@ -2087,6 +2105,7 @@
         {
             "name": "XML Object",
             "extensible": true,
+            "root": false,
             "description": "A metadata object that allows for more fine-tuned XML model definitions.When using arrays, XML element names are <em>not</em> inferred (for singular/plural forms) and the <code>name</code> property should be used to add that information. See examples for expected behavior.",
             "fields": [
                 {
@@ -2190,6 +2209,7 @@
         {
             "name": "Definitions Object",
             "extensible": false,
+            "root": false,
             "description": "An object to hold data types that can be consumed and produced by operations. These data types can be primitives, arrays or models.",
             "fields": [
                 {
@@ -2213,6 +2233,7 @@
         {
             "name": "Parameters Definitions Object",
             "extensible": false,
+            "root": false,
             "description": "An object to hold parameters to be reused across operations. Parameter definitions can be referenced to the ones defined here.This does <em>not</em> define global operation parameters.",
             "fields": [
                 {
@@ -2236,6 +2257,7 @@
         {
             "name": "Responses Definitions Object",
             "extensible": false,
+            "root": false,
             "description": "An object to hold responses to be reused across operations. Response definitions can be referenced to the ones defined here.This does <em>not</em> define global operation responses.",
             "fields": [
                 {
@@ -2259,6 +2281,7 @@
         {
             "name": "Security Definitions Object",
             "extensible": false,
+            "root": false,
             "description": "A declaration of the security schemes available to be used in the specification. This does not enforce the security schemes on the operations and only serves to provide the relevant details for each scheme.",
             "fields": [
                 {
@@ -2282,6 +2305,7 @@
         {
             "name": "Security Scheme Object",
             "extensible": true,
+            "root": false,
             "description": "Allows the definition of a security scheme that can be used by the operations. Supported schemes are basic authentication, an API key (either as a header or as a query parameter) and OAuth2's common flows (implicit, password, application and access code).",
             "fields": [
                 {
@@ -2433,6 +2457,7 @@
         {
             "name": "Scopes Object",
             "extensible": true,
+            "root": false,
             "description": "Lists the available scopes for an OAuth2 security scheme.",
             "fields": [
                 {
@@ -2472,6 +2497,7 @@
         {
             "name": "Security Requirement Object",
             "extensible": false,
+            "root": false,
             "description": "Lists the required security schemes to execute this operation. The object can have multiple security schemes declared in it which are all required (that is, there is a logical AND between the schemes).The name used for each property MUST correspond to a security scheme declared in the <a href=\"#securityDefinitionsObject\">Security Definitions</a>.",
             "fields": [
                 {

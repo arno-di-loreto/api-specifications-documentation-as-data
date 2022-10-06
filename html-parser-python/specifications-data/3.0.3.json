@@ -5,6 +5,7 @@
         {
             "name": "OpenAPI Object",
             "extensible": true,
+            "root": true,
             "description": "This is the root document object of the <a href=\"#oasDocument\">OpenAPI document</a>.",
             "fields": [
                 {
@@ -156,6 +157,7 @@
         {
             "name": "Info Object",
             "extensible": true,
+            "root": false,
             "description": "The object provides metadata about the API.\nThe metadata MAY be used by the clients if needed, and MAY be presented in editing or documentation generation tools for convenience.",
             "fields": [
                 {
@@ -275,6 +277,7 @@
         {
             "name": "Contact Object",
             "extensible": true,
+            "root": false,
             "description": "Contact information for the exposed API.",
             "fields": [
                 {
@@ -346,6 +349,7 @@
         {
             "name": "License Object",
             "extensible": true,
+            "root": false,
             "description": "License information for the exposed API.",
             "fields": [
                 {
@@ -401,6 +405,7 @@
         {
             "name": "Server Object",
             "extensible": true,
+            "root": false,
             "description": "An object representing a Server.",
             "fields": [
                 {
@@ -472,6 +477,7 @@
         {
             "name": "Server Variable Object",
             "extensible": true,
+            "root": false,
             "description": "An object representing a Server Variable for server URL template substitution.",
             "fields": [
                 {
@@ -543,6 +549,7 @@
         {
             "name": "Components Object",
             "extensible": true,
+            "root": false,
             "description": "Holds a set of reusable objects for different aspects of the OAS.\nAll objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.",
             "fields": [
                 {
@@ -719,6 +726,7 @@
         {
             "name": "Paths Object",
             "extensible": true,
+            "root": false,
             "description": "Holds the relative paths to the individual endpoints and their operations.\nThe path is appended to the URL from the <a href=\"#serverObject\"><code>Server Object</code></a> in order to construct the full URL.  The Paths MAY be empty, due to <a href=\"#securityFiltering\">ACL constraints</a>.",
             "fields": [
                 {
@@ -758,6 +766,7 @@
         {
             "name": "Path Item Object",
             "extensible": true,
+            "root": false,
             "description": "Describes the operations available on a single path.\nA Path Item MAY be empty, due to <a href=\"#securityFiltering\">ACL constraints</a>.\nThe path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available.",
             "fields": [
                 {
@@ -990,6 +999,7 @@
         {
             "name": "Operation Object",
             "extensible": true,
+            "root": false,
             "description": "Describes a single API operation on a path.",
             "fields": [
                 {
@@ -1208,6 +1218,7 @@
         {
             "name": "External Documentation Object",
             "extensible": true,
+            "root": false,
             "description": "Allows referencing an external resource for extended documentation.",
             "fields": [
                 {
@@ -1263,6 +1274,7 @@
         {
             "name": "Parameter Object",
             "extensible": true,
+            "root": false,
             "description": "Describes a single operation parameter.A unique parameter is defined by a combination of a <a href=\"#parameterName\">name</a> and <a href=\"#parameterIn\">location</a>.",
             "fields": [
                 {
@@ -1496,6 +1508,7 @@
         {
             "name": "Request Body Object",
             "extensible": true,
+            "root": false,
             "description": "Describes a single request body.",
             "fields": [
                 {
@@ -1567,6 +1580,7 @@
         {
             "name": "Media Type Object",
             "extensible": true,
+            "root": false,
             "description": "Each Media Type Object provides schema and examples for the media type identified by its key.",
             "fields": [
                 {
@@ -1656,6 +1670,7 @@
         {
             "name": "Encoding Object",
             "extensible": true,
+            "root": false,
             "description": "A single encoding definition applied to a single schema property.",
             "fields": [
                 {
@@ -1760,6 +1775,7 @@
         {
             "name": "Responses Object",
             "extensible": true,
+            "root": false,
             "description": "A container for the expected responses of an operation.\nThe container maps a HTTP response code to the expected response.The documentation is not necessarily expected to cover all possible HTTP response codes because they may not be known in advance.\nHowever, documentation is expected to cover a successful operation response and any known errors.The <code>default</code> MAY be used as a default response object for all HTTP codes \nthat are not covered individually by the specification.The <code>Responses Object</code> MUST contain at least one response code, and it \nSHOULD be the response for a successful operation call.",
             "fields": [
                 {
@@ -1817,6 +1833,7 @@
         {
             "name": "Response Object",
             "extensible": true,
+            "root": false,
             "description": "Describes a single response from an API Operation, including design-time, static \n<code>links</code> to operations based on the response.",
             "fields": [
                 {
@@ -1906,6 +1923,7 @@
         {
             "name": "Callback Object",
             "extensible": true,
+            "root": false,
             "description": "A map of possible out-of band callbacks related to the parent operation.\nEach value in the map is a <a href=\"#pathItemObject\">Path Item Object</a> that describes a set of requests that may be initiated by the API provider and the expected responses.\nThe key value used to identify the path item object is an expression, evaluated at runtime, that identifies a URL to use for the callback operation.",
             "fields": [
                 {
@@ -1945,6 +1963,7 @@
         {
             "name": "Example Object",
             "extensible": true,
+            "root": false,
             "description": "",
             "fields": [
                 {
@@ -2032,6 +2051,7 @@
         {
             "name": "Link Object",
             "extensible": true,
+            "root": false,
             "description": "The <code>Link object</code> represents a possible design-time link for a response.\nThe presence of a link does not guarantee the caller's ability to successfully invoke it, rather it provides a known relationship and traversal mechanism between responses and other operations.Unlike <em>dynamic</em> links (i.e. links provided <strong>in</strong> the response payload), the OAS linking mechanism does not require link information in the runtime response.For computing links, and providing instructions to execute them, a <a href=\"#runtimeExpression\">runtime expression</a> is used for accessing values in an operation and using them as parameters while invoking the linked operation.  ",
             "fields": [
                 {
@@ -2153,6 +2173,7 @@
         {
             "name": "Header Object",
             "extensible": false,
+            "root": false,
             "description": "The Header Object follows the structure of the <a href=\"#parameterObject\">Parameter Object</a> with the following changes:\n<li><code>name</code> MUST NOT be specified, it is given in the corresponding <code>headers</code> map.</li>\n<li><code>in</code> MUST NOT be specified, it is implicitly in <code>header</code>.</li>\n<li>All traits that are affected by the location MUST be applicable to a location of <code>header</code> (for example, <a href=\"#parameterStyle\"><code>style</code></a>).</li>\n",
             "fields": [
                 {
@@ -2176,6 +2197,7 @@
         {
             "name": "Tag Object",
             "extensible": true,
+            "root": false,
             "description": "Adds metadata to a single tag that is used by the <a href=\"#operationObject\">Operation Object</a>.\nIt is not mandatory to have a Tag Object per tag defined in the Operation Object instances.",
             "fields": [
                 {
@@ -2247,6 +2269,7 @@
         {
             "name": "Reference Object",
             "extensible": false,
+            "root": false,
             "description": "A simple object to allow referencing other components in the specification, internally and externally.The Reference Object is defined by <a href=\"https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03\">JSON Reference</a> and follows the same structure, behavior and rules. For this specification, reference resolution is accomplished as defined by the JSON Reference specification and not by the JSON Schema specification.",
             "fields": [
                 {
@@ -2286,6 +2309,7 @@
         {
             "name": "Schema Object",
             "extensible": true,
+            "root": false,
             "description": "The Schema Object allows the definition of input and output data types.\nThese types can be objects, but also primitives and arrays.\nThis object is an extended subset of the <a href=\"https://json-schema.org/\">JSON Schema Specification Wright Draft 00</a>.For more information about the properties, see <a href=\"https://tools.ietf.org/html/draft-wright-json-schema-00\">JSON Schema Core</a> and <a href=\"https://tools.ietf.org/html/draft-wright-json-schema-validation-00\">JSON Schema Validation</a>.\nUnless stated otherwise, the property definitions follow the JSON Schema.",
             "fields": [
                 {
@@ -2437,6 +2461,7 @@
         {
             "name": "Discriminator Object",
             "extensible": false,
+            "root": false,
             "description": "When request bodies or response payloads may be one of a number of different schemas, a <code>discriminator</code> object can be used to aid in serialization, deserialization, and validation.  The discriminator is a specific object in a schema which is used to inform the consumer of the specification of an alternative schema based on the value associated with it.When using the discriminator, <em>inline</em> schemas will not be considered.",
             "fields": [
                 {
@@ -2492,6 +2517,7 @@
         {
             "name": "XML Object",
             "extensible": true,
+            "root": false,
             "description": "A metadata object that allows for more fine-tuned XML model definitions.When using arrays, XML element names are <em>not</em> inferred (for singular/plural forms) and the <code>name</code> property SHOULD be used to add that information.\nSee examples for expected behavior.",
             "fields": [
                 {
@@ -2595,6 +2621,7 @@
         {
             "name": "Security Scheme Object",
             "extensible": true,
+            "root": false,
             "description": "Defines a security scheme that can be used by the operations.\nSupported schemes are HTTP authentication, an API key (either as a header, a cookie parameter or as a query parameter), OAuth2's common flows (implicit, password, client credentials and authorization code) as defined in <a href=\"https://tools.ietf.org/html/rfc6749\">RFC6749</a>, and <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-discovery-06\">OpenID Connect Discovery</a>.",
             "fields": [
                 {
@@ -2746,6 +2773,7 @@
         {
             "name": "OAuth Flows Object",
             "extensible": true,
+            "root": false,
             "description": "Allows configuration of the supported OAuth Flows.",
             "fields": [
                 {
@@ -2833,6 +2861,7 @@
         {
             "name": "OAuth Flow Object",
             "extensible": true,
+            "root": false,
             "description": "Configuration details for a supported OAuth Flow",
             "fields": [
                 {
@@ -2920,6 +2949,7 @@
         {
             "name": "Security Requirement Object",
             "extensible": false,
+            "root": false,
             "description": "Lists the required security schemes to execute this operation.\nThe name used for each property MUST correspond to a security scheme declared in the <a href=\"#componentsSecuritySchemes\">Security Schemes</a> under the <a href=\"#componentsObject\">Components Object</a>.Security Requirement Objects that contain multiple schemes require that all schemes MUST be satisfied for a request to be authorized.\nThis enables support for scenarios where multiple query parameters or HTTP headers are required to convey security information.When a list of Security Requirement Objects is defined on the <a href=\"#oasObject\">OpenAPI Object</a> or <a href=\"#operationObject\">Operation Object</a>, only one of the Security Requirement Objects in the list needs to be satisfied to authorize the request.",
             "fields": [
                 {
