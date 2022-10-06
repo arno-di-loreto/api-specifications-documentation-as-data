@@ -114,7 +114,12 @@ class SpecificationViewer extends HTMLElement {
     .tree .extensible {
       font-family: monaco, Consolas, 'Lucida Console', monospace;
       font-size: 0.8rem;
-      color: green
+      background-color: green;
+      color: white;
+      padding: 0.3rem;
+      border-radius: 8px;
+      vertical-align: middle;
+      text-transform: uppercase;
     }
     `;
 
@@ -143,7 +148,7 @@ class SpecificationViewer extends HTMLElement {
     const item = document.createElement('li');
     let extensible = '';
     if(object.extensible) {
-      extensible = `<span class="extensible">&nbsp;(X-tensible)</span>`
+      extensible = `&nbsp;<span class="extensible">Extensible</span>`
     }
     item.innerHTML = `
         <div class="node">
