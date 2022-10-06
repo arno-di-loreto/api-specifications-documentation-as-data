@@ -85,7 +85,7 @@ class SpecificationViewer extends HTMLElement {
       color: green;
     }
     
-    .tree .value {
+    .tree .type {
       color: orange;
     }
     
@@ -306,13 +306,20 @@ class SpecificationViewer extends HTMLElement {
         `
       }
       const url_md = field.urls.find(url => url.type === 'markdown').url;
+      let fieldType = '<span class="type">'+field.type.types.join('</span><span class="syntax">&nbsp;or&nbsp;</span><span class="type">')+'</span>';
+      if(field.type.listType === 'array'){
+        fieldType = `<span class="syntax">[</span>${fieldType}<span class="syntax">]</span>`;
+      }
+      else if (field.type.listType === 'map'){
+        fieldType = `<span class="syntax">{key ${field.type.mapKeyType}: </span>${fieldType}<span class="syntax">}</span>`;
+      }
       htmlField.innerHTML = `
       <div class="node" data-type="field" data-name="${schema.name};${field.name}" data-children="${dataChildren}">
         <div class="title">
           <code class="openapi">
             <span class="property">${field.name}</span>${required}
             <span class="syntax">:<span>
-            <span class="value">${field.type.types.join(',')}</span>${richText}
+            <span class="value">${fieldType}</span>${richText}
           </code>
         </div>
         <div class="description">${field.description}</div>
