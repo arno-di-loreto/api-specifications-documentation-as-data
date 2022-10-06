@@ -135,6 +135,18 @@ class SpecificationViewer extends HTMLElement {
       text-transform: uppercase;
     }
 
+    .tree .patterned {
+      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 0.6rem;
+      background-color: cadetblue;
+      color: white;
+      padding: 0.2rem;
+      margin-left: 0.2rem;
+      border-radius: 5px;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+
     .tree .root {
       font-family: monaco, Consolas, 'Lucida Console', monospace;
       font-size: 0.8rem;
@@ -293,6 +305,10 @@ class SpecificationViewer extends HTMLElement {
       if(field.richText){
         richText = '<span class="rich-text">Rich Text</span>';
       }
+      let patterned = '';
+      if(field.nameType == 'patterned'){
+        patterned = '<span class="patterned">Patterned</span>';
+      }
       let dataChildren = false;
       let navigationChildren = '';
       field.type.types.forEach(type => {
@@ -317,7 +333,7 @@ class SpecificationViewer extends HTMLElement {
       <div class="node" data-type="field" data-name="${schema.name};${field.name}" data-children="${dataChildren}">
         <div class="title">
           <code class="openapi">
-            <span class="property">${field.name}</span>${required}
+            <span class="property">${field.name}${patterned}</span>${required}
             <span class="syntax">:<span>
             <span class="value">${fieldType}</span>${richText}
           </code>
