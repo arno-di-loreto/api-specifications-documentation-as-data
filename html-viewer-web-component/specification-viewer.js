@@ -153,6 +153,28 @@ class SpecificationViewer extends HTMLElement {
       top: 0;
       background: white;
     }
+
+    .navigation {
+      width: 100%;
+    }
+
+    .nav-button {
+      display: inline-block;
+      //width: 50%;
+      margin: 4px;
+      padding: 2px;
+      border-radius: 8px;
+      text-align: center;
+      background: lightgreen;
+      border: solid;
+      border-color: black;
+      cursor: pointer;
+    }
+
+    .opened {
+      background: red;
+    }
+
     `;
 
     return style;
@@ -185,6 +207,7 @@ class SpecificationViewer extends HTMLElement {
     schemaSection.innerHTML = `
         <div>
           <div class="title"><h1>Schema</h1></div>
+          </div>
         </div>
     `;
     schemaSection.appendChild(this._getAllHtmlSchemas());
@@ -216,6 +239,9 @@ class SpecificationViewer extends HTMLElement {
             <h1>${schema.name}${root}${extensible}</h1>
           </div>
           <div class="description">${schema.description}</div>
+          <div class="navigation">
+            <span class="nav-button" data-action="children">→</span>
+          </div>
         </div>
     `;
     return htmlSchema;
@@ -252,11 +278,20 @@ class SpecificationViewer extends HTMLElement {
         richText = '<span class="rich-text">Rich Text</span>';
       }
       let dataChildren = false;
+      let navigation = '';
       field.type.types.forEach(type => {
         if(type.includes('Object')){
           dataChildren = true;
         }
       });
+      if(dataChildren){
+        navigation = `
+        <div class="navigation">
+          <span class="nav-button" data-action="children">→</span>
+        </div>
+        `
+
+      }
       htmlField.innerHTML = `
       <div class="node" data-type="field" data-name="${schema.name};${field.name}" data-children="${dataChildren}">
         <div class="title">
@@ -267,6 +302,7 @@ class SpecificationViewer extends HTMLElement {
           </code>
         </div>
         <div class="description">${field.description}</div>
+        ${navigation}
       </div>
       `;
       // will need a fix to add the map/list dimension * vs {*}
@@ -305,9 +341,7 @@ class SpecificationViewer extends HTMLElement {
     return result;
   }
 
-  onclick(event) {
-    // Click location to replace by actual buttons
-    const elementClicked = event.path[0];
+  showHideChildren(elementClicked) {
     const dataParent = elementClicked.closest('[data-type]');
     if(this.hasDataChildren(dataParent)){
       console.log('dataParent', dataParent);
@@ -318,6 +352,7 @@ class SpecificationViewer extends HTMLElement {
       const openedChildren = node.querySelector("[data-type=children]");// replace by css class?
       if(openedChildren){
         openedChildren.remove();
+        elementClicked.textContent="→";
       }
       else {
         if(dataType == 'schema'){
@@ -334,10 +369,22 @@ class SpecificationViewer extends HTMLElement {
           const htmlSchemas = this._getAllHtmlSchemas();
           dataParent.appendChild(htmlSchemas);
         }
+        elementClicked.textContent="←";
       }
+      elementClicked.classList.toggle('opened');
     }
     else {
       console.log('no data children');
+    }
+  }
+
+  onclick(event) {
+    // Click location to replace by actual buttons
+    const elementClicked = event.path[0];
+    console.log(elementClicked);
+    const dataAction = elementClicked.getAttribute('data-action');
+    if(dataAction == 'children'){
+      this.showHideChildren(elementClicked);
     }
   }
 
