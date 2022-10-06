@@ -121,6 +121,13 @@ class SpecificationViewer extends HTMLElement {
       vertical-align: middle;
       text-transform: uppercase;
     }
+
+    .tree .title {
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      background: white;
+    }
     `;
 
     return style;
@@ -132,39 +139,63 @@ class SpecificationViewer extends HTMLElement {
     htmlSpecification.innerHTML = `
       <li>
         <div>
-          <h1>OpenAPI ${specification.version} Specification</h1>
+          <div class="title"><h1>OpenAPI ${specification.version} Specification</h1></div>
           <div class="description">${specification.description}</div>
         </div>
       </li>
     `;
-    const rootObject = this._getHtmlObject(specification.schemas[0], specification);
-    htmlSpecification.appendChild(rootObject);
+    const ul = document.createElement('ul');
+    // Need to add a "root" schema flag in data
+    const rootObject = this._getHtmlSchema(specification.schemas[0], specification);
+    ul.appendChild(rootObject);
+    htmlSpecification.appendChild(ul);
     return htmlSpecification;
   }
 
-  _getHtmlObject(object, specification) {
-    console.log('object', object)
-    const htmlObject = document.createElement('ul');
-    const item = document.createElement('li');
+  _getHtmlSchema(schema, specification) {
+    const htmlSchema = document.createElement('li');
     let extensible = '';
-    if(object.extensible) {
+    if(schema.extensible) {
       extensible = `&nbsp;<span class="extensible">Extensible</span>`
     }
-    item.innerHTML = `
+    htmlSchema.innerHTML = `
         <div class="node">
-          <h1>${object.name}${extensible}</h1>
-          <div class="description">${object.description}</div>
+          <div class="title">
+            <h1>${schema.name}${extensible}</h1>
+          </div>
+          <div class="description">${schema.description}</div>
         </div>
     `;
-    const fields = this._getHtmlFields(object.fields, specification);
-    item.appendChild(fields);
-    htmlObject.appendChild(item);
-    return htmlObject;
+    const fields = this._getHtmlFields(schema.fields, specification);
+    htmlSchema.appendChild(fields);
+    return htmlSchema;
+  }
+
+
+  _getHtmlSchemas(types, specification) {
+    const htmlSchemas = document.createElement('ul');
+    types.forEach(type => {
+      // Q&D to avoid loop
+      if(['Info Object', 'Contact Object', 'License Object', 'Paths Object', 'Path Item Object', 'Components Object', 'Parameter Object', 'Reference Object'].includes(type)){
+        const schema = specification.schemas.find(s => s.name === type);
+        console.log(type, schema);
+        if(schema){ // atomic types will not be found but we do not care
+            htmlSchemas.appendChild(this._getHtmlSchema(schema, specification));
+        }
+      }
+    });
+    if(htmlSchemas.childElementCount > 0){
+      return htmlSchemas;
+    }
+    else {
+      return null;
+    }
   }
 
   _getHtmlFields(fields, specification) {
     const htmlFields = document.createElement('ul');
     fields.forEach((field) => {
+      console.log(field)
       const htmlField = document.createElement('li');
       let required = '';
       if(field.required){
@@ -172,21 +203,21 @@ class SpecificationViewer extends HTMLElement {
       }
       htmlField.innerHTML = `
       <div class="node" data-schema="${field.type.types[0]}">
-        <code class="openapi"><span class="property">${field.name}</span><span class="required">${required}</span>: <span class="value">${field.type.types.join(',')}</span></code>
+        <div class="title">
+          <code class="openapi">
+            <span class="property">${field.name}</span><span class="required">${required}</span>
+            <span class="syntax">:&nbsp;<span>
+            <span class="value">${field.type.types.join(',')}</span>
+          </code>
+        </div>
         <div class="description">${field.description}</div>
       </div>
       `;
-      // Q&D to fix
-      if(field.type.types[0].includes('Object')) {
-        // risk of endless loop, should be done "on click", just testing with safe schemas
-        if(['Info Object', 'Contact Object', 'License Object', 'Paths Object', 'Path Item Object', 'Parameter Object'].includes(field.type.types[0])){
-          const schema = specification.schemas.find(schema => schema.name === field.type.types[0]);
-          console.log(field.type.types[0]);
-          console.log(schema);
-          const htmlObject = this._getHtmlObject(schema, specification);
-          htmlField.appendChild(htmlObject);
-        }
-
+      // will need a fix to add the map/list dimension * vs {*}
+      const htmlSchemas = this._getHtmlSchemas(field.type.types, specification);
+      console.log(htmlSchemas);
+      if(htmlSchemas){
+        htmlField.appendChild(htmlSchemas);
       }
       htmlFields.appendChild(htmlField);
     });
