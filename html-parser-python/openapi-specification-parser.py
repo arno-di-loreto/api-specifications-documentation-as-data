@@ -286,6 +286,7 @@ class SchemaField:
     self.applies_to = table_node_line.get_value_by_header(['Validity','Applies To'])
     self.description = table_node_line.get_value_by_header(['Description'])
     self.__init__required()
+    self.__init_rich_text()
 
   def __init__required(self):
     #if self.specification.is_version('2'):
@@ -295,8 +296,21 @@ class SchemaField:
     #description_html_lower = self.description.text.lower()
     self.required = self.description.text.lower().startswith('required')
 
+  def __init_rich_text(self):
+    # v2 GFM syntax can be used for rich text representation.
+    # v3 CommonMark syntax MAY be used for rich text representation.
+    rich_text_regex = re.compile(r'\.\s*(?P<format>.*)\s+syntax.*rich\stext\srepresentation\.\s*')
+    rich_text_search = rich_text_regex.search(self.description.text)
+    if rich_text_search:
+      self.rich_text = rich_text_search.group('format')
+    else:
+      self.rich_text = None
+
   def get_description_text(self):
-    return re.sub(r'^required\.\s*', '', self.description.text, flags=re.IGNORECASE)
+    clean_description = self.description.text
+    clean_description = re.sub(r'^required\.\s*', '', clean_description, flags=re.IGNORECASE)
+    clean_description = re.sub(r'(\.).*syntax.*rich\stext\srepresentation\.\s*', '\g<1>', clean_description)
+    return clean_description
 
   def to_dict(self):
     applies_to = None
@@ -309,6 +323,7 @@ class SchemaField:
       'id': self.id,
       'type': self.type.to_dict(),
       'appliesTo': applies_to,
+      'richText': self.rich_text,
       'description': self.get_description_text()
     }
 
