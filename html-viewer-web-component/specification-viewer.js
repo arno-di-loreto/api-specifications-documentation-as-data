@@ -171,6 +171,13 @@ class SpecificationViewer extends HTMLElement {
       cursor: pointer;
     }
 
+    .navigation > a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      background: black;
+      color: white;
+    }
+
     .opened {
       background: red;
     }
@@ -185,11 +192,17 @@ class SpecificationViewer extends HTMLElement {
     htmlSpecification.setAttribute('data-type', 'specification');
     htmlSpecification.setAttribute('data-name', this.specification.version);
     htmlSpecification.setAttribute('class', 'tree');
+    const url_md = this.specification.urls.find(url => url.type === 'markdown').url;
+    const url_schema = this.specification.urls.find(url => url.type === 'schema').url;
     htmlSpecification.innerHTML = `
       <li>
         <div>
           <div class="title"><h1>OpenAPI ${this.specification.version} Specification</h1></div>
           <div class="description">${this.specification.description}</div>
+          <div class="navigation">
+            <a href="${url_md}" target="MD_${this.specification.version}" class="nav-button">Original Documentation&nbsp;🔗</a>
+            <a href="${url_schema}" target="SCHEMA_${this.specification.version}" class="nav-button">JSON Schema&nbsp;🔗</a>
+          </div>
         </div>
       </li>
     `;
@@ -233,6 +246,7 @@ class SpecificationViewer extends HTMLElement {
     if(schema.root) {
       root = `<span class="root">Root</span>`
     }
+    const url_md = schema.urls.find(url => url.type === 'markdown').url;
     htmlSchema.innerHTML = `
         <div class="node" data-type="schema" data-name="${schema.name}">
           <div class="title">
@@ -240,6 +254,7 @@ class SpecificationViewer extends HTMLElement {
           </div>
           <div class="description">${schema.description}</div>
           <div class="navigation">
+            <a href="${url_md}" target="MD_${this.specification.version}" class="nav-button">Original Documentation&nbsp;🔗</a>
             <span class="nav-button" data-action="children">→</span>
           </div>
         </div>
@@ -278,20 +293,18 @@ class SpecificationViewer extends HTMLElement {
         richText = '<span class="rich-text">Rich Text</span>';
       }
       let dataChildren = false;
-      let navigation = '';
+      let navigationChildren = '';
       field.type.types.forEach(type => {
         if(type.includes('Object')){
           dataChildren = true;
         }
       });
       if(dataChildren){
-        navigation = `
-        <div class="navigation">
+        navigationChildren = `
           <span class="nav-button" data-action="children">→</span>
-        </div>
         `
-
       }
+      const url_md = field.urls.find(url => url.type === 'markdown').url;
       htmlField.innerHTML = `
       <div class="node" data-type="field" data-name="${schema.name};${field.name}" data-children="${dataChildren}">
         <div class="title">
@@ -302,17 +315,12 @@ class SpecificationViewer extends HTMLElement {
           </code>
         </div>
         <div class="description">${field.description}</div>
-        ${navigation}
+        <div class="navigation">
+          <a href="${url_md}" target="MD_${this.specification.version}" class="nav-button">Original Documentation&nbsp;🔗</a>
+          ${navigationChildren}
+        </div>
       </div>
       `;
-      // will need a fix to add the map/list dimension * vs {*}
-      /*
-      const htmlSchemas = this._getHtmlSchemas(field.type.types);
-      console.log(htmlSchemas);
-      if(htmlSchemas){
-        htmlField.appendChild(htmlSchemas);
-      }
-      */
       htmlFields.appendChild(htmlField);
     });
     return htmlFields;
