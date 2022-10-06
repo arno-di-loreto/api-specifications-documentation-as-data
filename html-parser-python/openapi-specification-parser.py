@@ -287,6 +287,11 @@ class SchemaField:
     self.description = table_node_line.get_value_by_header(['Description'])
     self.__init__required()
     self.__init_rich_text()
+    self.__init_urls()
+
+  def __init_urls(self):
+    self.urls = Urls()
+    self.urls.add_url(self.specification.urls.get_url('markdown').url+'#'+self.id, 'markdown')
 
   def __init__required(self):
     #if self.specification.is_version('2'):
@@ -324,6 +329,7 @@ class SchemaField:
       'type': self.type.to_dict(),
       'appliesTo': applies_to,
       'richText': self.rich_text,
+      'urls': self.urls.to_dict(),
       'description': self.get_description_text()
     }
 
@@ -363,6 +369,11 @@ class OpenApiSpecificationSchema:
     self.__init_fields()
     self.__init_description()
     self.__init_is_root()
+    self.__init_urls()
+
+  def __init_urls(self):
+    self.urls = Urls()
+    self.urls.add_url(self.specification.urls.get_url('markdown').url+'#'+self.node.header.anchor, 'markdown')
 
   def __init_description(self):
     self.descriptions = []
@@ -426,15 +437,50 @@ class OpenApiSpecificationSchema:
       'name': self.name,
       'extensible': self.is_extensible,
       'root': self.is_root,
+      'urls': self.urls.to_dict(),
       'description': self.get_description(),
       'fields': self.fields.to_dict(),
       #'node': self.node.to_dict()
     }
 
+
+class Url:
+  def __init__(self, url, type):
+    self.url = url
+    self.type = type
+  
+  def to_dict(self):
+    return {
+      'url': self.url,
+      'type': self.type
+    }
+
+class Urls:
+  def __init__(self):
+      self.urls = []
+  
+  def add_url(self, url, type):
+    self.urls.append(Url(url, type))
+
+  def get_url(self, type):
+    result = None
+    for url in self.urls:
+      if url.type == type:
+        result = url
+        break
+    return result
+
+  def to_dict(self):
+    urls_dict = []
+    for url in self.urls:
+      urls_dict.append(url.to_dict())
+    return urls_dict
+
 class OpenApiSpecification:
   def __init__(self, document_tree):
     self.document_tree = document_tree
     self.__init__version()
+    self.__init_urls()
     self.__init__description()
     self.__init__schemas()
 
@@ -444,7 +490,15 @@ class OpenApiSpecification:
     version_header = title_regex.search(version_header_soup.text)
     self.version = version_header.group(1)
     print('****** VERSION *****', self.version)
-  
+
+  def __init_urls(self):
+    self.urls = Urls()
+    # move hardcorded url somewhere
+    template_md = 'https://github.com/OAI/OpenAPI-Specification/blob/main/versions/$VERSION.md'
+    template_schema = 'https://github.com/OAI/OpenAPI-Specification/blob/main/schemas/v$VERSION_MINOR/schema.json'
+    self.urls.add_url(self.get_url_with_version(template_md), 'markdown')
+    self.urls.add_url(self.get_url_with_version(template_schema),'schema')
+
   def __init__schemas(self):
     schemas_node = self.document_tree.get_node('Schema', 'header', 3)
     self.schemas = []
@@ -469,6 +523,24 @@ class OpenApiSpecification:
   def is_version(self, version):
     return self.version.startswith(version)
 
+  def get_version(self, type=None):
+    if type == 'major':
+      numbers = self.version.split('.')
+      return numbers[0]
+    elif type == 'minor':
+      numbers = self.version.split('.')
+      return str(numbers[0])+'.'+str(numbers[1])
+    else:
+      return self.version
+
+  def get_url_with_version(self, url_template):
+    version_minor = '$VERSION_MINOR'
+    version = '$VERSION'
+    if version_minor in url_template:
+      return url_template.replace(version_minor, self.get_version('minor'))
+    elif version in url_template:
+      return url_template.replace(version, self.get_version())
+
   def to_dict(self):
     schemas_dict = []
     for schema in self.schemas:
@@ -477,10 +549,9 @@ class OpenApiSpecification:
       'version': self.version,
       'description': self.get_description(),
       #'node': self.document_tree.to_dict(),
+      'urls': self.urls.to_dict(),
       'schemas': schemas_dict
     }
-
-
 
 def is_not_excluded_soup(soup):
   return soup.text != '\n'

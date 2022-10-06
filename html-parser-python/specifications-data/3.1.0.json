@@ -1,11 +1,27 @@
 {
     "version": "3.1.0",
     "description": "The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.",
+    "urls": [
+        {
+            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md",
+            "type": "markdown"
+        },
+        {
+            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/schemas/v3.1/schema.json",
+            "type": "schema"
+        }
+    ],
     "schemas": [
         {
             "name": "OpenAPI Object",
             "extensible": true,
             "root": true,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "This is the root object of the <a href=\"#oasDocument\">OpenAPI document</a>.",
             "fields": [
                 {
@@ -22,6 +38,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasVersion",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "This string MUST be the version number of the OpenAPI Specification that the OpenAPI document uses. The openapi field SHOULD be used by tooling to interpret the OpenAPI document. This is not related to the API info.version string."
                 },
                 {
@@ -38,6 +60,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasInfo",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Provides metadata about the API. The metadata MAY be used by tooling as required."
                 },
                 {
@@ -54,6 +82,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasJsonSchemaDialect",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The default value for the $schema keyword within Schema Objects contained within this OAS document. This MUST be in the form of a URI."
                 },
                 {
@@ -70,6 +104,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasServers",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An array of Server Objects, which provide connectivity information to a target server. If the servers property is not provided, or is an empty array, the default value would be a Server Object with a url value of /."
                 },
                 {
@@ -86,6 +126,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasPaths",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The available paths and operations for the API."
                 },
                 {
@@ -103,6 +149,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasWebhooks",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The incoming webhooks that MAY be received as part of this API and that the API consumer MAY choose to implement. Closely related to the callbacks feature, this section describes requests initiated other than by an API call, for example by an out of band registration. The key name is a unique string to refer to each webhook, while the (optionally referenced) Path Item Object describes a request that may be initiated by the API provider and the expected responses. An example is available."
                 },
                 {
@@ -119,6 +171,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasComponents",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An element to hold various schemas for the document."
                 },
                 {
@@ -135,6 +193,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasSecurity",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A declaration of which security mechanisms can be used across the API. The list of values includes alternative security requirement objects that can be used. Only one of the security requirement objects need to be satisfied to authorize a request. Individual operations can override this definition. To make security optional, an empty security requirement ({}) can be included in the array."
                 },
                 {
@@ -151,6 +215,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasTags",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A list of tags used by the document with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared MAY be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique."
                 },
                 {
@@ -167,6 +237,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oasExternalDocs",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Additional external documentation."
                 },
                 {
@@ -183,6 +259,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -191,6 +273,12 @@
             "name": "Info Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "The object provides metadata about the API.\nThe metadata MAY be used by the clients if needed, and MAY be presented in editing or documentation generation tools for convenience.",
             "fields": [
                 {
@@ -207,6 +295,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoTitle",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The title of the API."
                 },
                 {
@@ -223,6 +317,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoSummary",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A short summary of the API."
                 },
                 {
@@ -239,6 +339,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A description of the API."
                 },
                 {
@@ -255,6 +361,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoTermsOfService",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A URL to the Terms of Service for the API. This MUST be in the form of a URL."
                 },
                 {
@@ -271,6 +383,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoContact",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The contact information for the exposed API."
                 },
                 {
@@ -287,6 +405,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoLicense",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The license information for the exposed API."
                 },
                 {
@@ -303,6 +427,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoVersion",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The version of the OpenAPI document (which is distinct from the OpenAPI Specification version or the API implementation version)."
                 },
                 {
@@ -319,6 +449,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -327,6 +463,12 @@
             "name": "Contact Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#contactObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Contact information for the exposed API.",
             "fields": [
                 {
@@ -343,6 +485,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#contactName",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The identifying name of the contact person/organization."
                 },
                 {
@@ -359,6 +507,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#contactUrl",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The URL pointing to the contact information. This MUST be in the form of a URL."
                 },
                 {
@@ -375,6 +529,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#contactEmail",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The email address of the contact person/organization. This MUST be in the form of an email address."
                 },
                 {
@@ -391,6 +551,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -399,6 +565,12 @@
             "name": "License Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#licenseObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "License information for the exposed API.",
             "fields": [
                 {
@@ -415,6 +587,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#licenseName",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The license name used for the API."
                 },
                 {
@@ -431,6 +609,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#licenseIdentifier",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An SPDX license expression for the API. The identifier field is mutually exclusive of the url field."
                 },
                 {
@@ -447,6 +631,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#licenseUrl",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A URL to the license used for the API. This MUST be in the form of a URL. The url field is mutually exclusive of the identifier field."
                 },
                 {
@@ -463,6 +653,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -471,6 +667,12 @@
             "name": "Server Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "An object representing a Server.",
             "fields": [
                 {
@@ -487,6 +689,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverUrl",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A URL to the target host.  This URL supports Server Variables and MAY be relative, to indicate that the host location is relative to the location where the OpenAPI document is being served. Variable substitutions will be made when a variable is named in {brackets}."
                 },
                 {
@@ -503,6 +711,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An optional string describing the host designated by the URL."
                 },
                 {
@@ -519,6 +733,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverVariables",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A map between a variable name and its value.  The value is used for substitution in the server's URL template."
                 },
                 {
@@ -535,6 +755,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -543,6 +769,12 @@
             "name": "Server Variable Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverVariableObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "An object representing a Server Variable for server URL template substitution.",
             "fields": [
                 {
@@ -559,6 +791,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverVariableEnum",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An enumeration of string values to be used if the substitution options are from a limited set. The array MUST NOT be empty."
                 },
                 {
@@ -575,6 +813,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverVariableDefault",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The default value to use for substitution, which SHALL be sent if an alternate value is not supplied. Note this behavior is different than the Schema Object's treatment of default values, because in those cases parameter values are optional. If the enum is defined, the value MUST exist in the enum's values."
                 },
                 {
@@ -591,6 +835,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverVariableDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An optional description for the server variable."
                 },
                 {
@@ -607,6 +857,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -615,6 +871,12 @@
             "name": "Components Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Holds a set of reusable objects for different aspects of the OAS.\nAll objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.",
             "fields": [
                 {
@@ -631,6 +893,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsSchemas",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Schema Objects."
                 },
                 {
@@ -648,6 +916,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsResponses",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Response Objects."
                 },
                 {
@@ -665,6 +939,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsParameters",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Parameter Objects."
                 },
                 {
@@ -682,6 +962,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsExamples",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Example Objects."
                 },
                 {
@@ -699,6 +985,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsRequestBodies",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Request Body Objects."
                 },
                 {
@@ -716,6 +1008,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsHeaders",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Header Objects."
                 },
                 {
@@ -733,6 +1031,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsSecuritySchemes",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Security Scheme Objects."
                 },
                 {
@@ -750,6 +1054,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsLinks",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Link Objects."
                 },
                 {
@@ -767,6 +1077,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsCallbacks",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Callback Objects."
                 },
                 {
@@ -784,6 +1100,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#componentsPathItems",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold reusable Path Item Object."
                 },
                 {
@@ -800,6 +1122,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -808,6 +1136,12 @@
             "name": "Paths Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathsObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Holds the relative paths to the individual endpoints and their operations.\nThe path is appended to the URL from the <a href=\"#serverObject\"><code>Server Object</code></a> in order to construct the full URL.  The Paths MAY be empty, due to <a href=\"#securityFiltering\">Access Control List (ACL) constraints</a>.",
             "fields": [
                 {
@@ -824,6 +1158,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathsPath",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A relative path to an individual endpoint. The field name MUST begin with a forward slash (/). The path is appended (no relative URL resolution) to the expanded URL from the Server Object's url field in order to construct the full URL. Path templating is allowed. When matching URLs, concrete (non-templated) paths would be matched before their templated counterparts. Templated paths with the same hierarchy but different templated names MUST NOT exist as they are identical. In case of ambiguous matching, it's up to the tooling to decide which one to use."
                 },
                 {
@@ -840,6 +1180,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -848,6 +1194,12 @@
             "name": "Path Item Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Describes the operations available on a single path.\nA Path Item MAY be empty, due to <a href=\"#securityFiltering\">ACL constraints</a>.\nThe path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available.",
             "fields": [
                 {
@@ -864,6 +1216,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemRef",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows for a referenced definition of this path item. The referenced structure MUST be in the form of a Path Item Object.  In case a Path Item Object field appears both in the defined object and the referenced object, the behavior is undefined. See the rules for resolving Relative References."
                 },
                 {
@@ -880,6 +1238,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemSummary",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An optional, string summary, intended to apply to all operations in this path."
                 },
                 {
@@ -896,6 +1260,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An optional, string description, intended to apply to all operations in this path."
                 },
                 {
@@ -912,6 +1282,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemGet",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A definition of a GET operation on this path."
                 },
                 {
@@ -928,6 +1304,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemPut",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A definition of a PUT operation on this path."
                 },
                 {
@@ -944,6 +1326,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemPost",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A definition of a POST operation on this path."
                 },
                 {
@@ -960,6 +1348,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemDelete",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A definition of a DELETE operation on this path."
                 },
                 {
@@ -976,6 +1370,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemOptions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A definition of a OPTIONS operation on this path."
                 },
                 {
@@ -992,6 +1392,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemHead",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A definition of a HEAD operation on this path."
                 },
                 {
@@ -1008,6 +1414,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemPatch",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A definition of a PATCH operation on this path."
                 },
                 {
@@ -1024,6 +1436,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemTrace",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A definition of a TRACE operation on this path."
                 },
                 {
@@ -1040,6 +1458,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemServers",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An alternative server array to service all operations in this path."
                 },
                 {
@@ -1057,6 +1481,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemParameters",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A list of parameters that are applicable for all the operations described under this path. These parameters can be overridden at the operation level, but cannot be removed there. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the OpenAPI Object's components/parameters."
                 },
                 {
@@ -1073,6 +1503,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -1081,6 +1517,12 @@
             "name": "Operation Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Describes a single API operation on a path.",
             "fields": [
                 {
@@ -1097,6 +1539,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationTags",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier."
                 },
                 {
@@ -1113,6 +1561,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationSummary",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A short summary of what the operation does."
                 },
                 {
@@ -1129,6 +1583,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A verbose explanation of the operation behavior."
                 },
                 {
@@ -1145,6 +1605,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationExternalDocs",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Additional external documentation for this operation."
                 },
                 {
@@ -1161,6 +1627,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationId",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Unique string used to identify the operation. The id MUST be unique among all operations described in the API. The operationId value is case-sensitive. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is RECOMMENDED to follow common programming naming conventions."
                 },
                 {
@@ -1178,6 +1650,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationParameters",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A list of parameters that are applicable for this operation. If a parameter is already defined at the Path Item, the new definition will override it but can never remove it. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the OpenAPI Object's components/parameters."
                 },
                 {
@@ -1195,6 +1673,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationRequestBody",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The request body applicable for this operation.  The requestBody is fully supported in HTTP methods where the HTTP 1.1 specification RFC7231 has explicitly defined semantics for request bodies.  In other cases where the HTTP spec is vague (such as GET, HEAD and DELETE), requestBody is permitted but does not have well-defined semantics and SHOULD be avoided if possible."
                 },
                 {
@@ -1211,6 +1695,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationResponses",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The list of possible responses as they are returned from executing this operation."
                 },
                 {
@@ -1228,6 +1718,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationCallbacks",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A map of possible out-of band callbacks related to the parent operation. The key is a unique identifier for the Callback Object. Each value in the map is a Callback Object that describes a request that may be initiated by the API provider and the expected responses."
                 },
                 {
@@ -1244,6 +1740,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationDeprecated",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Declares this operation to be deprecated. Consumers SHOULD refrain from usage of the declared operation. Default value is false."
                 },
                 {
@@ -1260,6 +1762,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationSecurity",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A declaration of which security mechanisms can be used for this operation. The list of values includes alternative security requirement objects that can be used. Only one of the security requirement objects need to be satisfied to authorize a request. To make security optional, an empty security requirement ({}) can be included in the array. This definition overrides any declared top-level security. To remove a top-level security declaration, an empty array can be used."
                 },
                 {
@@ -1276,6 +1784,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationServers",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An alternative server array to service this operation. If an alternative server object is specified at the Path Item Object or Root level, it will be overridden by this value."
                 },
                 {
@@ -1292,6 +1806,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -1300,6 +1820,12 @@
             "name": "External Documentation Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#externalDocumentationObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Allows referencing an external resource for extended documentation.",
             "fields": [
                 {
@@ -1316,6 +1842,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#externalDocDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A description of the target documentation."
                 },
                 {
@@ -1332,6 +1864,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#externalDocUrl",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The URL for the target documentation. This MUST be in the form of a URL."
                 },
                 {
@@ -1348,6 +1886,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -1356,6 +1900,12 @@
             "name": "Parameter Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Describes a single operation parameter.A unique parameter is defined by a combination of a <a href=\"#parameterName\">name</a> and <a href=\"#parameterIn\">location</a>.",
             "fields": [
                 {
@@ -1372,6 +1922,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterName",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The name of the parameter. Parameter names are case sensitive. If in is \"path\", the name field MUST correspond to a template expression occurring within the path field in the Paths Object. See Path Templating for further information.If in is \"header\" and the name field is \"Accept\", \"Content-Type\" or \"Authorization\", the parameter definition SHALL be ignored.For all other cases, the name corresponds to the parameter name used by the in property."
                 },
                 {
@@ -1388,6 +1944,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterIn",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The location of the parameter. Possible values are \"query\", \"header\", \"path\" or \"cookie\"."
                 },
                 {
@@ -1404,6 +1966,12 @@
                     },
                     "appliesTo": null,
                     "richText": "This could contain examples of use. CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A brief description of the parameter."
                 },
                 {
@@ -1420,6 +1988,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterRequired",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Determines whether this parameter is mandatory. If the parameter location is \"path\", this property is REQUIRED and its value MUST be true. Otherwise, the property MAY be included and its default value is false."
                 },
                 {
@@ -1436,6 +2010,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterDeprecated",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Specifies that a parameter is deprecated and SHOULD be transitioned out of usage. Default value is false."
                 },
                 {
@@ -1452,6 +2032,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterAllowEmptyValue",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Sets the ability to pass empty-valued parameters. This is valid only for query parameters and allows sending a parameter with an empty value. Default value is false. If style is used, and if behavior is n/a (cannot be serialized), the value of allowEmptyValue SHALL be ignored. Use of this property is NOT RECOMMENDED, as it is likely to be removed in a later revision."
                 },
                 {
@@ -1468,6 +2054,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterStyle",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Describes how the parameter value will be serialized depending on the type of the parameter value. Default values (based on value of in): for query - form; for path - simple; for header - simple; for cookie - form."
                 },
                 {
@@ -1484,6 +2076,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterExplode",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "When this is true, parameter values of type array or object generate separate parameters for each value of the array or key-value pair of the map. For other types of parameters this property has no effect. When style is form, the default value is true. For all other styles, the default value is false."
                 },
                 {
@@ -1500,6 +2098,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterAllowReserved",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. This property only applies to parameters with an in value of query. The default value is false."
                 },
                 {
@@ -1516,6 +2120,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterSchema",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The schema defining the type used for the parameter."
                 },
                 {
@@ -1532,6 +2142,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterExample",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Example of the parameter's potential value. The example SHOULD match the specified schema and encoding properties if present. The example field is mutually exclusive of the examples field. Furthermore, if referencing a schema that contains an example, the example value SHALL override the example provided by the schema. To represent examples of media types that cannot naturally be represented in JSON or YAML, a string value can contain the example with escaping where necessary."
                 },
                 {
@@ -1549,6 +2165,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterExamples",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Examples of the parameter's potential value. Each example SHOULD contain a value in the correct format as specified in the parameter encoding. The examples field is mutually exclusive of the example field. Furthermore, if referencing a schema that contains an example, the examples value SHALL override the example provided by the schema."
                 },
                 {
@@ -1565,6 +2187,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameterContent",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A map containing the representations for the parameter. The key is the media type and the value describes it. The map MUST only contain one entry."
                 },
                 {
@@ -1581,6 +2209,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -1589,6 +2223,12 @@
             "name": "Request Body Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#requestBodyObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Describes a single request body.",
             "fields": [
                 {
@@ -1605,6 +2245,12 @@
                     },
                     "appliesTo": null,
                     "richText": "This could contain examples of use.  CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#requestBodyDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A brief description of the request body."
                 },
                 {
@@ -1621,6 +2267,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#requestBodyContent",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The content of the request body. The key is a media type or media type range and the value describes it.  For requests that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
                 },
                 {
@@ -1637,6 +2289,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#requestBodyRequired",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Determines if the request body is required in the request. Defaults to false."
                 },
                 {
@@ -1653,6 +2311,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -1661,6 +2325,12 @@
             "name": "Media Type Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Each Media Type Object provides schema and examples for the media type identified by its key.",
             "fields": [
                 {
@@ -1677,6 +2347,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeSchema",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The schema defining the content of the request, response, or parameter."
                 },
                 {
@@ -1693,6 +2369,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeExample",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Example of the media type.  The example object SHOULD be in the correct format as specified by the media type.  The example field is mutually exclusive of the examples field.  Furthermore, if referencing a schema which contains an example, the example value SHALL override the example provided by the schema."
                 },
                 {
@@ -1710,6 +2392,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeExamples",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Examples of the media type.  Each example object SHOULD  match the media type and specified schema if present.  The examples field is mutually exclusive of the example field.  Furthermore, if referencing a schema which contains an example, the examples value SHALL override the example provided by the schema."
                 },
                 {
@@ -1726,6 +2414,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeEncoding",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A map between a property name and its encoding information. The key, being the property name, MUST exist in the schema as a property. The encoding object SHALL only apply to requestBody objects when the media type is multipart or application/x-www-form-urlencoded."
                 },
                 {
@@ -1742,6 +2436,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -1750,6 +2450,12 @@
             "name": "Encoding Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#encodingObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "A single encoding definition applied to a single schema property.",
             "fields": [
                 {
@@ -1766,6 +2472,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#encodingContentType",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The Content-Type for encoding a specific property. Default value depends on the property type: for object - application/json;  for array \u2013 the default is defined based on the inner type; for all other cases the default is application/octet-stream. The value can be a specific media type (e.g. application/json), a wildcard media type (e.g. image/*), or a comma-separated list of the two types."
                 },
                 {
@@ -1783,6 +2495,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#encodingHeaders",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A map allowing additional information to be provided as headers, for example Content-Disposition.  Content-Type is described separately and SHALL be ignored in this section. This property SHALL be ignored if the request body media type is not a multipart."
                 },
                 {
@@ -1799,6 +2517,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#encodingStyle",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Describes how a specific property value will be serialized depending on its type.  See Parameter Object for details on the style property. The behavior follows the same values as query parameters, including default values. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded or multipart/form-data. If a value is explicitly defined, then the value of contentType (implicit or explicit) SHALL be ignored."
                 },
                 {
@@ -1815,6 +2539,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#encodingExplode",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "When this is true, property values of type array or object generate separate parameters for each value of the array, or key-value-pair of the map.  For other types of properties this property has no effect. When style is form, the default value is true. For all other styles, the default value is false. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded or multipart/form-data. If a value is explicitly defined, then the value of contentType (implicit or explicit) SHALL be ignored."
                 },
                 {
@@ -1831,6 +2561,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#encodingAllowReserved",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by RFC3986 :/?#[]@!$&'()*+,;= to be included without percent-encoding. The default value is false. This property SHALL be ignored if the request body media type is not application/x-www-form-urlencoded or multipart/form-data. If a value is explicitly defined, then the value of contentType (implicit or explicit) SHALL be ignored."
                 },
                 {
@@ -1847,6 +2583,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -1855,6 +2597,12 @@
             "name": "Responses Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#responsesObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "A container for the expected responses of an operation.\nThe container maps a HTTP response code to the expected response.The documentation is not necessarily expected to cover all possible HTTP response codes because they may not be known in advance.\nHowever, documentation is expected to cover a successful operation response and any known errors.The <code>default</code> MAY be used as a default response object for all HTTP codes \nthat are not covered individually by the <code>Responses Object</code>.The <code>Responses Object</code> MUST contain at least one response code, and if only one\nresponse code is provided it SHOULD be the response for a successful operation\ncall.",
             "fields": [
                 {
@@ -1872,6 +2620,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#responsesDefault",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The documentation of responses other than the ones declared for specific HTTP response codes. Use this field to cover undeclared responses."
                 },
                 {
@@ -1889,6 +2643,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#responsesCode",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Any HTTP status code can be used as the property name, but only one property per code, to describe the expected response for that HTTP status code. This field MUST be enclosed in quotation marks (for example, \"200\") for compatibility between JSON and YAML. To define a range of response codes, this field MAY contain the uppercase wildcard character X. For example, 2XX represents all response codes between [200-299]. Only the following range definitions are allowed: 1XX, 2XX, 3XX, 4XX, and 5XX. If a response is defined using an explicit code, the explicit code definition takes precedence over the range definition for that code."
                 },
                 {
@@ -1905,6 +2665,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -1913,6 +2679,12 @@
             "name": "Response Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#responseObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Describes a single response from an API Operation, including design-time, static \n<code>links</code> to operations based on the response.",
             "fields": [
                 {
@@ -1929,6 +2701,12 @@
                     },
                     "appliesTo": null,
                     "richText": "A description of the response. CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#responseDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A description of the response."
                 },
                 {
@@ -1946,6 +2724,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#responseHeaders",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Maps a header name to its definition. RFC7230 states header names are case insensitive. If a response header is defined with the name \"Content-Type\", it SHALL be ignored."
                 },
                 {
@@ -1962,6 +2746,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#responseContent",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A map containing descriptions of potential response payloads. The key is a media type or media type range and the value describes it.  For responses that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
                 },
                 {
@@ -1979,6 +2769,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#responseLinks",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A map of operations links that can be followed from the response. The key of the map is a short name for the link, following the naming constraints of the names for Component Objects."
                 },
                 {
@@ -1995,6 +2791,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2003,6 +2805,12 @@
             "name": "Callback Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#callbackObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "A map of possible out-of band callbacks related to the parent operation.\nEach value in the map is a <a href=\"#pathItemObject\">Path Item Object</a> that describes a set of requests that may be initiated by the API provider and the expected responses.\nThe key value used to identify the path item object is an expression, evaluated at runtime, that identifies a URL to use for the callback operation.To describe incoming requests from the API provider independent from another API call, use the <a href=\"#oasWebhooks\"><code>webhooks</code></a> field.",
             "fields": [
                 {
@@ -2020,6 +2828,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#callbackExpression",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A Path Item Object, or a reference to one, used to define a callback request and expected responses.  A complete example is available."
                 },
                 {
@@ -2036,6 +2850,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2044,6 +2864,12 @@
             "name": "Example Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#exampleObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "",
             "fields": [
                 {
@@ -2060,6 +2886,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#exampleSummary",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Short description for the example."
                 },
                 {
@@ -2076,6 +2908,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#exampleDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Long description for the example."
                 },
                 {
@@ -2092,6 +2930,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#exampleValue",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Embedded literal example. The value field and externalValue field are mutually exclusive. To represent examples of media types that cannot naturally represented in JSON or YAML, use a string value to contain the example, escaping where necessary."
                 },
                 {
@@ -2108,6 +2952,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#exampleExternalValue",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A URI that points to the literal example. This provides the capability to reference examples that cannot easily be included in JSON or YAML documents.  The value field and externalValue field are mutually exclusive. See the rules for resolving Relative References."
                 },
                 {
@@ -2124,6 +2974,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2132,6 +2988,12 @@
             "name": "Link Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#linkObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "The <code>Link object</code> represents a possible design-time link for a response.\nThe presence of a link does not guarantee the caller's ability to successfully invoke it, rather it provides a known relationship and traversal mechanism between responses and other operations.Unlike <em>dynamic</em> links (i.e. links provided <strong>in</strong> the response payload), the OAS linking mechanism does not require link information in the runtime response.For computing links, and providing instructions to execute them, a <a href=\"#runtimeExpression\">runtime expression</a> is used for accessing values in an operation and using them as parameters while invoking the linked operation.  ",
             "fields": [
                 {
@@ -2148,6 +3010,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#linkOperationRef",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A relative or absolute URI reference to an OAS operation. This field is mutually exclusive of the operationId field, and MUST point to an Operation Object. Relative operationRef values MAY be used to locate an existing Operation Object in the OpenAPI definition. See the rules for resolving Relative References."
                 },
                 {
@@ -2164,6 +3032,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#linkOperationId",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The name of an existing, resolvable OAS operation, as defined with a unique operationId.  This field is mutually exclusive of the operationRef field."
                 },
                 {
@@ -2181,6 +3055,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#linkParameters",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A map representing parameters to pass to an operation as specified with operationId or identified via operationRef. The key is the parameter name to be used, whereas the value can be a constant or an expression to be evaluated and passed to the linked operation.  The parameter name can be qualified using the parameter location [{in}.]{name} for operations that use the same parameter name in different locations (e.g. path.id)."
                 },
                 {
@@ -2198,6 +3078,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#linkRequestBody",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A literal value or {expression} to use as a request body when calling the target operation."
                 },
                 {
@@ -2214,6 +3100,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#linkDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A description of the link."
                 },
                 {
@@ -2230,6 +3122,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#linkServer",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A server object to be used by the target operation."
                 },
                 {
@@ -2246,6 +3144,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2254,6 +3158,12 @@
             "name": "Header Object",
             "extensible": false,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#headerObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "The Header Object follows the structure of the <a href=\"#parameterObject\">Parameter Object</a> with the following changes:\n<li><code>name</code> MUST NOT be specified, it is given in the corresponding <code>headers</code> map.</li>\n<li><code>in</code> MUST NOT be specified, it is implicitly in <code>header</code>.</li>\n<li>All traits that are affected by the location MUST be applicable to a location of <code>header</code> (for example, <a href=\"#parameterStyle\"><code>style</code></a>).</li>\n",
             "fields": [
                 {
@@ -2270,6 +3180,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2278,6 +3194,12 @@
             "name": "Tag Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#tagObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Adds metadata to a single tag that is used by the <a href=\"#operationObject\">Operation Object</a>.\nIt is not mandatory to have a Tag Object per tag defined in the Operation Object instances.",
             "fields": [
                 {
@@ -2294,6 +3216,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#tagName",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The name of the tag."
                 },
                 {
@@ -2310,6 +3238,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#tagDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A description for the tag."
                 },
                 {
@@ -2326,6 +3260,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#tagExternalDocs",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Additional external documentation for this tag."
                 },
                 {
@@ -2342,6 +3282,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2350,6 +3296,12 @@
             "name": "Reference Object",
             "extensible": false,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#referenceObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "A simple object to allow referencing other components in the OpenAPI document, internally and externally.The <code>$ref</code> string value contains a URI <a href=\"https://tools.ietf.org/html/rfc3986\">RFC3986</a>, which identifies the location of the value being referenced.See the rules for resolving <a href=\"#relativeReferencesURI\">Relative References</a>.",
             "fields": [
                 {
@@ -2366,6 +3318,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#referenceRef",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The reference identifier. This MUST be in the form of a URI."
                 },
                 {
@@ -2382,6 +3340,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#referenceSummary",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A short summary which by default SHOULD override that of the referenced component. If the referenced object-type does not allow a summary field, then this field has no effect."
                 },
                 {
@@ -2398,6 +3362,12 @@
                     },
                     "appliesTo": null,
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#referenceDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A description which by default SHOULD override that of the referenced component.If the referenced object-type does not allow a description field, then this field has no effect."
                 },
                 {
@@ -2414,6 +3384,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2422,6 +3398,12 @@
             "name": "Schema Object",
             "extensible": false,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "The Schema Object allows the definition of input and output data types.\nThese types can be objects, but also primitives and arrays. This object is a superset of the <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-00\">JSON Schema Specification Draft 2020-12</a>.For more information about the properties, see <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-00\">JSON Schema Core</a> and <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-validation-00\">JSON Schema Validation</a>.Unless stated otherwise, the property definitions follow those of JSON Schema and do not add any additional semantics.\nWhere JSON Schema indicates that behavior is defined by the application (e.g. for annotations), OAS also defers the definition of semantics to the application consuming the OpenAPI document.",
             "fields": [
                 {
@@ -2438,6 +3420,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaDiscriminator",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Adds support for polymorphism. The discriminator is an object name that is used to differentiate between other schemas which may satisfy the payload description. See Composition and Inheritance for more details."
                 },
                 {
@@ -2454,6 +3442,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaXml",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "This MAY be used only on properties schemas. It has no effect on root schemas. Adds additional metadata to describe the XML representation of this property."
                 },
                 {
@@ -2470,6 +3464,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaExternalDocs",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Additional external documentation for this schema."
                 },
                 {
@@ -2486,6 +3486,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaExample",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A free-form property to include an example of an instance for this schema. To represent examples that cannot be naturally represented in JSON or YAML, a string value can be used to contain the example with escaping where necessary.Deprecated: The example property has been deprecated in favor of the JSON Schema examples keyword. Use of example is discouraged, and later versions of this specification may remove it."
                 },
                 {
@@ -2502,6 +3508,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2510,6 +3522,12 @@
             "name": "Discriminator Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#discriminatorObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "When request bodies or response payloads may be one of a number of different schemas, a <code>discriminator</code> object can be used to aid in serialization, deserialization, and validation.  The discriminator is a specific object in a schema which is used to inform the consumer of the document of an alternative schema based on the value associated with it.When using the discriminator, <em>inline</em> schemas will not be considered.",
             "fields": [
                 {
@@ -2526,6 +3544,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#propertyName",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The name of the property in the payload that will hold the discriminator value."
                 },
                 {
@@ -2542,6 +3566,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#discriminatorMapping",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object to hold mappings between payload values and schema names or references."
                 },
                 {
@@ -2558,6 +3588,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2566,6 +3602,12 @@
             "name": "XML Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#xmlObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "A metadata object that allows for more fine-tuned XML model definitions.When using arrays, XML element names are <em>not</em> inferred (for singular/plural forms) and the <code>name</code> property SHOULD be used to add that information.\nSee examples for expected behavior.",
             "fields": [
                 {
@@ -2582,6 +3624,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#xmlName",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Replaces the name of the element/attribute used for the described schema property. When defined within items, it will affect the name of the individual XML elements within the list. When defined alongside type being array (outside the items), it will affect the wrapping element and only if wrapped is true. If wrapped is false, it will be ignored."
                 },
                 {
@@ -2598,6 +3646,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#xmlNamespace",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The URI of the namespace definition. This MUST be in the form of an absolute URI."
                 },
                 {
@@ -2614,6 +3668,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#xmlPrefix",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The prefix to be used for the name."
                 },
                 {
@@ -2630,6 +3690,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#xmlAttribute",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Declares whether the property definition translates to an attribute instead of an element. Default value is false."
                 },
                 {
@@ -2646,6 +3712,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#xmlWrapped",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "MAY be used only for an array definition. Signifies whether the array is wrapped (for example, <books><book/><book/></books>) or unwrapped (<book/><book/>). Default value is false. The definition takes effect only when defined alongside type being array (outside the items)."
                 },
                 {
@@ -2662,6 +3734,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2670,6 +3748,12 @@
             "name": "Security Scheme Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Defines a security scheme that can be used by the operations.Supported schemes are HTTP authentication, an API key (either as a header, a cookie parameter or as a query parameter), mutual TLS (use of a client certificate), OAuth2's common flows (implicit, password, client credentials and authorization code) as defined in <a href=\"https://tools.ietf.org/html/rfc6749\">RFC6749</a>, and <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-discovery-06\">OpenID Connect Discovery</a>.\nPlease note that as of 2020, the implicit flow is about to be deprecated by <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-security-topics\">OAuth 2.0 Security Best Current Practice</a>. Recommended for most use case is Authorization Code Grant flow with PKCE.",
             "fields": [
                 {
@@ -2686,6 +3770,12 @@
                     },
                     "appliesTo": "Any",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeType",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The type of the security scheme. Valid values are \"apiKey\", \"http\", \"mutualTLS\", \"oauth2\", \"openIdConnect\"."
                 },
                 {
@@ -2702,6 +3792,12 @@
                     },
                     "appliesTo": "Any",
                     "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeDescription",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A description for security scheme."
                 },
                 {
@@ -2718,6 +3814,12 @@
                     },
                     "appliesTo": "apiKey",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeName",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The name of the header, query or cookie parameter to be used."
                 },
                 {
@@ -2734,6 +3836,12 @@
                     },
                     "appliesTo": "apiKey",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeIn",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The location of the API key. Valid values are \"query\", \"header\" or \"cookie\"."
                 },
                 {
@@ -2750,6 +3858,12 @@
                     },
                     "appliesTo": "http",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeScheme",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The name of the HTTP Authorization scheme to be used in the Authorization header as defined in RFC7235.  The values used SHOULD be registered in the IANA Authentication Scheme registry."
                 },
                 {
@@ -2766,6 +3880,12 @@
                     },
                     "appliesTo": "http (\"bearer\")",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeBearerFormat",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "A hint to the client to identify how the bearer token is formatted.  Bearer tokens are usually generated by an authorization server, so this information is primarily for documentation purposes."
                 },
                 {
@@ -2782,6 +3902,12 @@
                     },
                     "appliesTo": "oauth2",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeFlows",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "An object containing configuration information for the flow types supported."
                 },
                 {
@@ -2798,6 +3924,12 @@
                     },
                     "appliesTo": "openIdConnect",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securitySchemeOpenIdConnectUrl",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL. The OpenID Connect standard requires the use of TLS."
                 },
                 {
@@ -2814,6 +3946,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2822,6 +3960,12 @@
             "name": "OAuth Flows Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowsObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Allows configuration of the supported OAuth Flows.",
             "fields": [
                 {
@@ -2838,6 +3982,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowsImplicit",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Configuration for the OAuth Implicit flow"
                 },
                 {
@@ -2854,6 +4004,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowsPassword",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Configuration for the OAuth Resource Owner Password flow"
                 },
                 {
@@ -2870,6 +4026,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowsClientCredentials",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Configuration for the OAuth Client Credentials flow.  Previously called application in OpenAPI 2.0."
                 },
                 {
@@ -2886,6 +4048,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowsAuthorizationCode",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Configuration for the OAuth Authorization Code flow.  Previously called accessCode in OpenAPI 2.0."
                 },
                 {
@@ -2902,6 +4070,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2910,6 +4084,12 @@
             "name": "OAuth Flow Object",
             "extensible": true,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Configuration details for a supported OAuth Flow",
             "fields": [
                 {
@@ -2926,6 +4106,12 @@
                     },
                     "appliesTo": "oauth2 (\"implicit\", \"authorizationCode\")",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowAuthorizationUrl",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The authorization URL to be used for this flow. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
                 },
                 {
@@ -2942,6 +4128,12 @@
                     },
                     "appliesTo": "oauth2 (\"password\", \"clientCredentials\", \"authorizationCode\")",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowTokenUrl",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The token URL to be used for this flow. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
                 },
                 {
@@ -2958,6 +4150,12 @@
                     },
                     "appliesTo": "oauth2",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowRefreshUrl",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The URL to be used for obtaining refresh tokens. This MUST be in the form of a URL. The OAuth2 standard requires the use of TLS."
                 },
                 {
@@ -2974,6 +4172,12 @@
                     },
                     "appliesTo": "oauth2",
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#oauthFlowScopes",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it. The map MAY be empty."
                 },
                 {
@@ -2990,6 +4194,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
@@ -2998,6 +4208,12 @@
             "name": "Security Requirement Object",
             "extensible": false,
             "root": false,
+            "urls": [
+                {
+                    "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securityRequirementObject",
+                    "type": "markdown"
+                }
+            ],
             "description": "Lists the required security schemes to execute this operation.\nThe name used for each property MUST correspond to a security scheme declared in the <a href=\"#componentsSecuritySchemes\">Security Schemes</a> under the <a href=\"#componentsObject\">Components Object</a>.Security Requirement Objects that contain multiple schemes require that all schemes MUST be satisfied for a request to be authorized.\nThis enables support for scenarios where multiple query parameters or HTTP headers are required to convey security information.When a list of Security Requirement Objects is defined on the <a href=\"#oasObject\">OpenAPI Object</a> or <a href=\"#operationObject\">Operation Object</a>, only one of the Security Requirement Objects in the list needs to be satisfied to authorize the request.",
             "fields": [
                 {
@@ -3014,6 +4230,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securityRequirementsName",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Each name MUST correspond to a security scheme which is declared in the Security Schemes under the Components Object. If the security scheme is of type \"oauth2\" or \"openIdConnect\", then the value is a list of scope names required for the execution, and the list MAY be empty if authorization does not require a specified scope. For other security scheme types, the array MAY contain a list of role names which are required for the execution, but are not otherwise defined or exchanged in-band."
                 },
                 {
@@ -3030,6 +4252,12 @@
                     },
                     "appliesTo": null,
                     "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#infoExtensions",
+                            "type": "markdown"
+                        }
+                    ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with x-, for example, x-internal-id. Field names beginning x-oai- and x-oas- are reserved for uses defined by the OpenAPI Initiative. The value can be null, a primitive, an array or an object."
                 }
             ]
