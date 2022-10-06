@@ -357,9 +357,15 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _render() {
-    this.shadowRoot.appendChild(this._getCss());
-    const htmlSpecification = this._getHtmlSpecification();
-    this.shadowRoot.appendChild(htmlSpecification);
+    const style = this.shadowRoot.querySelector('style');
+    if(style === null){
+      this.shadowRoot.appendChild(this._getCss());
+    }
+    const htmlSpecification = this.shadowRoot.querySelector('[data-type=specification]');
+    if(htmlSpecification !== null){
+      htmlSpecification.remove();
+    }
+    this.shadowRoot.appendChild(this._getHtmlSpecification());
   }
 
   // Web components functions
@@ -367,7 +373,7 @@ class SpecificationViewer extends HTMLElement {
   connectedCallback() {
     console.log('connectedCallback');
     this.addEventListener("click", this.onclick);
-    this._setContentAndRender();    
+    //this._setContentAndRender();    
   }
 
   disconnectedCallback() {
@@ -390,6 +396,7 @@ class SpecificationViewer extends HTMLElement {
         this[property] = newValue;
       //}
     //}
+    this._setContentAndRender(); 
   }
 
 }
