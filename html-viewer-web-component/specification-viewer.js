@@ -43,7 +43,7 @@ class SpecificationViewer extends HTMLElement {
     
     /* All nodes */
     
-    .tree li > *:first-child{
+    .tree li > div:first-of-type {
       border: var( --connector-size) solid var( --connector-color);
       border-radius: .4em;
       padding: 0.5rem;
@@ -147,8 +147,6 @@ class SpecificationViewer extends HTMLElement {
       text-transform: uppercase;
     }
 
-
-
     .tree .title {
       position: -webkit-sticky; /* Safari */
       position: sticky;
@@ -162,6 +160,8 @@ class SpecificationViewer extends HTMLElement {
 
   _getHtmlSpecification() {
     const htmlSpecification = document.createElement('ul');
+    htmlSpecification.setAttribute('data-type', 'specification');
+    htmlSpecification.setAttribute('data-name', this.specification.version);
     htmlSpecification.setAttribute('class', 'tree');
     htmlSpecification.innerHTML = `
       <li>
@@ -172,18 +172,32 @@ class SpecificationViewer extends HTMLElement {
       </li>
     `;
     const sections = document.createElement('ul');
-    const schemas = document.createElement('li');
-    schemas.setAttribute('class', 'node');
-    schemas.innerHTML = `
-        <div>
-          <div class="title"><h1>Schemas</h1></div>
-        </div>
-    `;
-    sections.appendChild(schemas);
-    const rootObject = this._getHtmlSchema(this.specification.schemas.find(schema => schema.root));
-    schemas.appendChild(rootObject);
+    sections.appendChild(this._getHtmlSchemaSection());
     htmlSpecification.appendChild(sections);
     return htmlSpecification;
+  }
+
+  _getHtmlSchemaSection() {
+    const schemaSection = document.createElement('li');
+    schemaSection.setAttribute('data-type', 'section');
+    schemaSection.setAttribute('data-name', 'schema');
+    schemaSection.setAttribute('class', 'node');
+    schemaSection.innerHTML = `
+        <div>
+          <div class="title"><h1>Schema</h1></div>
+        </div>
+    `;
+    schemaSection.appendChild(this._getAllHtmlSchemas());
+    return schemaSection;
+  }
+
+  _getAllHtmlSchemas(){
+    const types = [];
+    this.specification.schemas.forEach(schema => {
+      types.push(schema.name);
+    })
+    const htmlSchemas = this._getHtmlSchemas(types);
+    return htmlSchemas;
   }
 
   _getHtmlSchema(schema) {
@@ -204,22 +218,16 @@ class SpecificationViewer extends HTMLElement {
           <div class="description">${schema.description}</div>
         </div>
     `;
-    const fields = this._getHtmlFields(schema.fields);
-    htmlSchema.appendChild(fields);
     return htmlSchema;
   }
 
-
   _getHtmlSchemas(types) {
     const htmlSchemas = document.createElement('ul');
+    htmlSchemas.setAttribute('data-type', 'children');
     types.forEach(type => {
-      // Q&D to avoid loop
-      if(['Info Object', 'Contact Object', 'License Object', 'Paths Object', 'Path Item Object', 'Components Object', 'Parameter Object', 'Reference Object'].includes(type)){
-        const schema = this.specification.schemas.find(s => s.name === type);
-        console.log(type, schema);
-        if(schema){ // atomic types will not be found but we do not care
-            htmlSchemas.appendChild(this._getHtmlSchema(schema));
-        }
+      const schema = this.specification.schemas.find(s => s.name === type);
+      if(schema){ // atomic types will not be found but we do not care
+          htmlSchemas.appendChild(this._getHtmlSchema(schema));
       }
     });
     if(htmlSchemas.childElementCount > 0){
@@ -230,9 +238,10 @@ class SpecificationViewer extends HTMLElement {
     }
   }
 
-  _getHtmlFields(fields) {
+  _getHtmlFields(schema) {
     const htmlFields = document.createElement('ul');
-    fields.forEach((field) => {
+    htmlFields.setAttribute('data-type', 'children');
+    schema.fields.forEach((field) => {
       const htmlField = document.createElement('li');
       let required = '';
       if(field.required){
@@ -242,8 +251,14 @@ class SpecificationViewer extends HTMLElement {
       if(field.richText){
         richText = '<span class="rich-text">Rich Text</span>';
       }
+      let dataChildren = false;
+      field.type.types.forEach(type => {
+        if(type.includes('Object')){
+          dataChildren = true;
+        }
+      });
       htmlField.innerHTML = `
-      <div class="node" data-type="field" data-name="${field.name}">
+      <div class="node" data-type="field" data-name="${schema.name};${field.name}" data-children="${dataChildren}">
         <div class="title">
           <code class="openapi">
             <span class="property">${field.name}</span>${required}
@@ -255,23 +270,75 @@ class SpecificationViewer extends HTMLElement {
       </div>
       `;
       // will need a fix to add the map/list dimension * vs {*}
+      /*
       const htmlSchemas = this._getHtmlSchemas(field.type.types);
       console.log(htmlSchemas);
       if(htmlSchemas){
         htmlField.appendChild(htmlSchemas);
       }
+      */
       htmlFields.appendChild(htmlField);
     });
     return htmlFields;
   }
 
+  getSchema(schemaName) {
+    const schema = this.specification.schemas.find(schema => schema.name === schemaName);
+    return schema;
+  }
+
+  getField(fieldId) {
+    const split = fieldId.split(';');
+    const schemaName = split[0];
+    const fieldName = split[1];
+    const schema = this.getSchema(schemaName);
+    const field = schema.fields.find(field => field.name === fieldName);
+    return field;
+  }
+
+  hasDataChildren(element){
+    let result = false;
+    const dataChildrenAttribute = element.getAttribute('data-children');
+    if(dataChildrenAttribute===null || dataChildrenAttribute === "true"){
+      result = true;
+    }
+    return result;
+  }
+
   onclick(event) {
-    console.log('web component clicked', event);
-    console.log(event.path[0]);
-    const schemaName = event.path[0].getAttribute('data-schema');
-    console.log(schemaName);
-    const schema = this.content.schemas.find(schema => schema.name === schemaName);
-    console.log(schema);
+    // Click location to replace by actual buttons
+    const elementClicked = event.path[0];
+    const dataParent = elementClicked.closest('[data-type]');
+    if(this.hasDataChildren(dataParent)){
+      console.log('dataParent', dataParent);
+      const node = dataParent.parentElement;
+      const dataType = dataParent.getAttribute('data-type');
+      const dataName = dataParent.getAttribute('data-name');
+      console.log(dataType, dataName);
+      const openedChildren = node.querySelector("[data-type=children]");// replace by css class?
+      if(openedChildren){
+        openedChildren.remove();
+      }
+      else {
+        if(dataType == 'schema'){
+          const schema = this.getSchema(dataName);
+          const htmlFields = this._getHtmlFields(schema);
+          node.appendChild(htmlFields);  
+        }
+        else if(dataType == 'field'){
+          const field = this.getField(dataName);
+          const htmlSchemas = this._getHtmlSchemas(field.type.types);
+          node.appendChild(htmlSchemas);
+        }
+        else if(dataType == 'section' && dataName == 'schema'){
+          const htmlSchemas = this._getAllHtmlSchemas();
+          dataParent.appendChild(htmlSchemas);
+        }
+      }
+    }
+    else {
+      console.log('no data children');
+    }
   }
 
   _setContentAndRender() {
