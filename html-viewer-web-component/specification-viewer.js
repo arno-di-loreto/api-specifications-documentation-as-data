@@ -122,6 +122,18 @@ class SpecificationViewer extends HTMLElement {
       text-transform: uppercase;
     }
 
+    .tree .rich-text {
+      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 0.6rem;
+      background-color: brown;
+      color: white;
+      padding: 0.2rem;
+      margin-left: 0.2rem;
+      border-radius: 5px;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+
     .tree .title {
       position: -webkit-sticky; /* Safari */
       position: sticky;
@@ -199,15 +211,19 @@ class SpecificationViewer extends HTMLElement {
       const htmlField = document.createElement('li');
       let required = '';
       if(field.required){
-        required = '*';
+        required = '<span class="required">*</span>';
+      }
+      let richText = '';
+      if(field.richText){
+        richText = '<span class="rich-text">Rich Text</span>';
       }
       htmlField.innerHTML = `
       <div class="node" data-schema="${field.type.types[0]}">
         <div class="title">
           <code class="openapi">
-            <span class="property">${field.name}</span><span class="required">${required}</span>
-            <span class="syntax">:&nbsp;<span>
-            <span class="value">${field.type.types.join(',')}</span>
+            <span class="property">${field.name}</span>${required}
+            <span class="syntax">:<span>
+            <span class="value">${field.type.types.join(',')}</span>${richText}
           </code>
         </div>
         <div class="description">${field.description}</div>
