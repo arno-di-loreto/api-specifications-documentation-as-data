@@ -199,6 +199,10 @@ class SpecificationViewer extends HTMLElement {
       top: 4px;
     }
 
+    .nav-button-children-section {
+      top: 4px;
+    }
+
     .links {
       margin-top: 0.5rem;
     }
@@ -254,13 +258,23 @@ class SpecificationViewer extends HTMLElement {
     schemaSection.setAttribute('data-type', 'section');
     schemaSection.setAttribute('data-name', 'schema');
     schemaSection.setAttribute('class', 'node');
+    let navigationChildren = ''
+    if(this.specification.schemas.length > 0){
+      navigationChildren = `
+        <span class="nav-button-children nav-button-children-section" data-action="children">→</span>
+      `
+    }
     schemaSection.innerHTML = `
         <div>
-          <div class="title"><h1>Schema</h1></div>
+          <div class="title">
+            <h1>Schema</h1>
+            <div class="navigation">
+            ${navigationChildren}
+            </div>
           </div>
         </div>
     `;
-    schemaSection.appendChild(this._getAllHtmlSchemas());
+    //schemaSection.appendChild(this._getAllHtmlSchemas());
     return schemaSection;
   }
 
