@@ -11,6 +11,80 @@
             "type": "schema"
         }
     ],
+    "history": [
+        {
+            "date": "2020-02-20",
+            "type": "patch",
+            "version": "3.0.3",
+            "notes": "Patch release of the OpenAPI Specification 3.0.3"
+        },
+        {
+            "date": "2018-10-08",
+            "type": "patch",
+            "version": "3.0.2",
+            "notes": "Patch release of the OpenAPI Specification 3.0.2"
+        },
+        {
+            "date": "2017-12-06",
+            "type": "patch",
+            "version": "3.0.1",
+            "notes": "Patch release of the OpenAPI Specification 3.0.1"
+        },
+        {
+            "date": "2017-07-26",
+            "type": "release",
+            "version": "3.0.0",
+            "notes": "Release of the OpenAPI Specification 3.0.0"
+        },
+        {
+            "date": "2017-06-16",
+            "type": "draft",
+            "version": "3.0.0-rc2",
+            "notes": "rc2 of the 3.0 specification"
+        },
+        {
+            "date": "2017-04-27",
+            "type": "draft",
+            "version": "3.0.0-rc1",
+            "notes": "rc1 of the 3.0 specification"
+        },
+        {
+            "date": "2017-02-28",
+            "type": "draft",
+            "version": "3.0.0-rc0",
+            "notes": "Implementer's Draft of the 3.0 specification"
+        },
+        {
+            "date": "2015-12-31",
+            "type": "event",
+            "version": "2.0",
+            "notes": "Donation of Swagger 2.0 to the OpenAPI Initiative"
+        },
+        {
+            "date": "2014-09-08",
+            "type": "release",
+            "version": "2.0",
+            "notes": "Release of Swagger 2.0"
+        },
+        {
+            "date": "2014-03-14",
+            "type": "release",
+            "version": "1.2",
+            "notes": "Initial release of the formal document."
+        },
+        {
+            "date": "2012-08-22",
+            "type": "release",
+            "version": "1.1",
+            "notes": "Release of Swagger 1.1"
+        },
+        {
+            "date": "2011-08-10",
+            "type": "release",
+            "version": "1.0",
+            "notes": "First release of the Swagger Specification"
+        }
+    ],
     "schemas": [
         {
             "name": "OpenAPI Object",

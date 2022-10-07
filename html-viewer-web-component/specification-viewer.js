@@ -222,6 +222,22 @@ class SpecificationViewer extends HTMLElement {
       background: red;
     }
 
+    [data-type="events"] table {
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 0.7rem;
+    }
+
+    [data-type="events"] th,td {
+      padding: 3px;;
+    }
+
+    [data-type="events"] td,th {
+      border: solid;
+      border-color: grey;
+      border-width: thin;
+      margin: 0;
+    }
     `;
 
     return style;
@@ -248,26 +264,67 @@ class SpecificationViewer extends HTMLElement {
       </li>
     `;
     const sections = document.createElement('ul');
+    sections.appendChild(this._getHtmlHistorySection());
     sections.appendChild(this._getHtmlSchemaSection());
     htmlSpecification.appendChild(sections);
     return htmlSpecification;
   }
 
-  _getHtmlSchemaSection() {
-    const schemaSection = document.createElement('li');
-    schemaSection.setAttribute('data-type', 'section');
-    schemaSection.setAttribute('data-name', 'schema');
-    schemaSection.setAttribute('class', 'node');
+  _getHtmlHistoryEvents(){
+    const events = document.createElement('ul');
+    events.setAttribute('data-type', 'children');
+    const li = document.createElement('li');
+    li.setAttribute('data-type', 'events');
+    events.appendChild(li);
+    let lines = '';
+    console.log(this.specification.history);
+    this.specification.history.forEach(event => {
+      lines += `
+        <tr>
+          <td>${event.date}</td>
+          <td>${event.type}</td>
+          <td>${event.version}</td>
+          <td>${event.notes}</td>
+        </tr>
+      `
+    });
+    li.innerHTML = `
+      <div>
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Event type</th>
+                <th>Version</th>
+                <th>Notes</th>
+              </tr>
+            <thead>
+            <tbody>
+            ${lines}
+            <tbody>
+          </table>
+        </div>
+      </div>
+    `;
+    return events;
+  }
+
+  _getHtmlSection(dataName, title, children){
+    const section = document.createElement('li');
+    section.setAttribute('data-type', 'section');
+    section.setAttribute('data-name', dataName);
+    section.setAttribute('class', 'node');
     let navigationChildren = ''
-    if(this.specification.schemas.length > 0){
+    if(children.length > 0){
       navigationChildren = `
         <span class="nav-button-children nav-button-children-section" data-action="children">→</span>
       `
     }
-    schemaSection.innerHTML = `
+    section.innerHTML = `
         <div>
           <div class="title">
-            <h1>Schema</h1>
+            <h1>${title}</h1>
             <div class="navigation">
             ${navigationChildren}
             </div>
@@ -275,7 +332,15 @@ class SpecificationViewer extends HTMLElement {
         </div>
     `;
     //schemaSection.appendChild(this._getAllHtmlSchemas());
-    return schemaSection;
+    return section;
+  }
+
+  _getHtmlHistorySection() {
+    return this._getHtmlSection('history', 'History', this.specification.history);
+  }
+
+  _getHtmlSchemaSection() {
+    return this._getHtmlSection('schema', 'Schema', this.specification.history);
   }
 
   _getAllHtmlSchemas(){
@@ -423,7 +488,13 @@ class SpecificationViewer extends HTMLElement {
       const dataType = dataParent.getAttribute('data-type');
       const dataName = dataParent.getAttribute('data-name');
       console.log(dataType, dataName);
-      const openedChildren = node.querySelector("[data-type=children]");// replace by css class?
+      let openedChildren;
+      if(dataType == "section"){
+        openedChildren = dataParent.querySelector("[data-type=children]");// replace by css class?
+      }
+      else {
+        openedChildren = node.querySelector("[data-type=children]");// replace by css class?
+      }
       if(openedChildren){
         openedChildren.remove();
         elementClicked.textContent="→";
@@ -442,6 +513,9 @@ class SpecificationViewer extends HTMLElement {
         else if(dataType == 'section' && dataName == 'schema'){
           const htmlSchemas = this._getAllHtmlSchemas();
           dataParent.appendChild(htmlSchemas);
+        }
+        else if(dataType == 'section' && dataName == 'history'){
+          dataParent.appendChild(this._getHtmlHistoryEvents());
         }
         elementClicked.textContent="←";
       }

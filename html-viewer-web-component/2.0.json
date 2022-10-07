@@ -11,6 +11,32 @@
             "type": "schema"
         }
     ],
+    "history": [
+        {
+            "date": "2014-09-08",
+            "type": "release",
+            "version": "2.0",
+            "notes": "Release of Swagger 2.0"
+        },
+        {
+            "date": "2014-03-14",
+            "type": "release",
+            "version": "1.2",
+            "notes": "Initial release of the formal document."
+        },
+        {
+            "date": "2012-08-22",
+            "type": "release",
+            "version": "1.1",
+            "notes": "Release of Swagger 1.1"
+        },
+        {
+            "date": "2011-08-10",
+            "type": "release",
+            "version": "1.0",
+            "notes": "First release of the Swagger Specification"
+        }
+    ],
     "schemas": [
         {
             "name": "Swagger Object",
