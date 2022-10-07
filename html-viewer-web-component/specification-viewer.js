@@ -49,6 +49,7 @@ class SpecificationViewer extends HTMLElement {
       padding: 0.5rem;
       margin-top: 0.5rem;
       max-width: 500px;
+      z-index:1;
     }
     
     .tree pre {
@@ -103,7 +104,7 @@ class SpecificationViewer extends HTMLElement {
     
     .tree h1 {
       font-family: monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
     .tree .required {
       font-family: monaco, Consolas, 'Lucida Console', monospace;
@@ -165,30 +166,52 @@ class SpecificationViewer extends HTMLElement {
       top: 90px;
       margin-top:10px;
       background: white;
-    }
-
-    .navigation {
+      display: inline-flex;
+      align-items: center;
       width: 100%;
     }
 
-    .nav-button {
+    .navigation {
+      margin-left:auto;
+    }
+
+    .nav-button-children {
       display: inline-block;
-      //width: 50%;
       margin: 4px;
       padding: 2px;
-      border-radius: 8px;
       text-align: center;
       background: lightgreen;
       border: solid;
       border-color: black;
       cursor: pointer;
+      border: var( --connector-size) solid var( --connector-color);
+      border-radius: .6em;
+      position:relative;
+      left: 20px;
+      padding-bottom: 4px;
     }
 
-    .navigation > a {
+    .nav-button-children-fields {
+      top: 12px;
+    }
+
+    .nav-button-children-schemas {
+      top: 4px;
+    }
+
+    .links {
+      margin-top: 0.5rem;
+    }
+
+    .links > a {
       text-decoration: none;
       font-size: 0.8rem;
       background: darkseagreen;
       color: black;
+      padding: 0.3rem;
+      margin-right: 0.4rem;
+      border-radius: 8px;
+      vertical-align: middle;
     }
 
     .opened {
@@ -211,10 +234,11 @@ class SpecificationViewer extends HTMLElement {
       <li>
         <div>
           <div class="title"><h1>OpenAPI ${this.specification.version} Specification</h1></div>
+          <div class="content">
           <div class="description">${this.specification.description}</div>
-          <div class="navigation">
-            <a href="${url_md}" target="MD_${this.specification.version}" class="nav-button">Original Documentation&nbsp;🔗</a>
-            <a href="${url_schema}" target="SCHEMA_${this.specification.version}" class="nav-button">JSON Schema&nbsp;🔗</a>
+          <div class="links">
+            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+            <a href="${url_schema}" target="SCHEMA_${this.specification.version}">JSON Schema&nbsp;🔗</a>
           </div>
         </div>
       </li>
@@ -264,11 +288,13 @@ class SpecificationViewer extends HTMLElement {
         <div class="node" data-type="schema" data-name="${schema.name}">
           <div class="title">
             <h1>${schema.name}${root}${extensible}</h1>
+            <div class="navigation">
+              <span class="nav-button-children nav-button-children-schemas" data-action="children">→</span>
+            </div>
           </div>
           <div class="description">${schema.description}</div>
-          <div class="navigation">
-            <a href="${url_md}" target="MD_${this.specification.version}" class="nav-button">Original Documentation&nbsp;🔗</a>
-            <span class="nav-button" data-action="children">→</span>
+          <div class="links">
+            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
           </div>
         </div>
     `;
@@ -318,7 +344,7 @@ class SpecificationViewer extends HTMLElement {
       });
       if(dataChildren){
         navigationChildren = `
-          <span class="nav-button" data-action="children">→</span>
+          <span class="nav-button-children nav-button-children-fields" data-action="children">→</span>
         `
       }
       const url_md = field.urls.find(url => url.type === 'markdown').url;
@@ -335,13 +361,15 @@ class SpecificationViewer extends HTMLElement {
           <code class="openapi">
             <span class="property">${field.name}${patterned}</span>${required}
             <span class="syntax">:<span>
-            <span class="value">${fieldType}</span>${richText}
+            <span class="type">${fieldType}</span>${richText}
           </code>
+          <div class="navigation">
+            ${navigationChildren}
+          </div>
         </div>
         <div class="description">${field.description}</div>
-        <div class="navigation">
-          <a href="${url_md}" target="MD_${this.specification.version}" class="nav-button">Original Documentation&nbsp;🔗</a>
-          ${navigationChildren}
+        <div class="links">
+          <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
         </div>
       </div>
       `;
