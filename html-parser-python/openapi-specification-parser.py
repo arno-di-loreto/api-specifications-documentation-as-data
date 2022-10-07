@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import markdown
 import json 
+import OpenApiSpecificationHistory
 
 regex_header = re.compile(r'^h(\d)')
 def get_header_level(element):
@@ -190,15 +191,27 @@ class Node:
         self.parent = get_parent_node(self, current_parent_node)
       self.parent.add_child(self)
 
+  def compare_regex_or_text(self, source_text_or_regex, target):
+    result = False
+    #print('compare_regex_or_text', str(source_text_or_regex), target)
+    if type(source_text_or_regex) is str:
+      #print('text')
+      result = source_text_or_regex == target
+    else:
+      #print('regex')
+      result =  source_text_or_regex.search(target) != None
+    #print('compare_regex_or_text result', result)
+    return result
+
   def get_node(self, text, type=None, level=None):
     #print('search', text, type, level)
-    found_flag = False
-    if text == self.get_text():
-      found_flag = True
-      if type != None:
-        found_flag = found_flag and (type == self.type)
-      if level != None:
-        found_flag =  found_flag and (level == self.level)
+    found_flag = True
+    if type != None and found_flag == True:
+      found_flag = type == self.type
+    if level != None and found_flag == True:
+      found_flag = level == self.level
+    if text != None and found_flag == True:
+      found_flag = self.compare_regex_or_text(text, self.get_text())
     #print('result', found_flag, self.get_text()[0:20], self.type, self.level)
     if found_flag == True:
       #print('result', found_flag, self.get_text()[0:20], self.type, self.level)
@@ -483,6 +496,7 @@ class OpenApiSpecification:
     self.__init_urls()
     self.__init__description()
     self.__init__schemas()
+    self.__init__history()
 
   def __init__version(self):
     title_regex = re.compile(r'Version (.*)')
@@ -513,6 +527,9 @@ class OpenApiSpecification:
     else:
       introduction = self.document_tree.get_node('Introductions', 'header', 2)
     self.description = introduction.children
+
+  def __init__history(self):
+    self.history = OpenApiSpecificationHistory.History(self.document_tree)
 
   def get_description(self):
     description_html = ''
@@ -550,6 +567,7 @@ class OpenApiSpecification:
       'description': self.get_description(),
       #'node': self.document_tree.to_dict(),
       'urls': self.urls.to_dict(),
+      'history': self.history.to_dict(),
       'schemas': schemas_dict
     }
 
@@ -592,7 +610,6 @@ for version in versions:
   soup = BeautifulSoup(html, 'html.parser')
   tree_node = generate_tree(soup)
   tree_dict = tree_node.to_dict()
-
   openapi = OpenApiSpecification(tree_node)
   openapi_dict = openapi.to_dict()
   full_dict = {
