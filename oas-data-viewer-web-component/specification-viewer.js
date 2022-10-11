@@ -248,12 +248,12 @@ class SpecificationViewer extends HTMLElement {
     htmlSpecification.setAttribute('data-type', 'specification');
     htmlSpecification.setAttribute('data-name', this.specification.version);
     htmlSpecification.setAttribute('class', 'tree');
-    const url_md = this.specification.urls.find(url => url.type === 'markdown').url;
-    const url_schema = this.specification.urls.find(url => url.type === 'schema').url;
+    const url_md = this.specification.urls.find(url => url.name === 'markdown').url;
+    const url_schema = this.specification.urls.find(url => url.name === 'schema').url;
     htmlSpecification.innerHTML = `
       <li>
         <div>
-          <div class="title"><h1>OpenAPI ${this.specification.version} Specification</h1></div>
+          <div class="title"><h1>${this.specification.name} ${this.specification.version} Specification</h1></div>
           <div class="content">
           <div class="description">${this.specification.description}</div>
           <div class="links">
@@ -266,6 +266,7 @@ class SpecificationViewer extends HTMLElement {
     const sections = document.createElement('ul');
     sections.appendChild(this._getHtmlHistorySection());
     sections.appendChild(this._getHtmlSchemaSection());
+    sections.appendChild(this._getHtmlConceptsSection());
     htmlSpecification.appendChild(sections);
     return htmlSpecification;
   }
@@ -310,6 +311,28 @@ class SpecificationViewer extends HTMLElement {
     return events;
   }
 
+  _getHtmlConcept(concept){
+    const htmlConcept = document.createElement('li');
+    htmlConcept.innerHTML = `
+        <div class="node" data-type="concept" data-name="${concept.name}">
+          <div class="title">
+            <h1>${concept.name}</h1>
+          </div>
+          <div class="description">${concept.description}</div>
+        </div>
+    `;
+    return htmlConcept;
+  }
+
+  _getHtmlConcepts() {
+    const concepts = document.createElement('ul');
+    concepts.setAttribute('data-type', 'children');
+    this.specification.concepts.forEach(concept => {
+      concepts.appendChild(this._getHtmlConcept(concept));
+    });
+    return concepts;
+  }
+
   _getHtmlSection(dataName, title, children){
     const section = document.createElement('li');
     section.setAttribute('data-type', 'section');
@@ -339,6 +362,11 @@ class SpecificationViewer extends HTMLElement {
     return this._getHtmlSection('history', 'History', this.specification.history);
   }
 
+  _getHtmlConceptsSection() {
+    return this._getHtmlSection('concepts', 'Concepts', this.specification.concepts);
+  }
+
+
   _getHtmlSchemaSection() {
     return this._getHtmlSection('schema', 'Schema', this.specification.history);
   }
@@ -355,14 +383,14 @@ class SpecificationViewer extends HTMLElement {
   _getHtmlSchema(schema) {
     const htmlSchema = document.createElement('li');
     let extensible = '';
-    if(schema.extensible) {
+    if(schema.isExtensible) {
       extensible = `<span class="extensible">Extensible</span>`
     }
     let root = '';
-    if(schema.root) {
+    if(schema.isRoot) {
       root = `<span class="root">Root</span>`
     }
-    const url_md = schema.urls.find(url => url.type === 'markdown').url;
+    const url_md = schema.urls.find(url => url.name === 'markdown').url;
     htmlSchema.innerHTML = `
         <div class="node" data-type="schema" data-name="${schema.name}">
           <div class="title">
@@ -403,7 +431,7 @@ class SpecificationViewer extends HTMLElement {
     schema.fields.forEach((field) => {
       const htmlField = document.createElement('li');
       let required = '';
-      if(field.required){
+      if(field.isRequired){
         required = '<span class="required">*</span>';
       }
       let richText = '';
@@ -416,6 +444,7 @@ class SpecificationViewer extends HTMLElement {
       }
       let dataChildren = false;
       let navigationChildren = '';
+      console.log('field', field.type)
       field.type.types.forEach(type => {
         if(type.includes('Object')){
           dataChildren = true;
@@ -426,7 +455,7 @@ class SpecificationViewer extends HTMLElement {
           <span class="nav-button-children nav-button-children-fields" data-action="children">→</span>
         `
       }
-      const url_md = field.urls.find(url => url.type === 'markdown').url;
+      const url_md = field.urls.find(url => url.name === 'markdown').url;
       let fieldType = '<span class="type">'+field.type.types.join('</span><span class="syntax">&nbsp;or&nbsp;</span><span class="type">')+'</span>';
       if(field.type.listType === 'array'){
         fieldType = `<span class="syntax">[</span>${fieldType}<span class="syntax">]</span>`;
@@ -459,6 +488,7 @@ class SpecificationViewer extends HTMLElement {
 
   getSchema(schemaName) {
     const schema = this.specification.schemas.find(schema => schema.name === schemaName);
+    console.log('schema', schema)
     return schema;
   }
 
@@ -516,6 +546,9 @@ class SpecificationViewer extends HTMLElement {
         }
         else if(dataType == 'section' && dataName == 'history'){
           dataParent.appendChild(this._getHtmlHistoryEvents());
+        }
+        else if(dataType == 'section' && dataName == 'concepts'){
+          dataParent.appendChild(this._getHtmlConcepts());
         }
         elementClicked.textContent="←";
       }

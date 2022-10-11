@@ -93,7 +93,7 @@
         <p>You'll find the previous version (which only support versions 2. and 3.0) <a href="https://openapi-map.apihandyman.io/">here</a>.</p>
       </div>
       <div class="viewer">
-        <specification-viewer src="3.1.0.json"></specification-viewer>
+        <specification-viewer src="../specifications-data/3.1.0.json"></specification-viewer>
       </div>  
     </div>
     <script>
@@ -105,7 +105,7 @@
         console.log('onVersionClick', event);
         const version = event.path[0];
         const viewer = document.querySelector('specification-viewer');
-        const dataFile = version.textContent+'.json';
+        const dataFile = '../specifications-data/'+version.textContent+'.json';
         console.log('data file', dataFile);
         viewer.setAttribute('src', dataFile);
         const versions = document.querySelectorAll('.selected');
