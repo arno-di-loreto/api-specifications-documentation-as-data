@@ -18,6 +18,7 @@ class SpecificationViewer extends HTMLElement {
     
     .tree {
       display: inline-flex;
+      margin-right: 20px;
     }
     
     .tree ul {
@@ -302,7 +303,6 @@ class SpecificationViewer extends HTMLElement {
     li.setAttribute('data-type', 'events');
     events.appendChild(li);
     let lines = '';
-    console.log(this.specification.history);
     this.specification.history.forEach(event => {
       lines += `
         <tr>
@@ -471,7 +471,6 @@ class SpecificationViewer extends HTMLElement {
       }
       let dataChildren = false;
       let navigationChildren = '';
-      console.log('field', field.type)
       field.type.types.forEach(type => {
         if(type.includes('Object')){
           dataChildren = true;
@@ -528,7 +527,6 @@ class SpecificationViewer extends HTMLElement {
 
   getSchema(schemaName) {
     const schema = this.specification.schemas.find(schema => schema.name === schemaName);
-    console.log('schema', schema)
     return schema;
   }
 
@@ -550,14 +548,41 @@ class SpecificationViewer extends HTMLElement {
     return result;
   }
 
+  isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  scrollToElement(element){
+    if(!this.isInViewport(element)){
+      console.log('not in viewport, scroll to', element)
+      const verticalOffset = 100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - verticalOffset;
+      window.scrollTo({
+        behavior: 'smooth',
+        top: offsetPosition,
+        left: element.getBoundingClientRect().left
+      })  
+    }
+    else {
+      console.log('already in viewport')
+    }
+  }
+
   showHideChildren(elementClicked) {
     const dataParent = elementClicked.closest('[data-type]');
     if(this.hasDataChildren(dataParent)){
-      console.log('dataParent', dataParent);
       const node = dataParent.parentElement;
       const dataType = dataParent.getAttribute('data-type');
       const dataName = dataParent.getAttribute('data-name');
-      console.log(dataType, dataName);
       let openedChildren;
       if(dataType == "section"){
         openedChildren = dataParent.querySelector("[data-type=children]");// replace by css class?
@@ -568,28 +593,37 @@ class SpecificationViewer extends HTMLElement {
       if(openedChildren){
         openedChildren.remove();
         elementClicked.textContent="→";
+        this.scrollToElement(dataParent);
       }
       else {
         if(dataType == 'schema'){
           const schema = this.getSchema(dataName);
           const htmlFields = this._getHtmlFields(schema);
-          node.appendChild(htmlFields);  
+          node.appendChild(htmlFields);
+          this.scrollToElement(htmlFields)  
         }
         else if(dataType == 'field'){
           const field = this.getField(dataName);
           const htmlSchemas = this._getHtmlSchemas(field.type.types);
           node.appendChild(htmlSchemas);
+          this.scrollToElement(htmlSchemas)
         }
         else if(dataType == 'section' && dataName == 'schema'){
           const htmlSchemas = this._getAllHtmlSchemas();
           dataParent.appendChild(htmlSchemas);
+          this.scrollToElement(htmlSchemas)
         }
         else if(dataType == 'section' && dataName == 'history'){
-          dataParent.appendChild(this._getHtmlHistoryEvents());
+          const historyEvents = this._getHtmlHistoryEvents()
+          dataParent.appendChild(historyEvents);
+          this.scrollToElement(historyEvents)
         }
         else if(dataType == 'section' && dataName == 'concepts'){
-          dataParent.appendChild(this._getHtmlConcepts());
+          const htmlConcepts = this._getHtmlConcepts()
+          dataParent.appendChild(htmlConcepts);
+          this.scrollToElement(htmlConcepts)
         }
+        //this.scrollToElement(dataParent.children[dataParent.children.length - 1]);
         elementClicked.textContent="←";
       }
       elementClicked.classList.toggle('opened');
