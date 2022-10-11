@@ -87,9 +87,18 @@ class SpecificationViewer extends HTMLElement {
     }
     
     .tree .type {
+      color: darkgrey;
+    }
+
+    .tree .type-oas {
       color: orange;
     }
-    
+
+    .tree .syntax {
+      color: blue;
+    }
+
+
     .tree .description {
       padding-top: 0.2rem;
       color: lightgrey;
@@ -106,11 +115,6 @@ class SpecificationViewer extends HTMLElement {
       font-family: monaco, Consolas, 'Lucida Console', monospace;
       font-size: 1.2rem;
     }
-    .tree .required {
-      font-family: monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 0.8rem;
-      color: red
-    }
 
     .tree .extensible {
       font-family: monaco, Consolas, 'Lucida Console', monospace;
@@ -124,28 +128,48 @@ class SpecificationViewer extends HTMLElement {
       text-transform: uppercase;
     }
 
-    .tree .rich-text {
+    /* field */
+
+    .tree .required {
+      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 0.8rem;
+      color: red
+    }
+
+    .tree .pill-field {
       font-family: monaco, Consolas, 'Lucida Console', monospace;
       font-size: 0.6rem;
-      background-color: brown;
-      color: white;
       padding: 0.2rem;
       margin-left: 0.2rem;
+      margin-right: 0.2rem;
       border-radius: 5px;
       vertical-align: middle;
       text-transform: uppercase;
     }
 
-    .tree .patterned {
-      font-family: monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 0.6rem;
+    .tree .pill-field-rich-text {
+      background-color: brown;
+      color: white;
+    }
+
+    .tree .pill-field-patterned {
       background-color: cadetblue;
       color: white;
-      padding: 0.2rem;
-      margin-left: 0.2rem;
-      border-radius: 5px;
-      vertical-align: middle;
-      text-transform: uppercase;
+    }
+
+    .tree .pill-field-map {
+      background-color: pink;
+      color: black;
+    }
+
+    .tree .pill-field-array {
+      background-color: yellow;
+      color: black;
+    }
+
+    .tree .pill-field-ref {
+      background-color: orange;
+      color: black;
     }
 
     .tree .root {
@@ -366,7 +390,6 @@ class SpecificationViewer extends HTMLElement {
     return this._getHtmlSection('concepts', 'Concepts', this.specification.concepts);
   }
 
-
   _getHtmlSchemaSection() {
     return this._getHtmlSection('schema', 'Schema', this.specification.history);
   }
@@ -436,11 +459,11 @@ class SpecificationViewer extends HTMLElement {
       }
       let richText = '';
       if(field.richText){
-        richText = '<span class="rich-text">Rich Text</span>';
+        richText = '<span class="pill pill-field pill-field-rich-text">Rich Text</span>';
       }
       let patterned = '';
       if(field.nameType == 'patterned'){
-        patterned = '<span class="patterned">Patterned</span>';
+        patterned = '<span class="pill pill-field pill-field-patterned">Patterned</span>';
       }
       let dataChildren = false;
       let navigationChildren = '';
@@ -455,13 +478,26 @@ class SpecificationViewer extends HTMLElement {
           <span class="nav-button-children nav-button-children-fields" data-action="children">→</span>
         `
       }
+      
       const url_md = field.urls.find(url => url.name === 'markdown').url;
-      let fieldType = '<span class="type">'+field.type.types.join('</span><span class="syntax">&nbsp;or&nbsp;</span><span class="type">')+'</span>';
-      if(field.type.listType === 'array'){
-        fieldType = `<span class="syntax">[</span>${fieldType}<span class="syntax">]</span>`;
+      const fieldTypes = [];
+      field.type.types.forEach(type => {
+        let typeClass = 'type'
+        if(type.includes('Object')){
+          typeClass+='-oas'
+        }
+        let refPill = ''
+        if(type === 'Reference Object'){
+          refPill = '<span class="pill pill-field pill-field-ref">$ref</span>';
+        }
+        fieldTypes.push(`${refPill}<span class="${typeClass}">${type}</span>`);
+      })
+      let fieldType = fieldTypes.join(`<span class="syntax">&nbsp;or&nbsp;</span>`);
+      if(field.type.parentType === 'array'){
+        fieldType = `<span class="pill pill-field pill-field-array">Array</span><span class="syntax">[</span>${fieldType}<span class="syntax">]</span>`;
       }
-      else if (field.type.listType === 'map'){
-        fieldType = `<span class="syntax">{ * : </span>${fieldType}<span class="syntax">}</span>`;
+      else if (field.type.parentType === 'map'){
+        fieldType = `<span class="pill pill-field pill-field-map">Map</span><span class="syntax">{ * : </span>${fieldType}<span class="syntax">}</span>`;
       }
       htmlField.innerHTML = `
       <div class="node" data-type="field" data-name="${schema.name};${field.name}" data-children="${dataChildren}">
