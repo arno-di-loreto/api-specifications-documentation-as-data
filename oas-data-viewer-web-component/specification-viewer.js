@@ -336,6 +336,7 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlConcept(concept){
+    const url_md = concept.urls.find(url => url.name === 'markdown').url;
     const htmlConcept = document.createElement('li');
     htmlConcept.innerHTML = `
         <div class="node" data-type="concept" data-name="${concept.name}">
@@ -343,6 +344,9 @@ class SpecificationViewer extends HTMLElement {
             <h1>${concept.name}</h1>
           </div>
           <div class="description">${concept.description}</div>
+          <div class="links">
+            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+          </div>
         </div>
     `;
     return htmlConcept;
