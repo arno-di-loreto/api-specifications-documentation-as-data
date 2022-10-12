@@ -13,60 +13,52 @@ class SpecificationViewer extends HTMLElement {
       --node: #7b9fe0;
       --connector-color: green;
       --connector-size: 1px;
-      --space: 10px;
+      --space: 0px;
     }
-    
+
+    /* tree, nodes, node */
+        
+    .nodes {
+      padding-left: 0px;
+      margin: 0;
+      padding: 0;
+    }
+
     .tree {
-      display: inline-flex;
       margin-right: 20px;
+      display: inline-flex;
     }
-    
-    .tree ul {
-      padding-left: var(--space);
-    }
-    
-    .tree ul .closed {
+
+    .nodes .closed {
       visibility:hidden;
       display: none;
     }
     
-    .tree , .tree ul, .tree li {
+    .nodes, .node {
       list-style: none;
     }
     
-    .tree li {
+    .node {
       display: flex;
     }
     
-    .tree li:first-child {
+    .node:first-child {
       margin-top: 2rem;
     }
-    
-    /* All nodes */
-    
-    .tree li > div:first-of-type {
+        
+    .node > div:first-of-type {
       border: var( --connector-size) solid var( --connector-color);
       border-radius: .4em;
       padding: 0.5rem;
       margin-top: 0.5rem;
-      max-width: 500px;
+      max-width: 600px;
       z-index:1;
     }
-    
-    .tree pre {
-      white-space:pre-wrap;
-      max-height: 150px;
-      overflow:auto;
-    }
-    
-    .tree ul {
-      margin: 0;
-      padding: 0;
-    }
+        
     
     /* Connectors */
     
-    .tree li:before {
+    .tree .node:before {
       background: var( --connector-color);
       content: "";
       width: 20px;
@@ -77,7 +69,7 @@ class SpecificationViewer extends HTMLElement {
       position: relative;
     }
     
-    .tree > li:before {
+    .tree > .node:before {
       content: none;
     }
     
@@ -98,7 +90,6 @@ class SpecificationViewer extends HTMLElement {
     .tree .syntax {
       color: blue;
     }
-
 
     .tree .description {
       padding-top: 0.2rem;
@@ -263,43 +254,72 @@ class SpecificationViewer extends HTMLElement {
       border-width: thin;
       margin: 0;
     }
+
+    /* content */
+    .tree pre {
+      white-space:pre-wrap;
+      max-height: 150px;
+      overflow:auto;
+    }
+
     `;
 
     return style;
   }
 
+  ROOT=true
+
+  _createNodes(dataType, dataName, root){
+    const nodes = document.createElement('ul')
+    nodes.setAttribute('data-type', dataType);
+    if(dataName){
+      nodes.setAttribute('data-name', dataName);
+    }
+
+    if(root){
+      nodes.classList.add('tree');
+    }
+    nodes.classList.add('nodes');
+
+    return nodes
+  }
+
+  _createNode(){
+    const node = document.createElement('li')
+    node.classList.add('node');
+    return node
+  }
+
   _getHtmlSpecification() {
-    const htmlSpecification = document.createElement('ul');
-    htmlSpecification.setAttribute('data-type', 'specification');
-    htmlSpecification.setAttribute('data-name', this.specification.version);
-    htmlSpecification.setAttribute('class', 'tree');
+    const htmlSpecificationTree = this._createNodes('specification', this.specification.version, this.ROOT);
     const url_md = this.specification.urls.find(url => url.name === 'markdown').url;
     const url_schema = this.specification.urls.find(url => url.name === 'schema').url;
-    htmlSpecification.innerHTML = `
-      <li>
-        <div>
-          <div class="title"><h1>${this.specification.name} ${this.specification.version} Specification</h1></div>
-          <div class="content">
-          <div class="description">${this.specification.description}</div>
-          <div class="links">
-            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
-            <a href="${url_schema}" target="SCHEMA_${this.specification.version}">JSON Schema&nbsp;🔗</a>
-          </div>
+    const htmlSpecificationIntro = this._createNode()
+    htmlSpecificationIntro.innerHTML = `
+      <div>
+        <div class="title"><h1>${this.specification.name} ${this.specification.version} Specification</h1></div>
+        <div class="content">
+        <div class="description">${this.specification.description}</div>
+        <div class="links">
+          <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+          <a href="${url_schema}" target="SCHEMA_${this.specification.version}">JSON Schema&nbsp;🔗</a>
         </div>
-      </li>
+      </div>
     `;
-    const sections = document.createElement('ul');
+
+    const sections = this._createNodes();
     sections.appendChild(this._getHtmlHistorySection());
     sections.appendChild(this._getHtmlSchemaSection());
     sections.appendChild(this._getHtmlConceptsSection());
-    htmlSpecification.appendChild(sections);
-    return htmlSpecification;
+    htmlSpecificationIntro.appendChild(sections);
+    htmlSpecificationTree.appendChild(htmlSpecificationIntro)
+    return htmlSpecificationTree;
   }
 
   _getHtmlHistoryEvents(){
-    const events = document.createElement('ul');
+    const events = this._createNodes();
     events.setAttribute('data-type', 'children');
-    const li = document.createElement('li');
+    const li = this._createNode();
     li.setAttribute('data-type', 'events');
     events.appendChild(li);
     let lines = '';
@@ -315,6 +335,7 @@ class SpecificationViewer extends HTMLElement {
     });
     li.innerHTML = `
       <div>
+        <div class="title"><h1>Events</h2></div>
         <div class="content">
           <table>
             <thead>
@@ -337,9 +358,11 @@ class SpecificationViewer extends HTMLElement {
 
   _getHtmlConcept(concept){
     const url_md = concept.urls.find(url => url.name === 'markdown').url;
-    const htmlConcept = document.createElement('li');
+    const htmlConcept = this._createNode();
+    htmlConcept.setAttribute('data-type', 'specification');
+    htmlConcept.setAttribute('data-name', concept.name);
     htmlConcept.innerHTML = `
-        <div class="node" data-type="concept" data-name="${concept.name}">
+        <div>
           <div class="title">
             <h1>${concept.name}</h1>
           </div>
@@ -353,7 +376,7 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlConcepts() {
-    const concepts = document.createElement('ul');
+    const concepts = this._createNodes();
     concepts.setAttribute('data-type', 'children');
     this.specification.concepts.forEach(concept => {
       concepts.appendChild(this._getHtmlConcept(concept));
@@ -362,10 +385,9 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlSection(dataName, title, children){
-    const section = document.createElement('li');
+    const section = this._createNode();
     section.setAttribute('data-type', 'section');
     section.setAttribute('data-name', dataName);
-    section.setAttribute('class', 'node');
     let navigationChildren = ''
     if(children.length > 0){
       navigationChildren = `
@@ -408,7 +430,9 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlSchema(schema) {
-    const htmlSchema = document.createElement('li');
+    const htmlSchema = this._createNode();
+    htmlSchema.setAttribute('data-type','schema')
+    htmlSchema.setAttribute('data-name',schema.name)
     let extensible = '';
     if(schema.isExtensible) {
       extensible = `<span class="extensible">Extensible</span>`
@@ -419,7 +443,7 @@ class SpecificationViewer extends HTMLElement {
     }
     const url_md = schema.urls.find(url => url.name === 'markdown').url;
     htmlSchema.innerHTML = `
-        <div class="node" data-type="schema" data-name="${schema.name}">
+        <div>
           <div class="title">
             <h1>${schema.name}${root}${extensible}</h1>
             <div class="navigation">
@@ -436,7 +460,7 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlSchemas(types) {
-    const htmlSchemas = document.createElement('ul');
+    const htmlSchemas = this._createNodes();
     htmlSchemas.setAttribute('data-type', 'children');
     types.forEach(type => {
       const schema = this.specification.schemas.find(s => s.name === type);
@@ -453,10 +477,13 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlFields(schema) {
-    const htmlFields = document.createElement('ul');
+    const htmlFields = this._createNodes();
     htmlFields.setAttribute('data-type', 'children');
     schema.fields.forEach((field) => {
-      const htmlField = document.createElement('li');
+      const htmlField = this._createNode();
+      htmlField.setAttribute('data-type', 'field')
+      htmlField.setAttribute('data-name', `${schema.name};${field.name}`)
+      //htmlField.setAttribute('data-children', ${dataChildren}"
       let required = '';
       if(field.isRequired){
         required = '<span class="required">*</span>';
@@ -503,7 +530,7 @@ class SpecificationViewer extends HTMLElement {
         fieldType = `<span class="pill pill-field pill-field-map">Map</span><span class="syntax">{ * : </span>${fieldType}<span class="syntax">}</span>`;
       }
       htmlField.innerHTML = `
-      <div class="node" data-type="field" data-name="${schema.name};${field.name}" data-children="${dataChildren}">
+      <div>
         <div class="title">
           <code class="openapi">
             <span class="property">${field.name}${patterned}</span>${required}
@@ -539,15 +566,6 @@ class SpecificationViewer extends HTMLElement {
     return field;
   }
 
-  hasDataChildren(element){
-    let result = false;
-    const dataChildrenAttribute = element.getAttribute('data-children');
-    if(dataChildrenAttribute===null || dataChildrenAttribute === "true"){
-      result = true;
-    }
-    return result;
-  }
-
   isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -578,65 +596,50 @@ class SpecificationViewer extends HTMLElement {
   }
 
   showHideChildren(elementClicked) {
-    const dataParent = elementClicked.closest('[data-type]');
-    if(this.hasDataChildren(dataParent)){
-      const node = dataParent.parentElement;
-      const dataType = dataParent.getAttribute('data-type');
-      const dataName = dataParent.getAttribute('data-name');
-      let openedChildren;
-      if(dataType == "section"){
-        openedChildren = dataParent.querySelector("[data-type=children]");// replace by css class?
-      }
-      else {
-        openedChildren = node.querySelector("[data-type=children]");// replace by css class?
-      }
-      if(openedChildren){
-        openedChildren.remove();
-        elementClicked.textContent="→";
-        this.scrollToElement(dataParent);
-      }
-      else {
-        if(dataType == 'schema'){
-          const schema = this.getSchema(dataName);
-          const htmlFields = this._getHtmlFields(schema);
-          node.appendChild(htmlFields);
-          this.scrollToElement(htmlFields)  
-        }
-        else if(dataType == 'field'){
-          const field = this.getField(dataName);
-          const htmlSchemas = this._getHtmlSchemas(field.type.types);
-          node.appendChild(htmlSchemas);
-          this.scrollToElement(htmlSchemas)
-        }
-        else if(dataType == 'section' && dataName == 'schema'){
-          const htmlSchemas = this._getAllHtmlSchemas();
-          dataParent.appendChild(htmlSchemas);
-          this.scrollToElement(htmlSchemas)
-        }
-        else if(dataType == 'section' && dataName == 'history'){
-          const historyEvents = this._getHtmlHistoryEvents()
-          dataParent.appendChild(historyEvents);
-          this.scrollToElement(historyEvents)
-        }
-        else if(dataType == 'section' && dataName == 'concepts'){
-          const htmlConcepts = this._getHtmlConcepts()
-          dataParent.appendChild(htmlConcepts);
-          this.scrollToElement(htmlConcepts)
-        }
-        //this.scrollToElement(dataParent.children[dataParent.children.length - 1]);
-        elementClicked.textContent="←";
-      }
-      elementClicked.classList.toggle('opened');
+    const node = elementClicked.closest('.node');
+    const dataType = node.getAttribute('data-type');
+    const dataName = node.getAttribute('data-name');
+    let openedChildren = node.querySelector('.nodes');
+    if(openedChildren){
+      console.log('closing')
+      openedChildren.remove();
+      this.scrollToElement(node);
+      elementClicked.textContent="→";
+
     }
     else {
-      console.log('no data children');
+      let nodes;
+      if(dataType == 'schema'){
+        const schema = this.getSchema(dataName);
+        nodes = this._getHtmlFields(schema);
+      }
+      else if(dataType == 'field'){
+        const field = this.getField(dataName);
+        nodes = this._getHtmlSchemas(field.type.types);
+      }
+      else if(dataType == 'section' && dataName == 'schema'){
+        nodes = this._getAllHtmlSchemas();
+      }
+      else if(dataType == 'section' && dataName == 'history'){
+        nodes = this._getHtmlHistoryEvents()
+      }
+      else if(dataType == 'section' && dataName == 'concepts'){
+        nodes = this._getHtmlConcepts()
+      }
+      else {
+        console.log('unexpected dataType and dataName', dataType, dataName)
+      }
+      if(nodes){
+        node.appendChild(nodes);
+        this.scrollToElement(nodes)  
+      }
+      elementClicked.textContent="←";
     }
+    elementClicked.classList.toggle('opened');
   }
 
   onclick(event) {
-    // Click location to replace by actual buttons
     const elementClicked = event.path[0];
-    console.log(elementClicked);
     const dataAction = elementClicked.getAttribute('data-action');
     if(dataAction == 'children'){
       this.showHideChildren(elementClicked);
