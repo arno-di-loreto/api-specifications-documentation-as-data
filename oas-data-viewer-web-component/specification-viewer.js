@@ -14,6 +14,7 @@ class SpecificationViewer extends HTMLElement {
       --connector-color: green;
       --connector-size: 1px;
       --space: 0px;
+      --text-font-family: monaco, Consolas, 'Lucida Console', monospace;
     }
 
     /* tree, nodes, node */
@@ -27,6 +28,7 @@ class SpecificationViewer extends HTMLElement {
     .tree {
       margin-right: 20px;
       display: inline-flex;
+      font-family: var(--text-font-family);
     }
 
     .nodes .closed {
@@ -91,10 +93,10 @@ class SpecificationViewer extends HTMLElement {
       color: blue;
     }
 
-    .tree .description {
+    .description {
       padding-top: 0.2rem;
-      color: lightgrey;
-      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      color: darkgrey;
+      font-family: var(--text-font-family);
       font-size: 0.8rem;
       text-align: justify;
     }
@@ -104,12 +106,12 @@ class SpecificationViewer extends HTMLElement {
     }
     
     .tree h1 {
-      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-family: var(--text-font-family);
       font-size: 1.2rem;
     }
 
     .tree .extensible {
-      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-family: var(--text-font-family);
       font-size: 0.8rem;
       background-color: green;
       color: white;
@@ -123,13 +125,13 @@ class SpecificationViewer extends HTMLElement {
     /* field */
 
     .tree .required {
-      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-family: var(--text-font-family);
       font-size: 0.8rem;
       color: red
     }
 
     .tree .pill-field {
-      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-family: var(--text-font-family);
       font-size: 0.6rem;
       padding: 0.2rem;
       margin-left: 0.2rem;
@@ -165,7 +167,7 @@ class SpecificationViewer extends HTMLElement {
     }
 
     .tree .root {
-      font-family: monaco, Consolas, 'Lucida Console', monospace;
+      font-family: var(--text-font-family);
       font-size: 0.8rem;
       background-color: red;
       color: white;
@@ -176,7 +178,7 @@ class SpecificationViewer extends HTMLElement {
       text-transform: uppercase;
     }
 
-    .tree .title {
+    .node-title {
       position: -webkit-sticky; /* Safari */
       position: sticky;
       top: 90px;
@@ -238,17 +240,21 @@ class SpecificationViewer extends HTMLElement {
       background: red;
     }
 
-    [data-type="events"] table {
+    .hidden {
+      display: none;
+    }
+
+    table {
       border-collapse: collapse;
       margin: 0;
       font-size: 0.7rem;
     }
 
-    [data-type="events"] th,td {
+    th,td {
       padding: 3px;;
     }
 
-    [data-type="events"] td,th {
+    td,th {
       border: solid;
       border-color: grey;
       border-width: thin;
@@ -262,12 +268,31 @@ class SpecificationViewer extends HTMLElement {
       overflow:auto;
     }
 
+    .description pre {
+      background: black;
+      color: white;
+      padding: 5px;
+    }
+
+    .reference-links h2 {
+      font-size: 0.9rem;
+    }
+
+    .reference-links a {
+      font-size: 0.8rem;
+    }
+
     `;
 
     return style;
   }
 
   ROOT=true
+
+  getNodeContentDefaultVisibility(){
+    //return " hidden"
+    return ""
+  }
 
   _createNodes(dataType, dataName, root){
     const nodes = document.createElement('ul')
@@ -290,6 +315,24 @@ class SpecificationViewer extends HTMLElement {
     return node
   }
 
+  _getHtmlReferenceLinks(data){
+    const links = document.createElement('div');
+    links.classList.add('reference-links')
+    let list = '<h2>Reference Links</h2><ul>'
+    let count = 0;
+    data.urls.forEach(url => {
+      if(url.type === 'reference'){
+        list += `<li><a class="reference-link" href="${url.url}">${url.name}</li>`;
+        count++;
+      }
+    })
+    list+='</ul>'
+    if(count > 0){
+      links.innerHTML = list;
+    }
+    return links;
+  }
+
   _getHtmlSpecification() {
     const htmlSpecificationTree = this._createNodes('specification', this.specification.version, this.ROOT);
     const url_md = this.specification.urls.find(url => url.name === 'markdown').url;
@@ -297,12 +340,14 @@ class SpecificationViewer extends HTMLElement {
     const htmlSpecificationIntro = this._createNode()
     htmlSpecificationIntro.innerHTML = `
       <div>
-        <div class="title"><h1>${this.specification.name} ${this.specification.version} Specification</h1></div>
-        <div class="content">
-        <div class="description">${this.specification.description}</div>
-        <div class="links">
-          <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
-          <a href="${url_schema}" target="SCHEMA_${this.specification.version}">JSON Schema&nbsp;🔗</a>
+        <div class="node-title"><h1>${this.specification.name} ${this.specification.version} Specification</h1></div>
+        <div class="node-content${this.getNodeContentDefaultVisibility()}">
+          <div class="description">${this.specification.description}</div>
+          <div class="links">
+            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+            <a href="${url_schema}" target="SCHEMA_${this.specification.version}">JSON Schema&nbsp;🔗</a>
+          </div>
+          ${this._getHtmlReferenceLinks(this.specification).outerHTML}
         </div>
       </div>
     `;
@@ -335,8 +380,8 @@ class SpecificationViewer extends HTMLElement {
     });
     li.innerHTML = `
       <div>
-        <div class="title"><h1>Events</h2></div>
-        <div class="content">
+        <div class="node-title"><h1>Events</h1></div>
+        <div class="node-content${this.getNodeContentDefaultVisibility()}">
           <table>
             <thead>
               <tr>
@@ -363,12 +408,15 @@ class SpecificationViewer extends HTMLElement {
     htmlConcept.setAttribute('data-name', concept.name);
     htmlConcept.innerHTML = `
         <div>
-          <div class="title">
+          <div class="node-title">
             <h1>${concept.name}</h1>
           </div>
-          <div class="description">${concept.description}</div>
-          <div class="links">
-            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+          <div class="node-content${this.getNodeContentDefaultVisibility()}">
+            <div class="description">${concept.description}</div>
+            <div class="links">
+              <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+            </div>
+            ${this._getHtmlReferenceLinks(concept).outerHTML}
           </div>
         </div>
     `;
@@ -396,7 +444,7 @@ class SpecificationViewer extends HTMLElement {
     }
     section.innerHTML = `
         <div>
-          <div class="title">
+          <div class="node-title">
             <h1>${title}</h1>
             <div class="navigation">
             ${navigationChildren}
@@ -404,7 +452,6 @@ class SpecificationViewer extends HTMLElement {
           </div>
         </div>
     `;
-    //schemaSection.appendChild(this._getAllHtmlSchemas());
     return section;
   }
 
@@ -444,15 +491,18 @@ class SpecificationViewer extends HTMLElement {
     const url_md = schema.urls.find(url => url.name === 'markdown').url;
     htmlSchema.innerHTML = `
         <div>
-          <div class="title">
+          <div class="node-title">
             <h1>${schema.name}${root}${extensible}</h1>
             <div class="navigation">
               <span class="nav-button-children nav-button-children-schemas" data-action="children">→</span>
             </div>
           </div>
-          <div class="description">${schema.description}</div>
-          <div class="links">
-            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+          <div class="node-content${this.getNodeContentDefaultVisibility()}">
+            <div class="description">${schema.description}</div>
+            <div class="links">
+              <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+            </div>
+            ${this._getHtmlReferenceLinks(schema).outerHTML}
           </div>
         </div>
     `;
@@ -531,7 +581,7 @@ class SpecificationViewer extends HTMLElement {
       }
       htmlField.innerHTML = `
       <div>
-        <div class="title">
+        <div class="node-title">
           <code class="openapi">
             <span class="property">${field.name}${patterned}</span>${required}
             <span class="syntax">:<span>
@@ -541,9 +591,12 @@ class SpecificationViewer extends HTMLElement {
             ${navigationChildren}
           </div>
         </div>
-        <div class="description">${field.description}</div>
-        <div class="links">
-          <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+        <div class="node-content${this.getNodeContentDefaultVisibility()}">
+          <div class="description">${field.description}</div>
+          <div class="links">
+            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+          </div>
+          ${this._getHtmlReferenceLinks(field).outerHTML}
         </div>
       </div>
       `;
