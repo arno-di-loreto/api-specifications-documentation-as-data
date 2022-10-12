@@ -32,7 +32,6 @@ class SpecificationUrls:
     return Url(url, name, Url.DOCUMENTATION)
 
 class Url(Dictable):
-
   REFERENCE='reference'
   DOCUMENTATION='documentation'
 
@@ -44,16 +43,46 @@ class Url(Dictable):
 class DataUrls(Data):
   def __init__(self, source, parent):
     super().__init__(source, parent)
+    self.__init_specification_urls()
+    self.__init__other_urls()
+
+  def __init_specification_urls(self):
     if self.get_source().type == ContentType.DOCUMENT: 
       self.urls = SpecificationUrls.get_specification_urls(self.get_data_root()._version)
-      # extract all reference URLs from spec document
     else:
-      id = parent.get_id()
+      id = self.get_data_parent().get_id()
       if id != None:
         self.urls = []
         self.urls.append(SpecificationUrls.get_specification_url(self.get_data_root()._version, SpecificationUrls.MARKDOWN, id))
-        # extract all reference URLs from data.document
 
+  def __get_all_links(self):
+    if self.get_source().type == ContentType.DOCUMENT:
+      return self.get_source().get_parsed_html().find_all('a')
+    else:
+      links = []
+      for content in self.get_data_parent().get_source().get_contents():
+        links += content.get_parsed_html().find_all('a')
+      return links
+
+  def __init__other_urls(self):
+    links = self.__get_all_links()
+    for link in links:
+      if 'href' in link.attrs.keys():
+        url = link['href']
+        if not url.startswith('#'):
+          name = link.get_text()
+          self.add_url(Url(url, name, Url.REFERENCE))
+  
+  def add_url(self, data_url):
+    found = False
+    for url in self.urls:
+      found = (data_url.name == url.name and
+              data_url.type == url.type and
+              data_url.url == url.url)
+      if found == True:
+        break
+    if not found:
+      self.urls.append(data_url)
 
 class DataWithUrls(object):
   def __init__(self):

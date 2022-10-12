@@ -11,6 +11,281 @@
             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/schemas/v3.1",
             "name": "schema",
             "type": "documentation"
+        },
+        {
+            "url": "https://tools.ietf.org/html/bcp14",
+            "name": "BCP 14",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc2119",
+            "name": "RFC2119",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc8174",
+            "name": "RFC8174",
+            "type": "reference"
+        },
+        {
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+            "name": "The Apache License, Version 2.0",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc3986#section-3",
+            "name": "RFC3986",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc6838",
+            "name": "RFC6838",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7231#section-6",
+            "name": "RFC7231",
+            "type": "reference"
+        },
+        {
+            "url": "https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml",
+            "name": "IANA Status Code Registry",
+            "type": "reference"
+        },
+        {
+            "url": "https://yaml.org/spec/1.2/spec.html",
+            "name": "1.2",
+            "type": "reference"
+        },
+        {
+            "url": "https://yaml.org/spec/1.2/spec.html#id2803231",
+            "name": "JSON Schema ruleset",
+            "type": "reference"
+        },
+        {
+            "url": "https://yaml.org/spec/1.2/spec.html#id2802346",
+            "name": "YAML Failsafe schema ruleset",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-4.2.1",
+            "name": "JSON Schema Specification Draft 2020-12",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-validation-00#section-7.3",
+            "name": "JSON Schema Validation vocabulary",
+            "type": "reference"
+        },
+        {
+            "url": "https://spec.commonmark.org/0.27/",
+            "name": "CommonMark 0.27",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc3986#section-4.2",
+            "name": "RFC3986",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc3986#section-5.2",
+            "name": "RFC3986",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc6901",
+            "name": "RFC6901",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-8.2",
+            "name": "JSON Schema Specification Draft 2020-12",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc3986#section-5.1",
+            "name": "RFC3986",
+            "type": "reference"
+        },
+        {
+            "url": "../examples/v3.1/webhook-example.yaml",
+            "name": "example",
+            "type": "reference"
+        },
+        {
+            "url": "https://spec.commonmark.org/",
+            "name": "CommonMark syntax",
+            "type": "reference"
+        },
+        {
+            "url": "https://spdx.org/spdx-specification-21-web-version#h.jxpfx0ykyb60",
+            "name": "SPDX",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7231#section-4.3.1",
+            "name": "RFC7231",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7231#section-4.3.1",
+            "name": "GET",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7231#section-4.3.2",
+            "name": "HEAD",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7231#section-4.3.5",
+            "name": "DELETE",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7230#page-22",
+            "name": "RFC7230",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc3986#section-2.2",
+            "name": "RFC3986",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc6570#section-3.2.7",
+            "name": "RFC6570",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc6570#section-3.2.5",
+            "name": "RFC6570",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc6570#section-3.2.8",
+            "name": "RFC6570",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc6570#section-3.2.2",
+            "name": "RFC6570",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7231#appendix-D",
+            "name": "media type range",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc4648",
+            "name": "RFC4648",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc2045#section-6.7",
+            "name": "RFC2045",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc1866",
+            "name": "RFC1866",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc1866/",
+            "name": "RFC1866",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7578",
+            "name": "RFC7578",
+            "type": "reference"
+        },
+        {
+            "url": "../examples/v3.0/callback-example.yaml",
+            "name": "complete example",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc5234",
+            "name": "ABNF",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7159#section-7",
+            "name": "RFC7159",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7230#section-3.2.6",
+            "name": "RFC7230",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc3986",
+            "name": "RFC3986",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00",
+            "name": "JSON Schema Specification Draft 2020-12",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00",
+            "name": "JSON Schema Core",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-validation-00",
+            "name": "JSON Schema Validation",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-4.3.3",
+            "name": "dialect",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-8",
+            "name": "general purpose meta-schema",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-8.1.1",
+            "name": "JSON Schema rules",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc6749",
+            "name": "RFC6749",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-ietf-oauth-discovery-06",
+            "name": "OpenID Connect Discovery",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-ietf-oauth-security-topics",
+            "name": "OAuth 2.0 Security Best Current Practice",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/rfc7235#section-5.1",
+            "name": "Authorization header as defined in RFC7235",
+            "type": "reference"
+        },
+        {
+            "url": "https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml",
+            "name": "IANA Authentication Scheme registry",
+            "type": "reference"
+        },
+        {
+            "url": "https://www.openapis.org/",
+            "name": "OpenAPI Initiative",
+            "type": "reference"
         }
     ],
     "description": "<p>The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.</p><p>An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.</p>",
@@ -111,11 +386,13 @@
             "ids": [
                 {
                     "value": "openapi-document",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "oasDocument",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "OpenAPI Document",
@@ -132,11 +409,13 @@
             "ids": [
                 {
                     "value": "path-templating",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "pathTemplating",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Path Templating",
@@ -145,6 +424,11 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#pathTemplating",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc3986#section-3",
+                    "name": "RFC3986",
+                    "type": "reference"
                 }
             ],
             "description": "<p>Path templating refers to the usage of template expressions, delimited by curly braces ({}), to mark a section of a URL path as replaceable using path parameters.</p><p>Each template expression in the path MUST correspond to a path parameter that is included in the <a href=\"#path-item-object\">Path Item</a> itself and/or in each of the Path Item's <a href=\"#operation-object\">Operations</a>. An exception is if the path item is empty, for example due to ACL constraints, matching path parameters are not required.</p><p>The value for these path parameters MUST NOT contain any unescaped \"generic syntax\" characters described by <a href=\"https://tools.ietf.org/html/rfc3986#section-3\">RFC3986</a>: forward slashes (<code>/</code>), question marks (<code>?</code>), or hashes (<code>#</code>).</p>"
@@ -153,11 +437,13 @@
             "ids": [
                 {
                     "value": "media-types",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "mediaTypes",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Media Types",
@@ -166,6 +452,11 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#mediaTypes",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc6838",
+                    "name": "RFC6838",
+                    "type": "reference"
                 }
             ],
             "description": "<p>Media type definitions are spread across several resources.\nThe media type definitions SHOULD be in compliance with <a href=\"https://tools.ietf.org/html/rfc6838\">RFC6838</a>.</p><p>Some examples of possible media type definitions:</p><pre><code>  text/plain; charset=utf-8\n  application/json\n  application/vnd.github+json\n  application/vnd.github.v3+json\n  application/vnd.github.v3.raw+json\n  application/vnd.github.v3.text+json\n  application/vnd.github.v3.html+json\n  application/vnd.github.v3.full+json\n  application/vnd.github.v3.diff\n  application/vnd.github.v3.patch\n</code></pre>"
@@ -174,11 +465,13 @@
             "ids": [
                 {
                     "value": "http-status-codes",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "httpCodes",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "HTTP Status Codes",
@@ -187,6 +480,16 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#httpCodes",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc7231#section-6",
+                    "name": "RFC7231",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml",
+                    "name": "IANA Status Code Registry",
+                    "type": "reference"
                 }
             ],
             "description": "<p>The HTTP Status Codes are used to indicate the status of the executed operation. \nThe available status codes are defined by <a href=\"https://tools.ietf.org/html/rfc7231#section-6\">RFC7231</a> and registered status codes are listed in the <a href=\"https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml\">IANA Status Code Registry</a>.</p>"
@@ -195,7 +498,8 @@
             "ids": [
                 {
                     "value": "versions",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 }
             ],
             "name": "Versions",
@@ -212,7 +516,8 @@
             "ids": [
                 {
                     "value": "format",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 }
             ],
             "name": "Format",
@@ -221,6 +526,21 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#format",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://yaml.org/spec/1.2/spec.html",
+                    "name": "1.2",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://yaml.org/spec/1.2/spec.html#id2803231",
+                    "name": "JSON Schema ruleset",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://yaml.org/spec/1.2/spec.html#id2802346",
+                    "name": "YAML Failsafe schema ruleset",
+                    "type": "reference"
                 }
             ],
             "description": "<p>An OpenAPI document that conforms to the OpenAPI Specification is itself a JSON object, which may be represented either in JSON or YAML format.</p><p>For example, if a field has an array value, the JSON array representation will be used:</p><pre><code class=\"language-json\">{\n   \"field\": [ 1, 2, 3 ]\n}\n</code></pre><p>All field names in the specification are <strong>case sensitive</strong>.\nThis includes all fields that are used as keys in a map, except where explicitly noted that keys are <strong>case insensitive</strong>.</p><p>The schema exposes two types of fields: Fixed fields, which have a declared name, and Patterned fields, which declare a regex pattern for the field name.</p><p>Patterned fields MUST have unique names within the containing object. </p><p>In order to preserve the ability to round-trip between YAML and JSON formats, YAML version <a href=\"https://yaml.org/spec/1.2/spec.html\">1.2</a> is RECOMMENDED along with some additional constraints:</p><ul>\n<li>Tags MUST be limited to those allowed by the <a href=\"https://yaml.org/spec/1.2/spec.html#id2803231\">JSON Schema ruleset</a>.</li>\n<li>Keys used in YAML maps MUST be limited to a scalar string, as defined by the <a href=\"https://yaml.org/spec/1.2/spec.html#id2802346\">YAML Failsafe schema ruleset</a>.</li>\n</ul><p><strong>Note:</strong> While APIs may be defined by OpenAPI documents in either YAML or JSON format, the API request and response bodies and other content are not required to be JSON or YAML.</p>"
@@ -229,11 +549,13 @@
             "ids": [
                 {
                     "value": "document-structure",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "documentStructure",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Document Structure",
@@ -250,11 +572,13 @@
             "ids": [
                 {
                     "value": "data-types",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "dataTypes",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Data Types",
@@ -263,6 +587,16 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#dataTypes",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-4.2.1",
+                    "name": "JSON Schema Specification Draft 2020-12",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-validation-00#section-7.3",
+                    "name": "JSON Schema Validation vocabulary",
+                    "type": "reference"
                 }
             ],
             "description": "<p>Data types in the OAS are based on the types supported by the <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-4.2.1\">JSON Schema Specification Draft 2020-12</a>.\nNote that <code>integer</code> as a type is also supported and is defined as a JSON number without a fraction or exponent part. \nModels are defined using the <a href=\"#schemaObject\">Schema Object</a>, which is a superset of JSON Schema Specification Draft 2020-12.</p><p><a name=\"dataTypeFormat\"></a>As defined by the <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-validation-00#section-7.3\">JSON Schema Validation vocabulary</a>, data types can have an optional modifier property: <code>format</code>.\nOAS defines additional formats to provide fine detail for primitive data types.</p><p>The formats defined by the OAS are:</p><table>\n<thead>\n<tr>\n<th><a href=\"#dataTypes\"><code>type</code></a></th>\n<th><a href=\"#dataTypeFormat\"><code>format</code></a></th>\n<th>Comments</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>integer</code></td>\n<td><code>int32</code></td>\n<td>signed 32 bits</td>\n</tr>\n<tr>\n<td><code>integer</code></td>\n<td><code>int64</code></td>\n<td>signed 64 bits (a.k.a long)</td>\n</tr>\n<tr>\n<td><code>number</code></td>\n<td><code>float</code></td>\n<td></td>\n</tr>\n<tr>\n<td><code>number</code></td>\n<td><code>double</code></td>\n<td></td>\n</tr>\n<tr>\n<td><code>string</code></td>\n<td><code>password</code></td>\n<td>A hint to UIs to obscure input.</td>\n</tr>\n</tbody>\n</table>"
@@ -271,11 +605,13 @@
             "ids": [
                 {
                     "value": "rich-text-formatting",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "richText",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Rich Text Formatting",
@@ -284,6 +620,11 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#richText",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://spec.commonmark.org/0.27/",
+                    "name": "CommonMark 0.27",
+                    "type": "reference"
                 }
             ],
             "description": "<p>Throughout the specification <code>description</code> fields are noted as supporting CommonMark markdown formatting.\nWhere OpenAPI tooling renders rich text it MUST support, at a minimum, markdown syntax as described by <a href=\"https://spec.commonmark.org/0.27/\">CommonMark 0.27</a>. Tooling MAY choose to ignore some CommonMark features to address security concerns. </p>"
@@ -292,11 +633,13 @@
             "ids": [
                 {
                     "value": "relative-references-in-uris",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "relativeReferencesURI",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Relative References in URIs",
@@ -305,6 +648,31 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#relativeReferencesURI",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc3986#section-4.2",
+                    "name": "RFC3986",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc3986#section-5.2",
+                    "name": "RFC3986",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc6901",
+                    "name": "RFC6901",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-8.2",
+                    "name": "JSON Schema Specification Draft 2020-12",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc3986#section-5.1",
+                    "name": "RFC3986",
+                    "type": "reference"
                 }
             ],
             "description": "<p>Unless specified otherwise, all properties that are URIs MAY be relative references as defined by <a href=\"https://tools.ietf.org/html/rfc3986#section-4.2\">RFC3986</a>.</p><p>Relative references, including those in <a href=\"#referenceObject\"><code>Reference Objects</code></a>, <a href=\"#pathItemObject\"><code>PathItem Object</code></a> <code>$ref</code> fields, <a href=\"#linkObject\"><code>Link Object</code></a> <code>operationRef</code> fields and <a href=\"#exampleObject\"><code>Example Object</code></a> <code>externalValue</code> fields, are resolved using the referring document as the Base URI according to <a href=\"https://tools.ietf.org/html/rfc3986#section-5.2\">RFC3986</a>.</p><p>If a URI contains a fragment identifier, then the fragment should be resolved per the fragment resolution mechanism of the referenced document.  If the representation of the referenced document is JSON or YAML, then the fragment identifier SHOULD be interpreted as a JSON-Pointer as per <a href=\"https://tools.ietf.org/html/rfc6901\">RFC6901</a>.</p><p>Relative references in <a href=\"#schemaObject\"><code>Schema Objects</code></a>, including any that appear as <code>$id</code> values, use the nearest parent <code>$id</code> as a Base URI, as described by <a href=\"https://tools.ietf.org/html/draft-bhutton-json-schema-00#section-8.2\">JSON Schema Specification Draft 2020-12</a>.  If no parent schema contains an <code>$id</code>, then the Base URI MUST be determined according to <a href=\"https://tools.ietf.org/html/rfc3986#section-5.1\">RFC3986</a>.</p>"
@@ -313,11 +681,13 @@
             "ids": [
                 {
                     "value": "relative-references-in-urls",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "relativeReferencesURL",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Relative References in URLs",
@@ -326,6 +696,11 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#relativeReferencesURL",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc3986#section-4.2",
+                    "name": "RFC3986",
+                    "type": "reference"
                 }
             ],
             "description": "<p>Unless specified otherwise, all properties that are URLs MAY be relative references as defined by <a href=\"https://tools.ietf.org/html/rfc3986#section-4.2\">RFC3986</a>.\nUnless specified otherwise, relative references are resolved using the URLs defined in the <a href=\"#serverObject\"><code>Server Object</code></a> as a Base URL. Note that these themselves MAY be relative to the referring document.</p>"
@@ -334,11 +709,13 @@
             "ids": [
                 {
                     "value": "specification-extensions",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "specificationExtensions",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Specification Extensions",
@@ -347,6 +724,11 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#specificationExtensions",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://www.openapis.org/",
+                    "name": "OpenAPI Initiative",
+                    "type": "reference"
                 }
             ],
             "description": "<p>While the OpenAPI Specification tries to accommodate most use cases, additional data can be added to extend the specification at certain points.</p><p>The extensions properties are implemented as patterned fields that are always prefixed by <code>\"x-\"</code>.</p><table>\n<thead>\n<tr>\n<th>Field Pattern</th>\n<th style=\"text-align: center;\">Type</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><a name=\"infoExtensions\"></a>^x-</td>\n<td style=\"text-align: center;\">Any</td>\n<td>Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object.</td>\n</tr>\n</tbody>\n</table><p>The extensions may or may not be supported by the available tooling, but those may be extended as well to add requested support (if tools are internal or open-sourced).</p>"
@@ -355,11 +737,13 @@
             "ids": [
                 {
                     "value": "security-filtering",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "securityFiltering",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Security Filtering",
@@ -378,11 +762,13 @@
             "ids": [
                 {
                     "value": "openapi-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "oasObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "OpenAPI Object",
@@ -401,7 +787,8 @@
                     "ids": [
                         {
                             "value": "oasVersion",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "openapi",
@@ -428,7 +815,8 @@
                     "ids": [
                         {
                             "value": "oasInfo",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "info",
@@ -455,7 +843,8 @@
                     "ids": [
                         {
                             "value": "oasJsonSchemaDialect",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " jsonSchemaDialect",
@@ -482,7 +871,8 @@
                     "ids": [
                         {
                             "value": "oasServers",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "servers",
@@ -509,7 +899,8 @@
                     "ids": [
                         {
                             "value": "oasPaths",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "paths",
@@ -536,7 +927,8 @@
                     "ids": [
                         {
                             "value": "oasWebhooks",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "webhooks",
@@ -556,6 +948,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#oasWebhooks",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "../examples/v3.1/webhook-example.yaml",
+                            "name": "example",
+                            "type": "reference"
                         }
                     ],
                     "description": "The incoming webhooks that MAY be received as part of this API and that the API consumer MAY choose to implement. Closely related to the <code>callbacks</code> feature, this section describes requests initiated other than by an API call, for example by an out of band registration. The key name is a unique string to refer to each webhook, while the (optionally referenced) Path Item Object describes a request that may be initiated by the API provider and the expected responses. An <a href=\"../examples/v3.1/webhook-example.yaml\">example</a> is available."
@@ -564,7 +961,8 @@
                     "ids": [
                         {
                             "value": "oasComponents",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "components",
@@ -591,7 +989,8 @@
                     "ids": [
                         {
                             "value": "oasSecurity",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "security",
@@ -618,7 +1017,8 @@
                     "ids": [
                         {
                             "value": "oasTags",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "tags",
@@ -645,7 +1045,8 @@
                     "ids": [
                         {
                             "value": "oasExternalDocs",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalDocs",
@@ -672,7 +1073,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -691,6 +1093,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -701,11 +1108,13 @@
             "ids": [
                 {
                     "value": "info-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "infoObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Info Object",
@@ -724,7 +1133,8 @@
                     "ids": [
                         {
                             "value": "infoTitle",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "title",
@@ -751,7 +1161,8 @@
                     "ids": [
                         {
                             "value": "infoSummary",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "summary",
@@ -778,7 +1189,8 @@
                     "ids": [
                         {
                             "value": "infoDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -797,6 +1209,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A description of the API."
@@ -805,7 +1222,8 @@
                     "ids": [
                         {
                             "value": "infoTermsOfService",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "termsOfService",
@@ -832,7 +1250,8 @@
                     "ids": [
                         {
                             "value": "infoContact",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "contact",
@@ -859,7 +1278,8 @@
                     "ids": [
                         {
                             "value": "infoLicense",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "license",
@@ -886,7 +1306,8 @@
                     "ids": [
                         {
                             "value": "infoVersion",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "version",
@@ -913,7 +1334,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -932,6 +1354,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -942,11 +1369,13 @@
             "ids": [
                 {
                     "value": "contact-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "contactObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Contact Object",
@@ -965,7 +1394,8 @@
                     "ids": [
                         {
                             "value": "contactName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -992,7 +1422,8 @@
                     "ids": [
                         {
                             "value": "contactUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "url",
@@ -1019,7 +1450,8 @@
                     "ids": [
                         {
                             "value": "contactEmail",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "email",
@@ -1046,7 +1478,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1065,6 +1498,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -1075,11 +1513,13 @@
             "ids": [
                 {
                     "value": "license-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "licenseObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "License Object",
@@ -1098,7 +1538,8 @@
                     "ids": [
                         {
                             "value": "licenseName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -1125,7 +1566,8 @@
                     "ids": [
                         {
                             "value": "licenseIdentifier",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "identifier",
@@ -1144,6 +1586,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#licenseIdentifier",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spdx.org/spdx-specification-21-web-version#h.jxpfx0ykyb60",
+                            "name": "SPDX",
+                            "type": "reference"
                         }
                     ],
                     "description": "An <a href=\"https://spdx.org/spdx-specification-21-web-version#h.jxpfx0ykyb60\">SPDX</a> license expression for the API. The <code>identifier</code> field is mutually exclusive of the <code>url</code> field."
@@ -1152,7 +1599,8 @@
                     "ids": [
                         {
                             "value": "licenseUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "url",
@@ -1179,7 +1627,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1198,6 +1647,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -1208,11 +1662,13 @@
             "ids": [
                 {
                     "value": "server-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "serverObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Server Object",
@@ -1231,7 +1687,8 @@
                     "ids": [
                         {
                             "value": "serverUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "url",
@@ -1258,7 +1715,8 @@
                     "ids": [
                         {
                             "value": "serverDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -1277,6 +1735,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#serverDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "An optional string describing the host designated by the URL."
@@ -1285,7 +1748,8 @@
                     "ids": [
                         {
                             "value": "serverVariables",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "variables",
@@ -1312,7 +1776,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1331,6 +1796,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -1341,11 +1811,13 @@
             "ids": [
                 {
                     "value": "server-variable-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "serverVariableObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Server Variable Object",
@@ -1364,7 +1836,8 @@
                     "ids": [
                         {
                             "value": "serverVariableEnum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "enum",
@@ -1391,7 +1864,8 @@
                     "ids": [
                         {
                             "value": "serverVariableDefault",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "default",
@@ -1418,7 +1892,8 @@
                     "ids": [
                         {
                             "value": "serverVariableDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -1437,6 +1912,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#serverVariableDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "An optional description for the server variable."
@@ -1445,7 +1925,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1464,6 +1945,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -1474,11 +1960,13 @@
             "ids": [
                 {
                     "value": "components-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "componentsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Components Object",
@@ -1497,7 +1985,8 @@
                     "ids": [
                         {
                             "value": "componentsSchemas",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " schemas",
@@ -1524,7 +2013,8 @@
                     "ids": [
                         {
                             "value": "componentsResponses",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " responses",
@@ -1552,7 +2042,8 @@
                     "ids": [
                         {
                             "value": "componentsParameters",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " parameters",
@@ -1580,7 +2071,8 @@
                     "ids": [
                         {
                             "value": "componentsExamples",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " examples",
@@ -1608,7 +2100,8 @@
                     "ids": [
                         {
                             "value": "componentsRequestBodies",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " requestBodies",
@@ -1636,7 +2129,8 @@
                     "ids": [
                         {
                             "value": "componentsHeaders",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " headers",
@@ -1664,7 +2158,8 @@
                     "ids": [
                         {
                             "value": "componentsSecuritySchemes",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " securitySchemes",
@@ -1692,7 +2187,8 @@
                     "ids": [
                         {
                             "value": "componentsLinks",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " links",
@@ -1720,7 +2216,8 @@
                     "ids": [
                         {
                             "value": "componentsCallbacks",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " callbacks",
@@ -1748,7 +2245,8 @@
                     "ids": [
                         {
                             "value": "componentsPathItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " pathItems",
@@ -1776,7 +2274,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1795,6 +2294,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -1805,11 +2309,13 @@
             "ids": [
                 {
                     "value": "paths-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "pathsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Paths Object",
@@ -1828,7 +2334,8 @@
                     "ids": [
                         {
                             "value": "pathsPath",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "/{path}",
@@ -1855,7 +2362,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1874,6 +2382,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -1884,11 +2397,13 @@
             "ids": [
                 {
                     "value": "path-item-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "pathItemObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Path Item Object",
@@ -1907,7 +2422,8 @@
                     "ids": [
                         {
                             "value": "pathItemRef",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "$ref",
@@ -1934,7 +2450,8 @@
                     "ids": [
                         {
                             "value": "pathItemSummary",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "summary",
@@ -1961,7 +2478,8 @@
                     "ids": [
                         {
                             "value": "pathItemDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -1980,6 +2498,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#pathItemDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "An optional, string description, intended to apply to all operations in this path."
@@ -1988,7 +2511,8 @@
                     "ids": [
                         {
                             "value": "pathItemGet",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "get",
@@ -2015,7 +2539,8 @@
                     "ids": [
                         {
                             "value": "pathItemPut",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "put",
@@ -2042,7 +2567,8 @@
                     "ids": [
                         {
                             "value": "pathItemPost",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "post",
@@ -2069,7 +2595,8 @@
                     "ids": [
                         {
                             "value": "pathItemDelete",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "delete",
@@ -2096,7 +2623,8 @@
                     "ids": [
                         {
                             "value": "pathItemOptions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "options",
@@ -2123,7 +2651,8 @@
                     "ids": [
                         {
                             "value": "pathItemHead",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "head",
@@ -2150,7 +2679,8 @@
                     "ids": [
                         {
                             "value": "pathItemPatch",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "patch",
@@ -2177,7 +2707,8 @@
                     "ids": [
                         {
                             "value": "pathItemTrace",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "trace",
@@ -2204,7 +2735,8 @@
                     "ids": [
                         {
                             "value": "pathItemServers",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "servers",
@@ -2231,7 +2763,8 @@
                     "ids": [
                         {
                             "value": "pathItemParameters",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "parameters",
@@ -2259,7 +2792,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -2278,6 +2812,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -2288,11 +2827,13 @@
             "ids": [
                 {
                     "value": "operation-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "operationObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Operation Object",
@@ -2311,7 +2852,8 @@
                     "ids": [
                         {
                             "value": "operationTags",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "tags",
@@ -2338,7 +2880,8 @@
                     "ids": [
                         {
                             "value": "operationSummary",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "summary",
@@ -2365,7 +2908,8 @@
                     "ids": [
                         {
                             "value": "operationDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -2384,6 +2928,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#operationDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A verbose explanation of the operation behavior."
@@ -2392,7 +2941,8 @@
                     "ids": [
                         {
                             "value": "operationExternalDocs",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalDocs",
@@ -2419,7 +2969,8 @@
                     "ids": [
                         {
                             "value": "operationId",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "operationId",
@@ -2446,7 +2997,8 @@
                     "ids": [
                         {
                             "value": "operationParameters",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "parameters",
@@ -2474,7 +3026,8 @@
                     "ids": [
                         {
                             "value": "operationRequestBody",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "requestBody",
@@ -2494,6 +3047,26 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#operationRequestBody",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc7231#section-4.3.1",
+                            "name": "RFC7231",
+                            "type": "reference"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc7231#section-4.3.1",
+                            "name": "GET",
+                            "type": "reference"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc7231#section-4.3.2",
+                            "name": "HEAD",
+                            "type": "reference"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc7231#section-4.3.5",
+                            "name": "DELETE",
+                            "type": "reference"
                         }
                     ],
                     "description": "The request body applicable for this operation.  The <code>requestBody</code> is fully supported in HTTP methods where the HTTP 1.1 specification <a href=\"https://tools.ietf.org/html/rfc7231#section-4.3.1\">RFC7231</a> has explicitly defined semantics for request bodies.  In other cases where the HTTP spec is vague (such as <a href=\"https://tools.ietf.org/html/rfc7231#section-4.3.1\">GET</a>, <a href=\"https://tools.ietf.org/html/rfc7231#section-4.3.2\">HEAD</a> and <a href=\"https://tools.ietf.org/html/rfc7231#section-4.3.5\">DELETE</a>), <code>requestBody</code> is permitted but does not have well-defined semantics and SHOULD be avoided if possible."
@@ -2502,7 +3075,8 @@
                     "ids": [
                         {
                             "value": "operationResponses",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "responses",
@@ -2529,7 +3103,8 @@
                     "ids": [
                         {
                             "value": "operationCallbacks",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "callbacks",
@@ -2557,7 +3132,8 @@
                     "ids": [
                         {
                             "value": "operationDeprecated",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "deprecated",
@@ -2584,7 +3160,8 @@
                     "ids": [
                         {
                             "value": "operationSecurity",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "security",
@@ -2611,7 +3188,8 @@
                     "ids": [
                         {
                             "value": "operationServers",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "servers",
@@ -2638,7 +3216,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -2657,6 +3236,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -2667,11 +3251,13 @@
             "ids": [
                 {
                     "value": "external-documentation-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "externalDocumentationObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "External Documentation Object",
@@ -2690,7 +3276,8 @@
                     "ids": [
                         {
                             "value": "externalDocDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -2709,6 +3296,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#externalDocDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A description of the target documentation."
@@ -2717,7 +3309,8 @@
                     "ids": [
                         {
                             "value": "externalDocUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "url",
@@ -2744,7 +3337,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -2763,6 +3357,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -2773,11 +3372,13 @@
             "ids": [
                 {
                     "value": "parameter-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "parameterObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Parameter Object",
@@ -2796,7 +3397,8 @@
                     "ids": [
                         {
                             "value": "parameterName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -2823,7 +3425,8 @@
                     "ids": [
                         {
                             "value": "parameterIn",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "in",
@@ -2850,7 +3453,8 @@
                     "ids": [
                         {
                             "value": "parameterDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -2869,6 +3473,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#parameterDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A brief description of the parameter."
@@ -2877,7 +3486,8 @@
                     "ids": [
                         {
                             "value": "parameterRequired",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "required",
@@ -2904,7 +3514,8 @@
                     "ids": [
                         {
                             "value": "parameterDeprecated",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " deprecated",
@@ -2931,7 +3542,8 @@
                     "ids": [
                         {
                             "value": "parameterAllowEmptyValue",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " allowEmptyValue",
@@ -2958,7 +3570,8 @@
                     "ids": [
                         {
                             "value": "parameterStyle",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "style",
@@ -2985,7 +3598,8 @@
                     "ids": [
                         {
                             "value": "parameterExplode",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "explode",
@@ -3012,7 +3626,8 @@
                     "ids": [
                         {
                             "value": "parameterAllowReserved",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "allowReserved",
@@ -3031,6 +3646,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#parameterAllowReserved",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc3986#section-2.2",
+                            "name": "RFC3986",
+                            "type": "reference"
                         }
                     ],
                     "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by <a href=\"https://tools.ietf.org/html/rfc3986#section-2.2\">RFC3986</a> <code>:/?#[]@!$&amp;'()*+,;=</code> to be included without percent-encoding. This property only applies to parameters with an <code>in</code> value of <code>query</code>. The default value is <code>false</code>."
@@ -3039,7 +3659,8 @@
                     "ids": [
                         {
                             "value": "parameterSchema",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "schema",
@@ -3066,7 +3687,8 @@
                     "ids": [
                         {
                             "value": "parameterExample",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "example",
@@ -3093,7 +3715,8 @@
                     "ids": [
                         {
                             "value": "parameterExamples",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "examples",
@@ -3121,7 +3744,8 @@
                     "ids": [
                         {
                             "value": "parameterContent",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "content",
@@ -3148,7 +3772,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3167,6 +3792,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -3177,11 +3807,13 @@
             "ids": [
                 {
                     "value": "request-body-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "requestBodyObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Request Body Object",
@@ -3200,7 +3832,8 @@
                     "ids": [
                         {
                             "value": "requestBodyDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -3219,6 +3852,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#requestBodyDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A brief description of the request body."
@@ -3227,7 +3865,8 @@
                     "ids": [
                         {
                             "value": "requestBodyContent",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "content",
@@ -3246,6 +3885,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#requestBodyContent",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc7231#appendix-D",
+                            "name": "media type range",
+                            "type": "reference"
                         }
                     ],
                     "description": "The content of the request body. The key is a media type or <a href=\"https://tools.ietf.org/html/rfc7231#appendix-D\">media type range</a> and the value describes it.  For requests that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
@@ -3254,7 +3898,8 @@
                     "ids": [
                         {
                             "value": "requestBodyRequired",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "required",
@@ -3281,7 +3926,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3300,6 +3946,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -3310,11 +3961,13 @@
             "ids": [
                 {
                     "value": "media-type-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "mediaTypeObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Media Type Object",
@@ -3333,7 +3986,8 @@
                     "ids": [
                         {
                             "value": "mediaTypeSchema",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "schema",
@@ -3360,7 +4014,8 @@
                     "ids": [
                         {
                             "value": "mediaTypeExample",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "example",
@@ -3387,7 +4042,8 @@
                     "ids": [
                         {
                             "value": "mediaTypeExamples",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "examples",
@@ -3415,7 +4071,8 @@
                     "ids": [
                         {
                             "value": "mediaTypeEncoding",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "encoding",
@@ -3442,7 +4099,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3461,6 +4119,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -3471,11 +4134,13 @@
             "ids": [
                 {
                     "value": "encoding-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "encodingObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Encoding Object",
@@ -3494,7 +4159,8 @@
                     "ids": [
                         {
                             "value": "encodingContentType",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "contentType",
@@ -3521,7 +4187,8 @@
                     "ids": [
                         {
                             "value": "encodingHeaders",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "headers",
@@ -3549,7 +4216,8 @@
                     "ids": [
                         {
                             "value": "encodingStyle",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "style",
@@ -3576,7 +4244,8 @@
                     "ids": [
                         {
                             "value": "encodingExplode",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "explode",
@@ -3603,7 +4272,8 @@
                     "ids": [
                         {
                             "value": "encodingAllowReserved",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "allowReserved",
@@ -3622,6 +4292,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#encodingAllowReserved",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc3986#section-2.2",
+                            "name": "RFC3986",
+                            "type": "reference"
                         }
                     ],
                     "description": "Determines whether the parameter value SHOULD allow reserved characters, as defined by <a href=\"https://tools.ietf.org/html/rfc3986#section-2.2\">RFC3986</a> <code>:/?#[]@!$&amp;'()*+,;=</code> to be included without percent-encoding. The default value is <code>false</code>. This property SHALL be ignored if the request body media type is not <code>application/x-www-form-urlencoded</code> or <code>multipart/form-data</code>. If a value is explicitly defined, then the value of <a href=\"#encodingContentType\"><code>contentType</code></a> (implicit or explicit) SHALL be ignored."
@@ -3630,7 +4305,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3649,6 +4325,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -3659,11 +4340,13 @@
             "ids": [
                 {
                     "value": "responses-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "responsesObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Responses Object",
@@ -3682,7 +4365,8 @@
                     "ids": [
                         {
                             "value": "responsesDefault",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "default",
@@ -3710,7 +4394,8 @@
                     "ids": [
                         {
                             "value": "responsesCode",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "HTTP Status Code",
@@ -3738,7 +4423,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3757,6 +4443,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -3767,11 +4458,13 @@
             "ids": [
                 {
                     "value": "response-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "responseObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Response Object",
@@ -3790,7 +4483,8 @@
                     "ids": [
                         {
                             "value": "responseDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -3809,6 +4503,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#responseDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A description of the response."
@@ -3817,7 +4516,8 @@
                     "ids": [
                         {
                             "value": "responseHeaders",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "headers",
@@ -3837,6 +4537,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#responseHeaders",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc7230#page-22",
+                            "name": "RFC7230",
+                            "type": "reference"
                         }
                     ],
                     "description": "Maps a header name to its definition. <a href=\"https://tools.ietf.org/html/rfc7230#page-22\">RFC7230</a> states header names are case insensitive. If a response header is defined with the name <code>\"Content-Type\"</code>, it SHALL be ignored."
@@ -3845,7 +4550,8 @@
                     "ids": [
                         {
                             "value": "responseContent",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "content",
@@ -3864,6 +4570,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#responseContent",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc7231#appendix-D",
+                            "name": "media type range",
+                            "type": "reference"
                         }
                     ],
                     "description": "A map containing descriptions of potential response payloads. The key is a media type or <a href=\"https://tools.ietf.org/html/rfc7231#appendix-D\">media type range</a> and the value describes it.  For responses that match multiple keys, only the most specific key is applicable. e.g. text/plain overrides text/*"
@@ -3872,7 +4583,8 @@
                     "ids": [
                         {
                             "value": "responseLinks",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "links",
@@ -3900,7 +4612,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3919,6 +4632,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -3929,11 +4647,13 @@
             "ids": [
                 {
                     "value": "callback-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "callbackObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Callback Object",
@@ -3952,7 +4672,8 @@
                     "ids": [
                         {
                             "value": "callbackExpression",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{expression}",
@@ -3972,6 +4693,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#callbackExpression",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "../examples/v3.0/callback-example.yaml",
+                            "name": "complete example",
+                            "type": "reference"
                         }
                     ],
                     "description": "A Path Item Object, or a reference to one, used to define a callback request and expected responses.  A <a href=\"../examples/v3.0/callback-example.yaml\">complete example</a> is available."
@@ -3980,7 +4706,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3999,6 +4726,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -4009,11 +4741,13 @@
             "ids": [
                 {
                     "value": "example-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "exampleObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Example Object",
@@ -4032,7 +4766,8 @@
                     "ids": [
                         {
                             "value": "exampleSummary",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "summary",
@@ -4059,7 +4794,8 @@
                     "ids": [
                         {
                             "value": "exampleDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -4078,6 +4814,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#exampleDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "Long description for the example."
@@ -4086,7 +4827,8 @@
                     "ids": [
                         {
                             "value": "exampleValue",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "value",
@@ -4113,7 +4855,8 @@
                     "ids": [
                         {
                             "value": "exampleExternalValue",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalValue",
@@ -4140,7 +4883,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4159,6 +4903,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -4169,11 +4918,13 @@
             "ids": [
                 {
                     "value": "link-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "linkObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Link Object",
@@ -4192,7 +4943,8 @@
                     "ids": [
                         {
                             "value": "linkOperationRef",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "operationRef",
@@ -4219,7 +4971,8 @@
                     "ids": [
                         {
                             "value": "linkOperationId",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "operationId",
@@ -4246,7 +4999,8 @@
                     "ids": [
                         {
                             "value": "linkParameters",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "parameters",
@@ -4274,7 +5028,8 @@
                     "ids": [
                         {
                             "value": "linkRequestBody",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "requestBody",
@@ -4302,7 +5057,8 @@
                     "ids": [
                         {
                             "value": "linkDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -4321,6 +5077,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#linkDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A description of the link."
@@ -4329,7 +5090,8 @@
                     "ids": [
                         {
                             "value": "linkServer",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "server",
@@ -4356,7 +5118,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4375,6 +5138,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -4385,11 +5153,13 @@
             "ids": [
                 {
                     "value": "header-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "headerObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Header Object",
@@ -4408,7 +5178,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4427,6 +5198,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -4437,11 +5213,13 @@
             "ids": [
                 {
                     "value": "tag-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "tagObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Tag Object",
@@ -4460,7 +5238,8 @@
                     "ids": [
                         {
                             "value": "tagName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -4487,7 +5266,8 @@
                     "ids": [
                         {
                             "value": "tagDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -4506,6 +5286,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#tagDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A description for the tag."
@@ -4514,7 +5299,8 @@
                     "ids": [
                         {
                             "value": "tagExternalDocs",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalDocs",
@@ -4541,7 +5327,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4560,6 +5347,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -4570,11 +5362,13 @@
             "ids": [
                 {
                     "value": "reference-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "referenceObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Reference Object",
@@ -4586,6 +5380,11 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#referenceObject",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc3986",
+                    "name": "RFC3986",
+                    "type": "reference"
                 }
             ],
             "fields": [
@@ -4593,7 +5392,8 @@
                     "ids": [
                         {
                             "value": "referenceRef",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "$ref",
@@ -4620,7 +5420,8 @@
                     "ids": [
                         {
                             "value": "referenceSummary",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "summary",
@@ -4647,7 +5448,8 @@
                     "ids": [
                         {
                             "value": "referenceDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -4666,6 +5468,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#referenceDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A description which by default SHOULD override that of the referenced component.If the referenced object-type does not allow a <code>description</code> field, then this field has no effect."
@@ -4674,7 +5481,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4693,6 +5501,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -4703,11 +5516,13 @@
             "ids": [
                 {
                     "value": "schema-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "schemaObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Schema Object",
@@ -4719,6 +5534,21 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#schemaObject",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00",
+                    "name": "JSON Schema Specification Draft 2020-12",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-00",
+                    "name": "JSON Schema Core",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-bhutton-json-schema-validation-00",
+                    "name": "JSON Schema Validation",
+                    "type": "reference"
                 }
             ],
             "fields": [
@@ -4726,7 +5556,8 @@
                     "ids": [
                         {
                             "value": "schemaDiscriminator",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "discriminator",
@@ -4753,7 +5584,8 @@
                     "ids": [
                         {
                             "value": "schemaXml",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "xml",
@@ -4780,7 +5612,8 @@
                     "ids": [
                         {
                             "value": "schemaExternalDocs",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalDocs",
@@ -4807,7 +5640,8 @@
                     "ids": [
                         {
                             "value": "schemaExample",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "example",
@@ -4834,7 +5668,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4853,6 +5688,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -4863,11 +5703,13 @@
             "ids": [
                 {
                     "value": "discriminator-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "discriminatorObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Discriminator Object",
@@ -4886,7 +5728,8 @@
                     "ids": [
                         {
                             "value": "propertyName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "propertyName",
@@ -4913,7 +5756,8 @@
                     "ids": [
                         {
                             "value": "discriminatorMapping",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": " mapping",
@@ -4940,7 +5784,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4959,6 +5804,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -4969,11 +5819,13 @@
             "ids": [
                 {
                     "value": "xml-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "xmlObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "XML Object",
@@ -4992,7 +5844,8 @@
                     "ids": [
                         {
                             "value": "xmlName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -5019,7 +5872,8 @@
                     "ids": [
                         {
                             "value": "xmlNamespace",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "namespace",
@@ -5046,7 +5900,8 @@
                     "ids": [
                         {
                             "value": "xmlPrefix",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "prefix",
@@ -5073,7 +5928,8 @@
                     "ids": [
                         {
                             "value": "xmlAttribute",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "attribute",
@@ -5100,7 +5956,8 @@
                     "ids": [
                         {
                             "value": "xmlWrapped",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "wrapped",
@@ -5127,7 +5984,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -5146,6 +6004,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -5156,11 +6019,13 @@
             "ids": [
                 {
                     "value": "security-scheme-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "securitySchemeObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Security Scheme Object",
@@ -5172,6 +6037,21 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#securitySchemeObject",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/rfc6749",
+                    "name": "RFC6749",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-ietf-oauth-discovery-06",
+                    "name": "OpenID Connect Discovery",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-ietf-oauth-security-topics",
+                    "name": "OAuth 2.0 Security Best Current Practice",
+                    "type": "reference"
                 }
             ],
             "fields": [
@@ -5179,7 +6059,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeType",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "type",
@@ -5207,7 +6088,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -5227,6 +6109,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#securitySchemeDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A description for security scheme."
@@ -5235,7 +6122,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -5263,7 +6151,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeIn",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "in",
@@ -5291,7 +6180,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeScheme",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "scheme",
@@ -5311,6 +6201,16 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#securitySchemeScheme",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://tools.ietf.org/html/rfc7235#section-5.1",
+                            "name": "Authorization header as defined in RFC7235",
+                            "type": "reference"
+                        },
+                        {
+                            "url": "https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml",
+                            "name": "IANA Authentication Scheme registry",
+                            "type": "reference"
                         }
                     ],
                     "description": "The name of the HTTP Authorization scheme to be used in the <a href=\"https://tools.ietf.org/html/rfc7235#section-5.1\">Authorization header as defined in RFC7235</a>.  The values used SHOULD be registered in the <a href=\"https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml\">IANA Authentication Scheme registry</a>."
@@ -5319,7 +6219,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeBearerFormat",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "bearerFormat",
@@ -5347,7 +6248,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeFlows",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "flows",
@@ -5375,7 +6277,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeOpenIdConnectUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "openIdConnectUrl",
@@ -5403,7 +6306,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -5422,6 +6326,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -5432,11 +6341,13 @@
             "ids": [
                 {
                     "value": "oauth-flows-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "oauthFlowsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "OAuth Flows Object",
@@ -5455,7 +6366,8 @@
                     "ids": [
                         {
                             "value": "oauthFlowsImplicit",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "implicit",
@@ -5482,7 +6394,8 @@
                     "ids": [
                         {
                             "value": "oauthFlowsPassword",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "password",
@@ -5509,7 +6422,8 @@
                     "ids": [
                         {
                             "value": "oauthFlowsClientCredentials",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "clientCredentials",
@@ -5536,7 +6450,8 @@
                     "ids": [
                         {
                             "value": "oauthFlowsAuthorizationCode",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "authorizationCode",
@@ -5563,7 +6478,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -5582,6 +6498,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -5592,11 +6513,13 @@
             "ids": [
                 {
                     "value": "oauth-flow-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "oauthFlowObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "OAuth Flow Object",
@@ -5615,7 +6538,8 @@
                     "ids": [
                         {
                             "value": "oauthFlowAuthorizationUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "authorizationUrl",
@@ -5643,7 +6567,8 @@
                     "ids": [
                         {
                             "value": "oauthFlowTokenUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "tokenUrl",
@@ -5671,7 +6596,8 @@
                     "ids": [
                         {
                             "value": "oauthFlowRefreshUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "refreshUrl",
@@ -5699,7 +6625,8 @@
                     "ids": [
                         {
                             "value": "oauthFlowScopes",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "scopes",
@@ -5727,7 +6654,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -5746,6 +6674,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
@@ -5756,11 +6689,13 @@
             "ids": [
                 {
                     "value": "security-requirement-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "securityRequirementObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Security Requirement Object",
@@ -5779,7 +6714,8 @@
                     "ids": [
                         {
                             "value": "securityRequirementsName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{name}",
@@ -5806,7 +6742,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -5825,6 +6762,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.openapis.org/",
+                            "name": "OpenAPI Initiative",
+                            "type": "reference"
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."

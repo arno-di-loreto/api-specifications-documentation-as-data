@@ -1,6 +1,15 @@
 from UtilsClass import Dictable
 from MarkdownParser import Anchor
 
+class DataReference(Dictable):
+  TYPE_CONCEPT='concept'
+  TYPE_SCHEMA='schema'
+  TYPE_FIELD='field'
+
+  def __init__(self, type, id):
+    self.type = type
+    self.id = id
+
 class DataId(Dictable):
   MAIN='main'
   SECONDARY='secondary'
@@ -11,6 +20,7 @@ class DataId(Dictable):
       self.type = DataId.MAIN
     else:
       self.type = DataId.SECONDARY
+    self.references = []
 
 class Data(Dictable):
   def __init__(self, source, data_parent):
@@ -49,3 +59,6 @@ class Data(Dictable):
 
   def get_source(self):
     return self._source
+  
+  def add_reference(self, type, id):
+    self.references.append(DataReference(type, id))

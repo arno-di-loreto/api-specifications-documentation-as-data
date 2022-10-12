@@ -11,6 +11,86 @@
             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/schemas/v2.0",
             "name": "schema",
             "type": "documentation"
+        },
+        {
+            "url": "http://www.ietf.org/rfc/rfc2119.txt",
+            "name": "RFC 2119",
+            "type": "reference"
+        },
+        {
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+            "name": "The Apache License, Version 2.0",
+            "type": "reference"
+        },
+        {
+            "url": "http://tools.ietf.org/html/rfc6838",
+            "name": "RFC 6838",
+            "type": "reference"
+        },
+        {
+            "url": "http://tools.ietf.org/html/rfc7231#section-6",
+            "name": "RFC 7231",
+            "type": "reference"
+        },
+        {
+            "url": "http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml",
+            "name": "IANA Status Code Registry",
+            "type": "reference"
+        },
+        {
+            "url": "http://json-schema.org",
+            "name": "JSON Schema",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-zyp-json-schema-04#section-3.5",
+            "name": "JSON-Schema Draft 4",
+            "type": "reference"
+        },
+        {
+            "url": "http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14",
+            "name": "RFC3339",
+            "type": "reference"
+        },
+        {
+            "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
+            "name": "GFM syntax",
+            "type": "reference"
+        },
+        {
+            "url": "http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-02",
+            "name": "JSON Reference",
+            "type": "reference"
+        },
+        {
+            "url": "http://tools.ietf.org/html/rfc6901",
+            "name": "JSON Pointer",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-zyp-json-schema-04#section-7.2.3",
+            "name": "canonical dereferencing",
+            "type": "reference"
+        },
+        {
+            "url": "http://json-schema.org/",
+            "name": "JSON Schema Specification Draft 4",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-zyp-json-schema-04",
+            "name": "JSON Schema Core",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-fge-json-schema-validation-00",
+            "name": "JSON Schema Validation",
+            "type": "reference"
+        },
+        {
+            "url": "https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03",
+            "name": "JSON Reference",
+            "type": "reference"
         }
     ],
     "description": "<p>Swagger\u2122  is a project used to describe and document RESTful APIs.</p><p>The Swagger specification defines a set of files required to describe such an API. These files can then be used by the Swagger-UI project to display the API and Swagger-Codegen to generate clients in various languages. Additional utilities can also take advantage of the resulting files, such as testing tools.</p>",
@@ -45,11 +125,13 @@
             "ids": [
                 {
                     "value": "path-templating",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "pathTemplating",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Path Templating",
@@ -66,11 +148,13 @@
             "ids": [
                 {
                     "value": "mime-types",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "mimeTypes",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Mime Types",
@@ -79,6 +163,11 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#mimeTypes",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "http://tools.ietf.org/html/rfc6838",
+                    "name": "RFC 6838",
+                    "type": "reference"
                 }
             ],
             "description": "<p>Mime type definitions are spread across several resources. The mime type definitions should be in compliance with <a href=\"http://tools.ietf.org/html/rfc6838\">RFC 6838</a>.</p><p>Some examples of possible mime type definitions:</p><pre><code>  text/plain; charset=utf-8\n  application/json\n  application/vnd.github+json\n  application/vnd.github.v3+json\n  application/vnd.github.v3.raw+json\n  application/vnd.github.v3.text+json\n  application/vnd.github.v3.html+json\n  application/vnd.github.v3.full+json\n  application/vnd.github.v3.diff\n  application/vnd.github.v3.patch\n</code></pre>"
@@ -87,11 +176,13 @@
             "ids": [
                 {
                     "value": "http-status-codes",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "httpCodes",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "HTTP Status Codes",
@@ -100,6 +191,16 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#httpCodes",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "http://tools.ietf.org/html/rfc7231#section-6",
+                    "name": "RFC 7231",
+                    "type": "reference"
+                },
+                {
+                    "url": "http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml",
+                    "name": "IANA Status Code Registry",
+                    "type": "reference"
                 }
             ],
             "description": "<p>The HTTP Status Codes are used to indicate the status of the executed operation. The available status codes are described by <a href=\"http://tools.ietf.org/html/rfc7231#section-6\">RFC 7231</a> and in the <a href=\"http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml\">IANA Status Code Registry</a>.</p>"
@@ -108,7 +209,8 @@
             "ids": [
                 {
                     "value": "format",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 }
             ],
             "name": "Format",
@@ -125,7 +227,8 @@
             "ids": [
                 {
                     "value": "file-structure",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 }
             ],
             "name": "File Structure",
@@ -134,6 +237,11 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#file-structure",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "http://json-schema.org",
+                    "name": "JSON Schema",
+                    "type": "reference"
                 }
             ],
             "description": "<p>The Swagger representation of the API is made of a single file. However, parts of the definitions can be split into separate files, at the discretion of the user. This is applicable for <code>$ref</code> fields in the specification as follows from the <a href=\"http://json-schema.org\">JSON Schema</a> definitions.</p><p>By convention, the Swagger specification file is named <code>swagger.json</code>.</p>"
@@ -142,7 +250,8 @@
             "ids": [
                 {
                     "value": "data-types",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 }
             ],
             "name": "Data Types",
@@ -151,6 +260,16 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#data-types",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-zyp-json-schema-04#section-3.5",
+                    "name": "JSON-Schema Draft 4",
+                    "type": "reference"
+                },
+                {
+                    "url": "http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14",
+                    "name": "RFC3339",
+                    "type": "reference"
                 }
             ],
             "description": "<p>Primitive data types in the Swagger Specification are based on the types supported by the <a href=\"https://tools.ietf.org/html/draft-zyp-json-schema-04#section-3.5\">JSON-Schema Draft 4</a>. Models are described using the <a href=\"#schemaObject\">Schema Object</a> which is a subset of JSON Schema Draft 4.</p><p>An additional primitive data type <code>\"file\"</code> is used by the <a href=\"#parameterObject\">Parameter Object</a> and the <a href=\"#responseObject\">Response Object</a> to set the parameter type or the response as being a file.</p><p><a name=\"dataTypeFormat\"></a>Primitives have an optional modifier property <code>format</code>. Swagger uses several known formats to more finely define the data type being used. However, the <code>format</code> property is an open <code>string</code>-valued property, and can have any value to support documentation needs. Formats such as <code>\"email\"</code>, <code>\"uuid\"</code>, etc., can be used even though they are not defined by this specification. Types that are not accompanied by a <code>format</code> property follow their definition from the JSON Schema (except for <code>file</code> type which is defined above). The formats defined by the Swagger Specification are:</p><table>\n<thead>\n<tr>\n<th>Common Name</th>\n<th><a href=\"#dataTypeType\"><code>type</code></a></th>\n<th><a href=\"#dataTypeFormat\"><code>format</code></a></th>\n<th>Comments</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>integer</td>\n<td><code>integer</code></td>\n<td><code>int32</code></td>\n<td>signed 32 bits</td>\n</tr>\n<tr>\n<td>long</td>\n<td><code>integer</code></td>\n<td><code>int64</code></td>\n<td>signed 64 bits</td>\n</tr>\n<tr>\n<td>float</td>\n<td><code>number</code></td>\n<td><code>float</code></td>\n<td></td>\n</tr>\n<tr>\n<td>double</td>\n<td><code>number</code></td>\n<td><code>double</code></td>\n<td></td>\n</tr>\n<tr>\n<td>string</td>\n<td><code>string</code></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>byte</td>\n<td><code>string</code></td>\n<td><code>byte</code></td>\n<td>base64 encoded characters</td>\n</tr>\n<tr>\n<td>binary</td>\n<td><code>string</code></td>\n<td><code>binary</code></td>\n<td>any sequence of octets</td>\n</tr>\n<tr>\n<td>boolean</td>\n<td><code>boolean</code></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>date</td>\n<td><code>string</code></td>\n<td><code>date</code></td>\n<td>As defined by <code>full-date</code> - <a href=\"http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14\">RFC3339</a></td>\n</tr>\n<tr>\n<td>dateTime</td>\n<td><code>string</code></td>\n<td><code>date-time</code></td>\n<td>As defined by <code>date-time</code> - <a href=\"http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14\">RFC3339</a></td>\n</tr>\n<tr>\n<td>password</td>\n<td><code>string</code></td>\n<td><code>password</code></td>\n<td>Used to hint UIs the input needs to be obscured.</td>\n</tr>\n</tbody>\n</table>"
@@ -159,11 +278,13 @@
             "ids": [
                 {
                     "value": "specification-extensions",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "vendorExtensions",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Specification Extensions",
@@ -180,11 +301,13 @@
             "ids": [
                 {
                     "value": "security-filtering",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "securityFiltering",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Security Filtering",
@@ -203,11 +326,13 @@
             "ids": [
                 {
                     "value": "swagger-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "swaggerObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Swagger Object",
@@ -226,7 +351,8 @@
                     "ids": [
                         {
                             "value": "swaggerSwagger",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "swagger",
@@ -253,7 +379,8 @@
                     "ids": [
                         {
                             "value": "swaggerInfo",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "info",
@@ -280,7 +407,8 @@
                     "ids": [
                         {
                             "value": "swaggerHost",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "host",
@@ -307,7 +435,8 @@
                     "ids": [
                         {
                             "value": "swaggerBasePath",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "basePath",
@@ -334,7 +463,8 @@
                     "ids": [
                         {
                             "value": "swaggerSchemes",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "schemes",
@@ -361,7 +491,8 @@
                     "ids": [
                         {
                             "value": "swaggerConsumes",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "consumes",
@@ -388,7 +519,8 @@
                     "ids": [
                         {
                             "value": "swaggerProduces",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "produces",
@@ -415,7 +547,8 @@
                     "ids": [
                         {
                             "value": "swaggerPaths",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "paths",
@@ -442,7 +575,8 @@
                     "ids": [
                         {
                             "value": "swaggerDefinitions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "definitions",
@@ -469,7 +603,8 @@
                     "ids": [
                         {
                             "value": "swaggerParameters",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "parameters",
@@ -496,7 +631,8 @@
                     "ids": [
                         {
                             "value": "swaggerResponses",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "responses",
@@ -523,7 +659,8 @@
                     "ids": [
                         {
                             "value": "swaggerSecurityDefinitions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "securityDefinitions",
@@ -550,7 +687,8 @@
                     "ids": [
                         {
                             "value": "swaggerSecurity",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "security",
@@ -577,7 +715,8 @@
                     "ids": [
                         {
                             "value": "swaggerTags",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "tags",
@@ -604,7 +743,8 @@
                     "ids": [
                         {
                             "value": "swaggerExternalDocs",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalDocs",
@@ -631,7 +771,8 @@
                     "ids": [
                         {
                             "value": "swaggerExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -660,11 +801,13 @@
             "ids": [
                 {
                     "value": "info-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "infoObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Info Object",
@@ -683,7 +826,8 @@
                     "ids": [
                         {
                             "value": "infoTitle",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "title",
@@ -710,7 +854,8 @@
                     "ids": [
                         {
                             "value": "infoDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -729,6 +874,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#infoDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
+                            "name": "GFM syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A short description of the application."
@@ -737,7 +887,8 @@
                     "ids": [
                         {
                             "value": "infoTermsOfService",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "termsOfService",
@@ -764,7 +915,8 @@
                     "ids": [
                         {
                             "value": "infoContact",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "contact",
@@ -791,7 +943,8 @@
                     "ids": [
                         {
                             "value": "infoLicense",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "license",
@@ -818,7 +971,8 @@
                     "ids": [
                         {
                             "value": "infoVersion",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "version",
@@ -845,7 +999,8 @@
                     "ids": [
                         {
                             "value": "infoExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -874,11 +1029,13 @@
             "ids": [
                 {
                     "value": "contact-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "contactObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Contact Object",
@@ -897,7 +1054,8 @@
                     "ids": [
                         {
                             "value": "contactName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -924,7 +1082,8 @@
                     "ids": [
                         {
                             "value": "contactUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "url",
@@ -951,7 +1110,8 @@
                     "ids": [
                         {
                             "value": "contactEmail",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "email",
@@ -978,7 +1138,8 @@
                     "ids": [
                         {
                             "value": "contactExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1007,11 +1168,13 @@
             "ids": [
                 {
                     "value": "license-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "licenseObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "License Object",
@@ -1030,7 +1193,8 @@
                     "ids": [
                         {
                             "value": "licenseName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -1057,7 +1221,8 @@
                     "ids": [
                         {
                             "value": "licenseUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "url",
@@ -1084,7 +1249,8 @@
                     "ids": [
                         {
                             "value": "licenseExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1113,11 +1279,13 @@
             "ids": [
                 {
                     "value": "paths-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "pathsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Paths Object",
@@ -1136,7 +1304,8 @@
                     "ids": [
                         {
                             "value": "pathsPath",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "/{path}",
@@ -1163,7 +1332,8 @@
                     "ids": [
                         {
                             "value": "pathsExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1192,11 +1362,13 @@
             "ids": [
                 {
                     "value": "path-item-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "pathItemObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Path Item Object",
@@ -1215,7 +1387,8 @@
                     "ids": [
                         {
                             "value": "pathItemRef",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "$ref",
@@ -1242,7 +1415,8 @@
                     "ids": [
                         {
                             "value": "pathItemGet",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "get",
@@ -1269,7 +1443,8 @@
                     "ids": [
                         {
                             "value": "pathItemPut",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "put",
@@ -1296,7 +1471,8 @@
                     "ids": [
                         {
                             "value": "pathItemPost",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "post",
@@ -1323,7 +1499,8 @@
                     "ids": [
                         {
                             "value": "pathItemDelete",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "delete",
@@ -1350,7 +1527,8 @@
                     "ids": [
                         {
                             "value": "pathItemOptions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "options",
@@ -1377,7 +1555,8 @@
                     "ids": [
                         {
                             "value": "pathItemHead",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "head",
@@ -1404,7 +1583,8 @@
                     "ids": [
                         {
                             "value": "pathItemPatch",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "patch",
@@ -1431,7 +1611,8 @@
                     "ids": [
                         {
                             "value": "pathItemParameters",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "parameters",
@@ -1459,7 +1640,8 @@
                     "ids": [
                         {
                             "value": "pathItemExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1488,11 +1670,13 @@
             "ids": [
                 {
                     "value": "operation-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "operationObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Operation Object",
@@ -1511,7 +1695,8 @@
                     "ids": [
                         {
                             "value": "operationTags",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "tags",
@@ -1538,7 +1723,8 @@
                     "ids": [
                         {
                             "value": "operationSummary",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "summary",
@@ -1565,7 +1751,8 @@
                     "ids": [
                         {
                             "value": "operationDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -1584,6 +1771,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#operationDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
+                            "name": "GFM syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A verbose explanation of the operation behavior."
@@ -1592,7 +1784,8 @@
                     "ids": [
                         {
                             "value": "operationExternalDocs",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalDocs",
@@ -1619,7 +1812,8 @@
                     "ids": [
                         {
                             "value": "operationId",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "operationId",
@@ -1646,7 +1840,8 @@
                     "ids": [
                         {
                             "value": "operationConsumes",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "consumes",
@@ -1673,7 +1868,8 @@
                     "ids": [
                         {
                             "value": "operationProduces",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "produces",
@@ -1700,7 +1896,8 @@
                     "ids": [
                         {
                             "value": "operationParameters",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "parameters",
@@ -1728,7 +1925,8 @@
                     "ids": [
                         {
                             "value": "operationResponses",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "responses",
@@ -1755,7 +1953,8 @@
                     "ids": [
                         {
                             "value": "operationSchemes",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "schemes",
@@ -1782,7 +1981,8 @@
                     "ids": [
                         {
                             "value": "operationDeprecated",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "deprecated",
@@ -1809,7 +2009,8 @@
                     "ids": [
                         {
                             "value": "operationSecurity",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "security",
@@ -1836,7 +2037,8 @@
                     "ids": [
                         {
                             "value": "operationExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1865,11 +2067,13 @@
             "ids": [
                 {
                     "value": "external-documentation-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "externalDocumentationObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "External Documentation Object",
@@ -1888,7 +2092,8 @@
                     "ids": [
                         {
                             "value": "externalDocDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -1907,6 +2112,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#externalDocDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
+                            "name": "GFM syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A short description of the target documentation."
@@ -1915,7 +2125,8 @@
                     "ids": [
                         {
                             "value": "externalDocUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "url",
@@ -1942,7 +2153,8 @@
                     "ids": [
                         {
                             "value": "externalDocExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -1971,11 +2183,13 @@
             "ids": [
                 {
                     "value": "parameter-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "parameterObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Parameter Object",
@@ -1994,7 +2208,8 @@
                     "ids": [
                         {
                             "value": "parameterName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -2021,7 +2236,8 @@
                     "ids": [
                         {
                             "value": "parameterIn",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "in",
@@ -2048,7 +2264,8 @@
                     "ids": [
                         {
                             "value": "parameterDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -2067,6 +2284,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#parameterDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
+                            "name": "GFM syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A brief description of the parameter."
@@ -2075,7 +2297,8 @@
                     "ids": [
                         {
                             "value": "parameterRequired",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "required",
@@ -2102,7 +2325,8 @@
                     "ids": [
                         {
                             "value": "parameterSchema",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "schema",
@@ -2129,7 +2353,8 @@
                     "ids": [
                         {
                             "value": "parameterType",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "type",
@@ -2156,7 +2381,8 @@
                     "ids": [
                         {
                             "value": "parameterFormat",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "format",
@@ -2183,7 +2409,8 @@
                     "ids": [
                         {
                             "value": "parameterAllowEmptyValue",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "allowEmptyValue",
@@ -2210,7 +2437,8 @@
                     "ids": [
                         {
                             "value": "parameterItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "items",
@@ -2237,7 +2465,8 @@
                     "ids": [
                         {
                             "value": "parameterCollectionFormat",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "collectionFormat",
@@ -2264,7 +2493,8 @@
                     "ids": [
                         {
                             "value": "parameterDefault",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "default",
@@ -2291,7 +2521,8 @@
                     "ids": [
                         {
                             "value": "parameterMaximum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "maximum",
@@ -2318,7 +2549,8 @@
                     "ids": [
                         {
                             "value": "parameterExclusiveMaximum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "exclusiveMaximum",
@@ -2345,7 +2577,8 @@
                     "ids": [
                         {
                             "value": "parameterMinimum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "minimum",
@@ -2372,7 +2605,8 @@
                     "ids": [
                         {
                             "value": "parameterExclusiveMinimum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "exclusiveMinimum",
@@ -2399,7 +2633,8 @@
                     "ids": [
                         {
                             "value": "parameterMaxLength",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "maxLength",
@@ -2426,7 +2661,8 @@
                     "ids": [
                         {
                             "value": "parameterMinLength",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "minLength",
@@ -2453,7 +2689,8 @@
                     "ids": [
                         {
                             "value": "parameterPattern",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "pattern",
@@ -2480,7 +2717,8 @@
                     "ids": [
                         {
                             "value": "parameterMaxItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "maxItems",
@@ -2507,7 +2745,8 @@
                     "ids": [
                         {
                             "value": "parameterMinItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "minItems",
@@ -2534,7 +2773,8 @@
                     "ids": [
                         {
                             "value": "parameterUniqueItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "uniqueItems",
@@ -2561,7 +2801,8 @@
                     "ids": [
                         {
                             "value": "parameterEnum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "enum",
@@ -2588,7 +2829,8 @@
                     "ids": [
                         {
                             "value": "parameterMultipleOf",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "multipleOf",
@@ -2615,7 +2857,8 @@
                     "ids": [
                         {
                             "value": "parameterExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -2644,11 +2887,13 @@
             "ids": [
                 {
                     "value": "items-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "itemsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Items Object",
@@ -2667,7 +2912,8 @@
                     "ids": [
                         {
                             "value": "itemsType",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "type",
@@ -2694,7 +2940,8 @@
                     "ids": [
                         {
                             "value": "itemsFormat",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "format",
@@ -2721,7 +2968,8 @@
                     "ids": [
                         {
                             "value": "itemsItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "items",
@@ -2748,7 +2996,8 @@
                     "ids": [
                         {
                             "value": "itemsCollectionFormat",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "collectionFormat",
@@ -2775,7 +3024,8 @@
                     "ids": [
                         {
                             "value": "itemsDefault",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "default",
@@ -2802,7 +3052,8 @@
                     "ids": [
                         {
                             "value": "itemsMaximum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "maximum",
@@ -2829,7 +3080,8 @@
                     "ids": [
                         {
                             "value": "itemsMaximum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "exclusiveMaximum",
@@ -2856,7 +3108,8 @@
                     "ids": [
                         {
                             "value": "itemsMinimum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "minimum",
@@ -2883,7 +3136,8 @@
                     "ids": [
                         {
                             "value": "itemsExclusiveMinimum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "exclusiveMinimum",
@@ -2910,7 +3164,8 @@
                     "ids": [
                         {
                             "value": "itemsMaxLength",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "maxLength",
@@ -2937,7 +3192,8 @@
                     "ids": [
                         {
                             "value": "itemsMinLength",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "minLength",
@@ -2964,7 +3220,8 @@
                     "ids": [
                         {
                             "value": "itemsPattern",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "pattern",
@@ -2991,7 +3248,8 @@
                     "ids": [
                         {
                             "value": "itemsMaxItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "maxItems",
@@ -3018,7 +3276,8 @@
                     "ids": [
                         {
                             "value": "itemsMinItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "minItems",
@@ -3045,7 +3304,8 @@
                     "ids": [
                         {
                             "value": "itemsUniqueItems",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "uniqueItems",
@@ -3072,7 +3332,8 @@
                     "ids": [
                         {
                             "value": "itemsEnum",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "enum",
@@ -3099,7 +3360,8 @@
                     "ids": [
                         {
                             "value": "itemsMultipleOf",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "multipleOf",
@@ -3126,7 +3388,8 @@
                     "ids": [
                         {
                             "value": "itemsExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3155,11 +3418,13 @@
             "ids": [
                 {
                     "value": "responses-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "responsesObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Responses Object",
@@ -3178,7 +3443,8 @@
                     "ids": [
                         {
                             "value": "responsesDefault",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "default",
@@ -3206,7 +3472,8 @@
                     "ids": [
                         {
                             "value": "responsesCode",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{HTTP Status Code}",
@@ -3234,7 +3501,8 @@
                     "ids": [
                         {
                             "value": "responsesExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3263,11 +3531,13 @@
             "ids": [
                 {
                     "value": "response-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "responseObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Response Object",
@@ -3286,7 +3556,8 @@
                     "ids": [
                         {
                             "value": "responseDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -3305,6 +3576,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#responseDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
+                            "name": "GFM syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A short description of the response."
@@ -3313,7 +3589,8 @@
                     "ids": [
                         {
                             "value": "responseSchema",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "schema",
@@ -3340,7 +3617,8 @@
                     "ids": [
                         {
                             "value": "responseHeaders",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "headers",
@@ -3367,7 +3645,8 @@
                     "ids": [
                         {
                             "value": "responseExamples",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "examples",
@@ -3394,7 +3673,8 @@
                     "ids": [
                         {
                             "value": "responseExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3423,11 +3703,13 @@
             "ids": [
                 {
                     "value": "headers-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "headersObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Headers Object",
@@ -3446,7 +3728,8 @@
                     "ids": [
                         {
                             "value": "headersName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{name}",
@@ -3475,11 +3758,13 @@
             "ids": [
                 {
                     "value": "example-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "exampleObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Example Object",
@@ -3498,7 +3783,8 @@
                     "ids": [
                         {
                             "value": "exampleMimeType",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{mime type}",
@@ -3527,11 +3813,13 @@
             "ids": [
                 {
                     "value": "header-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "headerObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Header Object",
@@ -3550,7 +3838,8 @@
                     "ids": [
                         {
                             "value": "headerExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3579,11 +3868,13 @@
             "ids": [
                 {
                     "value": "tag-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "tagObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Tag Object",
@@ -3602,7 +3893,8 @@
                     "ids": [
                         {
                             "value": "tagName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -3629,7 +3921,8 @@
                     "ids": [
                         {
                             "value": "tagDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -3648,6 +3941,11 @@
                             "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#tagDescription",
                             "name": "markdown",
                             "type": "documentation"
+                        },
+                        {
+                            "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
+                            "name": "GFM syntax",
+                            "type": "reference"
                         }
                     ],
                     "description": "A short description for the tag."
@@ -3656,7 +3954,8 @@
                     "ids": [
                         {
                             "value": "tagExternalDocs",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalDocs",
@@ -3683,7 +3982,8 @@
                     "ids": [
                         {
                             "value": "tagExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3712,11 +4012,13 @@
             "ids": [
                 {
                     "value": "reference-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "referenceObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Reference Object",
@@ -3728,6 +4030,21 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#referenceObject",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-02",
+                    "name": "JSON Reference",
+                    "type": "reference"
+                },
+                {
+                    "url": "http://tools.ietf.org/html/rfc6901",
+                    "name": "JSON Pointer",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-zyp-json-schema-04#section-7.2.3",
+                    "name": "canonical dereferencing",
+                    "type": "reference"
                 }
             ],
             "fields": [
@@ -3735,7 +4052,8 @@
                     "ids": [
                         {
                             "value": "referenceRef",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "$ref",
@@ -3764,11 +4082,13 @@
             "ids": [
                 {
                     "value": "schema-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "schemaObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Schema Object",
@@ -3780,6 +4100,31 @@
                     "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/2.0.md#schemaObject",
                     "name": "markdown",
                     "type": "documentation"
+                },
+                {
+                    "url": "http://json-schema.org/",
+                    "name": "JSON Schema Specification Draft 4",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-zyp-json-schema-04",
+                    "name": "JSON Schema Core",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-fge-json-schema-validation-00",
+                    "name": "JSON Schema Validation",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03",
+                    "name": "JSON Reference",
+                    "type": "reference"
+                },
+                {
+                    "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
+                    "name": "GFM syntax",
+                    "type": "reference"
                 }
             ],
             "fields": [
@@ -3787,7 +4132,8 @@
                     "ids": [
                         {
                             "value": "schemaDiscriminator",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "discriminator",
@@ -3814,7 +4160,8 @@
                     "ids": [
                         {
                             "value": "schemaReadOnly",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "readOnly",
@@ -3841,7 +4188,8 @@
                     "ids": [
                         {
                             "value": "schemaXml",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "xml",
@@ -3868,7 +4216,8 @@
                     "ids": [
                         {
                             "value": "schemaExternalDocs",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "externalDocs",
@@ -3895,7 +4244,8 @@
                     "ids": [
                         {
                             "value": "schemaExample",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "example",
@@ -3922,7 +4272,8 @@
                     "ids": [
                         {
                             "value": "schemaExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -3951,11 +4302,13 @@
             "ids": [
                 {
                     "value": "xml-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "xmlObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "XML Object",
@@ -3974,7 +4327,8 @@
                     "ids": [
                         {
                             "value": "xmlName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -4001,7 +4355,8 @@
                     "ids": [
                         {
                             "value": "xmlNamespace",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "namespace",
@@ -4028,7 +4383,8 @@
                     "ids": [
                         {
                             "value": "xmlPrefix",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "prefix",
@@ -4055,7 +4411,8 @@
                     "ids": [
                         {
                             "value": "xmlAttribute",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "attribute",
@@ -4082,7 +4439,8 @@
                     "ids": [
                         {
                             "value": "xmlWrapped",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "wrapped",
@@ -4109,7 +4467,8 @@
                     "ids": [
                         {
                             "value": "xmlExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4138,11 +4497,13 @@
             "ids": [
                 {
                     "value": "definitions-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "definitionsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Definitions Object",
@@ -4161,7 +4522,8 @@
                     "ids": [
                         {
                             "value": "definitionsName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{name}",
@@ -4190,11 +4552,13 @@
             "ids": [
                 {
                     "value": "parameters-definitions-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "parametersDefinitionsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Parameters Definitions Object",
@@ -4213,7 +4577,8 @@
                     "ids": [
                         {
                             "value": "pdName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{name}",
@@ -4242,11 +4607,13 @@
             "ids": [
                 {
                     "value": "responses-definitions-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "responsesDefinitionsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Responses Definitions Object",
@@ -4265,7 +4632,8 @@
                     "ids": [
                         {
                             "value": "rdName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{name}",
@@ -4294,11 +4662,13 @@
             "ids": [
                 {
                     "value": "security-definitions-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "securityDefinitionsObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Security Definitions Object",
@@ -4317,7 +4687,8 @@
                     "ids": [
                         {
                             "value": "sdName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{name}",
@@ -4346,11 +4717,13 @@
             "ids": [
                 {
                     "value": "security-scheme-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "securitySchemeObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Security Scheme Object",
@@ -4369,7 +4742,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeType",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "type",
@@ -4397,7 +4771,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeDescription",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "description",
@@ -4425,7 +4800,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "name",
@@ -4453,7 +4829,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeIn",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "in",
@@ -4481,7 +4858,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeFlow",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "flow",
@@ -4509,7 +4887,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeAuthorizationUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "authorizationUrl",
@@ -4537,7 +4916,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeTokenUrl",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "tokenUrl",
@@ -4565,7 +4945,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeScopes",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "scopes",
@@ -4593,7 +4974,8 @@
                     "ids": [
                         {
                             "value": "securitySchemeExtensions",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "^x-",
@@ -4622,11 +5004,13 @@
             "ids": [
                 {
                     "value": "scopes-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "scopesObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Scopes Object",
@@ -4645,7 +5029,8 @@
                     "ids": [
                         {
                             "value": "scopesName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{name}",
@@ -4674,11 +5059,13 @@
             "ids": [
                 {
                     "value": "security-requirement-object",
-                    "type": "secondary"
+                    "type": "secondary",
+                    "references": []
                 },
                 {
                     "value": "securityRequirementObject",
-                    "type": "main"
+                    "type": "main",
+                    "references": []
                 }
             ],
             "name": "Security Requirement Object",
@@ -4697,7 +5084,8 @@
                     "ids": [
                         {
                             "value": "securityRequirementsName",
-                            "type": "main"
+                            "type": "main",
+                            "references": []
                         }
                     ],
                     "name": "{name}",
