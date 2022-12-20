@@ -7,6 +7,7 @@ import re
 class SpecificationUrls:
   _urls = {
     'markdown': 'https://github.com/OAI/OpenAPI-Specification/tree/main/versions/{version.revision}.md',
+    'html': 'https://spec.openapis.org/oas/v{version.revision}',
     'schema': 'https://github.com/OAI/OpenAPI-Specification/tree/main/schemas/v{version.minor}'
   }
 
@@ -32,7 +33,8 @@ class SpecificationUrls:
     return Url(url, name, Url.DOCUMENTATION)
 
 class Url(Dictable):
-  REFERENCE='reference'
+  EXTERNAL_REFERENCE='external reference'
+  INTERNAL_REFERENCE='internal reference'
   DOCUMENTATION='documentation'
 
   def __init__(self, url, name, type):
@@ -71,9 +73,20 @@ class DataUrls(Data):
         url = link['href']
         if not url.startswith('#'):
           name = link.get_text()
-          self.add_url(Url(url, name, Url.REFERENCE))
+          self.add_url(Url(url, name, Url.EXTERNAL_REFERENCE))
+        elif self.get_source().type != ContentType.DOCUMENT:
+          name = link.get_text()
+          self.add_url(Url(url, name, Url.INTERNAL_REFERENCE))
   
+  def get_urls(self, type):
+    urls = []
+    for url in self.urls:
+      if url.type == type:
+        urls.append(url)
+    return urls 
+
   def add_url(self, data_url):
+    # TODO add target data retrieval (page title, section title)
     found = False
     for url in self.urls:
       found = (data_url.name == url.name and

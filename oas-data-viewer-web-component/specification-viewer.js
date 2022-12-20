@@ -321,7 +321,7 @@ class SpecificationViewer extends HTMLElement {
     let list = '<h2>Reference Links</h2><ul>'
     let count = 0;
     data.urls.forEach(url => {
-      if(url.type === 'reference'){
+      if(url.type !== 'documentation'){
         list += `<li><a class="reference-link" href="${url.url}">${url.name}</li>`;
         count++;
       }
