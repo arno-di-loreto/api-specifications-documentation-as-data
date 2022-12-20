@@ -288,6 +288,39 @@ class SpecificationViewer extends HTMLElement {
       font-size: 0.8rem
     }
 
+    .diagram-link {
+      cursor: pointer;
+    }
+
+    .diagram-viewer {
+      top: 248px;
+      left: 10px;
+      position: absolute;
+      background: white;
+      z-index: 9999;
+      border: green;
+      border-style: solid;
+      box-shadow: 10px 5px 5px green;
+    }
+
+    .diagram-viewer img {
+      max-width: 1980px;
+    }
+
+    .diagram-viewer-header {
+      padding: 0.4rem;
+    }
+
+    .diagram-viewer-button {
+      font-size: 1.2rem;
+      background-color: red;
+      color: white;
+      padding: 0.3rem;
+      border-radius: 8px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
 
     `;
 
@@ -384,7 +417,6 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlClassDiagram(){
-    const url = this.src.replace('.json', '.svg');
     const diagram = this._createNodes();
     diagram.setAttribute('data-type', 'children');
     const li = this._createNode();
@@ -394,7 +426,8 @@ class SpecificationViewer extends HTMLElement {
       <div>
         <div class="node-content${this.getNodeContentDefaultVisibility()}">
           <ul>
-            <li><a href="${url}" target="class-diagram">PlantUML SVG (new window)</li>
+            <li class="diagram-link" data="${this.src.replace('.json', '.svg')}" data-action="diagram">PlantUML (SVG)</li>
+            <li class="diagram-link" data="${this.src.replace('.json', '.png')}" data-action="diagram">PlantUML (PNG)</li>
           </ul>
         </div>
       </div>
@@ -505,12 +538,12 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlSchemaSection() {
-    return this._getHtmlSection('schema', 'Schema', this.specification.history);
+    return this._getHtmlSection('schema', 'Schemas', this.specification.history);
   }
 
   _getHtmlClassDiagramSection() {
     const children = [{url: this.src.replace('.json', '.svg')}]
-    return this._getHtmlSection('class-diagram', 'Class diagram', children);
+    return this._getHtmlSection('class-diagram', 'Class diagrams', children);
   }
 
   _getAllHtmlSchemas(){
@@ -746,6 +779,22 @@ class SpecificationViewer extends HTMLElement {
     const dataAction = elementClicked.getAttribute('data-action');
     if(dataAction == 'children'){
       this.showHideChildren(elementClicked);
+    }
+    else if(dataAction == 'diagram'){
+      console.log('opening diagram');
+      console.log(elementClicked);
+      const url = elementClicked.getAttribute('data');
+      console.log(url);
+      const diagramViewer = document.createElement('div');
+      diagramViewer.classList.add('diagram-viewer')
+      const innerHtml = `<div class="diagram-viewer-header"><span class="diagram-viewer-button" data-action="diagram-close">Close</span></div><img src="${url}">`;
+      diagramViewer.innerHTML = innerHtml;
+      this.shadowRoot.appendChild(diagramViewer);
+    }
+    else if(dataAction == 'diagram-close'){
+      console.log('closing diagram');
+      // TODO replace by a more clever get
+      elementClicked.parentElement.parentElement.remove();
     }
   }
 

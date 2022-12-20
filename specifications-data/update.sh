@@ -8,4 +8,7 @@ pipenv run python src/OasMarkdownParserCli.py ../specifications/2.0.md ../specif
 plantuml -tsvg ../specifications-data/3.1.0.puml
 plantuml -tsvg ../specifications-data/3.0.3.puml
 plantuml -tsvg ../specifications-data/2.0.puml
+plantuml -tpng ../specifications-data/3.1.0.puml
+plantuml -tpng ../specifications-data/3.0.3.puml
+plantuml -tpng ../specifications-data/2.0.puml
 cd ../specifications-data

@@ -1,5 +1,4 @@
 @startuml
-note "Back to the [[/oas-data-viewer-web-component OpenAPI Map v2 Alpha]]" as TITLE
 class "Swagger" #line:Aquamarine;line.bold {
   swagger : string
   info : Info

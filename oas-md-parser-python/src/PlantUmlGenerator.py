@@ -27,7 +27,7 @@ class PlantUmlGenerator:
   
   def get_plantuml(self, ref_relations = False):
     puml = '@startuml\n'
-    puml += 'note "Back to the [[/oas-data-viewer-web-component OpenAPI Map v2 Alpha]]" as TITLE\n'
+    #puml += 'note "Back to the [[/oas-data-viewer-web-component OpenAPI Map v2 Alpha]]" as TITLE\n'
     puml += self.__gen_classes__(ref_relations)
     puml += '@enduml\n'
     return puml
