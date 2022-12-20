@@ -1,0 +1,324 @@
+@startuml
+note "Back to the [[/oas-data-viewer-web-component OpenAPI Map v2 Alpha]]" as TITLE
+class "OpenAPI" #line:Aquamarine;line.bold {
+  -openapi : string
+  -info : Info
+  servers : array of Server
+  -paths : Paths
+  components : Components
+  security : array of Security Requirement
+  tags : array of Tag
+  externalDocs : External Documentation
+  ^x- : Any
+}
+"OpenAPI::info"*-->"Info" #Blue
+"OpenAPI::servers"*-->"Server" #CornflowerBlue
+"OpenAPI::paths"*-->"Paths" #DarkMagenta
+"OpenAPI::components"*-->"Components" #DarkGreen
+"OpenAPI::security"*-->"Security Requirement" #LightSeaGreen
+"OpenAPI::tags"*-->"Tag" #GreenYellow
+"OpenAPI::externalDocs"*-->"External Documentation" #DarkSalmon
+
+class "Info" #line:Blue;line.bold {
+  -title : string
+  description : string
+  termsOfService : string
+  contact : Contact
+  license : License
+  -version : string
+  ^x- : Any
+}
+"Info::contact"*-->"Contact" #CadetBlue
+"Info::license"*-->"License" #Coral
+
+class "Contact" #line:CadetBlue;line.bold {
+  name : string
+  url : string
+  email : string
+  ^x- : Any
+}
+
+class "License" #line:Coral;line.bold {
+  -name : string
+  url : string
+  ^x- : Any
+}
+
+class "Server" #line:CornflowerBlue;line.bold {
+  -url : string
+  description : string
+  variables : map of Server Variable
+  ^x- : Any
+}
+"Server::variables"*-->"Server Variable" #DarkCyan
+
+class "Server Variable" #line:DarkCyan;line.bold {
+  enum : array of string
+  -default : string
+  description : string
+  ^x- : Any
+}
+
+class "Components" #line:DarkGreen;line.bold {
+  schemas : map of Schema or $ref
+  responses : map of Response or $ref
+  parameters : map of Parameter or $ref
+  examples : map of Example or $ref
+  requestBodies : map of Request Body or $ref
+  headers : map of Header or $ref
+  securitySchemes : map of Security Scheme or $ref
+  links : map of Link or $ref
+  callbacks : map of Callback or $ref
+  ^x- : Any
+}
+"Components::schemas"*-->"Schema" #IndianRed
+"Components::responses"*-->"Response" #DeepSkyBlue
+"Components::parameters"*-->"Parameter" #DarkSeaGreen
+"Components::examples"*-->"Example" #ForestGreen
+"Components::requestBodies"*-->"Request Body" #DarkSlateBlue
+"Components::headers"*-->"Header" #Gold
+"Components::securitySchemes"*-->"Security Scheme" #LightGreen
+"Components::links"*-->"Link" #Fuchsia
+"Components::callbacks"*-->"Callback" #FireBrick
+
+class "Paths" #line:DarkMagenta;line.bold {
+  /path : Path Item
+  ^x- : Any
+}
+"Paths::/path"*-->"Path Item" #DarkOrange
+
+class "Path Item" #line:DarkOrange;line.bold {
+  $ref : string
+  summary : string
+  description : string
+  get : Operation
+  put : Operation
+  post : Operation
+  delete : Operation
+  options : Operation
+  head : Operation
+  patch : Operation
+  trace : Operation
+  servers : array of Server
+  parameters : array of Parameter or $ref
+  ^x- : Any
+}
+"Path Item::get"*-->"Operation" #DarkRed
+"Path Item::put"*-->"Operation" #DarkRed
+"Path Item::post"*-->"Operation" #DarkRed
+"Path Item::delete"*-->"Operation" #DarkRed
+"Path Item::options"*-->"Operation" #DarkRed
+"Path Item::head"*-->"Operation" #DarkRed
+"Path Item::patch"*-->"Operation" #DarkRed
+"Path Item::trace"*-->"Operation" #DarkRed
+"Path Item::servers"*-->"Server" #CornflowerBlue
+"Path Item::parameters"*-->"Parameter" #DarkSeaGreen
+
+class "Operation" #line:DarkRed;line.bold {
+  tags : array of string
+  summary : string
+  description : string
+  externalDocs : External Documentation
+  operationId : string
+  parameters : array of Parameter or $ref
+  requestBody : Request Body or $ref
+  -responses : Responses
+  callbacks : map of Callback or $ref
+  deprecated : boolean
+  security : array of Security Requirement
+  servers : array of Server
+  ^x- : Any
+}
+"Operation::externalDocs"*-->"External Documentation" #DarkSalmon
+"Operation::parameters"*-->"Parameter" #DarkSeaGreen
+"Operation::requestBody"*-->"Request Body" #DarkSlateBlue
+"Operation::responses"*-->"Responses" #DeepPink
+"Operation::callbacks"*-->"Callback" #FireBrick
+"Operation::security"*-->"Security Requirement" #LightSeaGreen
+"Operation::servers"*-->"Server" #CornflowerBlue
+
+class "External Documentation" #line:DarkSalmon;line.bold {
+  description : string
+  -url : string
+  ^x- : Any
+}
+
+class "Parameter" #line:DarkSeaGreen;line.bold {
+  -name : string
+  -in : string
+  description : string
+  required : boolean
+  deprecated : boolean
+  allowEmptyValue : boolean
+  style : string
+  explode : boolean
+  allowReserved : boolean
+  schema : Schema or $ref
+  example : Any
+  examples : map of Example or $ref
+  content : map of Media Type
+  ^x- : Any
+}
+"Parameter::schema"*-->"Schema" #IndianRed
+"Parameter::examples"*-->"Example" #ForestGreen
+"Parameter::content"*-->"Media Type" #DarkTurquoise
+
+class "Request Body" #line:DarkSlateBlue;line.bold {
+  description : string
+  -content : map of Media Type
+  required : boolean
+  ^x- : Any
+}
+"Request Body::content"*-->"Media Type" #DarkTurquoise
+
+class "Media Type" #line:DarkTurquoise;line.bold {
+  schema : Schema or $ref
+  example : Any
+  examples : map of Example or $ref
+  encoding : map of Encoding
+  ^x- : Any
+}
+"Media Type::schema"*-->"Schema" #IndianRed
+"Media Type::examples"*-->"Example" #ForestGreen
+"Media Type::encoding"*-->"Encoding" #DarkViolet
+
+class "Encoding" #line:DarkViolet;line.bold {
+  contentType : string
+  headers : map of Header or $ref
+  style : string
+  explode : boolean
+  allowReserved : boolean
+  ^x- : Any
+}
+"Encoding::headers"*-->"Header" #Gold
+
+class "Responses" #line:DeepPink;line.bold {
+  default : Response or $ref
+  HTTP Status Code : Response or $ref
+  ^x- : Any
+}
+"Responses::default"*-->"Response" #DeepSkyBlue
+"Responses::HTTP Status Code"*-->"Response" #DeepSkyBlue
+
+class "Response" #line:DeepSkyBlue;line.bold {
+  -description : string
+  headers : map of Header or $ref
+  content : map of Media Type
+  links : map of Link or $ref
+  ^x- : Any
+}
+"Response::headers"*-->"Header" #Gold
+"Response::content"*-->"Media Type" #DarkTurquoise
+"Response::links"*-->"Link" #Fuchsia
+
+class "Callback" #line:FireBrick;line.bold {
+  expression : Path Item
+  ^x- : Any
+}
+"Callback::expression"*-->"Path Item" #DarkOrange
+
+class "Example" #line:ForestGreen;line.bold {
+  summary : string
+  description : string
+  value : Any
+  externalValue : string
+  ^x- : Any
+}
+
+class "Link" #line:Fuchsia;line.bold {
+  operationRef : string
+  operationId : string
+  parameters : map of 
+  requestBody : 
+  description : string
+  server : Server
+  ^x- : Any
+}
+"Link::server"*-->"Server" #CornflowerBlue
+
+class "Header" #line:Gold;line.bold {
+  ^x- : Any
+}
+
+class "Tag" #line:GreenYellow;line.bold {
+  -name : string
+  description : string
+  externalDocs : External Documentation
+  ^x- : Any
+}
+"Tag::externalDocs"*-->"External Documentation" #DarkSalmon
+
+class "Reference" #line:HotPink;line.bold {
+  -$ref : string
+  ^x- : Any
+}
+
+class "Schema" #line:IndianRed;line.bold {
+  nullable : boolean
+  discriminator : Discriminator
+  readOnly : boolean
+  writeOnly : boolean
+  xml : XML
+  externalDocs : External Documentation
+  example : Any
+  deprecated : boolean
+  ^x- : Any
+}
+"Schema::discriminator"*-->"Discriminator" #LightBlue
+"Schema::xml"*-->"XML" #LightCoral
+"Schema::externalDocs"*-->"External Documentation" #DarkSalmon
+
+class "Discriminator" #line:LightBlue;line.bold {
+  -propertyName : string
+  mapping : map of string
+  ^x- : Any
+}
+
+class "XML" #line:LightCoral;line.bold {
+  name : string
+  namespace : string
+  prefix : string
+  attribute : boolean
+  wrapped : boolean
+  ^x- : Any
+}
+
+class "Security Scheme" #line:LightGreen;line.bold {
+  -type : string
+  description : string
+  -name : string
+  -in : string
+  -scheme : string
+  bearerFormat : string
+  -flows : OAuth Flows
+  -openIdConnectUrl : string
+  ^x- : Any
+}
+"Security Scheme::flows"*-->"OAuth Flows" #LightPink
+
+class "OAuth Flows" #line:LightPink;line.bold {
+  implicit : OAuth Flow
+  password : OAuth Flow
+  clientCredentials : OAuth Flow
+  authorizationCode : OAuth Flow
+  ^x- : Any
+}
+"OAuth Flows::implicit"*-->"OAuth Flow" #LightSalmon
+"OAuth Flows::password"*-->"OAuth Flow" #LightSalmon
+"OAuth Flows::clientCredentials"*-->"OAuth Flow" #LightSalmon
+"OAuth Flows::authorizationCode"*-->"OAuth Flow" #LightSalmon
+
+class "OAuth Flow" #line:LightSalmon;line.bold {
+  -authorizationUrl : string
+  -tokenUrl : string
+  refreshUrl : string
+  -scopes : map of string
+  ^x- : Any
+}
+
+class "Security Requirement" #line:LightSeaGreen;line.bold {
+  name : array of string
+  ^x- : Any
+}
+
+@enduml

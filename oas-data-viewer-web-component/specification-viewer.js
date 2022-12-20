@@ -56,7 +56,6 @@ class SpecificationViewer extends HTMLElement {
       max-width: 600px;
       z-index:1;
     }
-        
     
     /* Connectors */
     
@@ -377,10 +376,30 @@ class SpecificationViewer extends HTMLElement {
     const sections = this._createNodes();
     sections.appendChild(this._getHtmlHistorySection());
     sections.appendChild(this._getHtmlSchemaSection());
+    sections.appendChild(this._getHtmlClassDiagramSection());
     sections.appendChild(this._getHtmlConceptsSection());
     htmlSpecificationIntro.appendChild(sections);
     htmlSpecificationTree.appendChild(htmlSpecificationIntro)
     return htmlSpecificationTree;
+  }
+
+  _getHtmlClassDiagram(){
+    const url = this.src.replace('.json', '.svg');
+    const diagram = this._createNodes();
+    diagram.setAttribute('data-type', 'children');
+    const li = this._createNode();
+    li.setAttribute('data-type', 'events');
+    diagram.appendChild(li);
+    li.innerHTML = `
+      <div>
+        <div class="node-content${this.getNodeContentDefaultVisibility()}">
+          <ul>
+            <li><a href="${url}" target="class-diagram">PlantUML SVG (new window)</li>
+          </ul>
+        </div>
+      </div>
+    `;
+    return diagram;
   }
 
   _getHtmlHistoryEvents(){
@@ -487,6 +506,11 @@ class SpecificationViewer extends HTMLElement {
 
   _getHtmlSchemaSection() {
     return this._getHtmlSection('schema', 'Schema', this.specification.history);
+  }
+
+  _getHtmlClassDiagramSection() {
+    const children = [{url: this.src.replace('.json', '.svg')}]
+    return this._getHtmlSection('class-diagram', 'Class diagram', children);
   }
 
   _getAllHtmlSchemas(){
@@ -701,6 +725,9 @@ class SpecificationViewer extends HTMLElement {
       }
       else if(dataType == 'section' && dataName == 'concepts'){
         nodes = this._getHtmlConcepts()
+      }
+      else if(dataType == 'section' && dataName == 'class-diagram'){
+        nodes = this._getHtmlClassDiagram()
       }
       else {
         console.log('unexpected dataType and dataName', dataType, dataName)

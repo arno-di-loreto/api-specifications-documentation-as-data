@@ -1167,7 +1167,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Info Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "info"
                 }
             ]
@@ -1317,7 +1317,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Contact Object",
+                    "schemaName": "Info Object",
                     "fieldName": "contact"
                 }
             ]
@@ -1439,7 +1439,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "License Object",
+                    "schemaName": "Info Object",
                     "fieldName": "license"
                 }
             ]
@@ -1558,7 +1558,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Paths Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "paths"
                 }
             ]
@@ -1947,7 +1947,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Path Item Object",
+                    "schemaName": "Paths Object",
                     "fieldName": "/{path}"
                 }
             ]
@@ -2430,31 +2430,31 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Operation Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "get"
                 },
                 {
-                    "schemaName": "Operation Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "put"
                 },
                 {
-                    "schemaName": "Operation Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "post"
                 },
                 {
-                    "schemaName": "Operation Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "delete"
                 },
                 {
-                    "schemaName": "Operation Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "options"
                 },
                 {
-                    "schemaName": "Operation Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "head"
                 },
                 {
-                    "schemaName": "Operation Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "patch"
                 }
             ]
@@ -2581,19 +2581,19 @@
             ],
             "usages": [
                 {
-                    "schemaName": "External Documentation Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "externalDocs"
                 },
                 {
-                    "schemaName": "External Documentation Object",
+                    "schemaName": "Operation Object",
                     "fieldName": "externalDocs"
                 },
                 {
-                    "schemaName": "External Documentation Object",
+                    "schemaName": "Tag Object",
                     "fieldName": "externalDocs"
                 },
                 {
-                    "schemaName": "External Documentation Object",
+                    "schemaName": "Schema Object",
                     "fieldName": "externalDocs"
                 }
             ]
@@ -3398,15 +3398,15 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Parameter Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "parameters"
                 },
                 {
-                    "schemaName": "Parameter Object",
+                    "schemaName": "Operation Object",
                     "fieldName": "parameters"
                 },
                 {
-                    "schemaName": "Parameter Object",
+                    "schemaName": "Parameters Definitions Object",
                     "fieldName": "{name}"
                 }
             ]
@@ -3978,7 +3978,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Items Object",
+                    "schemaName": "Parameter Object",
                     "fieldName": "items"
                 },
                 {
@@ -4146,7 +4146,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Responses Object",
+                    "schemaName": "Operation Object",
                     "fieldName": "responses"
                 }
             ]
@@ -4344,15 +4344,15 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Response Object",
+                    "schemaName": "Responses Object",
                     "fieldName": "default"
                 },
                 {
-                    "schemaName": "Response Object",
+                    "schemaName": "Responses Object",
                     "fieldName": "{HTTP Status Code}"
                 },
                 {
-                    "schemaName": "Response Object",
+                    "schemaName": "Responses Definitions Object",
                     "fieldName": "{name}"
                 }
             ]
@@ -4418,7 +4418,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Headers Object",
+                    "schemaName": "Response Object",
                     "fieldName": "headers"
                 }
             ]
@@ -4484,7 +4484,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Example Object",
+                    "schemaName": "Response Object",
                     "fieldName": "examples"
                 }
             ]
@@ -4570,7 +4570,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Header Object",
+                    "schemaName": "Headers Object",
                     "fieldName": "{name}"
                 }
             ]
@@ -4735,7 +4735,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Tag Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "tags"
                 }
             ]
@@ -4811,19 +4811,19 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Reference Object",
+                    "schemaName": "Path Item Object",
                     "fieldName": "parameters"
                 },
                 {
-                    "schemaName": "Reference Object",
+                    "schemaName": "Operation Object",
                     "fieldName": "parameters"
                 },
                 {
-                    "schemaName": "Reference Object",
+                    "schemaName": "Responses Object",
                     "fieldName": "default"
                 },
                 {
-                    "schemaName": "Reference Object",
+                    "schemaName": "Responses Object",
                     "fieldName": "{HTTP Status Code}"
                 }
             ]
@@ -5074,15 +5074,15 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Schema Object",
+                    "schemaName": "Parameter Object",
                     "fieldName": "schema"
                 },
                 {
-                    "schemaName": "Schema Object",
+                    "schemaName": "Response Object",
                     "fieldName": "schema"
                 },
                 {
-                    "schemaName": "Schema Object",
+                    "schemaName": "Definitions Object",
                     "fieldName": "{name}"
                 }
             ]
@@ -5293,7 +5293,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "XML Object",
+                    "schemaName": "Schema Object",
                     "fieldName": "xml"
                 }
             ]
@@ -5359,7 +5359,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Definitions Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "definitions"
                 }
             ]
@@ -5425,7 +5425,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Parameters Definitions Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "parameters"
                 }
             ]
@@ -5491,7 +5491,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Responses Definitions Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "responses"
                 }
             ]
@@ -5557,7 +5557,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Security Definitions Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "securityDefinitions"
                 }
             ]
@@ -5860,7 +5860,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Security Scheme Object",
+                    "schemaName": "Security Definitions Object",
                     "fieldName": "{name}"
                 }
             ]
@@ -5921,7 +5921,7 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Scopes Object",
+                    "schemaName": "Security Scheme Object",
                     "fieldName": "scopes"
                 }
             ]
@@ -5992,11 +5992,11 @@
             ],
             "usages": [
                 {
-                    "schemaName": "Security Requirement Object",
+                    "schemaName": "Swagger Object",
                     "fieldName": "security"
                 },
                 {
-                    "schemaName": "Security Requirement Object",
+                    "schemaName": "Operation Object",
                     "fieldName": "security"
                 }
             ]

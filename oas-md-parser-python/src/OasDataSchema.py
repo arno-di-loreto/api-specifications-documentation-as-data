@@ -181,7 +181,6 @@ class DataSchemas(Data):
   
   def __init_schemas_usages(self):
     for schema in self.schemas:
-      print('retrieving usages of ' + schema.name)
       schema.usages = self.__get_schema_usages(schema)
 
   def __get_schema_usages(self, schema):
@@ -189,5 +188,5 @@ class DataSchemas(Data):
     for parentSchema in self.schemas:
       for field in parentSchema.fields:
           if schema.name in field.type.types:
-            usages.append(DataSchemaUsage(schema.name, field.name))
+            usages.append(DataSchemaUsage(parentSchema.name, field.name))
     return usages
