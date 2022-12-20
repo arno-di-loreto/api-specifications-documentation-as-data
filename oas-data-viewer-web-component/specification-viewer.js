@@ -282,6 +282,14 @@ class SpecificationViewer extends HTMLElement {
       font-size: 0.8rem;
     }
 
+    .usages h2 {
+      font-size: 0.9rem;
+    }
+    .usages {
+      font-size: 0.8rem
+    }
+
+
     `;
 
     return style;
@@ -313,6 +321,20 @@ class SpecificationViewer extends HTMLElement {
     const node = document.createElement('li')
     node.classList.add('node');
     return node
+  }
+
+  _getHtmlUsages(schema) {
+    const usages = document.createElement('div');
+    usages.classList.add('usages');
+    if(schema.usages.length > 0){
+      let list = '<h2>Usages</h2><ul>';
+      schema.usages.forEach(usage => {
+        list += `<li>${usage.schemaName}.${usage.fieldName}</li>`;
+      });
+      list+='</ul>'
+      usages.innerHTML = list;
+    }
+    return usages;
   }
 
   _getHtmlReferenceLinks(data){
@@ -502,6 +524,7 @@ class SpecificationViewer extends HTMLElement {
             <div class="links">
               <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
             </div>
+            ${this._getHtmlUsages(schema).outerHTML}
             ${this._getHtmlReferenceLinks(schema).outerHTML}
           </div>
         </div>

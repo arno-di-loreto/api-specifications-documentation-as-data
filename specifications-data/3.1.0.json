@@ -972,7 +972,7 @@
                             "references": []
                         }
                     ],
-                    "name": " jsonSchemaDialect",
+                    "name": "jsonSchemaDialect",
                     "nameType": "fixed",
                     "type": {
                         "parentType": null,
@@ -1282,7 +1282,8 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
-            ]
+            ],
+            "usages": []
         },
         {
             "ids": [
@@ -1558,6 +1559,12 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Info Object",
+                    "fieldName": "info"
+                }
             ]
         },
         {
@@ -1701,6 +1708,12 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Contact Object",
+                    "fieldName": "contact"
                 }
             ]
         },
@@ -1850,6 +1863,12 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "License Object",
+                    "fieldName": "license"
                 }
             ]
         },
@@ -2004,6 +2023,24 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Server Object",
+                    "fieldName": "servers"
+                },
+                {
+                    "schemaName": "Server Object",
+                    "fieldName": "servers"
+                },
+                {
+                    "schemaName": "Server Object",
+                    "fieldName": "servers"
+                },
+                {
+                    "schemaName": "Server Object",
+                    "fieldName": "server"
                 }
             ]
         },
@@ -2164,6 +2201,12 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Server Variable Object",
+                    "fieldName": "variables"
+                }
             ]
         },
         {
@@ -2199,7 +2242,7 @@
                             "references": []
                         }
                     ],
-                    "name": " schemas",
+                    "name": "schemas",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2237,7 +2280,7 @@
                             "references": []
                         }
                     ],
-                    "name": " responses",
+                    "name": "responses",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2281,7 +2324,7 @@
                             "references": []
                         }
                     ],
-                    "name": " parameters",
+                    "name": "parameters",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2325,7 +2368,7 @@
                             "references": []
                         }
                     ],
-                    "name": " examples",
+                    "name": "examples",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2369,7 +2412,7 @@
                             "references": []
                         }
                     ],
-                    "name": " requestBodies",
+                    "name": "requestBodies",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2413,7 +2456,7 @@
                             "references": []
                         }
                     ],
-                    "name": " headers",
+                    "name": "headers",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2457,7 +2500,7 @@
                             "references": []
                         }
                     ],
-                    "name": " securitySchemes",
+                    "name": "securitySchemes",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2501,7 +2544,7 @@
                             "references": []
                         }
                     ],
-                    "name": " links",
+                    "name": "links",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2545,7 +2588,7 @@
                             "references": []
                         }
                     ],
-                    "name": " callbacks",
+                    "name": "callbacks",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2589,7 +2632,7 @@
                             "references": []
                         }
                     ],
-                    "name": " pathItems",
+                    "name": "pathItems",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -2652,6 +2695,12 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Components Object",
+                    "fieldName": "components"
                 }
             ]
         },
@@ -2765,6 +2814,12 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Paths Object",
+                    "fieldName": "paths"
                 }
             ]
         },
@@ -3281,6 +3336,24 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Path Item Object",
+                    "fieldName": "webhooks"
+                },
+                {
+                    "schemaName": "Path Item Object",
+                    "fieldName": "pathItems"
+                },
+                {
+                    "schemaName": "Path Item Object",
+                    "fieldName": "/{path}"
+                },
+                {
+                    "schemaName": "Path Item Object",
+                    "fieldName": "{expression}"
+                }
             ]
         },
         {
@@ -3780,6 +3853,40 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "get"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "put"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "post"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "delete"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "options"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "head"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "patch"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "trace"
+                }
             ]
         },
         {
@@ -3900,6 +4007,24 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "External Documentation Object",
+                    "fieldName": "externalDocs"
+                },
+                {
+                    "schemaName": "External Documentation Object",
+                    "fieldName": "externalDocs"
+                },
+                {
+                    "schemaName": "External Documentation Object",
+                    "fieldName": "externalDocs"
+                },
+                {
+                    "schemaName": "External Documentation Object",
+                    "fieldName": "externalDocs"
                 }
             ]
         },
@@ -4088,7 +4213,7 @@
                             "references": []
                         }
                     ],
-                    "name": " deprecated",
+                    "name": "deprecated",
                     "nameType": "fixed",
                     "type": {
                         "parentType": null,
@@ -4116,7 +4241,7 @@
                             "references": []
                         }
                     ],
-                    "name": " allowEmptyValue",
+                    "name": "allowEmptyValue",
                     "nameType": "fixed",
                     "type": {
                         "parentType": null,
@@ -4401,6 +4526,20 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Parameter Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Parameter Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Parameter Object",
+                    "fieldName": "parameters"
+                }
             ]
         },
         {
@@ -4559,6 +4698,16 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Request Body Object",
+                    "fieldName": "requestBodies"
+                },
+                {
+                    "schemaName": "Request Body Object",
+                    "fieldName": "requestBody"
                 }
             ]
         },
@@ -4752,6 +4901,20 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Media Type Object",
+                    "fieldName": "content"
+                },
+                {
+                    "schemaName": "Media Type Object",
+                    "fieldName": "content"
+                },
+                {
+                    "schemaName": "Media Type Object",
+                    "fieldName": "content"
                 }
             ]
         },
@@ -4999,6 +5162,12 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Encoding Object",
+                    "fieldName": "encoding"
+                }
             ]
         },
         {
@@ -5146,6 +5315,12 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Responses Object",
+                    "fieldName": "responses"
                 }
             ]
         },
@@ -5366,6 +5541,20 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Response Object",
+                    "fieldName": "responses"
+                },
+                {
+                    "schemaName": "Response Object",
+                    "fieldName": "default"
+                },
+                {
+                    "schemaName": "Response Object",
+                    "fieldName": "HTTP Status Code"
+                }
             ]
         },
         {
@@ -5479,6 +5668,16 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Callback Object",
+                    "fieldName": "callbacks"
+                },
+                {
+                    "schemaName": "Callback Object",
+                    "fieldName": "callbacks"
                 }
             ]
         },
@@ -5661,6 +5860,20 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Example Object",
+                    "fieldName": "examples"
+                },
+                {
+                    "schemaName": "Example Object",
+                    "fieldName": "examples"
+                },
+                {
+                    "schemaName": "Example Object",
+                    "fieldName": "examples"
                 }
             ]
         },
@@ -5932,6 +6145,16 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Link Object",
+                    "fieldName": "links"
+                },
+                {
+                    "schemaName": "Link Object",
+                    "fieldName": "links"
+                }
             ]
         },
         {
@@ -6001,6 +6224,20 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Header Object",
+                    "fieldName": "headers"
+                },
+                {
+                    "schemaName": "Header Object",
+                    "fieldName": "headers"
+                },
+                {
+                    "schemaName": "Header Object",
+                    "fieldName": "headers"
                 }
             ]
         },
@@ -6161,6 +6398,12 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Tag Object",
+                    "fieldName": "tags"
+                }
             ]
         },
         {
@@ -6319,6 +6562,96 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "webhooks"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "responses"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "examples"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "requestBodies"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "headers"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "securitySchemes"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "links"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "callbacks"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "pathItems"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "requestBody"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "callbacks"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "examples"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "examples"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "headers"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "default"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "HTTP Status Code"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "headers"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "links"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "{expression}"
                 }
             ]
         },
@@ -6527,6 +6860,20 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Schema Object",
+                    "fieldName": "schemas"
+                },
+                {
+                    "schemaName": "Schema Object",
+                    "fieldName": "schema"
+                },
+                {
+                    "schemaName": "Schema Object",
+                    "fieldName": "schema"
+                }
             ]
         },
         {
@@ -6590,7 +6937,7 @@
                             "references": []
                         }
                     ],
-                    "name": " mapping",
+                    "name": "mapping",
                     "nameType": "fixed",
                     "type": {
                         "parentType": "map",
@@ -6642,6 +6989,12 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Discriminator Object",
+                    "fieldName": "discriminator"
                 }
             ]
         },
@@ -6847,6 +7200,12 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "XML Object",
+                    "fieldName": "xml"
                 }
             ]
         },
@@ -7175,6 +7534,12 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Security Scheme Object",
+                    "fieldName": "securitySchemes"
+                }
             ]
         },
         {
@@ -7367,6 +7732,12 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "OAuth Flows Object",
+                    "fieldName": "flows"
+                }
             ]
         },
         {
@@ -7543,6 +7914,24 @@
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "OAuth Flow Object",
+                    "fieldName": "implicit"
+                },
+                {
+                    "schemaName": "OAuth Flow Object",
+                    "fieldName": "password"
+                },
+                {
+                    "schemaName": "OAuth Flow Object",
+                    "fieldName": "clientCredentials"
+                },
+                {
+                    "schemaName": "OAuth Flow Object",
+                    "fieldName": "authorizationCode"
+                }
             ]
         },
         {
@@ -7660,6 +8049,16 @@
                         }
                     ],
                     "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Security Requirement Object",
+                    "fieldName": "security"
+                },
+                {
+                    "schemaName": "Security Requirement Object",
+                    "fieldName": "security"
                 }
             ]
         }

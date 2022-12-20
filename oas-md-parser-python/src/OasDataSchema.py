@@ -1,3 +1,4 @@
+from UtilsClass import Dictable
 from OasData import Data
 from OasDataVersion import DataVersion
 import re
@@ -53,7 +54,7 @@ class DataField(Data, DataWithUrls):
 
   def __init__name(self):
     cell = self.get_source().get_cell_by_header_text(re.compile('^Field (Name|Pattern)$'))
-    self.name = cell.get_text()
+    self.name = cell.get_text().strip()
 
   def __init__type(self):
     cell = self.get_source().get_cell_by_header_text(re.compile('^Type$'))
@@ -84,6 +85,13 @@ class DataField(Data, DataWithUrls):
       self.rich_text = rich_text_search.group('format')
     else:
       self.rich_text = None
+
+class DataSchemaUsage(Dictable):
+
+  def __init__(self, schema_name, field_name):
+    self.schema_name = schema_name
+    self.field_name = field_name
+
 
 class DataSchema(Data, DataWithUrls):
   def __init__(self, source, data_schemas):
@@ -169,3 +177,17 @@ class DataSchemas(Data):
     for content in schema_section.get_contents():
       if content.type == ContentType.SECTION:
         self.schemas.append(DataSchema(content, self))
+    self.__init_schemas_usages()
+  
+  def __init_schemas_usages(self):
+    for schema in self.schemas:
+      print('retrieving usages of ' + schema.name)
+      schema.usages = self.__get_schema_usages(schema)
+
+  def __get_schema_usages(self, schema):
+    usages = []
+    for parentSchema in self.schemas:
+      for field in parentSchema.fields:
+          if schema.name in field.type.types:
+            usages.append(DataSchemaUsage(schema.name, field.name))
+    return usages

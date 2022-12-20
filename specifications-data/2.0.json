@@ -920,7 +920,8 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
-            ]
+            ],
+            "usages": []
         },
         {
             "ids": [
@@ -1163,6 +1164,12 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Info Object",
+                    "fieldName": "info"
+                }
             ]
         },
         {
@@ -1307,6 +1314,12 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Contact Object",
+                    "fieldName": "contact"
+                }
             ]
         },
         {
@@ -1423,6 +1436,12 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "License Object",
+                    "fieldName": "license"
+                }
             ]
         },
         {
@@ -1535,6 +1554,12 @@
                         }
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Paths Object",
+                    "fieldName": "paths"
                 }
             ]
         },
@@ -1918,6 +1943,12 @@
                         }
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Path Item Object",
+                    "fieldName": "/{path}"
                 }
             ]
         },
@@ -2396,6 +2427,36 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "get"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "put"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "post"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "delete"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "options"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "head"
+                },
+                {
+                    "schemaName": "Operation Object",
+                    "fieldName": "patch"
+                }
             ]
         },
         {
@@ -2516,6 +2577,24 @@
                         }
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "External Documentation Object",
+                    "fieldName": "externalDocs"
+                },
+                {
+                    "schemaName": "External Documentation Object",
+                    "fieldName": "externalDocs"
+                },
+                {
+                    "schemaName": "External Documentation Object",
+                    "fieldName": "externalDocs"
+                },
+                {
+                    "schemaName": "External Documentation Object",
+                    "fieldName": "externalDocs"
                 }
             ]
         },
@@ -3316,6 +3395,20 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Parameter Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Parameter Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Parameter Object",
+                    "fieldName": "{name}"
+                }
             ]
         },
         {
@@ -3882,6 +3975,16 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Items Object",
+                    "fieldName": "items"
+                },
+                {
+                    "schemaName": "Items Object",
+                    "fieldName": "items"
+                }
             ]
         },
         {
@@ -4039,6 +4142,12 @@
                         }
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Responses Object",
+                    "fieldName": "responses"
                 }
             ]
         },
@@ -4232,6 +4341,20 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Response Object",
+                    "fieldName": "default"
+                },
+                {
+                    "schemaName": "Response Object",
+                    "fieldName": "{HTTP Status Code}"
+                },
+                {
+                    "schemaName": "Response Object",
+                    "fieldName": "{name}"
+                }
             ]
         },
         {
@@ -4292,6 +4415,12 @@
                     ],
                     "description": "The name of the property corresponds to the name of the header. The value describes the type of the header."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Headers Object",
+                    "fieldName": "headers"
+                }
             ]
         },
         {
@@ -4351,6 +4480,12 @@
                         }
                     ],
                     "description": "The name of the property MUST be one of the Operation <code>produces</code> values (either implicit or inherited). The value SHOULD be an example of what such a response would look like."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Example Object",
+                    "fieldName": "examples"
                 }
             ]
         },
@@ -4431,6 +4566,12 @@
                         }
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Header Object",
+                    "fieldName": "{name}"
                 }
             ]
         },
@@ -4591,6 +4732,12 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Tag Object",
+                    "fieldName": "tags"
+                }
             ]
         },
         {
@@ -4660,6 +4807,24 @@
                         }
                     ],
                     "description": "The reference string."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "parameters"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "default"
+                },
+                {
+                    "schemaName": "Reference Object",
+                    "fieldName": "{HTTP Status Code}"
                 }
             ]
         },
@@ -4906,6 +5071,20 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Schema Object",
+                    "fieldName": "schema"
+                },
+                {
+                    "schemaName": "Schema Object",
+                    "fieldName": "schema"
+                },
+                {
+                    "schemaName": "Schema Object",
+                    "fieldName": "{name}"
+                }
             ]
         },
         {
@@ -5111,6 +5290,12 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "XML Object",
+                    "fieldName": "xml"
+                }
             ]
         },
         {
@@ -5170,6 +5355,12 @@
                         }
                     ],
                     "description": "A single definition, mapping a \"name\" to the schema it defines."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Definitions Object",
+                    "fieldName": "definitions"
                 }
             ]
         },
@@ -5231,6 +5422,12 @@
                     ],
                     "description": "A single parameter definition, mapping a \"name\" to the parameter it defines."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Parameters Definitions Object",
+                    "fieldName": "parameters"
+                }
             ]
         },
         {
@@ -5291,6 +5488,12 @@
                     ],
                     "description": "A single response definition, mapping a \"name\" to the response it defines."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Responses Definitions Object",
+                    "fieldName": "responses"
+                }
             ]
         },
         {
@@ -5350,6 +5553,12 @@
                         }
                     ],
                     "description": "A single security scheme definition, mapping a \"name\" to the scheme it defines."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Security Definitions Object",
+                    "fieldName": "securityDefinitions"
                 }
             ]
         },
@@ -5648,6 +5857,12 @@
                     ],
                     "description": "Allows extensions to the Swagger Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. See <a href=\"#vendorExtensions\">Vendor Extensions</a> for further details."
                 }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Security Scheme Object",
+                    "fieldName": "{name}"
+                }
             ]
         },
         {
@@ -5702,6 +5917,12 @@
                         }
                     ],
                     "description": "Maps between a name of a scope to a short description of it (as the value of the property)."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Scopes Object",
+                    "fieldName": "scopes"
                 }
             ]
         },
@@ -5767,6 +5988,16 @@
                         }
                     ],
                     "description": "Each name must correspond to a security scheme which is declared in the <a href=\"#securityDefinitions\">Security Definitions</a>. If the security scheme is of type <code>\"oauth2\"</code>, then the value is a list of scope names required for the execution. For other security scheme types, the array MUST be empty."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Security Requirement Object",
+                    "fieldName": "security"
+                },
+                {
+                    "schemaName": "Security Requirement Object",
+                    "fieldName": "security"
                 }
             ]
         }
