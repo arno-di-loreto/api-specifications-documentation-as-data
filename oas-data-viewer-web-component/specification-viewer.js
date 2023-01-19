@@ -775,16 +775,13 @@ class SpecificationViewer extends HTMLElement {
   }
 
   onclick(event) {
-    const elementClicked = event.path[0];
+    const elementClicked = event.composedPath()[0];
     const dataAction = elementClicked.getAttribute('data-action');
     if(dataAction == 'children'){
       this.showHideChildren(elementClicked);
     }
     else if(dataAction == 'diagram'){
-      console.log('opening diagram');
-      console.log(elementClicked);
       const url = elementClicked.getAttribute('data');
-      console.log(url);
       const diagramViewer = document.createElement('div');
       diagramViewer.classList.add('diagram-viewer')
       const innerHtml = `<div class="diagram-viewer-header"><span class="diagram-viewer-button" data-action="diagram-close">Close</span></div><img src="${url}">`;
@@ -792,7 +789,6 @@ class SpecificationViewer extends HTMLElement {
       this.shadowRoot.appendChild(diagramViewer);
     }
     else if(dataAction == 'diagram-close'){
-      console.log('closing diagram');
       // TODO replace by a more clever get
       elementClicked.parentElement.parentElement.remove();
     }
