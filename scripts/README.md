@@ -1,0 +1,4 @@
+- `generate-data.sh` generates JSON files for each Markdown document located in `../specifications`.
+- `generate-plantuml.sh` generates [PlantUML](https://plantuml.com/) class diagram (+ SVG and PNG images) for each Markdown document located in `../specifications` (`plantuml` command line tool must be available in PATH, can be installed with `brew install plantuml` on macOS).
+- `generate-mermaid.sh` generate [MermaidJS](https://mermaid.js.org/) class diagram (+ SVG and PNG images) for each Markdown document located in `../specifications` (requires `npx` which comes with `npm`).
+- `update-specifications` pulls Markdown documents from the [OpenAPI Specification GitHub repository](https://github.com/OAI/OpenAPI-Specification/tree/main/versions) to update the `../specifications` folder.

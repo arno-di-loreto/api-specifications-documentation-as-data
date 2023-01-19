@@ -1,0 +1,327 @@
+classDiagram
+  class OpenAPI:::OpenAPI {
+    +string openapi
+    +Info info
+    string jsonSchemaDialect
+    array~Server~ servers
+    Paths paths
+    map~PathItem🔗~ webhooks
+    Components components
+    array~SecurityRequirement~ security
+    array~Tag~ tags
+    ExternalDocumentation externalDocs
+    Any ^x-
+  }
+  OpenAPI *-- Info : OpenAPI.info
+  OpenAPI *-- Server : OpenAPI.servers
+  OpenAPI *-- Paths : OpenAPI.paths
+  OpenAPI *-- PathItem : OpenAPI.webhooks
+  OpenAPI *-- Components : OpenAPI.components
+  OpenAPI *-- SecurityRequirement : OpenAPI.security
+  OpenAPI *-- Tag : OpenAPI.tags
+  OpenAPI *-- ExternalDocumentation : OpenAPI.externalDocs
+
+  class Info:::Info {
+    +string title
+    string summary
+    string description
+    string termsOfService
+    Contact contact
+    License license
+    +string version
+    Any ^x-
+  }
+  Info *-- Contact : Info.contact
+  Info *-- License : Info.license
+
+  class Contact:::Contact {
+    string name
+    string url
+    string email
+    Any ^x-
+  }
+
+  class License:::License {
+    +string name
+    string identifier
+    string url
+    Any ^x-
+  }
+
+  class Server:::Server {
+    +string url
+    string description
+    map~ServerVariable~ variables
+    Any ^x-
+  }
+  Server *-- ServerVariable : Server.variables
+
+  class ServerVariable:::ServerVariable {
+    array~string~ enum
+    +string default
+    string description
+    Any ^x-
+  }
+
+  class Components:::Components {
+    map~Schema~ schemas
+    map~Response🔗~ responses
+    map~Parameter🔗~ parameters
+    map~Example🔗~ examples
+    map~RequestBody🔗~ requestBodies
+    map~Header🔗~ headers
+    map~SecurityScheme🔗~ securitySchemes
+    map~Link🔗~ links
+    map~Callback🔗~ callbacks
+    map~PathItem🔗~ pathItems
+    Any ^x-
+  }
+  Components *-- Schema : Components.schemas
+  Components *-- Response : Components.responses
+  Components *-- Parameter : Components.parameters
+  Components *-- Example : Components.examples
+  Components *-- RequestBody : Components.requestBodies
+  Components *-- Header : Components.headers
+  Components *-- SecurityScheme : Components.securitySchemes
+  Components *-- Link : Components.links
+  Components *-- Callback : Components.callbacks
+  Components *-- PathItem : Components.pathItems
+
+  class Paths:::Paths {
+    PathItem /path
+    Any ^x-
+  }
+  Paths *-- PathItem : Paths./path
+
+  class PathItem:::PathItem {
+    string $ref
+    string summary
+    string description
+    Operation get
+    Operation put
+    Operation post
+    Operation delete
+    Operation options
+    Operation head
+    Operation patch
+    Operation trace
+    array~Server~ servers
+    array~Parameter🔗~ parameters
+    Any ^x-
+  }
+  PathItem *-- Operation : PathItem.get
+  PathItem *-- Operation : PathItem.put
+  PathItem *-- Operation : PathItem.post
+  PathItem *-- Operation : PathItem.delete
+  PathItem *-- Operation : PathItem.options
+  PathItem *-- Operation : PathItem.head
+  PathItem *-- Operation : PathItem.patch
+  PathItem *-- Operation : PathItem.trace
+  PathItem *-- Server : PathItem.servers
+  PathItem *-- Parameter : PathItem.parameters
+
+  class Operation:::Operation {
+    array~string~ tags
+    string summary
+    string description
+    ExternalDocumentation externalDocs
+    string operationId
+    array~Parameter🔗~ parameters
+    RequestBody🔗 requestBody
+    Responses responses
+    map~Callback🔗~ callbacks
+    boolean deprecated
+    array~SecurityRequirement~ security
+    array~Server~ servers
+    Any ^x-
+  }
+  Operation *-- ExternalDocumentation : Operation.externalDocs
+  Operation *-- Parameter : Operation.parameters
+  Operation *-- RequestBody : Operation.requestBody
+  Operation *-- Responses : Operation.responses
+  Operation *-- Callback : Operation.callbacks
+  Operation *-- SecurityRequirement : Operation.security
+  Operation *-- Server : Operation.servers
+
+  class ExternalDocumentation:::ExternalDocumentation {
+    string description
+    +string url
+    Any ^x-
+  }
+
+  class Parameter:::Parameter {
+    +string name
+    +string in
+    string description
+    boolean required
+    boolean deprecated
+    boolean allowEmptyValue
+    string style
+    boolean explode
+    boolean allowReserved
+    Schema schema
+    Any example
+    map~Example🔗~ examples
+    map~MediaType~ content
+    Any ^x-
+  }
+  Parameter *-- Schema : Parameter.schema
+  Parameter *-- Example : Parameter.examples
+  Parameter *-- MediaType : Parameter.content
+
+  class RequestBody:::RequestBody {
+    string description
+    +map~MediaType~ content
+    boolean required
+    Any ^x-
+  }
+  RequestBody *-- MediaType : RequestBody.content
+
+  class MediaType:::MediaType {
+    Schema schema
+    Any example
+    map~Example🔗~ examples
+    map~Encoding~ encoding
+    Any ^x-
+  }
+  MediaType *-- Schema : MediaType.schema
+  MediaType *-- Example : MediaType.examples
+  MediaType *-- Encoding : MediaType.encoding
+
+  class Encoding:::Encoding {
+    string contentType
+    map~Header🔗~ headers
+    string style
+    boolean explode
+    boolean allowReserved
+    Any ^x-
+  }
+  Encoding *-- Header : Encoding.headers
+
+  class Responses:::Responses {
+    Response🔗 default
+    Response🔗 HTTP Status Code
+    Any ^x-
+  }
+  Responses *-- Response : Responses.default
+  Responses *-- Response : Responses.HTTP Status Code
+
+  class Response:::Response {
+    +string description
+    map~Header🔗~ headers
+    map~MediaType~ content
+    map~Link🔗~ links
+    Any ^x-
+  }
+  Response *-- Header : Response.headers
+  Response *-- MediaType : Response.content
+  Response *-- Link : Response.links
+
+  class Callback:::Callback {
+    PathItem🔗 expression
+    Any ^x-
+  }
+  Callback *-- PathItem : Callback.expression
+
+  class Example:::Example {
+    string summary
+    string description
+    Any value
+    string externalValue
+    Any ^x-
+  }
+
+  class Link:::Link {
+    string operationRef
+    string operationId
+    map~~ parameters
+     requestBody
+    string description
+    Server server
+    Any ^x-
+  }
+  Link *-- Server : Link.server
+
+  class Header:::Header {
+    Any ^x-
+  }
+
+  class Tag:::Tag {
+    +string name
+    string description
+    ExternalDocumentation externalDocs
+    Any ^x-
+  }
+  Tag *-- ExternalDocumentation : Tag.externalDocs
+
+  class Reference:::Reference {
+    +string $ref
+    string summary
+    string description
+    Any ^x-
+  }
+
+  class Schema:::Schema {
+    Discriminator discriminator
+    XML xml
+    ExternalDocumentation externalDocs
+    Any example
+    Any ^x-
+  }
+  Schema *-- Discriminator : Schema.discriminator
+  Schema *-- XML : Schema.xml
+  Schema *-- ExternalDocumentation : Schema.externalDocs
+
+  class Discriminator:::Discriminator {
+    +string propertyName
+    map~string~ mapping
+    Any ^x-
+  }
+
+  class XML:::XML {
+    string name
+    string namespace
+    string prefix
+    boolean attribute
+    boolean wrapped
+    Any ^x-
+  }
+
+  class SecurityScheme:::SecurityScheme {
+    +string type
+    string description
+    +string name
+    +string in
+    +string scheme
+    string bearerFormat
+    +OAuthFlows flows
+    +string openIdConnectUrl
+    Any ^x-
+  }
+  SecurityScheme *-- OAuthFlows : SecurityScheme.flows
+
+  class OAuthFlows:::OAuthFlows {
+    OAuthFlow implicit
+    OAuthFlow password
+    OAuthFlow clientCredentials
+    OAuthFlow authorizationCode
+    Any ^x-
+  }
+  OAuthFlows *-- OAuthFlow : OAuthFlows.implicit
+  OAuthFlows *-- OAuthFlow : OAuthFlows.password
+  OAuthFlows *-- OAuthFlow : OAuthFlows.clientCredentials
+  OAuthFlows *-- OAuthFlow : OAuthFlows.authorizationCode
+
+  class OAuthFlow:::OAuthFlow {
+    +string authorizationUrl
+    +string tokenUrl
+    string refreshUrl
+    +map~string~ scopes
+    Any ^x-
+  }
+
+  class SecurityRequirement:::SecurityRequirement {
+    array~string~ name
+    Any ^x-
+  }
+

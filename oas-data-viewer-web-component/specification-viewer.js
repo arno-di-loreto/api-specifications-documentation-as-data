@@ -304,7 +304,7 @@ class SpecificationViewer extends HTMLElement {
     }
 
     .diagram-viewer img {
-      max-width: 1980px;
+      max-width: 1980rem;
     }
 
     .diagram-viewer-header {
@@ -426,8 +426,10 @@ class SpecificationViewer extends HTMLElement {
       <div>
         <div class="node-content${this.getNodeContentDefaultVisibility()}">
           <ul>
-            <li class="diagram-link" data="${this.src.replace('.json', '.svg')}" data-action="diagram">PlantUML (SVG)</li>
-            <li class="diagram-link" data="${this.src.replace('.json', '.png')}" data-action="diagram">PlantUML (PNG)</li>
+            <li class="diagram-link" data="${this.src.replace('.json', '.puml.svg')}" data-action="diagram">PlantUML (SVG)</li>
+            <li class="diagram-link" data="${this.src.replace('.json', '.puml.png')}" data-action="diagram">PlantUML (PNG)</li>
+            <li class="diagram-link" data="${this.src.replace('.json', '.mmd.svg')}" data-action="diagram">MermaidJS (SVG)</li>
+            <li class="diagram-link" data="${this.src.replace('.json', '.mmd.png')}" data-action="diagram">MermaidJS (PNG)</li>
           </ul>
         </div>
       </div>
@@ -784,7 +786,11 @@ class SpecificationViewer extends HTMLElement {
       const url = elementClicked.getAttribute('data');
       const diagramViewer = document.createElement('div');
       diagramViewer.classList.add('diagram-viewer')
-      const innerHtml = `<div class="diagram-viewer-header"><span class="diagram-viewer-button" data-action="diagram-close">Close</span></div><img src="${url}">`;
+      let styleFix = ""
+      if(url.includes(".mmd.svg")){
+        styleFix = 'style=min-width:1980px';
+      }
+      const innerHtml = `<div class="diagram-viewer-header"><span class="diagram-viewer-button" data-action="diagram-close">Close</span></div><img ${styleFix} src="${url}">`;
       diagramViewer.innerHTML = innerHtml;
       this.shadowRoot.appendChild(diagramViewer);
     }

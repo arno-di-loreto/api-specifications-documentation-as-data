@@ -4,6 +4,7 @@ import sys
 from OasMarkdownParser import OasMarkdownParser
 import UtilsFile
 from PlantUmlGenerator import PlantUmlGenerator
+from MermaidJsClassDiagramGenerator import MermaidJsClassDiagramGenerator
 
 md_file = sys.argv[1]
 if len(sys.argv) == 3:
@@ -21,5 +22,7 @@ else:
     UtilsFile.save_file(json, output_file)
   elif output_file.endswith('.puml'):
     puml = PlantUmlGenerator(specification)
-    #print(puml.get_plantuml())
     UtilsFile.save_file(puml.get_plantuml(), output_file)
+  elif output_file.endswith('.mmd'):
+    mermaidjs = MermaidJsClassDiagramGenerator(specification)
+    UtilsFile.save_file(mermaidjs.get_diagram(), output_file)

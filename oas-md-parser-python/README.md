@@ -17,8 +17,12 @@ pipenv install
 Runs with the following command line:
 
 ```
-pipenv run python src/OasMarkdownParserCli.py <source md file> <optional output json file>
+pipenv run python src/OasMarkdownParserCli.py <source md file> <optional output json/puml/mmd file>
 ```
+
+Check also the [`../scripts`](../scripts) folder which contains ready to use scripts to generate data.
+
+## JSON
 
 The following command prints the data extracted from `../specifications/3.1.0.md` to the terminal:
 
@@ -30,4 +34,20 @@ The following command saves the data extracted from `../specifications/3.1.0.md`
 
 ```
 pipenv run python src/OasMarkdownParserCli.py ../specifications/3.1.0.md ../specifications-data/3.1.0.json
+```
+
+## PlanUML Class Diagram
+
+The following command generate a [PlantUML](https://plantuml.com/) class diagram from the data extracted from `../specifications/3.1.0.md` to `../specifications-data/3.1.0.puml`:
+
+```
+pipenv run python src/OasMarkdownParserCli.py ../specifications/3.1.0.md ../specifications-data/3.1.0.puml
+```
+
+## MermaidJS Class Diagram
+
+The following command generate a [MermaidJS](https://mermaid.js.org/) class diagram from the data extracted from `../specifications/3.1.0.md` to `../specifications-data/3.1.0.mmd`:
+
+```
+pipenv run python src/OasMarkdownParserCli.py ../specifications/3.1.0.md ../specifications-data/3.1.0.mmd
 ```
