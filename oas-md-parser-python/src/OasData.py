@@ -16,7 +16,7 @@ class DataId(Dictable):
 
   def __init__(self, anchor):
     self.value = anchor.value
-    if anchor.type == Anchor.TYPE_ANCHOR:
+    if anchor.type == Anchor.TYPE_ID: # Anchor.TYPE_ANCHOR is not working on MD files for objects or concepts
       self.type = DataId.MAIN
     else:
       self.type = DataId.SECONDARY

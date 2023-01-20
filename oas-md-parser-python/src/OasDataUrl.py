@@ -12,6 +12,7 @@ class SpecificationUrls:
   }
 
   MARKDOWN='markdown'
+  HTML='html'
   SCHEMA='schema'
 
   _url_version_regex_search = r'.*{version.(?P<version>[a-z]*)}'
@@ -56,6 +57,7 @@ class DataUrls(Data):
       if id != None:
         self.urls = []
         self.urls.append(SpecificationUrls.get_specification_url(self.get_data_root()._version, SpecificationUrls.MARKDOWN, id))
+        self.urls.append(SpecificationUrls.get_specification_url(self.get_data_root()._version, SpecificationUrls.HTML, id))
 
   def __get_all_links(self):
     if self.get_source().type == ContentType.DOCUMENT:

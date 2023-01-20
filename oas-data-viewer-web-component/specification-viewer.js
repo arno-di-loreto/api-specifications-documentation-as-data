@@ -390,6 +390,7 @@ class SpecificationViewer extends HTMLElement {
   _getHtmlSpecification() {
     const htmlSpecificationTree = this._createNodes('specification', this.specification.version, this.ROOT);
     const url_md = this.specification.urls.find(url => url.name === 'markdown').url;
+    const url_html = this.specification.urls.find(url => url.name === 'html').url;
     const url_schema = this.specification.urls.find(url => url.name === 'schema').url;
     const htmlSpecificationIntro = this._createNode()
     htmlSpecificationIntro.innerHTML = `
@@ -398,7 +399,8 @@ class SpecificationViewer extends HTMLElement {
         <div class="node-content${this.getNodeContentDefaultVisibility()}">
           <div class="description">${this.specification.description}</div>
           <div class="links">
-            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+            <a href="${url_md}" target="MD_${this.specification.version}">MD Documentation&nbsp;🔗</a>
+            <a href="${url_html}" target="HTML_${this.specification.version}">HTML Documentation&nbsp;🔗</a>
             <a href="${url_schema}" target="SCHEMA_${this.specification.version}">JSON Schema&nbsp;🔗</a>
           </div>
           ${this._getHtmlReferenceLinks(this.specification).outerHTML}
@@ -479,6 +481,7 @@ class SpecificationViewer extends HTMLElement {
 
   _getHtmlConcept(concept){
     const url_md = concept.urls.find(url => url.name === 'markdown').url;
+    const url_html = concept.urls.find(url => url.name === 'html').url;
     const htmlConcept = this._createNode();
     htmlConcept.setAttribute('data-type', 'specification');
     htmlConcept.setAttribute('data-name', concept.name);
@@ -490,7 +493,8 @@ class SpecificationViewer extends HTMLElement {
           <div class="node-content${this.getNodeContentDefaultVisibility()}">
             <div class="description">${concept.description}</div>
             <div class="links">
-              <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+              <a href="${url_md}" target="MD_${this.specification.version}">MD Documentation&nbsp;🔗</a>
+              <a href="${url_html}" target="MD_${this.specification.version}">HTML Documentation&nbsp;🔗</a>
             </div>
             ${this._getHtmlReferenceLinks(concept).outerHTML}
           </div>
@@ -570,6 +574,7 @@ class SpecificationViewer extends HTMLElement {
       root = `<span class="root">Root</span>`
     }
     const url_md = schema.urls.find(url => url.name === 'markdown').url;
+    const url_html = schema.urls.find(url => url.name === 'html').url;
     htmlSchema.innerHTML = `
         <div>
           <div class="node-title">
@@ -581,7 +586,8 @@ class SpecificationViewer extends HTMLElement {
           <div class="node-content${this.getNodeContentDefaultVisibility()}">
             <div class="description">${schema.description}</div>
             <div class="links">
-              <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+              <a href="${url_md}" target="MD_${this.specification.version}">MD Documentation&nbsp;🔗</a>
+              <a href="${url_html}" target="HTML_${this.specification.version}">HTML Documentation&nbsp;🔗</a>
             </div>
             ${this._getHtmlUsages(schema).outerHTML}
             ${this._getHtmlReferenceLinks(schema).outerHTML}
@@ -642,6 +648,7 @@ class SpecificationViewer extends HTMLElement {
       }
       
       const url_md = field.urls.find(url => url.name === 'markdown').url;
+      const url_html = field.urls.find(url => url.name === 'html').url;
       const fieldTypes = [];
       field.type.types.forEach(type => {
         let typeClass = 'type'
@@ -676,7 +683,8 @@ class SpecificationViewer extends HTMLElement {
         <div class="node-content${this.getNodeContentDefaultVisibility()}">
           <div class="description">${field.description}</div>
           <div class="links">
-            <a href="${url_md}" target="MD_${this.specification.version}">Original Documentation&nbsp;🔗</a>
+            <a href="${url_md}" target="MD_${this.specification.version}">MD Documentation&nbsp;🔗</a>
+            <a href="${url_html}" target="HTML_${this.specification.version}">HTML Documentation&nbsp;🔗</a>
           </div>
           ${this._getHtmlReferenceLinks(field).outerHTML}
         </div>
