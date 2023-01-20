@@ -236,7 +236,6 @@ class "Link" #line:Fuchsia;line.bold {
 "Link::server"*-->"Server" #CornflowerBlue
 
 class "Header" #line:Gold;line.bold {
-  ^x- : Any
 }
 
 class "Tag" #line:GreenYellow;line.bold {
@@ -248,12 +247,10 @@ class "Tag" #line:GreenYellow;line.bold {
 "Tag::externalDocs"*-->"External Documentation" #DarkSalmon
 
 class "Examples" #line:HotPink;line.bold {
-  ^x- : Any
 }
 
 class "Reference" #line:IndianRed;line.bold {
   -$ref : string
-  ^x- : Any
 }
 
 class "Schema" #line:LightBlue;line.bold {
@@ -274,7 +271,6 @@ class "Schema" #line:LightBlue;line.bold {
 class "Discriminator" #line:LightCoral;line.bold {
   -propertyName : string
   mapping : map of string
-  ^x- : Any
 }
 
 class "XML" #line:LightGreen;line.bold {
@@ -321,7 +317,6 @@ class "OAuth Flow" #line:LightSeaGreen;line.bold {
 
 class "Security Requirement" #line:LightSkyBlue;line.bold {
   name : array of string
-  ^x- : Any
 }
 
 @enduml

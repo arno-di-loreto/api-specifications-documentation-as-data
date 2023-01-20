@@ -6191,41 +6191,7 @@
                     "type": "internal reference"
                 }
             ],
-            "fields": [
-                {
-                    "ids": [
-                        {
-                            "value": "infoExtensions",
-                            "type": "main",
-                            "references": []
-                        }
-                    ],
-                    "name": "^x-",
-                    "nameType": "patterned",
-                    "type": {
-                        "parentType": null,
-                        "parentTypeMapKeyType": null,
-                        "types": [
-                            "Any"
-                        ]
-                    },
-                    "isRequired": false,
-                    "richText": null,
-                    "urls": [
-                        {
-                            "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
-                            "name": "markdown",
-                            "type": "documentation"
-                        },
-                        {
-                            "url": "https://www.openapis.org/",
-                            "name": "OpenAPI Initiative",
-                            "type": "external reference"
-                        }
-                    ],
-                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
-                }
-            ],
+            "fields": [],
             "usages": [
                 {
                     "schemaName": "Components Object",
@@ -6529,39 +6495,6 @@
                         }
                     ],
                     "description": "A description which by default SHOULD override that of the referenced component.If the referenced object-type does not allow a <code>description</code> field, then this field has no effect."
-                },
-                {
-                    "ids": [
-                        {
-                            "value": "infoExtensions",
-                            "type": "main",
-                            "references": []
-                        }
-                    ],
-                    "name": "^x-",
-                    "nameType": "patterned",
-                    "type": {
-                        "parentType": null,
-                        "parentTypeMapKeyType": null,
-                        "types": [
-                            "Any"
-                        ]
-                    },
-                    "isRequired": false,
-                    "richText": null,
-                    "urls": [
-                        {
-                            "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
-                            "name": "markdown",
-                            "type": "documentation"
-                        },
-                        {
-                            "url": "https://www.openapis.org/",
-                            "name": "OpenAPI Initiative",
-                            "type": "external reference"
-                        }
-                    ],
-                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
             ],
             "usages": [
@@ -8016,39 +7949,6 @@
                         }
                     ],
                     "description": "Each name MUST correspond to a security scheme which is declared in the <a href=\"#componentsSecuritySchemes\">Security Schemes</a> under the <a href=\"#componentsObject\">Components Object</a>. If the security scheme is of type <code>\"oauth2\"</code> or <code>\"openIdConnect\"</code>, then the value is a list of scope names required for the execution, and the list MAY be empty if authorization does not require a specified scope. For other security scheme types, the array MAY contain a list of role names which are required for the execution, but are not otherwise defined or exchanged in-band."
-                },
-                {
-                    "ids": [
-                        {
-                            "value": "infoExtensions",
-                            "type": "main",
-                            "references": []
-                        }
-                    ],
-                    "name": "^x-",
-                    "nameType": "patterned",
-                    "type": {
-                        "parentType": null,
-                        "parentTypeMapKeyType": null,
-                        "types": [
-                            "Any"
-                        ]
-                    },
-                    "isRequired": false,
-                    "richText": null,
-                    "urls": [
-                        {
-                            "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.1.0.md#infoExtensions",
-                            "name": "markdown",
-                            "type": "documentation"
-                        },
-                        {
-                            "url": "https://www.openapis.org/",
-                            "name": "OpenAPI Initiative",
-                            "type": "external reference"
-                        }
-                    ],
-                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. Field names beginning <code>x-oai-</code> and <code>x-oas-</code> are reserved for uses defined by the <a href=\"https://www.openapis.org/\">OpenAPI Initiative</a>. The value can be <code>null</code>, a primitive, an array or an object."
                 }
             ],
             "usages": [

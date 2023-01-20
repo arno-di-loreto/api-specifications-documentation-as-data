@@ -159,7 +159,8 @@ class DataSchema(Data, DataWithUrls):
     if not self.get_data_root()._version.is_version('2'):
       specification_extensions_section = self.get_data_parent().get_source().find_section_for_text(re.compile('^Specification Extensions$'))
       if specification_extensions_section != None:
-        self.fields += self._get_fields_from_section(specification_extensions_section, DataField.PATTERNED)
+        if self.is_extensible:
+          self.fields += self._get_fields_from_section(specification_extensions_section, DataField.PATTERNED)
 
 class DataSchemas(Data):
   def __init__(self, source, specification):

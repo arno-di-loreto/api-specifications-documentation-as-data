@@ -5679,36 +5679,7 @@
                     "type": "internal reference"
                 }
             ],
-            "fields": [
-                {
-                    "ids": [
-                        {
-                            "value": "infoExtensions",
-                            "type": "main",
-                            "references": []
-                        }
-                    ],
-                    "name": "^x-",
-                    "nameType": "patterned",
-                    "type": {
-                        "parentType": null,
-                        "parentTypeMapKeyType": null,
-                        "types": [
-                            "Any"
-                        ]
-                    },
-                    "isRequired": false,
-                    "richText": null,
-                    "urls": [
-                        {
-                            "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.0.0.md#infoExtensions",
-                            "name": "markdown",
-                            "type": "documentation"
-                        }
-                    ],
-                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
-                }
-            ],
+            "fields": [],
             "usages": [
                 {
                     "schemaName": "Components Object",
@@ -5908,36 +5879,7 @@
                     "type": "documentation"
                 }
             ],
-            "fields": [
-                {
-                    "ids": [
-                        {
-                            "value": "infoExtensions",
-                            "type": "main",
-                            "references": []
-                        }
-                    ],
-                    "name": "^x-",
-                    "nameType": "patterned",
-                    "type": {
-                        "parentType": null,
-                        "parentTypeMapKeyType": null,
-                        "types": [
-                            "Any"
-                        ]
-                    },
-                    "isRequired": false,
-                    "richText": null,
-                    "urls": [
-                        {
-                            "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.0.0.md#infoExtensions",
-                            "name": "markdown",
-                            "type": "documentation"
-                        }
-                    ],
-                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
-                }
-            ],
+            "fields": [],
             "usages": []
         },
         {
@@ -5997,34 +5939,6 @@
                         }
                     ],
                     "description": "The reference string."
-                },
-                {
-                    "ids": [
-                        {
-                            "value": "infoExtensions",
-                            "type": "main",
-                            "references": []
-                        }
-                    ],
-                    "name": "^x-",
-                    "nameType": "patterned",
-                    "type": {
-                        "parentType": null,
-                        "parentTypeMapKeyType": null,
-                        "types": [
-                            "Any"
-                        ]
-                    },
-                    "isRequired": false,
-                    "richText": null,
-                    "urls": [
-                        {
-                            "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.0.0.md#infoExtensions",
-                            "name": "markdown",
-                            "type": "documentation"
-                        }
-                    ],
-                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
                 }
             ],
             "usages": [
@@ -6526,34 +6440,6 @@
                         }
                     ],
                     "description": "An object to hold mappings between payload values and schema names or references."
-                },
-                {
-                    "ids": [
-                        {
-                            "value": "infoExtensions",
-                            "type": "main",
-                            "references": []
-                        }
-                    ],
-                    "name": "^x-",
-                    "nameType": "patterned",
-                    "type": {
-                        "parentType": null,
-                        "parentTypeMapKeyType": null,
-                        "types": [
-                            "Any"
-                        ]
-                    },
-                    "isRequired": false,
-                    "richText": null,
-                    "urls": [
-                        {
-                            "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.0.0.md#infoExtensions",
-                            "name": "markdown",
-                            "type": "documentation"
-                        }
-                    ],
-                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
                 }
             ],
             "usages": [
@@ -7551,34 +7437,6 @@
                         }
                     ],
                     "description": "Each name MUST correspond to a security scheme which is declared in the <a href=\"#componentsSecuritySchemes\">Security Schemes</a> under the <a href=\"#componentsObject\">Components Object</a>. If the security scheme is of type <code>\"oauth2\"</code> or <code>\"openIdConnect\"</code>, then the value is a list of scope names required for the execution. For other security scheme types, the array MUST be empty."
-                },
-                {
-                    "ids": [
-                        {
-                            "value": "infoExtensions",
-                            "type": "main",
-                            "references": []
-                        }
-                    ],
-                    "name": "^x-",
-                    "nameType": "patterned",
-                    "type": {
-                        "parentType": null,
-                        "parentTypeMapKeyType": null,
-                        "types": [
-                            "Any"
-                        ]
-                    },
-                    "isRequired": false,
-                    "richText": null,
-                    "urls": [
-                        {
-                            "url": "https://github.com/OAI/OpenAPI-Specification/tree/main/versions/3.0.0.md#infoExtensions",
-                            "name": "markdown",
-                            "type": "documentation"
-                        }
-                    ],
-                    "description": "Allows extensions to the OpenAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
                 }
             ],
             "usages": [

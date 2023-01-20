@@ -236,7 +236,6 @@ classDiagram
   Link *-- Server : Link.server
 
   class Header:::Header {
-    Any ^x-
   }
 
   class Tag:::Tag {
@@ -249,7 +248,6 @@ classDiagram
 
   class Reference:::Reference {
     +string $ref
-    Any ^x-
   }
 
   class Schema:::Schema {
@@ -270,7 +268,6 @@ classDiagram
   class Discriminator:::Discriminator {
     +string propertyName
     map~string~ mapping
-    Any ^x-
   }
 
   class XML:::XML {
@@ -317,6 +314,5 @@ classDiagram
 
   class SecurityRequirement:::SecurityRequirement {
     array~string~ name
-    Any ^x-
   }
 

@@ -243,7 +243,6 @@ class "Link" #line:Fuchsia;line.bold {
 "Link::server"*-->"Server" #CornflowerBlue
 
 class "Header" #line:Gold;line.bold {
-  ^x- : Any
 }
 
 class "Tag" #line:GreenYellow;line.bold {
@@ -258,7 +257,6 @@ class "Reference" #line:HotPink;line.bold {
   -$ref : string
   summary : string
   description : string
-  ^x- : Any
 }
 
 class "Schema" #line:IndianRed;line.bold {
@@ -322,7 +320,6 @@ class "OAuth Flow" #line:LightSalmon;line.bold {
 
 class "Security Requirement" #line:LightSeaGreen;line.bold {
   name : array of string
-  ^x- : Any
 }
 
 @enduml
