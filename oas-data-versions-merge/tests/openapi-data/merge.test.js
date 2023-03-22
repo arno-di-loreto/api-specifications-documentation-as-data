@@ -108,6 +108,26 @@ describe('merge', function() {
     });
   });
 
+  describe('getMergedSchemaFullName', function() {
+    it('should return name with versions', function() {
+      const data = {
+        name: 'Schema Object',
+        versions: ['2.0', '3.0', '3.1']
+      }
+      const result = merge.getMergedSchemaFullName(data);
+      assert.equal(result, 'Schema Object (2.0, 3.0, 3.1)');
+    });
+
+    it('should return unmodified name if versions is empty', function() {
+      const data = {
+        name: 'Schema Object',
+        versions: []
+      }
+      const result = merge.getMergedSchemaFullName(data);
+      assert.equal(result, 'Schema Object');
+    });
+  });
+
   describe('mergeSchemaLists', function() {
     it('should merge schema lists keep unique schema', function() {
       const data = [
@@ -137,6 +157,7 @@ describe('merge', function() {
       const expected = [
         { 
           name: 'A Swagger 2 schema', 
+          fullName: 'A Swagger 2 schema (2.0)',
           isRoot: false, 
           isExtensible: true, 
           versions: ['2.0'], 
@@ -144,6 +165,7 @@ describe('merge', function() {
         },
         { 
           name: 'A OpenAPI 3.0 schema', 
+          fullName: 'A OpenAPI 3.0 schema (3.0)', 
           isRoot: false, 
           isExtensible: true, 
           versions: ['3.0'], 
@@ -151,6 +173,7 @@ describe('merge', function() {
         },
         { 
           name: 'A OpenAPI 3.1 schema', 
+          fullName: 'A OpenAPI 3.1 schema (3.1)', 
           isRoot: false, 
           isExtensible: true, 
           versions: ['3.1'], 
@@ -187,6 +210,7 @@ describe('merge', function() {
       const result = merge.mergeSchemaLists(data);
       assert.equal(result.length, 1)
       assert.equal(result[0].name, 'Schema Object');
+      assert.equal(result[0].fullName, 'Schema Object (2.0, 3.0, 3.1)');
       assert.equal(result[0].isRoot, false);
       assert.equal(result[0].isExtensible, true);
       assert.deepEqual(result[0].versions, ['2.0', '3.0', '3.1']);
@@ -198,4 +222,6 @@ describe('merge', function() {
       ]);
     });
   });
+
+
 });

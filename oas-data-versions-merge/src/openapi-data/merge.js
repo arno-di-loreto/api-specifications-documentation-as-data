@@ -49,6 +49,14 @@ function getMergedSchemaName(sourceSchema){
   return result;
 }
 
+function getMergedSchemaFullName(mergedSchema) {
+  let result = mergedSchema.name;
+  if(mergedSchema.versions.length > 0){
+    result = `${result} (${mergedSchema.versions.join(', ')})`
+  }
+  return result;
+}
+
 function mergeSchemaLists(openapiDataList){
   const result = [];
   openapiDataList.forEach(openapiData => {
@@ -72,7 +80,14 @@ function mergeSchemaLists(openapiDataList){
       });
     });
   });
+  result.forEach(mergedSchema => {
+    mergedSchema.fullName = getMergedSchemaFullName(mergedSchema);
+  });
   return result;
+}
+
+function mergeFieldLists(target, source){
+
 }
 
 
@@ -90,3 +105,4 @@ exports.getVersion = getVersion;
 exports.sameSchema = sameSchema;
 exports.getMergedSchemaName = getMergedSchemaName;
 exports.mergeSchemaLists = mergeSchemaLists;
+exports.getMergedSchemaFullName = getMergedSchemaFullName;
