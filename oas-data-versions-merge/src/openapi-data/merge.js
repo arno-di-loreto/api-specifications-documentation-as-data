@@ -72,12 +72,15 @@ function mergeSchemaLists(openapiDataList){
         }
         result.push(mergedSchemaData);
       }
-      mergedSchemaData.isExtensible = schemaData.isExtensible;
-      mergedSchemaData.versions.push(version.version);
-      mergedSchemaData.logs.push({
+      const log = {
         version: version.version,
-        isExtensible: schemaData.isExtensible
-      });
+        isExtensible: schemaData.isExtensible,
+        description: schemaData.description,
+      }
+      mergedSchemaData.isExtensible = log.isExtensible;
+      mergedSchemaData.description = log.description;
+      mergedSchemaData.versions.push(version.version);
+      mergedSchemaData.logs.push(log);
     });
   });
   result.forEach(mergedSchema => {
@@ -86,18 +89,89 @@ function mergeSchemaLists(openapiDataList){
   return result;
 }
 
-function mergeFieldLists(target, source){
-  
+// TODO should be done at data generation level
+function canBeReference(field){
+  const result = field.type.types.includes('Reference Object');
+  return result;
 }
 
+// TODO fic generated data to avoid null value
+function isRichText(field){
+  return field.richText === true;
+}
 
+// TODO should be done at data generation level
+function getMainType(field){
+  const result =  field.type.types.find(type => type !== 'Reference Object');
+  return result;
+}
 
-/*
-function mergeData(contents){
-  contents.forEach(content => {
-    const version = getVersion(content);
+function addToMergedFields(mergedFields, sourceFields, sourceVersion){
+  sourceFields.forEach(sourceField => {
+    let mergedField = mergedFields.find( mergedField => mergedField.name === sourceField.name);
+    if(!mergedField){
+      mergedField = {
+        name: sourceField.name,
+        versions: [],
+        logs: []
+      }
+      mergedFields.push(mergedField);
+    };
+    const log = {
+      version: sourceVersion.version,      
+      mainType: getMainType(sourceField),
+      parentType: sourceField.type.parentType,
+      nameType: sourceField.nameType,
+      richText: isRichText(sourceField),
+      isRequired: sourceField.isRequired,
+      canBeReference: canBeReference(sourceField),
+      description: sourceField.description,
+    };
+    mergedField.mainType = log.mainType,
+    mergedField.parentType = log.parentType,
+    mergedField.nameType = log.nameType,
+    mergedField.richText = log.richText,
+    mergedField.isRequired = log.isRequired,
+    mergedField.canBeReference = log.canBeReference,
+    mergedField.description = log.description;
+    mergedField.versions.push(sourceVersion.version);
+    mergedField.logs.push(log);
   });
-}*/
+  return mergedFields;
+}
+
+function addMergeFieldsToMergedSchemaList(mergedSchemaList, openapiDataList){
+  openapiDataList.forEach(openapiData => {
+    const version = getVersion(openapiData);
+    openapiData.schemas.forEach(schemaData => {
+      const mergedSchemaData = mergedSchemaList.find(mergedSchemaData => sameSchema(mergedSchemaData, schemaData));
+      if(!mergedSchemaData.fields){
+        mergedSchemaData.fields = [];
+      }
+      addToMergedFields(mergedSchemaData.fields, schemaData.fields, version);
+    });
+  });
+  return mergedSchemaList
+}
+
+function getMergedVersions(openapiDataList){
+  const result = [];
+  openapiDataList.forEach(openapiData => {
+    result.push(getVersion(openapiData));
+  });
+  return result;
+}
+
+function mergeData(openapiDataList){
+  const versions = getMergedVersions(openapiDataList);
+  const schemas = mergeSchemaLists(openapiDataList);
+  addMergeFieldsToMergedSchemaList(schemas, openapiDataList);
+  const result = {
+    versions: versions,
+    schemas: schemas
+  }
+  return result;
+}
 
 exports.loadData = loadData;
 exports.getShortVersionNumber = getShortVersionNumber;
@@ -106,3 +180,9 @@ exports.sameSchema = sameSchema;
 exports.getMergedSchemaName = getMergedSchemaName;
 exports.mergeSchemaLists = mergeSchemaLists;
 exports.getMergedSchemaFullName = getMergedSchemaFullName;
+exports.canBeReference = canBeReference;
+exports.getMainType = getMainType;
+exports.addToMergedFields = addToMergedFields;
+exports.addMergeFieldsToMergedSchemaList = addMergeFieldsToMergedSchemaList;
+exports.getMergedVersions = getMergedVersions;
+exports.mergeData = mergeData;
