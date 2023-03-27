@@ -23,16 +23,6 @@ function getType(field) {
   });
 }
 
-
-/*
-openapi.schemas.forEach(schema => {
-  console.log('schema', schema.name);
-  schema.fields.forEach(field => {
-    console.log('field', field.name, field.type.parentType, getType(field));
-  });
-});
-*/
-
 function getAllPaths(schema, previousPath, openapi){
   let result = [];
   // Schema
@@ -46,7 +36,7 @@ function getAllPaths(schema, previousPath, openapi){
     id: schema.name,
     loop: loop,
     path: newSchemaPath,
-    jsonPath: getJsonPath(openapi, newSchemaPath)
+    //jsonPath: getJsonPath(openapi, newSchemaPath)
   });
   if(!loop) {
     // Fields
@@ -73,6 +63,114 @@ function getAllPaths(schema, previousPath, openapi){
     });
   }
   return result;
+}
+
+function getTypeAggregatedFields(schema) {
+  const result = [];
+  // Object Fields
+  const objectFields = schema.fields.filter(field => 
+      { return getType(field).includes('Object') }
+  );
+  objectFields.forEach(field => {
+    let aggregatedField = result.find( aggField => { return aggField.type === getType(field)});
+    if(aggregatedField === undefined){
+      aggregatedField = {
+        type: getType(field),
+        fields: []
+      }
+      result.push(aggregatedField);
+    }
+    aggregatedField.fields.push(field); 
+  });
+  // Non Object fields
+  const nonObjectFields = schema.fields.filter(field => 
+      { return !getType(field).includes('Object') }
+  );
+  nonObjectFields.forEach(field => {
+    result.push({
+      type: getType(field),
+      fields: [field]
+    });
+  });
+  
+  return result;
+}
+
+function getAllPathsV2(schema, previousPath, openapi) {
+  let result = [];
+  // Schema
+  const newSchemaPath = [...previousPath]
+  newSchemaPath.push(schema.name);
+  const loop = previousPath.includes(schema.name);
+  result.push({
+    type: 'schema',
+    names: [schema.name],
+    ids: [schema.name],
+    loop: loop,
+    path: newSchemaPath
+  });
+  if(!loop) {
+    // Fields
+    // 1 - Group by Object Type to reduce number of paths
+    const aggregatedFields = getTypeAggregatedFields(schema);
+    //console.log(JSON.stringify(aggregatedFields, null, 2))
+    aggregatedFields.forEach(aggregatedField => {
+      const names = []
+      const ids = [];
+      aggregatedField.fields.forEach(field => {
+        names.push(field.name);
+        ids.push(schema.name+'.'+field.name);
+      });
+      const fieldPath = [...newSchemaPath]
+      fieldPath.push(names);
+      result.push({
+        type: 'field',
+        names: names,
+        ids: ids,
+        loop: loop,
+        path: fieldPath
+      });
+      const fieldTypeSchema = getSchema(openapi, aggregatedField.type);
+      if(fieldTypeSchema !== undefined){
+        result = result.concat(getAllPathsV2(fieldTypeSchema, fieldPath, openapi));
+      }
+    });
+  }
+  return result;
+}
+
+function sameIds(id1, id2){
+  return JSON.stringify(id1) === JSON.stringify(id2); 
+}
+
+function getAggregatedPathsV2(openapi, paths) {
+  const aggregatedPaths = [];
+  allPaths.forEach(path => {
+    if(path.type === 'schema'){
+      let elementAggregated = aggregatedPaths.find(element => {
+        return sameIds(element.ids, path.ids); 
+      });
+      if(elementAggregated === undefined){
+        elementAggregated = {
+          type: path.type,
+          names: path.names,
+          ids: path.ids,
+          somePathsWithLoops: false,
+          pathsCount: 0,
+          paths: []
+        }
+        aggregatedPaths.push(elementAggregated);
+      }
+      elementAggregated.paths.push({
+        loop: path.loop,
+        path: path.path,
+        jsonPath: path.jsonPath
+      });
+      elementAggregated.somePathsWithLoops =  elementAggregated.somePathsWithLoops || path.loop;
+      elementAggregated.pathsCount =  elementAggregated.paths.length;
+    }
+  });
+  return aggregatedPaths;
 }
 
 function getJsonPath(openapi, path){
@@ -159,16 +257,31 @@ function getCounts(openapi){
   }
 }
 
+function getPathCounts(paths) {
+  const schemas = paths.filter(path => { return path.type === 'schema'}).length;
+  const fields = paths.filter(path => { return path.type === 'field'}).length;
+  const total = paths.length;
+  return {
+    total: total,
+    schemas: schemas,
+    fields: fields,
+  }
+}
+
 const openapiObject = getRootSchema(openapi);
-const paths = getAllPaths(openapiObject, [], openapi);
-const aggregatedPaths = getAggregatePaths(openapiObject, paths);
+//const paths = getAllPaths(openapiObject, [], openapi);
+//const aggregatedPaths = getAggregatePaths(openapiObject, paths);
+const allPaths = getAllPathsV2(openapiObject, [], openapi);
+
+const aggregatedPaths = getAggregatedPathsV2(openapiObject, allPaths);
+
 
 const result = {
   counts: {
     elements: getCounts(openapi),
-    aggregatedPaths: aggregatedPaths.length,
-    paths: paths.length
+    paths: getPathCounts(allPaths),
+    aggregatedSchemaPaths : aggregatedPaths.length,
   },
-  aggregatedPaths: aggregatedPaths
+  aggregatedSchemaPaths: aggregatedPaths // 1 schema without any path 🤔 -> it's Reference Object
 }
 console.log(JSON.stringify(result, null, 2));
