@@ -23,6 +23,19 @@ function getType(field) {
   });
 }
 
+<<<<<<< HEAD
+=======
+
+/*
+openapi.schemas.forEach(schema => {
+  console.log('schema', schema.name);
+  schema.fields.forEach(field => {
+    console.log('field', field.name, field.type.parentType, getType(field));
+  });
+});
+*/
+
+>>>>>>> fb4566a95dc3a113a9f841e4d67403c451b549de
 function getAllPaths(schema, previousPath, openapi){
   let result = [];
   // Schema
@@ -36,7 +49,11 @@ function getAllPaths(schema, previousPath, openapi){
     id: schema.name,
     loop: loop,
     path: newSchemaPath,
+<<<<<<< HEAD
     //jsonPath: getJsonPath(openapi, newSchemaPath)
+=======
+    jsonPath: getJsonPath(openapi, newSchemaPath)
+>>>>>>> fb4566a95dc3a113a9f841e4d67403c451b549de
   });
   if(!loop) {
     // Fields
@@ -65,6 +82,7 @@ function getAllPaths(schema, previousPath, openapi){
   return result;
 }
 
+<<<<<<< HEAD
 function getTypeAggregatedFields(schema) {
   const result = [];
   // Object Fields
@@ -173,6 +191,8 @@ function getAggregatedPathsV2(openapi, paths) {
   return aggregatedPaths;
 }
 
+=======
+>>>>>>> fb4566a95dc3a113a9f841e4d67403c451b549de
 function getJsonPath(openapi, path){
   let jsonPath = '$';
   for(let i=0;i<path.length;i++){
@@ -257,6 +277,7 @@ function getCounts(openapi){
   }
 }
 
+<<<<<<< HEAD
 function getPathCounts(paths) {
   const schemas = paths.filter(path => { return path.type === 'schema'}).length;
   const fields = paths.filter(path => { return path.type === 'field'}).length;
@@ -275,13 +296,25 @@ const allPaths = getAllPathsV2(openapiObject, [], openapi);
 
 const aggregatedPaths = getAggregatedPathsV2(openapiObject, allPaths);
 
+=======
+const openapiObject = getRootSchema(openapi);
+const paths = getAllPaths(openapiObject, [], openapi);
+const aggregatedPaths = getAggregatePaths(openapiObject, paths);
+>>>>>>> fb4566a95dc3a113a9f841e4d67403c451b549de
 
 const result = {
   counts: {
     elements: getCounts(openapi),
+<<<<<<< HEAD
     paths: getPathCounts(allPaths),
     aggregatedSchemaPaths : aggregatedPaths.length,
   },
   aggregatedSchemaPaths: aggregatedPaths // 1 schema without any path 🤔 -> it's Reference Object
+=======
+    aggregatedPaths: aggregatedPaths.length,
+    paths: paths.length
+  },
+  aggregatedPaths: aggregatedPaths
+>>>>>>> fb4566a95dc3a113a9f841e4d67403c451b549de
 }
 console.log(JSON.stringify(result, null, 2));
