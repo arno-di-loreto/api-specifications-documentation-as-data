@@ -554,9 +554,17 @@ class SpecificationViewer extends HTMLElement {
 
   _getAllHtmlSchemas(){
     const types = [];
+    let rootName;
     this.specification.schemas.forEach(schema => {
-      types.push(schema.name);
+      if(!schema.isRoot){
+        types.push(schema.name);
+      }
+      else {
+        rootName = schema.name;
+      }
     })
+    types.sort();
+    types.unshift(rootName);
     const htmlSchemas = this._getHtmlSchemas(types);
     return htmlSchemas;
   }
@@ -721,21 +729,29 @@ class SpecificationViewer extends HTMLElement {
 
   scrollToElement(element){
     if(!this.isInViewport(element)){
-      console.log('not in viewport, scroll to', element)
       const verticalOffset = 100;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - verticalOffset;
+      const top = elementPosition - verticalOffset;
+
+      const bodyRectLeft = document.body.getBoundingClientRect().left;
+      const elementRectLeft = element.getBoundingClientRect().left;
+      const left = elementRectLeft - bodyRectLeft
+      //const left = element.getBoundingClientRect().right;
+      //console.log('not in viewport, scroll to', 'top', top, 'left', left, 'element', element)
       window.scrollTo({
         behavior: 'smooth',
-        top: offsetPosition,
-        left: element.getBoundingClientRect().left
-      })  
+        top: top,
+        left: left
+      })
+      //console.log('new x', element.getBoundingClientRect().left)
+      //element.scrollIntoView({ behavior: 'smooth'})  
     }
+    /*
     else {
       console.log('already in viewport')
-    }
+    }*/
   }
 
   showHideChildren(elementClicked) {
