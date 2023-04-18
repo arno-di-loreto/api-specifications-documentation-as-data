@@ -28,7 +28,8 @@ class DataHistory(Data):
   def __init__events(self):
     self.events = []
     history_section = self.get_source().find_section_for_text(re.compile(r'Revision History$'))
-    for content in history_section.get_contents():
-      if content.sub_type == ContentSubType.TABLE:
-        for line in content.get_lines():
-          self.events.append(DataEvent(line, self))
+    if(history_section != None):
+      for content in history_section.get_contents():
+        if content.sub_type == ContentSubType.TABLE:
+          for line in content.get_lines():
+            self.events.append(DataEvent(line, self))

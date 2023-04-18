@@ -1,4 +1,5 @@
 {
+    "ids": [],
     "name": "OpenAPI",
     "version": "3.1.0",
     "urls": [
@@ -296,90 +297,105 @@
     "description": "<p>The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.</p><p>An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.</p>",
     "history": [
         {
+            "ids": [],
             "version": "3.1.0",
             "date": "2021-02-15",
             "notes": "Release of the OpenAPI Specification 3.1.0",
             "type": "release"
         },
         {
+            "ids": [],
             "version": "3.1.0-rc1",
             "date": "2020-10-08",
             "notes": "rc1 of the 3.1 specification",
             "type": "draft"
         },
         {
+            "ids": [],
             "version": "3.1.0-rc0",
             "date": "2020-06-18",
             "notes": "rc0 of the 3.1 specification",
             "type": "draft"
         },
         {
+            "ids": [],
             "version": "3.0.3",
             "date": "2020-02-20",
             "notes": "Patch release of the OpenAPI Specification 3.0.3",
             "type": "patch"
         },
         {
+            "ids": [],
             "version": "3.0.2",
             "date": "2018-10-08",
             "notes": "Patch release of the OpenAPI Specification 3.0.2",
             "type": "patch"
         },
         {
+            "ids": [],
             "version": "3.0.1",
             "date": "2017-12-06",
             "notes": "Patch release of the OpenAPI Specification 3.0.1",
             "type": "patch"
         },
         {
+            "ids": [],
             "version": "3.0.0",
             "date": "2017-07-26",
             "notes": "Release of the OpenAPI Specification 3.0.0",
             "type": "release"
         },
         {
+            "ids": [],
             "version": "3.0.0-rc2",
             "date": "2017-06-16",
             "notes": "rc2 of the 3.0 specification",
             "type": "draft"
         },
         {
+            "ids": [],
             "version": "3.0.0-rc1",
             "date": "2017-04-27",
             "notes": "rc1 of the 3.0 specification",
             "type": "draft"
         },
         {
+            "ids": [],
             "version": "3.0.0-rc0",
             "date": "2017-02-28",
             "notes": "Implementer's Draft of the 3.0 specification",
             "type": "draft"
         },
         {
+            "ids": [],
             "version": "2.0",
             "date": "2015-12-31",
             "notes": "Donation of Swagger 2.0 to the OpenAPI Initiative",
             "type": "event"
         },
         {
+            "ids": [],
             "version": "2.0",
             "date": "2014-09-08",
             "notes": "Release of Swagger 2.0",
             "type": "release"
         },
         {
+            "ids": [],
             "version": "1.2",
             "date": "2014-03-14",
             "notes": "Initial release of the formal document.",
             "type": "release"
         },
         {
+            "ids": [],
             "version": "1.1",
             "date": "2012-08-22",
             "notes": "Release of Swagger 1.1",
             "type": "release"
         },
         {
+            "ids": [],
             "version": "1.0",
             "date": "2011-08-10",
             "notes": "First release of the Swagger Specification",
@@ -974,6 +990,7 @@
                     "name": "openapi",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1017,6 +1034,7 @@
                     "name": "info",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1055,6 +1073,7 @@
                     "name": "jsonSchemaDialect",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1093,6 +1112,7 @@
                     "name": "servers",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1136,6 +1156,7 @@
                     "name": "paths",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1174,6 +1195,7 @@
                     "name": "webhooks",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -1223,6 +1245,7 @@
                     "name": "components",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1261,6 +1284,7 @@
                     "name": "security",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1299,6 +1323,7 @@
                     "name": "tags",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1342,6 +1367,7 @@
                     "name": "externalDocs",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1380,6 +1406,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1451,6 +1478,7 @@
                     "name": "title",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1484,6 +1512,7 @@
                     "name": "summary",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1517,6 +1546,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1555,6 +1585,7 @@
                     "name": "termsOfService",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1588,6 +1619,7 @@
                     "name": "contact",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1626,6 +1658,7 @@
                     "name": "license",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1664,6 +1697,7 @@
                     "name": "version",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1702,6 +1736,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1778,6 +1813,7 @@
                     "name": "name",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1811,6 +1847,7 @@
                     "name": "url",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1844,6 +1881,7 @@
                     "name": "email",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1877,6 +1915,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1953,6 +1992,7 @@
                     "name": "name",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -1986,6 +2026,7 @@
                     "name": "identifier",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2024,6 +2065,7 @@
                     "name": "url",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2057,6 +2099,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2133,6 +2176,7 @@
                     "name": "url",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2166,6 +2210,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2204,6 +2249,7 @@
                     "name": "variables",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2242,6 +2288,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2330,6 +2377,7 @@
                     "name": "enum",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2363,6 +2411,7 @@
                     "name": "default",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2406,6 +2455,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2444,6 +2494,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -2520,6 +2571,7 @@
                     "name": "schemas",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2563,6 +2615,7 @@
                     "name": "responses",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2612,6 +2665,7 @@
                     "name": "parameters",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2661,6 +2715,7 @@
                     "name": "examples",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2710,6 +2765,7 @@
                     "name": "requestBodies",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2759,6 +2815,7 @@
                     "name": "headers",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2808,6 +2865,7 @@
                     "name": "securitySchemes",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2857,6 +2915,7 @@
                     "name": "links",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2906,6 +2965,7 @@
                     "name": "callbacks",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2955,6 +3015,7 @@
                     "name": "pathItems",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -2999,6 +3060,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3085,6 +3147,7 @@
                     "name": "/{path}",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3133,6 +3196,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3214,6 +3278,7 @@
                     "name": "$ref",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3257,6 +3322,7 @@
                     "name": "summary",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3290,6 +3356,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3328,6 +3395,7 @@
                     "name": "get",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3366,6 +3434,7 @@
                     "name": "put",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3404,6 +3473,7 @@
                     "name": "post",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3442,6 +3512,7 @@
                     "name": "delete",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3480,6 +3551,7 @@
                     "name": "options",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3518,6 +3590,7 @@
                     "name": "head",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3556,6 +3629,7 @@
                     "name": "patch",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3594,6 +3668,7 @@
                     "name": "trace",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3632,6 +3707,7 @@
                     "name": "servers",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3670,6 +3746,7 @@
                     "name": "parameters",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3729,6 +3806,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3817,6 +3895,7 @@
                     "name": "tags",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3850,6 +3929,7 @@
                     "name": "summary",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3883,6 +3963,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3921,6 +4002,7 @@
                     "name": "externalDocs",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3959,6 +4041,7 @@
                     "name": "operationId",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -3992,6 +4075,7 @@
                     "name": "parameters",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4056,6 +4140,7 @@
                     "name": "requestBody",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4120,6 +4205,7 @@
                     "name": "responses",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4158,6 +4244,7 @@
                     "name": "callbacks",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -4202,6 +4289,7 @@
                     "name": "deprecated",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4235,6 +4323,7 @@
                     "name": "security",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4278,6 +4367,7 @@
                     "name": "servers",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4316,6 +4406,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4420,6 +4511,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4458,6 +4550,7 @@
                     "name": "url",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4491,6 +4584,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4589,6 +4683,7 @@
                     "name": "name",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4642,6 +4737,7 @@
                     "name": "in",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4675,6 +4771,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4713,6 +4810,7 @@
                     "name": "required",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4751,6 +4849,7 @@
                     "name": "deprecated",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4784,6 +4883,7 @@
                     "name": "allowEmptyValue",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4822,6 +4922,7 @@
                     "name": "style",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4855,6 +4956,7 @@
                     "name": "explode",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4893,6 +4995,7 @@
                     "name": "allowReserved",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4931,6 +5034,7 @@
                     "name": "schema",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -4969,6 +5073,7 @@
                     "name": "example",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5002,6 +5107,7 @@
                     "name": "examples",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": " string",
                         "types": [
@@ -5046,6 +5152,7 @@
                     "name": "content",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -5084,6 +5191,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5168,6 +5276,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5206,6 +5315,7 @@
                     "name": "content",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -5249,6 +5359,7 @@
                     "name": "required",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5282,6 +5393,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5362,6 +5474,7 @@
                     "name": "schema",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5400,6 +5513,7 @@
                     "name": "example",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5433,6 +5547,7 @@
                     "name": "examples",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": " string",
                         "types": [
@@ -5477,6 +5592,7 @@
                     "name": "encoding",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -5515,6 +5631,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5599,6 +5716,7 @@
                     "name": "contentType",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5632,6 +5750,7 @@
                     "name": "headers",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -5676,6 +5795,7 @@
                     "name": "style",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5724,6 +5844,7 @@
                     "name": "explode",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5767,6 +5888,7 @@
                     "name": "allowReserved",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5810,6 +5932,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5886,6 +6009,7 @@
                     "name": "default",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5930,6 +6054,7 @@
                     "name": "HTTP Status Code",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -5984,6 +6109,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6060,6 +6186,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6098,6 +6225,7 @@
                     "name": "headers",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -6147,6 +6275,7 @@
                     "name": "content",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -6190,6 +6319,7 @@
                     "name": "links",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -6239,6 +6369,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6333,6 +6464,7 @@
                     "name": "{expression}",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6382,6 +6514,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6462,6 +6595,7 @@
                     "name": "summary",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6495,6 +6629,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6533,6 +6668,7 @@
                     "name": "value",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6566,6 +6702,7 @@
                     "name": "externalValue",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6604,6 +6741,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6693,6 +6831,7 @@
                     "name": "operationRef",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6736,6 +6875,7 @@
                     "name": "operationId",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6769,6 +6909,7 @@
                     "name": "parameters",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -6813,6 +6954,7 @@
                     "name": "requestBody",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6852,6 +6994,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6890,6 +7033,7 @@
                     "name": "server",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -6928,6 +7072,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7068,6 +7213,7 @@
                     "name": "name",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7101,6 +7247,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7139,6 +7286,7 @@
                     "name": "externalDocs",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7177,6 +7325,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7263,6 +7412,7 @@
                     "name": "$ref",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7296,6 +7446,7 @@
                     "name": "summary",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7329,6 +7480,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7504,6 +7656,7 @@
                     "name": "discriminator",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7547,6 +7700,7 @@
                     "name": "xml",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7585,6 +7739,7 @@
                     "name": "externalDocs",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7623,6 +7778,7 @@
                     "name": "example",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7656,6 +7812,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7740,6 +7897,7 @@
                     "name": "propertyName",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7773,6 +7931,7 @@
                     "name": "mapping",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -7806,6 +7965,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7882,6 +8042,7 @@
                     "name": "name",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7915,6 +8076,7 @@
                     "name": "namespace",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7948,6 +8110,7 @@
                     "name": "prefix",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -7986,6 +8149,7 @@
                     "name": "attribute",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8019,6 +8183,7 @@
                     "name": "wrapped",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8052,6 +8217,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8143,6 +8309,7 @@
                     "name": "type",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8177,6 +8344,7 @@
                     "name": "description",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8216,6 +8384,7 @@
                     "name": "name",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8250,6 +8419,7 @@
                     "name": "in",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8284,6 +8454,7 @@
                     "name": "scheme",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8328,6 +8499,7 @@
                     "name": "bearerFormat",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8362,6 +8534,7 @@
                     "name": "flows",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8401,6 +8574,7 @@
                     "name": "openIdConnectUrl",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8435,6 +8609,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8511,6 +8686,7 @@
                     "name": "implicit",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8549,6 +8725,7 @@
                     "name": "password",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8587,6 +8764,7 @@
                     "name": "clientCredentials",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8625,6 +8803,7 @@
                     "name": "authorizationCode",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8663,6 +8842,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8739,6 +8919,7 @@
                     "name": "authorizationUrl",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8773,6 +8954,7 @@
                     "name": "tokenUrl",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8807,6 +8989,7 @@
                     "name": "refreshUrl",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8841,6 +9024,7 @@
                     "name": "scopes",
                     "nameType": "fixed",
                     "type": {
+                        "ids": [],
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
@@ -8875,6 +9059,7 @@
                     "name": "^x-",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
@@ -8983,6 +9168,7 @@
                     "name": "{name}",
                     "nameType": "patterned",
                     "type": {
+                        "ids": [],
                         "parentType": "array",
                         "parentTypeMapKeyType": null,
                         "types": [

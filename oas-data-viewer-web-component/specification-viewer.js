@@ -53,7 +53,7 @@ class SpecificationViewer extends HTMLElement {
       border-radius: .4em;
       padding: 0.5rem;
       margin-top: 0.5rem;
-      max-width: 600px;
+      max-width: 500px;
       z-index:1;
     }
     
@@ -371,6 +371,7 @@ class SpecificationViewer extends HTMLElement {
 
   _getHtmlReferenceLinks(data){
     const links = document.createElement('div');
+    /*
     links.classList.add('reference-links')
     let list = '<h2>Reference Links</h2><ul>'
     let count = 0;
@@ -384,6 +385,7 @@ class SpecificationViewer extends HTMLElement {
     if(count > 0){
       links.innerHTML = list;
     }
+    */
     return links;
   }
 
@@ -409,7 +411,9 @@ class SpecificationViewer extends HTMLElement {
     `;
 
     const sections = this._createNodes();
-    sections.appendChild(this._getHtmlHistorySection());
+    if(this.specification.history.length > 0){
+      sections.appendChild(this._getHtmlHistorySection());
+    }
     sections.appendChild(this._getHtmlSchemaSection());
     sections.appendChild(this._getHtmlClassDiagramSection());
     sections.appendChild(this._getHtmlConceptsSection());
@@ -544,7 +548,7 @@ class SpecificationViewer extends HTMLElement {
   }
 
   _getHtmlSchemaSection() {
-    return this._getHtmlSection('schema', 'Schemas', this.specification.history);
+    return this._getHtmlSection('schema', 'Schemas', this.specification.schemas);
   }
 
   _getHtmlClassDiagramSection() {
@@ -565,6 +569,7 @@ class SpecificationViewer extends HTMLElement {
     })
     types.sort();
     types.unshift(rootName);
+    console.log(types);
     const htmlSchemas = this._getHtmlSchemas(types);
     return htmlSchemas;
   }
@@ -583,13 +588,19 @@ class SpecificationViewer extends HTMLElement {
     }
     const url_md = schema.urls.find(url => url.name === 'markdown').url;
     const url_html = schema.urls.find(url => url.name === 'html').url;
+    let navigation='';
+    if(schema.fields && schema.fields.length > 0){
+      navigation = `
+      <div class="navigation">
+        <span class="nav-button-children nav-button-children-schemas" data-action="children">→</span>
+      </div>
+      `
+    }
     htmlSchema.innerHTML = `
         <div>
           <div class="node-title">
             <h1>${schema.name}${root}${extensible}</h1>
-            <div class="navigation">
-              <span class="nav-button-children nav-button-children-schemas" data-action="children">→</span>
-            </div>
+            ${navigation}
           </div>
           <div class="node-content${this.getNodeContentDefaultVisibility()}">
             <div class="description">${schema.description}</div>
@@ -655,8 +666,6 @@ class SpecificationViewer extends HTMLElement {
         `
       }
       
-      const url_md = field.urls.find(url => url.name === 'markdown').url;
-      const url_html = field.urls.find(url => url.name === 'html').url;
       const fieldTypes = [];
       field.type.types.forEach(type => {
         let typeClass = 'type'
@@ -676,6 +685,25 @@ class SpecificationViewer extends HTMLElement {
       else if (field.type.parentType === 'map'){
         fieldType = `<span class="pill pill-field pill-field-map">Map</span><span class="syntax">{ * : </span>${fieldType}<span class="syntax">}</span>`;
       }
+
+      let htmlFieldLinks = '';
+      if(field.urls && field.urls.length > 0){
+        const url_md = field.urls.find(url => url.name === 'markdown').url;
+        const url_html = field.urls.find(url => url.name === 'html').url;  
+        htmlFieldLinks = `
+        <div class="links">
+          <a href="${url_md}" target="MD_${this.specification.version}">MD Documentation&nbsp;🔗</a>
+          <a href="${url_html}" target="HTML_${this.specification.version}">HTML Documentation&nbsp;🔗</a>
+        </div>
+        ${this._getHtmlReferenceLinks(field).outerHTML}
+        `
+      }
+
+      let description = ''
+      if(field.description){
+        description = field.description;
+      }
+
       htmlField.innerHTML = `
       <div>
         <div class="node-title">
@@ -689,12 +717,8 @@ class SpecificationViewer extends HTMLElement {
           </div>
         </div>
         <div class="node-content${this.getNodeContentDefaultVisibility()}">
-          <div class="description">${field.description}</div>
-          <div class="links">
-            <a href="${url_md}" target="MD_${this.specification.version}">MD Documentation&nbsp;🔗</a>
-            <a href="${url_html}" target="HTML_${this.specification.version}">HTML Documentation&nbsp;🔗</a>
-          </div>
-          ${this._getHtmlReferenceLinks(field).outerHTML}
+          <div class="description">${description}</div>
+          ${htmlFieldLinks}
         </div>
       </div>
       `;

@@ -1,0 +1,371 @@
+classDiagram
+  class AsyncAPI:::AsyncAPI {
+    +AsyncAPIVersionString asyncapi
+    Identifier id
+    +Info info
+    Servers servers
+    DefaultContentType defaultContentType
+    +Channels channels
+    Components components
+    Tags tags
+    ExternalDocumentation externalDocs
+  }
+  AsyncAPI *-- Info : AsyncAPI.info
+  AsyncAPI *-- Servers : AsyncAPI.servers
+  AsyncAPI *-- Channels : AsyncAPI.channels
+  AsyncAPI *-- Components : AsyncAPI.components
+  AsyncAPI *-- Tags : AsyncAPI.tags
+  AsyncAPI *-- ExternalDocumentation : AsyncAPI.externalDocs
+
+  class AsyncAPIVersionString:::AsyncAPIVersionString {
+  }
+
+  class Identifier:::Identifier {
+  }
+
+  class Info:::Info {
+    +string title
+    +string version
+    string description
+    string termsOfService
+    Contact contact
+    License license
+  }
+  Info *-- Contact : Info.contact
+  Info *-- License : Info.license
+
+  class Contact:::Contact {
+    string name
+    string url
+    string email
+  }
+
+  class License:::License {
+    +string name
+    string url
+  }
+
+  class Servers:::Servers {
+    Server🔗 ^[A-Za-z0-9_\-]+$
+  }
+  Servers *-- Server : Servers.^[A-Za-z0-9_\-]+$
+
+  class Server:::Server {
+    +string url
+    +string protocol
+    string protocolVersion
+    string description
+    map~ServerVariable🔗~ variables
+    array~SecurityRequirement~ security
+    Tags tags
+    ServerBindings🔗 bindings
+  }
+  Server *-- ServerVariable : Server.variables
+  Server *-- SecurityRequirement : Server.security
+  Server *-- Tags : Server.tags
+  Server *-- ServerBindings : Server.bindings
+
+  class ServerVariable:::ServerVariable {
+    array~string~ enum
+    string default
+    string description
+    array~string~ examples
+  }
+
+  class DefaultContentType:::DefaultContentType {
+  }
+
+  class Channels:::Channels {
+    ChannelItem channel
+  }
+  Channels *-- ChannelItem : Channels.channel
+
+  class ChannelItem:::ChannelItem {
+    string $ref
+    string description
+    array~string~ servers
+    Operation subscribe
+    Operation publish
+    Parameters parameters
+    ChannelBindings🔗 bindings
+  }
+  ChannelItem *-- Operation : ChannelItem.subscribe
+  ChannelItem *-- Operation : ChannelItem.publish
+  ChannelItem *-- Parameters : ChannelItem.parameters
+  ChannelItem *-- ChannelBindings : ChannelItem.bindings
+
+  class Operation:::Operation {
+    string operationId
+    string summary
+    string description
+    array~SecurityRequirement~ security
+    Tags tags
+    ExternalDocumentation externalDocs
+    OperationBindings🔗 bindings
+    array~OperationTrait🔗~ traits
+    Map🔗 message
+  }
+  Operation *-- SecurityRequirement : Operation.security
+  Operation *-- Tags : Operation.tags
+  Operation *-- ExternalDocumentation : Operation.externalDocs
+  Operation *-- OperationBindings : Operation.bindings
+  Operation *-- OperationTrait : Operation.traits
+  Operation *-- Message : Operation.message
+
+  class OperationTrait:::OperationTrait {
+    string operationId
+    string summary
+    string description
+    array~SecurityRequirement~ security
+    Tags tags
+    ExternalDocumentation externalDocs
+    OperationBindings🔗 bindings
+  }
+  OperationTrait *-- SecurityRequirement : OperationTrait.security
+  OperationTrait *-- Tags : OperationTrait.tags
+  OperationTrait *-- ExternalDocumentation : OperationTrait.externalDocs
+  OperationTrait *-- OperationBindings : OperationTrait.bindings
+
+  class Parameters:::Parameters {
+    Parameter🔗 ^[A-Za-z0-9_\-]+$
+  }
+  Parameters *-- Parameter : Parameters.^[A-Za-z0-9_\-]+$
+
+  class Parameter:::Parameter {
+    string description
+    Schema🔗 schema
+    string location
+  }
+  Parameter *-- Schema : Parameter.schema
+
+  class ServerBindings:::ServerBindings {
+    HTTPServerBinding http
+    WebSocketsServerBinding ws
+    KafkaServerBinding kafka
+    AnypointMQServerBinding anypointmq
+    AMQPServerBinding amqp
+    AMQP amqp1
+    MQTTServerBinding mqtt
+    MQTT mqtt5
+    NATSServerBinding nats
+    JMSServerBinding jms
+    SNSServerBinding sns
+    SolaceServerBinding solace
+    SQSServerBinding sqs
+    STOMPServerBinding stomp
+    RedisServerBinding redis
+    MercureServerBinding mercure
+    IBMMQServerBinding ibmmq
+    GoogleCloudPub googlepubsub
+  }
+
+  class ChannelBindings:::ChannelBindings {
+    HTTPChannelBinding http
+    WebSocketsChannelBinding ws
+    KafkaChannelBinding kafka
+    AnypointMQChannelBinding anypointmq
+    AMQPChannelBinding amqp
+    AMQP amqp1
+    MQTTChannelBinding mqtt
+    MQTT mqtt5
+    NATSChannelBinding nats
+    JMSChannelBinding jms
+    SNSChannelBinding sns
+    SolaceChannelBinding solace
+    SQSChannelBinding sqs
+    STOMPChannelBinding stomp
+    RedisChannelBinding redis
+    MercureChannelBinding mercure
+    IBMMQChannelBinding ibmmq
+    GoogleCloudPub googlepubsub
+  }
+
+  class OperationBindings:::OperationBindings {
+    HTTPOperationBinding http
+    WebSocketsOperationBinding ws
+    KafkaOperationBinding kafka
+    AnypointMQOperationBinding anypointmq
+    AMQPOperationBinding amqp
+    AMQP amqp1
+    MQTTOperationBinding mqtt
+    MQTT mqtt5
+    NATSOperationBinding nats
+    JMSOperationBinding jms
+    SNSOperationBinding sns
+    SolaceOperationBinding solace
+    SQSOperationBinding sqs
+    STOMPOperationBinding stomp
+    RedisOperationBinding redis
+    MercureOperationBinding mercure
+    GoogleCloudPub googlepubsub
+    IBMMQOperationBinding ibmmq
+  }
+
+  class MessageBindings:::MessageBindings {
+    HTTPMessageBinding http
+    WebSocketsMessageBinding ws
+    KafkaMessageBinding kafka
+    AnypointMQMessageBinding anypointmq
+    AMQPMessageBinding amqp
+    AMQP amqp1
+    MQTTMessageBinding mqtt
+    MQTT mqtt5
+    NATSMessageBinding nats
+    JMSMessageBinding jms
+    SNSMessageBinding sns
+    SolaceServerBinding solace
+    SQSMessageBinding sqs
+    STOMPMessageBinding stomp
+    RedisMessageBinding redis
+    MercureMessageBinding mercure
+    IBMMQMessageBinding ibmmq
+    GoogleCloudPub googlepubsub
+  }
+
+  class Message:::Message {
+    string messageId
+    Schema🔗 headers
+    any payload
+    CorrelationID🔗 correlationId
+    string schemaFormat
+    string contentType
+    string name
+    string title
+    string summary
+    string description
+    Tags tags
+    ExternalDocumentation externalDocs
+    MessageBindings🔗 bindings
+    array~MessageExample~ examples
+    array~MessageTrait🔗~ traits
+  }
+  Message *-- Schema : Message.headers
+  Message *-- CorrelationID : Message.correlationId
+  Message *-- Tags : Message.tags
+  Message *-- ExternalDocumentation : Message.externalDocs
+  Message *-- MessageBindings : Message.bindings
+  Message *-- MessageExample : Message.examples
+  Message *-- MessageTrait : Message.traits
+
+  class MessageTrait:::MessageTrait {
+    string messageId
+    Schema🔗 headers
+    CorrelationID🔗 correlationId
+    string schemaFormat
+    string contentType
+    string name
+    string title
+    string summary
+    string description
+    Tags tags
+    ExternalDocumentation externalDocs
+    MessageBindings🔗 bindings
+    array~MessageExample~ examples
+  }
+  MessageTrait *-- Schema : MessageTrait.headers
+  MessageTrait *-- CorrelationID : MessageTrait.correlationId
+  MessageTrait *-- Tags : MessageTrait.tags
+  MessageTrait *-- ExternalDocumentation : MessageTrait.externalDocs
+  MessageTrait *-- MessageBindings : MessageTrait.bindings
+  MessageTrait *-- MessageExample : MessageTrait.examples
+
+  class MessageExample:::MessageExample {
+    map~any~ headers
+    any payload
+    string name
+    string summary
+  }
+
+  class Tags:::Tags {
+    Tag [*]
+  }
+  Tags *-- Tag : Tags.[*]
+
+  class Tag:::Tag {
+    +string name
+    string description
+    ExternalDocumentation externalDocs
+  }
+  Tag *-- ExternalDocumentation : Tag.externalDocs
+
+  class ExternalDocumentation:::ExternalDocumentation {
+    string description
+    +string url
+  }
+
+  class Reference:::Reference {
+    +string $ref
+  }
+
+  class Components:::Components {
+    map~Schema🔗~ schemas
+    map~Server🔗~ servers
+    map~ServerVariable🔗~ serverVariables
+    map~ChannelItem~ channels
+    map~Message🔗~ messages
+    map~SecurityScheme🔗~ securitySchemes
+    map~Parameter🔗~ parameters
+    map~CorrelationID🔗~ correlationIds
+    map~OperationTrait🔗~ operationTraits
+    map~MessageTrait🔗~ messageTraits
+    map~ServerBindings🔗~ serverBindings
+    map~ChannelBindings🔗~ channelBindings
+    map~OperationBindings🔗~ operationBindings
+    map~MessageBindings🔗~ messageBindings
+  }
+  Components *-- Schema : Components.schemas
+  Components *-- Server : Components.servers
+  Components *-- ServerVariable : Components.serverVariables
+  Components *-- ChannelItem : Components.channels
+  Components *-- Message : Components.messages
+  Components *-- SecurityScheme : Components.securitySchemes
+  Components *-- Parameter : Components.parameters
+  Components *-- CorrelationID : Components.correlationIds
+  Components *-- OperationTrait : Components.operationTraits
+  Components *-- MessageTrait : Components.messageTraits
+  Components *-- ServerBindings : Components.serverBindings
+  Components *-- ChannelBindings : Components.channelBindings
+  Components *-- OperationBindings : Components.operationBindings
+  Components *-- MessageBindings : Components.messageBindings
+
+  class Schema:::Schema {
+    string discriminator
+    ExternalDocumentation externalDocs
+    boolean deprecated
+  }
+  Schema *-- ExternalDocumentation : Schema.externalDocs
+
+  class SecurityScheme:::SecurityScheme {
+    +string type
+    string description
+    +string name
+    +string in
+    +string scheme
+    string bearerFormat
+    +OAuthFlows flows
+    +string openIdConnectUrl
+  }
+  SecurityScheme *-- OAuthFlows : SecurityScheme.flows
+
+  class OAuthFlows:::OAuthFlows {
+    OAuthFlow implicit
+    OAuthFlow password
+    OAuthFlow clientCredentials
+    OAuthFlow authorizationCode
+  }
+  OAuthFlows *-- OAuthFlow : OAuthFlows.implicit
+  OAuthFlows *-- OAuthFlow : OAuthFlows.password
+  OAuthFlows *-- OAuthFlow : OAuthFlows.clientCredentials
+  OAuthFlows *-- OAuthFlow : OAuthFlows.authorizationCode
+
+  class OAuthFlow:::OAuthFlow {
+    +string authorizationUrl
+    +string tokenUrl
+    string refreshUrl
+    +map~string~ scopes
+  }
+
+  class SecurityRequirement:::SecurityRequirement {
+    array~string~ name
+  }
+

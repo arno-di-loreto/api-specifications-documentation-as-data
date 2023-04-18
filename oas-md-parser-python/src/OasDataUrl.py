@@ -1,14 +1,21 @@
-from OasData import Data
+from OasData import Data, DataId
 from OasDataVersion import DataVersion
 from MarkdownParser import ContentType
 from UtilsClass import Dictable
 import re
 
+
 class SpecificationUrls:
-  _urls = {
+  _openapi_urls = {
     'markdown': 'https://github.com/OAI/OpenAPI-Specification/tree/main/versions/{version.revision}.md',
     'html': 'https://spec.openapis.org/oas/v{version.revision}',
     'schema': 'https://github.com/OAI/OpenAPI-Specification/tree/main/schemas/v{version.minor}'
+  }
+
+  _asyncapi_urls = {
+    'markdown': 'https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v{version.revision}.md',
+    'html': 'https://www.asyncapi.com/docs/reference/specification/v{version.revision}',
+    'schema': 'https://github.com/asyncapi/spec-json-schemas/blob/master/schemas/{version.revision}.json'
   }
 
   MARKDOWN='markdown'
@@ -18,14 +25,23 @@ class SpecificationUrls:
   _url_version_regex_search = r'.*{version.(?P<version>[a-z]*)}'
   _url_version_regex_replace = r'{version.[a-z]*}'
 
-  def get_specification_urls(version):
+  def get_specification_urls_templates(specification):
+      result = None
+      if specification == 'OpenAPI':
+        result = SpecificationUrls._openapi_urls
+      elif specification == 'AsyncAPI':
+        result = SpecificationUrls._asyncapi_urls
+      return result
+
+  def get_specification_urls(specification, version):
     result = []
-    for key in SpecificationUrls._urls.keys():
-      result.append(SpecificationUrls.get_specification_url(version, key))
+    templates = SpecificationUrls.get_specification_urls_templates(specification)
+    for key in templates.keys():
+      result.append(SpecificationUrls.get_specification_url(specification, version, key))
     return result
 
-  def get_specification_url(version, name, anchor=None):
-    url_template = SpecificationUrls._urls[name]
+  def get_specification_url(specification, version, name, anchor=None):
+    url_template = SpecificationUrls.get_specification_urls_templates(specification)[name]
     version_type_result = re.compile(SpecificationUrls._url_version_regex_search).search(url_template)
     version = version.get_version(version_type_result.group('version'))
     url = re.sub(SpecificationUrls._url_version_regex_replace, version, url_template)
@@ -46,18 +62,29 @@ class Url(Dictable):
 class DataUrls(Data):
   def __init__(self, source, parent):
     super().__init__(source, parent)
+    self.__init_specification_name()
     self.__init_specification_urls()
     self.__init__other_urls()
 
+  def __init_specification_name(self):
+    title = self.get_data_root().get_source().get_parsed_html().find('h1')
+    title_regex = re.compile(r'(.*)\s*Specification')
+    self._specification_name = title_regex.search(title.get_text()).group(1).strip()
+
   def __init_specification_urls(self):
     if self.get_source().type == ContentType.DOCUMENT: 
-      self.urls = SpecificationUrls.get_specification_urls(self.get_data_root()._version)
+      self.urls = SpecificationUrls.get_specification_urls(self._specification_name, self.get_data_root()._version)
     else:
-      id = self.get_data_parent().get_id()
-      if id != None:
-        self.urls = []
-        self.urls.append(SpecificationUrls.get_specification_url(self.get_data_root()._version, SpecificationUrls.MARKDOWN, id))
-        self.urls.append(SpecificationUrls.get_specification_url(self.get_data_root()._version, SpecificationUrls.HTML, id))
+      self.urls = []
+      if(self._specification_name == 'AsyncAPI'):
+        html_id = self.get_data_parent().get_id(DataId.SECONDARY)
+        markdown_id = self.get_data_parent().get_id()
+      else:
+        markdown_id = self.get_data_parent().get_id()
+        html_id = markdown_id
+      if html_id != None:
+        self.urls.append(SpecificationUrls.get_specification_url(self._specification_name, self.get_data_root()._version, SpecificationUrls.MARKDOWN, markdown_id))
+        self.urls.append(SpecificationUrls.get_specification_url(self._specification_name, self.get_data_root()._version, SpecificationUrls.HTML, html_id))
 
   def __get_all_links(self):
     if self.get_source().type == ContentType.DOCUMENT:

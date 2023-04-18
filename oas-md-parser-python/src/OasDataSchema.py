@@ -36,6 +36,20 @@ class DataFieldType(Data):
         t = 'Any'
       self.types.append(t.strip())
 
+class DataFieldFixType(Data):
+  def __init__(self, parent, parent_type, types):
+    super().__init__(parent._source, parent)
+    self.parent_type = parent_type
+    self.types = types
+
+class DataFieldFix(Data, DataWithUrls):
+  def __init__(self, parent, name, name_type, parent_type, types):
+    super().__init__(parent._source, parent)
+    self.name = name
+    self.name_type = name_type
+    self.is_required = False
+    self.type = DataFieldFixType(parent, parent_type, types)
+
 class DataField(Data, DataWithUrls):
 
   FIXED = 'fixed'
@@ -112,7 +126,7 @@ class DataSchema(Data, DataWithUrls):
       self.is_root = False
 
   def __init__name(self):
-    self.name = self.get_source().get_text()
+    self.name = self.get_source().get_text().strip()
   
   def __init__description(self):
     self.description = self.get_source().get_only_content_as_html()
@@ -124,7 +138,7 @@ class DataSchema(Data, DataWithUrls):
 
   def __init__is_extensible(self):
     self.is_extensible = False 
-    if self.get_data_root()._version.is_version('2'):
+    if self.get_data_root()._version.name == 'Swagger':
       patterned_fields_section = self.get_source().find_section_for_text(re.compile('^Patterned (Fields|Objects)$'))
       if patterned_fields_section != None:
         patterned_fields = self._get_fields_from_section(patterned_fields_section, DataField.PATTERNED)
@@ -162,6 +176,9 @@ class DataSchema(Data, DataWithUrls):
         if self.is_extensible:
           self.fields += self._get_fields_from_section(specification_extensions_section, DataField.PATTERNED)
 
+  def add_field(self, name, name_type, parent_type, types):
+    self.fields.append(DataFieldFix(self, name, name_type, parent_type, types))
+
 class DataSchemas(Data):
   def __init__(self, source, specification):
     super().__init__(source, specification)
@@ -178,8 +195,15 @@ class DataSchemas(Data):
     for content in schema_section.get_contents():
       if content.type == ContentType.SECTION:
         self.schemas.append(DataSchema(content, self))
+    self.__fix_schemas()
     self.__init_schemas_usages()
   
+  def __fix_schemas(self):
+    if(self.get_data_root()._version.name == 'AsyncAPI'):
+      for schema in self.schemas:
+        if(schema.name == 'Tags Object'):
+          schema.add_field('[*]', 'fixed', None, ['Tag Object'])
+
   def __init_schemas_usages(self):
     for schema in self.schemas:
       schema.usages = self.__get_schema_usages(schema)

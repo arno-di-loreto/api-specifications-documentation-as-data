@@ -29,8 +29,8 @@ class Data(Dictable):
     self.__init__ids()
   
   def __init__ids(self):
+    self.ids = []
     if len(self.get_source().anchors) > 0:
-      self.ids = []
       for anchor in self.get_source().anchors:
         self.ids.append(DataId(anchor))
 
