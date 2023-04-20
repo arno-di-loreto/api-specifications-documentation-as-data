@@ -125,11 +125,11 @@
             version.classList.add("selected")
           }
         });
+        window.history.replaceState(null, null, '?specification='+specification);
       }
 
       function onVersionClick(event){
         const specification = event.composedPath()[0].id;
-        window.history.replaceState(null, null, '?specification='+specification);
         viewSpecification(specification);
       }
 
