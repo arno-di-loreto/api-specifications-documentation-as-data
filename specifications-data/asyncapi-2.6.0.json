@@ -2,6 +2,7 @@
     "ids": [],
     "name": "AsyncAPI",
     "version": "2.6.0",
+    "specification": "AsyncAPI",
     "urls": [
         {
             "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.6.0.md",
@@ -11022,6 +11023,103 @@
                 {
                     "schemaName": "Operation Trait Object",
                     "fieldName": "security"
+                }
+            ]
+        },
+        {
+            "ids": [
+                {
+                    "value": "correlation-id-object",
+                    "type": "main",
+                    "references": []
+                },
+                {
+                    "value": "correlationIdObject",
+                    "type": "secondary",
+                    "references": []
+                }
+            ],
+            "name": "Correlation ID Object",
+            "isRoot": false,
+            "isExtensible": true,
+            "description": "<p>An object that specifies an identifier at design time that can used for message tracing and correlation. </p><p>For specifying and computing the location of a Correlation ID, a <a href=\"#runtimeExpression\">runtime expression</a> is used.</p>",
+            "urls": [
+                {
+                    "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.6.0.md#correlation-id-object",
+                    "name": "markdown",
+                    "type": "documentation"
+                },
+                {
+                    "url": "https://www.asyncapi.com/docs/reference/specification/v2.6.0#correlationIdObject",
+                    "name": "html",
+                    "type": "documentation"
+                },
+                {
+                    "url": "#runtimeExpression",
+                    "name": "runtime expression",
+                    "type": "internal reference"
+                }
+            ],
+            "fields": [
+                {
+                    "ids": [],
+                    "name": "description",
+                    "nameType": "fixed",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "isRequired": false,
+                    "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "https://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "external reference"
+                        }
+                    ],
+                    "description": "An optional description of the identifier."
+                },
+                {
+                    "ids": [],
+                    "name": "location",
+                    "nameType": "fixed",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "isRequired": true,
+                    "richText": null,
+                    "urls": [
+                        {
+                            "url": "#runtimeExpression",
+                            "name": "runtime expression",
+                            "type": "internal reference"
+                        }
+                    ],
+                    "description": "A <a href=\"#runtimeExpression\">runtime expression</a> that specifies the location of the correlation ID."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Message Object",
+                    "fieldName": "correlationId"
+                },
+                {
+                    "schemaName": "Message Trait Object",
+                    "fieldName": "correlationId"
+                },
+                {
+                    "schemaName": "Components Object",
+                    "fieldName": "correlationIds"
                 }
             ]
         }

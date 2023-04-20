@@ -3,7 +3,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 CURRENT_DIR=`pwd`
 SPEC_DIR="$SCRIPT_DIR/../specifications"
 DATA_DIR="$SCRIPT_DIR/../specifications-data"
-PARSER_DIR="$SCRIPT_DIR/../oas-md-parser-python"
+PARSER_DIR="$SCRIPT_DIR/../md-parser-python"
 
 cd $PARSER_DIR
 

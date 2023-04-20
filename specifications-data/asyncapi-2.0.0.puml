@@ -1,0 +1,332 @@
+@startuml
+class "AsyncAPI" #line:Aquamarine;line.bold {
+  asyncapi : AsyncAPI Version String
+  id : Identifier
+  info : Info
+  servers : Servers
+  channels : Channels
+  components : Components
+  tags : Tags
+  externalDocs : External Documentation
+}
+"AsyncAPI::info"*-->"Info" #Coral
+"AsyncAPI::servers"*-->"Servers" #DarkGreen
+"AsyncAPI::channels"*-->"Channels" #DarkSalmon
+"AsyncAPI::components"*-->"Components" #LightGreen
+"AsyncAPI::tags"*-->"Tags" #HotPink
+"AsyncAPI::externalDocs"*-->"External Documentation" #LightBlue
+
+class "AsyncAPI Version String" #line:Blue;line.bold {
+}
+
+class "Identifier" #line:CadetBlue;line.bold {
+}
+
+class "Info" #line:Coral;line.bold {
+  title : string
+  version : string
+  description : string
+  termsOfService : string
+  contact : Contact
+  license : License
+}
+"Info::contact"*-->"Contact" #CornflowerBlue
+"Info::license"*-->"License" #DarkCyan
+
+class "Contact" #line:CornflowerBlue;line.bold {
+  name : string
+  url : string
+  email : string
+}
+
+class "License" #line:DarkCyan;line.bold {
+  name : string
+  url : string
+}
+
+class "Servers" #line:DarkGreen;line.bold {
+  ^[A-Za-z0-9_\-]+$ : Server
+}
+"Servers::^[A-Za-z0-9_\-]+$"*-->"Server" #DarkMagenta
+
+class "Server" #line:DarkMagenta;line.bold {
+  -url : string
+  -protocol : string
+  protocolVersion : string
+  description : string
+  variables : map of Server Variable
+  security : array of Security Requirement
+  bindings : Server Bindings
+}
+"Server::variables"*-->"Server Variable" #DarkOrange
+"Server::security"*-->"Security Requirement" #LightSlateGray
+"Server::bindings"*-->"Server Bindings" #DeepSkyBlue
+
+class "Server Variable" #line:DarkOrange;line.bold {
+  enum : array of string
+  default : string
+  description : string
+  examples : array of string
+}
+
+class "Default Content Type" #line:DarkRed;line.bold {
+}
+
+class "Channels" #line:DarkSalmon;line.bold {
+  channel : Channel Item
+}
+"Channels::channel"*-->"Channel Item" #DarkSeaGreen
+
+class "Channel Item" #line:DarkSeaGreen;line.bold {
+  $ref : string
+  description : string
+  subscribe : Operation
+  publish : Operation
+  parameters : Parameters
+  bindings : Channel Bindings
+}
+"Channel Item::subscribe"*-->"Operation" #DarkSlateBlue
+"Channel Item::publish"*-->"Operation" #DarkSlateBlue
+"Channel Item::parameters"*-->"Parameters" #DarkViolet
+"Channel Item::bindings"*-->"Channel Bindings" #FireBrick
+
+class "Operation" #line:DarkSlateBlue;line.bold {
+  operationId : string
+  summary : string
+  description : string
+  tags : array of Tag
+  externalDocs : External Documentation
+  bindings : map of Operation Bindings
+  traits : array of Operation Trait
+  message : Message
+}
+"Operation::tags"*-->"Tag" #IndianRed
+"Operation::externalDocs"*-->"External Documentation" #LightBlue
+"Operation::bindings"*-->"Operation Bindings" #ForestGreen
+"Operation::traits"*-->"Operation Trait" #DarkTurquoise
+"Operation::message"*-->"Message" #Gold
+
+class "Operation Trait" #line:DarkTurquoise;line.bold {
+  operationId : string
+  summary : string
+  description : string
+  tags : Tags
+  externalDocs : External Documentation
+  bindings : Operation Bindings
+}
+"Operation Trait::tags"*-->"Tags" #HotPink
+"Operation Trait::externalDocs"*-->"External Documentation" #LightBlue
+"Operation Trait::bindings"*-->"Operation Bindings" #ForestGreen
+
+class "Parameters" #line:DarkViolet;line.bold {
+  ^[A-Za-z0-9_\-]+$ : Parameter or $ref
+}
+"Parameters::^[A-Za-z0-9_\-]+$"*-->"Parameter" #DeepPink
+
+class "Parameter" #line:DeepPink;line.bold {
+  description : string
+  schema : Schema
+  location : string
+}
+"Parameter::schema"*-->"Schema" #LightPink
+
+class "Server Bindings" #line:DeepSkyBlue;line.bold {
+  http : HTTP Server Binding
+  ws : WebSockets Server Binding
+  kafka : Kafka Server Binding
+  amqp : AMQP Server Binding
+  amqp1 : AMQP
+  mqtt : MQTT Server Binding
+  mqtt5 : MQTT
+  nats : NATS Server Binding
+  jms : JMS Server Binding
+  sns : SNS Server Binding
+  sqs : SQS Server Binding
+  stomp : STOMP Server Binding
+  redis : Redis Server Binding
+}
+
+class "Channel Bindings" #line:FireBrick;line.bold {
+  http : HTTP Channel Binding
+  ws : WebSockets Channel Binding
+  kafka : Kafka Channel Binding
+  amqp : AMQP Channel Binding
+  amqp1 : AMQP
+  mqtt : MQTT Channel Binding
+  mqtt5 : MQTT
+  nats : NATS Channel Binding
+  jms : JMS Channel Binding
+  sns : SNS Channel Binding
+  sqs : SQS Channel Binding
+  stomp : STOMP Channel Binding
+  redis : Redis Channel Binding
+}
+
+class "Operation Bindings" #line:ForestGreen;line.bold {
+  http : HTTP Operation Binding
+  ws : WebSockets Operation Binding
+  kafka : Kafka Operation Binding
+  amqp : AMQP Operation Binding
+  amqp1 : AMQP
+  mqtt : MQTT Operation Binding
+  mqtt5 : MQTT
+  nats : NATS Operation Binding
+  jms : JMS Operation Binding
+  sns : SNS Operation Binding
+  sqs : SQS Operation Binding
+  stomp : STOMP Operation Binding
+  redis : Redis Operation Binding
+}
+
+class "Message Bindings" #line:Fuchsia;line.bold {
+  http : HTTP Message Binding
+  ws : WebSockets Message Binding
+  kafka : Kafka Message Binding
+  amqp : AMQP Message Binding
+  amqp1 : AMQP
+  mqtt : MQTT Message Binding
+  mqtt5 : MQTT
+  nats : NATS Message Binding
+  jms : JMS Message Binding
+  sns : SNS Message Binding
+  sqs : SQS Message Binding
+  stomp : STOMP Message Binding
+  redis : Redis Message Binding
+}
+
+class "Message" #line:Gold;line.bold {
+  headers : Schema or $ref
+  payload : any
+  correlationId : Correlation ID or $ref
+  schemaFormat : string
+  contentType : string
+  name : string
+  title : string
+  summary : string
+  description : string
+  tags : Tags
+  externalDocs : External Documentation
+  bindings : Message Bindings
+  examples : array of Map
+  traits : array of Message Trait
+}
+"Message::headers"*-->"Schema" #LightPink
+"Message::correlationId"*-->"Correlation ID" #LightSlateGrey
+"Message::tags"*-->"Tags" #HotPink
+"Message::externalDocs"*-->"External Documentation" #LightBlue
+"Message::bindings"*-->"Message Bindings" #Fuchsia
+"Message::traits"*-->"Message Trait" #GreenYellow
+
+class "Message Trait" #line:GreenYellow;line.bold {
+  headers : Schema or $ref
+  correlationId : Correlation ID or $ref
+  schemaFormat : string
+  contentType : string
+  name : string
+  title : string
+  summary : string
+  description : string
+  tags : Tags
+  externalDocs : External Documentation
+  bindings : map of Message Bindings
+  examples : array of Map
+}
+"Message Trait::headers"*-->"Schema" #LightPink
+"Message Trait::correlationId"*-->"Correlation ID" #LightSlateGrey
+"Message Trait::tags"*-->"Tags" #HotPink
+"Message Trait::externalDocs"*-->"External Documentation" #LightBlue
+"Message Trait::bindings"*-->"Message Bindings" #Fuchsia
+
+class "Tags" #line:HotPink;line.bold {
+  [*] : Tag
+}
+"Tags::[*]"*-->"Tag" #IndianRed
+
+class "Tag" #line:IndianRed;line.bold {
+  name : string
+  description : string
+  externalDocs : External Documentation
+}
+"Tag::externalDocs"*-->"External Documentation" #LightBlue
+
+class "External Documentation" #line:LightBlue;line.bold {
+  description : string
+  url : string
+}
+
+class "Reference" #line:LightCoral;line.bold {
+  $ref : string
+}
+
+class "Components" #line:LightGreen;line.bold {
+  schemas : map of Schema or $ref
+  messages : map of Message or $ref
+  securitySchemes : map of Security Scheme or $ref
+  parameters : map of Parameter or $ref
+  correlationIds : map of Correlation ID
+  operationTraits : map of Operation Trait
+  messageTraits : map of Message Trait
+  serverBindings : map of Server Bindings
+  channelBindings : map of Channel Bindings
+  operationBindings : map of Operation Bindings
+  messageBindings : map of Message Bindings
+}
+"Components::schemas"*-->"Schema" #LightPink
+"Components::messages"*-->"Message" #Gold
+"Components::securitySchemes"*-->"Security Scheme" #LightSalmon
+"Components::parameters"*-->"Parameter" #DeepPink
+"Components::correlationIds"*-->"Correlation ID" #LightSlateGrey
+"Components::operationTraits"*-->"Operation Trait" #DarkTurquoise
+"Components::messageTraits"*-->"Message Trait" #GreenYellow
+"Components::serverBindings"*-->"Server Bindings" #DeepSkyBlue
+"Components::channelBindings"*-->"Channel Bindings" #FireBrick
+"Components::operationBindings"*-->"Operation Bindings" #ForestGreen
+"Components::messageBindings"*-->"Message Bindings" #Fuchsia
+
+class "Schema" #line:LightPink;line.bold {
+  discriminator : string
+  externalDocs : External Documentation
+  deprecated : boolean
+}
+"Schema::externalDocs"*-->"External Documentation" #LightBlue
+
+class "Security Scheme" #line:LightSalmon;line.bold {
+  -type : string
+  description : string
+  -name : string
+  -in : string
+  -scheme : string
+  bearerFormat : string
+  -flows : OAuth Flows
+  -openIdConnectUrl : string
+}
+"Security Scheme::flows"*-->"OAuth Flows" #LightSeaGreen
+
+class "OAuth Flows" #line:LightSeaGreen;line.bold {
+  implicit : OAuth Flow
+  password : OAuth Flow
+  clientCredentials : OAuth Flow
+  authorizationCode : OAuth Flow
+}
+"OAuth Flows::implicit"*-->"OAuth Flow" #LightSkyBlue
+"OAuth Flows::password"*-->"OAuth Flow" #LightSkyBlue
+"OAuth Flows::clientCredentials"*-->"OAuth Flow" #LightSkyBlue
+"OAuth Flows::authorizationCode"*-->"OAuth Flow" #LightSkyBlue
+
+class "OAuth Flow" #line:LightSkyBlue;line.bold {
+  -authorizationUrl : string
+  -tokenUrl : string
+  refreshUrl : string
+  -scopes : map of string
+}
+
+class "Security Requirement" #line:LightSlateGray;line.bold {
+  name : array of string
+}
+
+class "Correlation ID" #line:LightSlateGrey;line.bold {
+  description : string
+  -location : string
+}
+
+@enduml

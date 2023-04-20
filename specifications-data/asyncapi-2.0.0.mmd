@@ -266,10 +266,10 @@ classDiagram
     map~CorrelationID~ correlationIds
     map~OperationTrait~ operationTraits
     map~MessageTrait~ messageTraits
-    map~ServerBinding~ serverBindings
-    map~ChannelBinding~ channelBindings
-    map~OperationBinding~ operationBindings
-    map~MessageBinding~ messageBindings
+    map~ServerBindings~ serverBindings
+    map~ChannelBindings~ channelBindings
+    map~OperationBindings~ operationBindings
+    map~MessageBindings~ messageBindings
   }
   Components *-- Schema : Components.schemas
   Components *-- Message : Components.messages
@@ -278,10 +278,10 @@ classDiagram
   Components *-- CorrelationID : Components.correlationIds
   Components *-- OperationTrait : Components.operationTraits
   Components *-- MessageTrait : Components.messageTraits
-  Components *-- ServerBinding : Components.serverBindings
-  Components *-- ChannelBinding : Components.channelBindings
-  Components *-- OperationBinding : Components.operationBindings
-  Components *-- MessageBinding : Components.messageBindings
+  Components *-- ServerBindings : Components.serverBindings
+  Components *-- ChannelBindings : Components.channelBindings
+  Components *-- OperationBindings : Components.operationBindings
+  Components *-- MessageBindings : Components.messageBindings
 
   class Schema:::Schema {
     string discriminator
@@ -322,5 +322,10 @@ classDiagram
 
   class SecurityRequirement:::SecurityRequirement {
     array~string~ name
+  }
+
+  class CorrelationID:::CorrelationID {
+    string description
+    +string location
   }
 

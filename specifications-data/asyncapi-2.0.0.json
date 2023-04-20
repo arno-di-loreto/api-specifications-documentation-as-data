@@ -2,6 +2,7 @@
     "ids": [],
     "name": "AsyncAPI",
     "version": "2.0.0",
+    "specification": "AsyncAPI",
     "urls": [
         {
             "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.0.0.md",
@@ -4158,6 +4159,10 @@
                 {
                     "schemaName": "Server Object",
                     "fieldName": "bindings"
+                },
+                {
+                    "schemaName": "Components Object",
+                    "fieldName": "serverBindings"
                 }
             ]
         },
@@ -4703,6 +4708,10 @@
                 {
                     "schemaName": "Channel Item Object",
                     "fieldName": "bindings"
+                },
+                {
+                    "schemaName": "Components Object",
+                    "fieldName": "channelBindings"
                 }
             ]
         },
@@ -5252,6 +5261,10 @@
                 {
                     "schemaName": "Operation Trait Object",
                     "fieldName": "bindings"
+                },
+                {
+                    "schemaName": "Components Object",
+                    "fieldName": "operationBindings"
                 }
             ]
         },
@@ -5801,6 +5814,10 @@
                 {
                     "schemaName": "Message Trait Object",
                     "fieldName": "bindings"
+                },
+                {
+                    "schemaName": "Components Object",
+                    "fieldName": "messageBindings"
                 }
             ]
         },
@@ -7781,7 +7798,7 @@
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
-                            "Server Binding Object"
+                            "Server Bindings Object"
                         ]
                     },
                     "isRequired": false,
@@ -7825,7 +7842,7 @@
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
-                            "Channel Binding Object"
+                            "Channel Bindings Object"
                         ]
                     },
                     "isRequired": false,
@@ -7869,7 +7886,7 @@
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
-                            "Operation Binding Object"
+                            "Operation Bindings Object"
                         ]
                     },
                     "isRequired": false,
@@ -7913,7 +7930,7 @@
                         "parentType": "map",
                         "parentTypeMapKeyType": "string",
                         "types": [
-                            "Message Binding Object"
+                            "Message Bindings Object"
                         ]
                     },
                     "isRequired": false,
@@ -8948,6 +8965,103 @@
                 {
                     "schemaName": "Server Object",
                     "fieldName": "security"
+                }
+            ]
+        },
+        {
+            "ids": [
+                {
+                    "value": "correlation-id-object",
+                    "type": "main",
+                    "references": []
+                },
+                {
+                    "value": "correlationIdObject",
+                    "type": "secondary",
+                    "references": []
+                }
+            ],
+            "name": "Correlation ID Object",
+            "isRoot": false,
+            "isExtensible": false,
+            "description": "<p>An object that specifies an identifier at design time that can used for message tracing and correlation. </p><p>For specifying and computing the location of a Correlation ID, a <a href=\"#runtimeExpression\">runtime expression</a> is used.</p>",
+            "urls": [
+                {
+                    "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.0.0.md#correlation-id-object",
+                    "name": "markdown",
+                    "type": "documentation"
+                },
+                {
+                    "url": "https://www.asyncapi.com/docs/reference/specification/v2.0.0#correlationIdObject",
+                    "name": "html",
+                    "type": "documentation"
+                },
+                {
+                    "url": "#runtimeExpression",
+                    "name": "runtime expression",
+                    "type": "internal reference"
+                }
+            ],
+            "fields": [
+                {
+                    "ids": [],
+                    "name": "description",
+                    "nameType": "fixed",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "isRequired": false,
+                    "richText": "CommonMark",
+                    "urls": [
+                        {
+                            "url": "http://spec.commonmark.org/",
+                            "name": "CommonMark syntax",
+                            "type": "external reference"
+                        }
+                    ],
+                    "description": "An optional description of the identifier."
+                },
+                {
+                    "ids": [],
+                    "name": "location",
+                    "nameType": "fixed",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "string"
+                        ]
+                    },
+                    "isRequired": true,
+                    "richText": null,
+                    "urls": [
+                        {
+                            "url": "#runtimeExpression",
+                            "name": "runtime expression",
+                            "type": "internal reference"
+                        }
+                    ],
+                    "description": "A <a href=\"#runtimeExpression\">runtime expression</a> that specifies the location of the correlation ID."
+                }
+            ],
+            "usages": [
+                {
+                    "schemaName": "Message Object",
+                    "fieldName": "correlationId"
+                },
+                {
+                    "schemaName": "Message Trait Object",
+                    "fieldName": "correlationId"
+                },
+                {
+                    "schemaName": "Components Object",
+                    "fieldName": "correlationIds"
                 }
             ]
         }
