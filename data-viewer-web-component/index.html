@@ -4,26 +4,11 @@
     <title>API Specifications Map</title>
     <script type="module" src="specification-viewer.js"></script>
     <!-- icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icons/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/icons/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icons/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/icons/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="images/icons/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="images/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="images/icons/android-chrome-512x512.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="images/icons/android-chrome-192x192.png" sizes="192x192" />
     <link rel="icon" type="image/png" href="images/icons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="images/icons/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="images/icons/mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="images/icons/mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="images/icons/mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="images/icons/mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="images/icons/mstile-310x310.png" />
     <!-- end icons -->
     <style>
       body {
@@ -93,11 +78,11 @@
     <div class="header">
       <h1>API Specifications Map (alpha)</h1>
       <div class="selector">
-        <span class="specification"><img alt="Brand" id="icon" src="images/icons/favicon-32x32.png">OpenAPI</span>
+        <span class="specification" id="openapi-3.1.0"><img alt="Brand" id="icon" src="images/openapi-logo.png">OpenAPI</span>
         <span class="version v2" id="openapi-2.0">2.0</span>
         <span class="version v30" id="openapi-3.0.3">3.0.3</span>
-        <span class="version v31 selected" id="openapi-3.1.0">3.1.0</span>
-        <span class="specification"><img src="images/asyncapi-logo-32x32.png">AsyncAPI</span>
+        <span class="version v31" id="openapi-3.1.0">3.1.0</span>
+        <span class="specification" id="asyncapi-2.6.0"><img src="images/asyncapi-logo.png">AsyncAPI</span>
         <span class="version" id="asyncapi-2.0.0">2.0.0</span>
         <span class="version" id="asyncapi-2.1.0">2.1.0</span>
         <span class="version" id="asyncapi-2.2.0">2.2.0</span>
@@ -120,25 +105,74 @@
         <p><a href="https://github.com/arno-di-loreto/openapi-specification-documentation-as-data">Github repository</a></p>
       </div>
       <div class="viewer">
-        <specification-viewer src="../specifications-data/openapi-3.1.0.json"></specification-viewer>
+        <specification-viewer></specification-viewer>
       </div>  
     </div>
     <script>
       const versions = document.querySelectorAll('.version');
-      console.log(versions);
       versions.forEach(version => version.addEventListener("click", onVersionClick));
+      const specifications = document.querySelectorAll('.specification');
+      specifications.forEach(version => version.addEventListener("click", onVersionClick));
+
+      function viewSpecification(specification){
+        const viewer = document.querySelector('specification-viewer');
+        const dataFile = '../specifications-data/'+specification+'.json';
+        viewer.setAttribute('src', dataFile);
+        const versions = document.querySelectorAll('.version');
+        versions.forEach(version => version.classList.remove("selected"));
+        versions.forEach(version => {
+          if(version.id === specification){
+            version.classList.add("selected")
+          }
+        });
+      }
 
       function onVersionClick(event){
-        console.log('onVersionClick', event);
-        const version = event.composedPath()[0];
-        const viewer = document.querySelector('specification-viewer');
-        const dataFile = '../specifications-data/'+version.id+'.json';
-        console.log('data file', dataFile);
-        viewer.setAttribute('src', dataFile);
-        const versions = document.querySelectorAll('.selected');
-        versions.forEach(version => version.classList.toggle("selected"));
-        version.classList.toggle("selected")
+        const specification = event.composedPath()[0].id;
+        window.history.replaceState(null, null, '?specification='+specification);
+        viewSpecification(specification);
       }
+
+      function getSpecificationFromUrl(){
+        const urlParams = new URLSearchParams(location.search);
+        let specification = 'openapi-3.1.0';
+        for (const [key, value] of urlParams) {
+            if(key === 'specification'){
+              if(value === 'openapi'){
+                specification = 'openapi-3.1.0';
+              } 
+              else if(value ==='asyncapi'){
+                specification = 'asyncapi-2.6.0';
+              }
+              else if(value.startsWith('swagger')){
+                specification = 'openapi-2.0';
+              }
+              else if(value.startsWith('openapi-')){
+                const number = value.split('-')[1];
+                if(number.startsWith('2')){
+                  specification = 'openapi-2.0';
+                }
+                else if(number.startsWith('3.0')){
+                  specification = 'openapi-3.0.3';
+                }
+                else if(number.startsWith('3.1')){
+                  specification = 'openapi-3.1.0';
+                }
+              }
+              else if(value.startsWith('asyncapi-2')){
+                let number = value.split('-')[1].split('.')[1];
+                if(number === undefined){
+                  number = '6';
+                }
+                specification = `asyncapi-2.${number}.0`;
+              }
+            }
+        }
+        return specification;
+      }
+
+      const specification = getSpecificationFromUrl();
+      viewSpecification(specification)
     </script>
   </body>
 </html>
