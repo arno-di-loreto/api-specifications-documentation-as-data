@@ -57,6 +57,7 @@ class "Server" #line:DarkMagenta;line.bold {
   variables : map of Server Variable
   security : array of Security Requirement
   bindings : Server Bindings
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Server::variables"*-->"Server Variable" #DarkOrange
 "Server::security"*-->"Security Requirement" #LightSlateGray
@@ -67,6 +68,7 @@ class "Server Variable" #line:DarkOrange;line.bold {
   default : string
   description : string
   examples : array of string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Default Content Type" #line:DarkRed;line.bold {
@@ -299,6 +301,7 @@ class "Security Scheme" #line:LightSalmon;line.bold {
   bearerFormat : string
   -flows : OAuth Flows
   -openIdConnectUrl : string
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Security Scheme::flows"*-->"OAuth Flows" #LightSeaGreen
 
@@ -307,6 +310,7 @@ class "OAuth Flows" #line:LightSeaGreen;line.bold {
   password : OAuth Flow
   clientCredentials : OAuth Flow
   authorizationCode : OAuth Flow
+  ^x-[\w\d\-\_]+$ : Any
 }
 "OAuth Flows::implicit"*-->"OAuth Flow" #LightSkyBlue
 "OAuth Flows::password"*-->"OAuth Flow" #LightSkyBlue
@@ -318,6 +322,7 @@ class "OAuth Flow" #line:LightSkyBlue;line.bold {
   -tokenUrl : string
   refreshUrl : string
   -scopes : map of string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Security Requirement" #line:LightSlateGray;line.bold {

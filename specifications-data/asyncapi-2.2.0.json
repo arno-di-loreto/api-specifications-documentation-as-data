@@ -2315,6 +2315,40 @@
                         }
                     ],
                     "description": "A map where the keys describe the name of the protocol and the values describe protocol-specific definitions for the server."
+                },
+                {
+                    "ids": [
+                        {
+                            "value": "infoExtensions",
+                            "type": "secondary",
+                            "references": []
+                        }
+                    ],
+                    "name": "^x-[\\w\\d\\-\\_]+$",
+                    "nameType": "patterned",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "isRequired": false,
+                    "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.2.0.md#infoExtensions",
+                            "name": "markdown",
+                            "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.asyncapi.com/docs/reference/specification/v2.2.0#infoExtensions",
+                            "name": "html",
+                            "type": "documentation"
+                        }
+                    ],
+                    "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
                 }
             ],
             "usages": [
@@ -2494,6 +2528,40 @@
                         }
                     ],
                     "description": "An array of examples of the server variable."
+                },
+                {
+                    "ids": [
+                        {
+                            "value": "infoExtensions",
+                            "type": "secondary",
+                            "references": []
+                        }
+                    ],
+                    "name": "^x-[\\w\\d\\-\\_]+$",
+                    "nameType": "patterned",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "isRequired": false,
+                    "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.2.0.md#infoExtensions",
+                            "name": "markdown",
+                            "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.asyncapi.com/docs/reference/specification/v2.2.0#infoExtensions",
+                            "name": "html",
+                            "type": "documentation"
+                        }
+                    ],
+                    "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
                 }
             ],
             "usages": [
@@ -9466,6 +9534,40 @@
                         }
                     ],
                     "description": "OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of a URL."
+                },
+                {
+                    "ids": [
+                        {
+                            "value": "infoExtensions",
+                            "type": "secondary",
+                            "references": []
+                        }
+                    ],
+                    "name": "^x-[\\w\\d\\-\\_]+$",
+                    "nameType": "patterned",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "isRequired": false,
+                    "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.2.0.md#infoExtensions",
+                            "name": "markdown",
+                            "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.asyncapi.com/docs/reference/specification/v2.2.0#infoExtensions",
+                            "name": "html",
+                            "type": "documentation"
+                        }
+                    ],
+                    "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
                 }
             ],
             "usages": [
@@ -9660,6 +9762,40 @@
                         }
                     ],
                     "description": "Configuration for the OAuth Authorization Code flow."
+                },
+                {
+                    "ids": [
+                        {
+                            "value": "infoExtensions",
+                            "type": "secondary",
+                            "references": []
+                        }
+                    ],
+                    "name": "^x-[\\w\\d\\-\\_]+$",
+                    "nameType": "patterned",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "isRequired": false,
+                    "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.2.0.md#infoExtensions",
+                            "name": "markdown",
+                            "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.asyncapi.com/docs/reference/specification/v2.2.0#infoExtensions",
+                            "name": "html",
+                            "type": "documentation"
+                        }
+                    ],
+                    "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
                 }
             ],
             "usages": [
@@ -9838,6 +9974,40 @@
                         }
                     ],
                     "description": "The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it."
+                },
+                {
+                    "ids": [
+                        {
+                            "value": "infoExtensions",
+                            "type": "secondary",
+                            "references": []
+                        }
+                    ],
+                    "name": "^x-[\\w\\d\\-\\_]+$",
+                    "nameType": "patterned",
+                    "type": {
+                        "ids": [],
+                        "parentType": null,
+                        "parentTypeMapKeyType": null,
+                        "types": [
+                            "Any"
+                        ]
+                    },
+                    "isRequired": false,
+                    "richText": null,
+                    "urls": [
+                        {
+                            "url": "https://github.com/asyncapi/website/blob/master/pages/docs/reference/specification/v2.2.0.md#infoExtensions",
+                            "name": "markdown",
+                            "type": "documentation"
+                        },
+                        {
+                            "url": "https://www.asyncapi.com/docs/reference/specification/v2.2.0#infoExtensions",
+                            "name": "html",
+                            "type": "documentation"
+                        }
+                    ],
+                    "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
                 }
             ],
             "usages": [

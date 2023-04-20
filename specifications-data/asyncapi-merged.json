@@ -911,6 +911,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "Default content type to use when encoding/decoding a message's payload."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -1620,6 +1667,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "The license information for the exposed API."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -1948,6 +2042,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "The email address of the contact person/organization. MUST be in the format of an email address."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -2185,6 +2326,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "A URL to the license used for the API. This MUST be in the form of an absolute URL."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -3025,6 +3213,97 @@
           "description": "A map where the keys describe the name of the protocol and the values describe protocol-specific definitions for the server."
         },
         {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.0",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.1",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.2",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.3",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+        },
+        {
           "name": "tags",
           "versions": [
             "2.5",
@@ -3478,6 +3757,97 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "An array of examples of the server variable."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.0",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.1",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.2",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.3",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -4348,6 +4718,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "The servers on which this channel is available, specified as an optional unordered list of names (string keys) of <a href=\"#serverObject\">Server Objects</a> defined in the <a href=\"#serversObject\">Servers Object</a> (a map). If <code>servers</code> is absent or empty then this channel must be available on all servers defined in the <a href=\"#serversObject\">Servers Object</a>."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -5178,6 +5595,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "A declaration of which security mechanisms are associated with this operation. Only one of the security requirement objects MUST be satisfied to authorize an operation. In cases where Server Security also applies, it MUST also be satisfied."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -5826,6 +6290,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "A declaration of which security mechanisms are associated with this operation. Only one of the security requirement objects MUST be satisfied to authorize an operation. In cases where Server Security also applies, it MUST also be satisfied."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -6300,6 +6811,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "A <a href=\"#runtimeExpression\">runtime expression</a> that specifies the location of the parameter value. Even when a definition for the target field exists, it MUST NOT be used to validate this parameter but, instead, the <code>schema</code> property MUST be used."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -7825,6 +8383,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "Protocol-specific information for a Solace server."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         },
         {
           "name": "googlepubsub",
@@ -9413,6 +10018,53 @@
           "description": "Protocol-specific information for a Solace channel."
         },
         {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+        },
+        {
           "name": "googlepubsub",
           "versions": [
             "2.5",
@@ -10917,6 +11569,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "Protocol-specific information for a Solace operation."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         },
         {
           "name": "googlepubsub",
@@ -12541,6 +13240,53 @@
           "description": "Protocol-specific information for a Solace message."
         },
         {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+        },
+        {
           "name": "googlepubsub",
           "versions": [
             "2.5",
@@ -13976,6 +14722,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "Unique string used to identify the message. The id MUST be unique among all messages described in the API. The messageId value is <strong>case-sensitive</strong>. Tools and libraries MAY use the messageId to uniquely identify a message, therefore, it is RECOMMENDED to follow common programming naming conventions."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -15170,6 +15963,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "Unique string used to identify the message. The id MUST be unique among all messages described in the API. The messageId value is <strong>case-sensitive</strong>. Tools and libraries MAY use the messageId to uniquely identify a message, therefore, it is RECOMMENDED to follow common programming naming conventions."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -15636,6 +16476,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "Additional external documentation for this tag."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -15873,6 +16760,53 @@
           "isRequired": true,
           "canBeReference": false,
           "description": "The URL for the target documentation. This MUST be in the form of an absolute URL."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -17238,6 +18172,53 @@
           "isRequired": false,
           "canBeReference": true,
           "description": "An object to hold reusable <a href=\"#serverVariableObject\">Server Variable Objects</a>."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -17566,6 +18547,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "Specifies that a schema is deprecated and SHOULD be transitioned out of usage. Default value is <code>false</code>."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -18349,6 +19377,97 @@
           "isRequired": true,
           "canBeReference": false,
           "description": "OpenId Connect URL to discover OAuth2 configuration values. This MUST be in the form of an absolute URL."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.0",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.1",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.2",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.3",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -18768,6 +19887,97 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "Configuration for the OAuth Authorization Code flow."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.0",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.1",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.2",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.3",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -19187,6 +20397,97 @@
           "isRequired": true,
           "canBeReference": false,
           "description": "The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.0",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.1",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.2",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.3",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -19570,6 +20871,53 @@
           "isRequired": true,
           "canBeReference": false,
           "description": "A <a href=\"#runtimeExpression\">runtime expression</a> that specifies the location of the correlation ID."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     },
@@ -19889,6 +21237,53 @@
           "isRequired": false,
           "canBeReference": false,
           "description": "A short summary of what the example is about."
+        },
+        {
+          "name": "^x-[\\w\\d\\-\\_]+$",
+          "versions": [
+            "2.4",
+            "2.5",
+            "2.6"
+          ],
+          "logs": [
+            {
+              "version": "2.4",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.5",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            },
+            {
+              "version": "2.6",
+              "mainType": "Any",
+              "parentType": null,
+              "nameType": "patterned",
+              "richText": false,
+              "isRequired": false,
+              "canBeReference": false,
+              "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
+            }
+          ],
+          "mainType": "Any",
+          "parentType": null,
+          "nameType": "patterned",
+          "richText": false,
+          "isRequired": false,
+          "canBeReference": false,
+          "description": "Allows extensions to the AsyncAPI Schema. The field name MUST begin with <code>x-</code>, for example, <code>x-internal-id</code>. The value can be <code>null</code>, a primitive, an array or an object. Can have any valid JSON format value."
         }
       ]
     }

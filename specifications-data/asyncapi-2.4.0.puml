@@ -9,6 +9,7 @@ class "AsyncAPI" #line:Aquamarine;line.bold {
   components : Components
   tags : Tags
   externalDocs : External Documentation
+  ^x-[\w\d\-\_]+$ : Any
 }
 "AsyncAPI::info"*-->"Info" #Coral
 "AsyncAPI::servers"*-->"Servers" #DarkGreen
@@ -30,6 +31,7 @@ class "Info" #line:Coral;line.bold {
   termsOfService : string
   contact : Contact
   license : License
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Info::contact"*-->"Contact" #CornflowerBlue
 "Info::license"*-->"License" #DarkCyan
@@ -38,11 +40,13 @@ class "Contact" #line:CornflowerBlue;line.bold {
   name : string
   url : string
   email : string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "License" #line:DarkCyan;line.bold {
   -name : string
   url : string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Servers" #line:DarkGreen;line.bold {
@@ -58,6 +62,7 @@ class "Server" #line:DarkMagenta;line.bold {
   variables : map of Server Variable
   security : array of Security Requirement
   bindings : Server Bindings or $ref
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Server::variables"*-->"Server Variable" #DarkOrange
 "Server::security"*-->"Security Requirement" #LightSlateGrey
@@ -68,6 +73,7 @@ class "Server Variable" #line:DarkOrange;line.bold {
   default : string
   description : string
   examples : array of string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Default Content Type" #line:DarkRed;line.bold {
@@ -86,6 +92,7 @@ class "Channel Item" #line:DarkSeaGreen;line.bold {
   publish : Operation
   parameters : Parameters
   bindings : Channel Bindings or $ref
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Channel Item::subscribe"*-->"Operation" #DarkSlateBlue
 "Channel Item::publish"*-->"Operation" #DarkSlateBlue
@@ -102,6 +109,7 @@ class "Operation" #line:DarkSlateBlue;line.bold {
   bindings : Operation Bindings or $ref
   traits : array of Operation Trait or $ref
   message : Map or $ref
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Operation::security"*-->"Security Requirement" #LightSlateGrey
 "Operation::tags"*-->"Tags" #IndianRed
@@ -118,6 +126,7 @@ class "Operation Trait" #line:DarkTurquoise;line.bold {
   tags : Tags
   externalDocs : External Documentation
   bindings : Operation Bindings or $ref
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Operation Trait::security"*-->"Security Requirement" #LightSlateGrey
 "Operation Trait::tags"*-->"Tags" #IndianRed
@@ -133,6 +142,7 @@ class "Parameter" #line:DeepPink;line.bold {
   description : string
   schema : Schema or $ref
   location : string
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Parameter::schema"*-->"Schema" #LightSalmon
 
@@ -154,6 +164,7 @@ class "Server Bindings" #line:DeepSkyBlue;line.bold {
   redis : Redis Server Binding
   mercure : Mercure Server Binding
   ibmmq : IBM MQ Server Binding
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Channel Bindings" #line:FireBrick;line.bold {
@@ -174,6 +185,7 @@ class "Channel Bindings" #line:FireBrick;line.bold {
   redis : Redis Channel Binding
   mercure : Mercure Channel Binding
   ibmmq : IBM MQ Channel Binding
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Operation Bindings" #line:ForestGreen;line.bold {
@@ -193,6 +205,7 @@ class "Operation Bindings" #line:ForestGreen;line.bold {
   stomp : STOMP Operation Binding
   redis : Redis Operation Binding
   mercure : Mercure Operation Binding
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Message Bindings" #line:Fuchsia;line.bold {
@@ -213,6 +226,7 @@ class "Message Bindings" #line:Fuchsia;line.bold {
   redis : Redis Message Binding
   mercure : Mercure Message Binding
   ibmmq : IBM MQ Message Binding
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Message" #line:Gold;line.bold {
@@ -231,6 +245,7 @@ class "Message" #line:Gold;line.bold {
   bindings : Message Bindings or $ref
   examples : array of Message Example
   traits : array of Message Trait or $ref
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Message::headers"*-->"Schema" #LightSalmon
 "Message::correlationId"*-->"Correlation ID" #LightSteelBlue
@@ -254,6 +269,7 @@ class "Message Trait" #line:GreenYellow;line.bold {
   externalDocs : External Documentation
   bindings : Message Bindings or $ref
   examples : array of Message Example
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Message Trait::headers"*-->"Schema" #LightSalmon
 "Message Trait::correlationId"*-->"Correlation ID" #LightSteelBlue
@@ -267,6 +283,7 @@ class "Message Example" #line:HotPink;line.bold {
   payload : any
   name : string
   summary : string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Tags" #line:IndianRed;line.bold {
@@ -278,12 +295,14 @@ class "Tag" #line:LightBlue;line.bold {
   -name : string
   description : string
   externalDocs : External Documentation
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Tag::externalDocs"*-->"External Documentation" #LightCoral
 
 class "External Documentation" #line:LightCoral;line.bold {
   description : string
   -url : string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Reference" #line:LightGreen;line.bold {
@@ -305,6 +324,7 @@ class "Components" #line:LightPink;line.bold {
   channelBindings : map of Channel Bindings or $ref
   operationBindings : map of Operation Bindings or $ref
   messageBindings : map of Message Bindings or $ref
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Components::schemas"*-->"Schema" #LightSalmon
 "Components::servers"*-->"Server" #DarkMagenta
@@ -325,6 +345,7 @@ class "Schema" #line:LightSalmon;line.bold {
   discriminator : string
   externalDocs : External Documentation
   deprecated : boolean
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Schema::externalDocs"*-->"External Documentation" #LightCoral
 
@@ -337,6 +358,7 @@ class "Security Scheme" #line:LightSeaGreen;line.bold {
   bearerFormat : string
   -flows : OAuth Flows
   -openIdConnectUrl : string
+  ^x-[\w\d\-\_]+$ : Any
 }
 "Security Scheme::flows"*-->"OAuth Flows" #LightSkyBlue
 
@@ -345,6 +367,7 @@ class "OAuth Flows" #line:LightSkyBlue;line.bold {
   password : OAuth Flow
   clientCredentials : OAuth Flow
   authorizationCode : OAuth Flow
+  ^x-[\w\d\-\_]+$ : Any
 }
 "OAuth Flows::implicit"*-->"OAuth Flow" #LightSlateGray
 "OAuth Flows::password"*-->"OAuth Flow" #LightSlateGray
@@ -356,6 +379,7 @@ class "OAuth Flow" #line:LightSlateGray;line.bold {
   -tokenUrl : string
   refreshUrl : string
   -scopes : map of string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 class "Security Requirement" #line:LightSlateGrey;line.bold {
@@ -365,6 +389,7 @@ class "Security Requirement" #line:LightSlateGrey;line.bold {
 class "Correlation ID" #line:LightSteelBlue;line.bold {
   description : string
   -location : string
+  ^x-[\w\d\-\_]+$ : Any
 }
 
 @enduml

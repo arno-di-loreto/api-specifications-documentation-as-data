@@ -58,6 +58,7 @@ classDiagram
     map~ServerVariable~ variables
     array~SecurityRequirement~ security
     ServerBindings🔗 bindings
+    Any ^x-[\w\d\-\_]+$
   }
   Server *-- ServerVariable : Server.variables
   Server *-- SecurityRequirement : Server.security
@@ -68,6 +69,7 @@ classDiagram
     string default
     string description
     array~string~ examples
+    Any ^x-[\w\d\-\_]+$
   }
 
   class DefaultContentType:::DefaultContentType {
@@ -329,6 +331,7 @@ classDiagram
     string bearerFormat
     +OAuthFlows flows
     +string openIdConnectUrl
+    Any ^x-[\w\d\-\_]+$
   }
   SecurityScheme *-- OAuthFlows : SecurityScheme.flows
 
@@ -337,6 +340,7 @@ classDiagram
     OAuthFlow password
     OAuthFlow clientCredentials
     OAuthFlow authorizationCode
+    Any ^x-[\w\d\-\_]+$
   }
   OAuthFlows *-- OAuthFlow : OAuthFlows.implicit
   OAuthFlows *-- OAuthFlow : OAuthFlows.password
@@ -348,6 +352,7 @@ classDiagram
     +string tokenUrl
     string refreshUrl
     +map~string~ scopes
+    Any ^x-[\w\d\-\_]+$
   }
 
   class SecurityRequirement:::SecurityRequirement {

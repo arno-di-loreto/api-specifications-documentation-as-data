@@ -9,6 +9,7 @@ classDiagram
     Components components
     Tags tags
     ExternalDocumentation externalDocs
+    Any ^x-[\w\d\-\_]+$
   }
   AsyncAPI *-- Info : AsyncAPI.info
   AsyncAPI *-- Servers : AsyncAPI.servers
@@ -30,6 +31,7 @@ classDiagram
     string termsOfService
     Contact contact
     License license
+    Any ^x-[\w\d\-\_]+$
   }
   Info *-- Contact : Info.contact
   Info *-- License : Info.license
@@ -38,11 +40,13 @@ classDiagram
     string name
     string url
     string email
+    Any ^x-[\w\d\-\_]+$
   }
 
   class License:::License {
     +string name
     string url
+    Any ^x-[\w\d\-\_]+$
   }
 
   class Servers:::Servers {
@@ -59,6 +63,7 @@ classDiagram
     array~SecurityRequirement~ security
     Tags tags
     ServerBindings🔗 bindings
+    Any ^x-[\w\d\-\_]+$
   }
   Server *-- ServerVariable : Server.variables
   Server *-- SecurityRequirement : Server.security
@@ -70,6 +75,7 @@ classDiagram
     string default
     string description
     array~string~ examples
+    Any ^x-[\w\d\-\_]+$
   }
 
   class DefaultContentType:::DefaultContentType {
@@ -88,6 +94,7 @@ classDiagram
     Operation publish
     Parameters parameters
     ChannelBindings🔗 bindings
+    Any ^x-[\w\d\-\_]+$
   }
   ChannelItem *-- Operation : ChannelItem.subscribe
   ChannelItem *-- Operation : ChannelItem.publish
@@ -104,6 +111,7 @@ classDiagram
     OperationBindings🔗 bindings
     array~OperationTrait🔗~ traits
     Map🔗 message
+    Any ^x-[\w\d\-\_]+$
   }
   Operation *-- SecurityRequirement : Operation.security
   Operation *-- Tags : Operation.tags
@@ -120,6 +128,7 @@ classDiagram
     Tags tags
     ExternalDocumentation externalDocs
     OperationBindings🔗 bindings
+    Any ^x-[\w\d\-\_]+$
   }
   OperationTrait *-- SecurityRequirement : OperationTrait.security
   OperationTrait *-- Tags : OperationTrait.tags
@@ -135,6 +144,7 @@ classDiagram
     string description
     Schema🔗 schema
     string location
+    Any ^x-[\w\d\-\_]+$
   }
   Parameter *-- Schema : Parameter.schema
 
@@ -158,6 +168,7 @@ classDiagram
     IBMMQServerBinding ibmmq
     GoogleCloudPub googlepubsub
     PulsarServerBinding pulsar
+    Any ^x-[\w\d\-\_]+$
   }
 
   class ChannelBindings:::ChannelBindings {
@@ -180,6 +191,7 @@ classDiagram
     IBMMQChannelBinding ibmmq
     GoogleCloudPub googlepubsub
     PulsarChannelBinding pulsar
+    Any ^x-[\w\d\-\_]+$
   }
 
   class OperationBindings:::OperationBindings {
@@ -202,6 +214,7 @@ classDiagram
     GoogleCloudPub googlepubsub
     IBMMQOperationBinding ibmmq
     PulsarOperationBinding pulsar
+    Any ^x-[\w\d\-\_]+$
   }
 
   class MessageBindings:::MessageBindings {
@@ -224,6 +237,7 @@ classDiagram
     IBMMQMessageBinding ibmmq
     GoogleCloudPub googlepubsub
     PulsarMessageBinding pulsar
+    Any ^x-[\w\d\-\_]+$
   }
 
   class Message:::Message {
@@ -242,6 +256,7 @@ classDiagram
     MessageBindings🔗 bindings
     array~MessageExample~ examples
     array~MessageTrait🔗~ traits
+    Any ^x-[\w\d\-\_]+$
   }
   Message *-- Schema : Message.headers
   Message *-- CorrelationID : Message.correlationId
@@ -265,6 +280,7 @@ classDiagram
     ExternalDocumentation externalDocs
     MessageBindings🔗 bindings
     array~MessageExample~ examples
+    Any ^x-[\w\d\-\_]+$
   }
   MessageTrait *-- Schema : MessageTrait.headers
   MessageTrait *-- CorrelationID : MessageTrait.correlationId
@@ -278,6 +294,7 @@ classDiagram
     any payload
     string name
     string summary
+    Any ^x-[\w\d\-\_]+$
   }
 
   class Tags:::Tags {
@@ -289,12 +306,14 @@ classDiagram
     +string name
     string description
     ExternalDocumentation externalDocs
+    Any ^x-[\w\d\-\_]+$
   }
   Tag *-- ExternalDocumentation : Tag.externalDocs
 
   class ExternalDocumentation:::ExternalDocumentation {
     string description
     +string url
+    Any ^x-[\w\d\-\_]+$
   }
 
   class Reference:::Reference {
@@ -316,6 +335,7 @@ classDiagram
     map~ChannelBindings🔗~ channelBindings
     map~OperationBindings🔗~ operationBindings
     map~MessageBindings🔗~ messageBindings
+    Any ^x-[\w\d\-\_]+$
   }
   Components *-- Schema : Components.schemas
   Components *-- Server : Components.servers
@@ -336,6 +356,7 @@ classDiagram
     string discriminator
     ExternalDocumentation externalDocs
     boolean deprecated
+    Any ^x-[\w\d\-\_]+$
   }
   Schema *-- ExternalDocumentation : Schema.externalDocs
 
@@ -348,6 +369,7 @@ classDiagram
     string bearerFormat
     +OAuthFlows flows
     +string openIdConnectUrl
+    Any ^x-[\w\d\-\_]+$
   }
   SecurityScheme *-- OAuthFlows : SecurityScheme.flows
 
@@ -356,6 +378,7 @@ classDiagram
     OAuthFlow password
     OAuthFlow clientCredentials
     OAuthFlow authorizationCode
+    Any ^x-[\w\d\-\_]+$
   }
   OAuthFlows *-- OAuthFlow : OAuthFlows.implicit
   OAuthFlows *-- OAuthFlow : OAuthFlows.password
@@ -367,6 +390,7 @@ classDiagram
     +string tokenUrl
     string refreshUrl
     +map~string~ scopes
+    Any ^x-[\w\d\-\_]+$
   }
 
   class SecurityRequirement:::SecurityRequirement {
@@ -376,5 +400,6 @@ classDiagram
   class CorrelationID:::CorrelationID {
     string description
     +string location
+    Any ^x-[\w\d\-\_]+$
   }
 

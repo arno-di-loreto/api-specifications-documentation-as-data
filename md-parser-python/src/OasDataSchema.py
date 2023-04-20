@@ -170,11 +170,14 @@ class DataSchema(Data, DataWithUrls):
       self.fields += self._get_fields_from_section(patterned_fields_section, DataField.PATTERNED)
 
     # in v3 the x- extension field is not listed (while it was in v2)
-    if not self.get_data_root()._version.is_version('2'):
+    # Same for AsyncAPI
+    if self.get_data_root()._version.name != 'Swagger':
       specification_extensions_section = self.get_data_parent().get_source().find_section_for_text(re.compile('^Specification Extensions$'))
       if specification_extensions_section != None:
         if self.is_extensible:
           self.fields += self._get_fields_from_section(specification_extensions_section, DataField.PATTERNED)
+      else:
+        print('Specification Extensions not section found')
 
   def add_field(self, name, name_type, parent_type, types):
     self.fields.append(DataFieldFix(self, name, name_type, parent_type, types))
