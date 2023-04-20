@@ -198,7 +198,7 @@ classDiagram
 
   class Message:::Message {
     Schema🔗 headers
-    any payload
+    Schema🔗 payload
     CorrelationID🔗 correlationId
     string schemaFormat
     string contentType
@@ -213,6 +213,7 @@ classDiagram
     array~MessageTrait~ traits
   }
   Message *-- Schema : Message.headers
+  Message *-- Schema : Message.payload
   Message *-- CorrelationID : Message.correlationId
   Message *-- Tags : Message.tags
   Message *-- ExternalDocumentation : Message.externalDocs

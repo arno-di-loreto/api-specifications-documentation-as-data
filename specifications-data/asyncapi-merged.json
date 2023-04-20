@@ -13512,7 +13512,7 @@
               "nameType": "fixed",
               "richText": false,
               "isRequired": false,
-              "canBeReference": false,
+              "canBeReference": true,
               "description": "Definition of the message payload. It can be of any type but defaults to <a href=\"#schemaObject\">Schema object</a>."
             },
             {
@@ -13522,7 +13522,7 @@
               "nameType": "fixed",
               "richText": false,
               "isRequired": false,
-              "canBeReference": false,
+              "canBeReference": true,
               "description": "Definition of the message payload. It can be of any type but defaults to <a href=\"#schemaObject\">Schema object</a>. It must match the schema format, including encoding type - e.g Avro should be inlined as either a YAML or JSON object NOT a string to be parsed as YAML or JSON."
             },
             {
@@ -13532,7 +13532,7 @@
               "nameType": "fixed",
               "richText": false,
               "isRequired": false,
-              "canBeReference": false,
+              "canBeReference": true,
               "description": "Definition of the message payload. It can be of any type but defaults to <a href=\"#schemaObject\">Schema object</a>. It must match the schema format, including encoding type - e.g Avro should be inlined as either a YAML or JSON object NOT a string to be parsed as YAML or JSON."
             },
             {
@@ -13542,7 +13542,7 @@
               "nameType": "fixed",
               "richText": false,
               "isRequired": false,
-              "canBeReference": false,
+              "canBeReference": true,
               "description": "Definition of the message payload. It can be of any type but defaults to <a href=\"#schemaObject\">Schema object</a>. It must match the schema format, including encoding type - e.g Avro should be inlined as either a YAML or JSON object NOT a string to be parsed as YAML or JSON."
             },
             {
@@ -13552,7 +13552,7 @@
               "nameType": "fixed",
               "richText": false,
               "isRequired": false,
-              "canBeReference": false,
+              "canBeReference": true,
               "description": "Definition of the message payload. It can be of any type but defaults to <a href=\"#schemaObject\">Schema object</a>. It must match the schema format, including encoding type - e.g Avro should be inlined as either a YAML or JSON object NOT a string to be parsed as YAML or JSON."
             },
             {
@@ -13562,7 +13562,7 @@
               "nameType": "fixed",
               "richText": false,
               "isRequired": false,
-              "canBeReference": false,
+              "canBeReference": true,
               "description": "Definition of the message payload. It can be of any type but defaults to <a href=\"#schemaObject\">Schema object</a>. It must match the schema format, including encoding type - e.g Avro should be inlined as either a YAML or JSON object NOT a string to be parsed as YAML or JSON."
             },
             {
@@ -13572,7 +13572,7 @@
               "nameType": "fixed",
               "richText": false,
               "isRequired": false,
-              "canBeReference": false,
+              "canBeReference": true,
               "description": "Definition of the message payload. It can be of any type but defaults to <a href=\"#schemaObject\">Schema object</a>. It must match the schema format, including encoding type - e.g Avro should be inlined as either a YAML or JSON object NOT a string to be parsed as YAML or JSON."
             }
           ],
@@ -13581,7 +13581,7 @@
           "nameType": "fixed",
           "richText": false,
           "isRequired": false,
-          "canBeReference": false,
+          "canBeReference": true,
           "description": "Definition of the message payload. It can be of any type but defaults to <a href=\"#schemaObject\">Schema object</a>. It must match the schema format, including encoding type - e.g Avro should be inlined as either a YAML or JSON object NOT a string to be parsed as YAML or JSON."
         },
         {

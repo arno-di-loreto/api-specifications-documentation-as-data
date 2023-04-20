@@ -206,7 +206,7 @@ class "Message Bindings" #line:Fuchsia;line.bold {
 
 class "Message" #line:Gold;line.bold {
   headers : Schema or $ref
-  payload : any
+  payload : Schema or $ref
   correlationId : Correlation ID or $ref
   schemaFormat : string
   contentType : string
@@ -221,6 +221,7 @@ class "Message" #line:Gold;line.bold {
   traits : array of Message Trait or $ref
 }
 "Message::headers"*-->"Schema" #LightPink
+"Message::payload"*-->"Schema" #LightPink
 "Message::correlationId"*-->"Correlation ID" #LightSlateGrey
 "Message::tags"*-->"Tags" #HotPink
 "Message::externalDocs"*-->"External Documentation" #LightBlue

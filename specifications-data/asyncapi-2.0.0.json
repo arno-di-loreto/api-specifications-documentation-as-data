@@ -5979,7 +5979,9 @@
                         "parentType": null,
                         "parentTypeMapKeyType": null,
                         "types": [
-                            "any"
+                            "any",
+                            "Schema Object",
+                            "Reference Object"
                         ]
                     },
                     "isRequired": false,
@@ -7461,6 +7463,10 @@
                 },
                 {
                     "schemaName": "Message Object",
+                    "fieldName": "payload"
+                },
+                {
+                    "schemaName": "Message Object",
                     "fieldName": "correlationId"
                 },
                 {
@@ -8201,6 +8207,10 @@
                 {
                     "schemaName": "Message Object",
                     "fieldName": "headers"
+                },
+                {
+                    "schemaName": "Message Object",
+                    "fieldName": "payload"
                 },
                 {
                     "schemaName": "Message Trait Object",

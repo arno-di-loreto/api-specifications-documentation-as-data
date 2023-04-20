@@ -212,6 +212,13 @@ class DataSchemas(Data):
         # Tags Object is just described as an array of object without fields
         if(schema.name == 'Tags Object'):
           schema.add_field('[*]', 'fixed', None, ['Tag Object'])
+        # In Message Object the payload is typed as any but is a Schema Object by default (can be an Avro definition)
+        # Type of payload is indicated in schemaFormat
+        if(schema.name == 'Message Object'):
+          for field in schema.fields:
+            if(field.name == 'payload'):
+              field.type.types.append('Schema Object')
+              field.type.types.append('Reference Object')
         # Server Binding(s) Object typo in field type
         if(specification_version == '2.0.0'):
           for field in schema.fields:

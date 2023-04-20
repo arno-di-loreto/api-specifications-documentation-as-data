@@ -232,7 +232,7 @@ class "Message Bindings" #line:Fuchsia;line.bold {
 class "Message" #line:Gold;line.bold {
   messageId : string
   headers : Schema or $ref
-  payload : any
+  payload : Schema or $ref
   correlationId : Correlation ID or $ref
   schemaFormat : string
   contentType : string
@@ -248,6 +248,7 @@ class "Message" #line:Gold;line.bold {
   ^x-[\w\d\-\_]+$ : Any
 }
 "Message::headers"*-->"Schema" #LightSalmon
+"Message::payload"*-->"Schema" #LightSalmon
 "Message::correlationId"*-->"Correlation ID" #LightSteelBlue
 "Message::tags"*-->"Tags" #IndianRed
 "Message::externalDocs"*-->"External Documentation" #LightCoral
