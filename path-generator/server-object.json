@@ -1,0 +1,33 @@
+{
+  "target": "Server Object",
+  "count": 27,
+  "paths": [
+    "OpenAPI,Components,Callback,Path Item,Operation,Callback,Path Item,Operation,Responses,Response,Link,Server",
+    "OpenAPI,Components,Callback,Path Item,Operation,Callback,Path Item,Operation,Server",
+    "OpenAPI,Components,Callback,Path Item,Operation,Callback,Path Item,Server",
+    "OpenAPI,Components,Callback,Path Item,Operation,Responses,Response,Link,Server",
+    "OpenAPI,Components,Callback,Path Item,Operation,Server",
+    "OpenAPI,Components,Callback,Path Item,Server",
+    "OpenAPI,Components,Link,Server",
+    "OpenAPI,Components,Path Item,Operation,Callback,Path Item,Operation,Responses,Response,Link,Server",
+    "OpenAPI,Components,Path Item,Operation,Callback,Path Item,Operation,Server",
+    "OpenAPI,Components,Path Item,Operation,Callback,Path Item,Server",
+    "OpenAPI,Components,Path Item,Operation,Responses,Response,Link,Server",
+    "OpenAPI,Components,Path Item,Operation,Server",
+    "OpenAPI,Components,Path Item,Server",
+    "OpenAPI,Components,Response,Link,Server",
+    "OpenAPI,Path Item,Operation,Callback,Path Item,Operation,Responses,Response,Link,Server",
+    "OpenAPI,Path Item,Operation,Callback,Path Item,Operation,Server",
+    "OpenAPI,Path Item,Operation,Callback,Path Item,Server",
+    "OpenAPI,Path Item,Operation,Responses,Response,Link,Server",
+    "OpenAPI,Path Item,Operation,Server",
+    "OpenAPI,Path Item,Server",
+    "OpenAPI,Paths,Path Item,Operation,Callback,Path Item,Operation,Responses,Response,Link,Server",
+    "OpenAPI,Paths,Path Item,Operation,Callback,Path Item,Operation,Server",
+    "OpenAPI,Paths,Path Item,Operation,Callback,Path Item,Server",
+    "OpenAPI,Paths,Path Item,Operation,Responses,Response,Link,Server",
+    "OpenAPI,Paths,Path Item,Operation,Server",
+    "OpenAPI,Paths,Path Item,Server",
+    "OpenAPI,Server"
+  ]
+}
